@@ -41,7 +41,7 @@ The example above is built with https://processing.org/[Processing].
 
 Additional information is on his http://d.hatena.ne.jp/kougaku-navi/[blog post in Japanese].
 
-image::img/kougaku_stitching.png[title="dual fish-eye video stitching"]
+image::img/kougaku_stitching_english.png[title="dual fish-eye video stitching"]
 
 
 === Examples with Unity
@@ -61,7 +61,7 @@ or a browser using YouTube 360 can stitch the image.
 
 == 360 Image Viewers
 === Example in Processor language
-image::img/still_image_stitching.png[title="still image stitching"]
+image::img/still_image_stitching_english.png[title="still image stitching"]
 
 https://github.com/kougaku/PanoramaViewer[Source code available on GitHub].
 
