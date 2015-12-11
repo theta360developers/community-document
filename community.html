@@ -416,9 +416,34 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="details">
 <span id="author" class="author">The RICOH THETA 360 Developer Community</span><br>
 </div>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_overview">Overview</a></li>
+<li><a href="#_official_information">Official Information</a></li>
+<li><a href="#_360_video_live_streaming">360 Video Live Streaming</a>
+<ul class="sectlevel2">
+<li><a href="#_example_with_processor_language">Example with Processor Language</a></li>
+<li><a href="#_examples_with_unity">Examples with Unity</a></li>
+</ul>
+</li>
+<li><a href="#_360_image_viewers">360 Image Viewers</a>
+<ul class="sectlevel2">
+<li><a href="#_example_in_processor_language">Example in Processor language</a></li>
+<li><a href="#_example_in_javascript">Example in Javascript</a></li>
+</ul>
+</li>
+<li><a href="#_questions_regarding_proprietary_technical_information">Questions Regarding Proprietary Technical Information</a>
+<ul class="sectlevel2">
+<li><a href="#_lens_parameter_information">Lens Parameter Information</a></li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 <div id="content">
-<div id="preamble">
+<div class="sect1">
+<h2 id="_overview">Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>A collection of tips to unlock
@@ -465,6 +490,8 @@ usable in a web browser or with exernal services such as YouTube,
 you&#8217;ll need to convert the video into equirectangular mode. To view it with
 360 degree navigation, you&#8217;ll need to stitch it.</p>
 </div>
+<div class="sect2">
+<h3 id="_example_with_processor_language">Example with Processor Language</h3>
 <div class="paragraph">
 <p>Community Contribution from Sunao Hashimoto, kougaku on GitHub. Full
 sample source code is available.</p>
@@ -494,6 +521,20 @@ sample source code is available.</p>
 </div>
 <div class="title">Figure 2. dual fish-eye video stitching</div>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_examples_with_unity">Examples with Unity</h3>
+<div class="paragraph">
+<p>Nora, @steroarts, released a shader pack to convert THETA 360 degree
+media into equirectangular format in real time.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://dl.dropboxusercontent.com/u/7131835/Programs/ThetaS_LiveView_Sample.unitypackage">Shader Pack</a></p>
+</li>
+</ul>
+</div>
 <div class="paragraph">
 <p>The developer below, Goroman, was able to get reasonable 360 video live streaming in equirectangular mode
 after an hour of work back in September, 2015. Additional information in
@@ -511,25 +552,12 @@ or a browser using YouTube 360 can stitch the image.</p>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_theta_shader_pack_for_unity_to_convert_media_into_equirectangular_format">THETA Shader Pack for Unity to Convert Media into Equirectangular Format</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Nora, @steroarts, released a shader pack to convert THETA 360 degree
-media into equirectangular format in real time.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://dl.dropboxusercontent.com/u/7131835/Programs/ThetaS_LiveView_Sample.unitypackage">Shader Pack</a></p>
-</li>
-</ul>
-</div>
-</div>
 </div>
 <div class="sect1">
-<h2 id="_panorama_viewer_for_still_images">Panorama Viewer for Still Images</h2>
+<h2 id="_360_image_viewers">360 Image Viewers</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_example_in_processor_language">Example in Processor language</h3>
 <div class="imageblock">
 <div class="content">
 <img src="img/still_image_stitching.png" alt="still image stitching">
@@ -540,12 +568,35 @@ media into equirectangular format in real time.</p>
 <p><a href="https://github.com/kougaku/PanoramaViewer">Source code available on GitHub</a>.</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_example_in_javascript">Example in Javascript</h3>
+<div class="imageblock">
+<div class="content">
+<img src="img/akokubo_javascript_viewer.png" alt="akokubo javascript viewer">
+</div>
+<div class="title">Figure 5. 360 degree still image in Chrome web browser</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://akokubo.github.io/ThetaViewer/demo1.html">Demo of 360 image in browser</a></p>
+</li>
+<li>
+<p><a href="https://github.com/theta360developers/ThetaViewer">Javascript source code</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </div>
 <div class="sect1">
-<h2 id="_lens_parameter_information">Lens Parameter Information</h2>
+<h2 id="_questions_regarding_proprietary_technical_information">Questions Regarding Proprietary Technical Information</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_lens_parameter_information">Lens Parameter Information</h3>
 <div class="paragraph">
-<p>The lens geometry is based on equidistant projection. The final projection
+<p>The lens geometry for the THETA is based on equidistant projection.
+The final projection
 style for both videos and images is equirectangular projection.
 RICOH does not make detailed lens parameter information available. This is
 also known as lens distortion data. Developers often ask for this
@@ -555,9 +606,10 @@ as of December 2015. Stitching is still possible without this information.</p>
 </div>
 </div>
 </div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-12-10 16:06:25 PST
+Last updated 2015-12-10 16:36:47 PST
 </div>
 </div>
 </body>

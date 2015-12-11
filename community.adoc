@@ -1,6 +1,8 @@
 = RICOH THETA Developer Community Guide
 The RICOH THETA 360 Developer Community
+:toc:
 
+== Overview
 A collection of tips to unlock
 a new world of 360 degree images and videos.
 
@@ -8,6 +10,8 @@ Helping novice to intermediate
 developers to use the RICOH THETA S API to control
 the camera. Includes community information
 on the basics of using the media.
+
+
 
 == Official Information
 
@@ -25,6 +29,7 @@ usable in a web browser or with exernal services such as YouTube,
 you'll need to convert the video into equirectangular mode. To view it with
 360 degree navigation, you'll need to stitch it.
 
+=== Example with Processor Language
 Community Contribution from Sunao Hashimoto, kougaku on GitHub. Full
 sample source code is available.
 
@@ -38,6 +43,13 @@ Additional information is on his http://d.hatena.ne.jp/kougaku-navi/[blog post i
 
 image::img/kougaku_stitching.png[title="dual fish-eye video stitching"]
 
+
+=== Examples with Unity
+Nora, @steroarts, released a shader pack to convert THETA 360 degree
+media into equirectangular format in real time. 
+
+* https://dl.dropboxusercontent.com/u/7131835/Programs/ThetaS_LiveView_Sample.unitypackage[Shader Pack]
+
 The developer below, Goroman, was able to get reasonable 360 video live streaming in equirectangular mode
 after an hour of work back in September, 2015. Additional information in
 http://tips.hecomi.com/entry/2015/10/11/211456[Japanese is here]. 
@@ -47,20 +59,23 @@ image::img/goro_man.png[title="equirectangular video without stitching" link="ht
 Once the video is streamed in equirectangular mode, viewers such as VR Gear
 or a browser using YouTube 360 can stitch the image.
 
-== THETA Shader Pack for Unity to Convert Media into Equirectangular Format
-Nora, @steroarts, released a shader pack to convert THETA 360 degree
-media into equirectangular format in real time. 
-
-* https://dl.dropboxusercontent.com/u/7131835/Programs/ThetaS_LiveView_Sample.unitypackage[Shader Pack]
-
-== Panorama Viewer for Still Images
-
+== 360 Image Viewers
+=== Example in Processor language
 image::img/still_image_stitching.png[title="still image stitching"]
 
 https://github.com/kougaku/PanoramaViewer[Source code available on GitHub].
 
+=== Example in Javascript
+image::img/akokubo_javascript_viewer.png[title="360 degree still image in Chrome web browser"]
 
-== Lens Parameter Information
+* http://akokubo.github.io/ThetaViewer/demo1.html[Demo of 360 image in browser]
+* https://github.com/theta360developers/ThetaViewer[Javascript source code]
+
+
+
+== Questions Regarding Proprietary Technical Information
+
+=== Lens Parameter Information
 The lens geometry for the THETA is based on equidistant projection.
 The final projection
 style for both videos and images is equirectangular projection.
