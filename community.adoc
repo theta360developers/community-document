@@ -59,6 +59,11 @@ image::img/goro_man.png[title="equirectangular video without stitching" link="ht
 Once the video is streamed in equirectangular mode, viewers such as VR Gear
 or a browser using YouTube 360 can stitch the image.
 
+==== Community Articles About 360 Display in Unity
+
+* http://horriblepain.com/2015/05/360-display-in-unity-w-blender/[Horrible Pain's notes on 360 display in Unity w/Blender]
+
+
 == 360 Image Viewers
 === Example in Processor language
 image::img/still_image_stitching_english.png[title="still image stitching"]
