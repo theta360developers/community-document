@@ -76,7 +76,12 @@ image::img/akokubo_javascript_viewer.png[title="360 degree still image in Chrome
 * http://akokubo.github.io/ThetaViewer/demo1.html[Demo of 360 image in browser]
 * https://github.com/theta360developers/ThetaViewer[Javascript source code]
 
+== Linux and Command Line Usage
 
+* http://ggnome.com/pano2vr[PANO2VR] (Untested. Claims to work on Linux). Would be nice
+to get some from community to test it.
+* https://github.com/theta360developers/python-download-rossgoderer[Python script downloader]
+from Ulrich Rossgoderer. Community.
 
 == Questions Regarding Proprietary Technical Information
 
