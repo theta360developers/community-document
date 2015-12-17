@@ -410,59 +410,27 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 .show-for-print{display:inherit!important}}
 </style>
 </head>
-<body class="article">
+<body class="article toc2 toc-right">
 <div id="header">
 <h1>RICOH THETA Developer Community Guide</h1>
 <div class="details">
 <span id="author" class="author">The RICOH THETA 360 Developer Community &lt;ricohtheta360@oppkey.com&gt;</span><br>
 </div>
-<div id="toc" class="toc">
-<div id="toctitle">Table of Contents</div>
+<div id="toc" class="toc2">
+<div id="toctitle">Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_overview">Overview</a></li>
-<li><a href="#_official_information">Official Information</a></li>
-<li><a href="#_360_video_live_streaming">360 Video Live Streaming</a>
-<ul class="sectlevel2">
-<li><a href="#_example_with_processor_language">Example with Processor Language</a></li>
-<li><a href="#_examples_with_unity">Examples with Unity</a></li>
-</ul>
-</li>
-<li><a href="#_360_image_viewers">360 Image Viewers</a>
-<ul class="sectlevel2">
-<li><a href="#_example_in_processor_language">Example in Processor language</a></li>
-<li><a href="#_example_in_javascript">Example in Javascript</a></li>
-</ul>
-</li>
-<li><a href="#_linux_and_command_line_usage">Linux and Command Line Usage</a></li>
-<li><a href="#_questions_regarding_proprietary_technical_information">Questions Regarding Proprietary Technical Information</a>
-<ul class="sectlevel2">
-<li><a href="#_lens_parameter_information">Lens Parameter Information</a></li>
-</ul>
-</li>
+<li><a href="#_official_information">1. Official Information</a></li>
+<li><a href="#_video_live_streaming">2. Video Live Streaming</a></li>
+<li><a href="#_image_viewers">3. Image Viewers</a></li>
+<li><a href="#_linux">4. Linux</a></li>
+<li><a href="#_command_line">5. Command Line</a></li>
+<li><a href="#_proprietary_technical_information">6. Proprietary Technical Information</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_overview">Overview</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>A collection of tips to unlock
-a new world of 360 degree images and videos.</p>
-</div>
-<div class="paragraph">
-<p>Helping novice to intermediate
-developers to use the RICOH THETA S API to control
-the camera. Includes community information
-on the basics of using the media.</p>
-</div>
-<div class="paragraph">
-<p>Send corrections or tips to <a href="mailto:ricohtheta360@oppkey.com">ricohtheta360@oppkey.com</a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_official_information">Official Information</h2>
+<h2 id="_official_information">1. Official Information</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -485,7 +453,7 @@ compliant with
 </div>
 </div>
 <div class="sect1">
-<h2 id="_360_video_live_streaming">360 Video Live Streaming</h2>
+<h2 id="_video_live_streaming">2. Video Live Streaming</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The THETA S can stream video when connected to a USB or HDMI cable.
@@ -495,7 +463,7 @@ you&#8217;ll need to convert the video into equirectangular mode. To view it wit
 360 degree navigation, you&#8217;ll need to stitch it.</p>
 </div>
 <div class="sect2">
-<h3 id="_example_with_processor_language">Example with Processor Language</h3>
+<h3 id="_example_with_processor_language">2.1. Example with Processor Language</h3>
 <div class="paragraph">
 <p>Community Contribution from Sunao Hashimoto, kougaku on GitHub. Full
 sample source code is available.</p>
@@ -527,7 +495,7 @@ sample source code is available.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_examples_with_unity">Examples with Unity</h3>
+<h3 id="_examples_with_unity">2.2. Examples with Unity</h3>
 <div class="paragraph">
 <p>Nora, @steroarts, released a shader pack to convert THETA 360 degree
 media into equirectangular format in real time.</p>
@@ -555,7 +523,7 @@ after an hour of work back in September, 2015. Additional information in
 or a browser using YouTube 360 can stitch the image.</p>
 </div>
 <div class="sect3">
-<h4 id="_community_articles_about_360_display_in_unity">Community Articles About 360 Display in Unity</h4>
+<h4 id="_community_articles_about_360_display_in_unity">2.2.1. Community Articles About 360 Display in Unity</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -568,10 +536,10 @@ or a browser using YouTube 360 can stitch the image.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_360_image_viewers">360 Image Viewers</h2>
+<h2 id="_image_viewers">3. Image Viewers</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_example_in_processor_language">Example in Processor language</h3>
+<h3 id="_example_in_processor_language">3.1. Example in Processor language</h3>
 <div class="imageblock">
 <div class="content">
 <img src="img/still_image_stitching_english.png" alt="still image stitching english">
@@ -583,7 +551,7 @@ or a browser using YouTube 360 can stitch the image.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_example_in_javascript">Example in Javascript</h3>
+<h3 id="_example_in_javascript">3.2. Example in Javascript</h3>
 <div class="imageblock">
 <div class="content">
 <img src="img/akokubo_javascript_viewer.png" alt="akokubo javascript viewer">
@@ -604,7 +572,7 @@ or a browser using YouTube 360 can stitch the image.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_linux_and_command_line_usage">Linux and Command Line Usage</h2>
+<h2 id="_linux">4. Linux</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -612,6 +580,15 @@ or a browser using YouTube 360 can stitch the image.</p>
 <p><a href="http://ggnome.com/pano2vr">PANO2VR</a> (Untested. Claims to work on Linux). Would be nice
 to get some from community to test it.</p>
 </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_command_line">5. Command Line</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
 <li>
 <p><a href="https://github.com/theta360developers/python-download-rossgoderer">Python script downloader</a>
 from Ulrich Rossgoderer. Community.</p>
@@ -621,10 +598,10 @@ from Ulrich Rossgoderer. Community.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_questions_regarding_proprietary_technical_information">Questions Regarding Proprietary Technical Information</h2>
+<h2 id="_proprietary_technical_information">6. Proprietary Technical Information</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lens_parameter_information">Lens Parameter Information</h3>
+<h3 id="_lens_parameter_information">6.1. Lens Parameter Information</h3>
 <div class="paragraph">
 <p>The lens geometry for the THETA is based on equidistant projection.
 The final projection
@@ -640,7 +617,7 @@ as of December 2015. Stitching is still possible without this information.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-12-16 16:44:23 PST
+Last updated 2015-12-16 17:25:12 PST
 </div>
 </div>
 </body>

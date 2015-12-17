@@ -1,18 +1,9 @@
 = RICOH THETA Developer Community Guide
 The RICOH THETA 360 Developer Community <ricohtheta360@oppkey.com>
-:toc:
-
-== Overview
-A collection of tips to unlock
-a new world of 360 degree images and videos.
-
-Helping novice to intermediate
-developers to use the RICOH THETA S API to control
-the camera. Includes community information
-on the basics of using the media.
-
-Send corrections or tips to ricohtheta360@oppkey.com
-
+:toc: right
+:toclevels: 1
+:toc-title: Contents
+:sectnums:
 
 == Official Information
 
@@ -23,7 +14,7 @@ https://developers.google.com/streetview/open-spherical-camera/[Open Spherical C
 * https://developers.theta360.com/en/docs/sdk/[Official SDK]
 * https://theta360.com/en/support/download/[Windows, Mac, iOS, Android apps]
 
-== 360 Video Live Streaming
+== Video Live Streaming
 The THETA S can stream video when connected to a USB or HDMI cable.
 The output is in dual fish-eye mode (two spheres). To make the video
 usable in a web browser or with exernal services such as YouTube,
@@ -65,7 +56,7 @@ or a browser using YouTube 360 can stitch the image.
 * http://horriblepain.com/2015/05/360-display-in-unity-w-blender/[Horrible Pain's notes on 360 display in Unity w/Blender]
 
 
-== 360 Image Viewers
+== Image Viewers
 === Example in Processor language
 image::img/still_image_stitching_english.png[title="still image stitching"]
 
@@ -77,14 +68,16 @@ image::img/akokubo_javascript_viewer.png[title="360 degree still image in Chrome
 * http://akokubo.github.io/ThetaViewer/demo1.html[Demo of 360 image in browser]
 * https://github.com/theta360developers/ThetaViewer[Javascript source code]
 
-== Linux and Command Line Usage
+== Linux
 
 * http://ggnome.com/pano2vr[PANO2VR] (Untested. Claims to work on Linux). Would be nice
 to get some from community to test it.
+
+== Command Line
 * https://github.com/theta360developers/python-download-rossgoderer[Python script downloader]
 from Ulrich Rossgoderer. Community.
 
-== Questions Regarding Proprietary Technical Information
+== Proprietary Technical Information
 
 === Lens Parameter Information
 The lens geometry for the THETA is based on equidistant projection.
