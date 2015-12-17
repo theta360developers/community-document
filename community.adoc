@@ -1,5 +1,5 @@
 = RICOH THETA Developer Community Guide
-The RICOH THETA 360 Developer Community
+The RICOH THETA 360 Developer Community <ricohtheta360@oppkey.com>
 :toc:
 
 == Overview
@@ -11,6 +11,7 @@ developers to use the RICOH THETA S API to control
 the camera. Includes community information
 on the basics of using the media.
 
+Send corrections or tips to ricohtheta360@oppkey.com
 
 
 == Official Information
