@@ -69,9 +69,27 @@ image::img/akokubo_javascript_viewer.png[title="360 degree still image in Chrome
 * https://github.com/theta360developers/ThetaViewer[Javascript source code]
 
 == Linux
+Documentation contributed by Svendus
 
-* http://ggnome.com/pano2vr[PANO2VR] (Untested. Claims to work on Linux). Would be nice
-to get some from community to test it.
+SphericalViewer.exe opens and installs with Wine
+It runs and you can view Spherical images, but videos are not converted.
+
+Linux users can also import the files and use Pano2VR5.
+
+* http://ggnome.com/pano2vr[PANO2VR]
+
+  sudo apt-get install --no-install-recommends gnome-panel
+  sudo gnome-desktop-item-edit /usr/share/applications/ --create-new
+
+image::img/linux/new-app.png[]
+
+image::img/linux/pano2vr-1.png[]
+
+image::img/linux/pano2vr-2.png[]
+
+image::img/linux/pano2vr-3.png[]
+
+image::img/linux/pano2vr-4.png[]
 
 == Command Line
 * https://github.com/theta360developers/python-download-rossgoderer[Python script downloader]
