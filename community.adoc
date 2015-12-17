@@ -14,6 +14,12 @@ https://developers.google.com/streetview/open-spherical-camera/[Open Spherical C
 * https://developers.theta360.com/en/docs/sdk/[Official SDK]
 * https://theta360.com/en/support/download/[Windows, Mac, iOS, Android apps]
 
+== Unofficial Information
+* https://github.com/theta360developers[GitHub listing of community repositories] - libraries and code examples from the community
+* http://theta360developers.github.io/blog/[Blog for developers] - How-To articles from the community
+* http://theta360developers.github.io/community-document/community.html[Developer Community Guide] - Organized community information focused on the most common topics
+* Central site for the three components - planned: code samples, blog, guide
+
 == Video Live Streaming
 The THETA S can stream video when connected to a USB or HDMI cable.
 The output is in dual fish-eye mode (two spheres). To make the video
