@@ -131,7 +131,7 @@ also known as lens distortion data. Developers often ask for this
 information to improve stitching. It is proprietary and not available
 as of December 2015. Stitching is still possible without this information.
 
-== Stitching Libraries
+=== Stitching Libraries
 The RICOH THETA S processes still images inside of the camera. It
 takes 8 seconds for the camera to be ready to take another still
 image.
