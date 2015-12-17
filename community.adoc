@@ -107,6 +107,13 @@ image::img/linux/pano2vr-4.png[]
 * https://github.com/theta360developers/python-download-rossgoderer[Python script downloader]
 from Ulrich Rossgoderer. Community.
 
+== Programming Languages
+The HTTP API of the THETA S can be accessed from almost any programming language.
+
+* http://qiita.com/sandinist/items/9c3a77fdf262513ede3d[Article in Japanese] about using the RICOH THETA S API in shell, Ruby, Python, Swift, and C#.
+
+
+
 == Proprietary Technical Information
 
 === Lens Parameter Information
