@@ -131,5 +131,21 @@ also known as lens distortion data. Developers often ask for this
 information to improve stitching. It is proprietary and not available
 as of December 2015. Stitching is still possible without this information.
 
+== Stitching Libraries
+The RICOH THETA S processes still images inside of the camera. It
+takes 8 seconds for the camera to be ready to take another still
+image.
+
+The videos are stored in dual-fisheye format (two spheres). The
+official RICOH applications will convert this into equirectagular
+format on either mobile devices or desktop computers. This format
+can then be viewed locally or uploaded to YouTube, Facebook, or
+other sites.
+
+The source code and algorithms to perform this stitching
+are not available to developers.
+
+As of December 2015, there is no way to use the RICOH
+libraries in live streaming mode.
 
 
