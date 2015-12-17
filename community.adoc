@@ -69,7 +69,19 @@ image::img/akokubo_javascript_viewer.png[title="360 degree still image in Chrome
 * https://github.com/theta360developers/ThetaViewer[Javascript source code]
 
 == Linux
-Documentation contributed by Svendus
+RICOH only supports Mac and Windows desktop. As many developers use
+Linux, we've collected some information from the community to help
+people with basic tasks.
+
+Linux can be used to control the camera HTTP API. There are also a number of
+scripts to get media from the camera.
+
+If you want to use Linux to
+download media from the THETA and view it on your Linux box,
+you can use Wine for image viewing using the
+THETA Windows app or use a third-party application, Pano2VR.
+
+Documentation below contributed by Svendus
 
 SphericalViewer.exe opens and installs with Wine
 It runs and you can view Spherical images, but videos are not converted.
