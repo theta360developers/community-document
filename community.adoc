@@ -1,4 +1,4 @@
-= 360 Media - Unofficial RICOH THETA S Community Guide (Second Guide in Series)
+= 360 Media - Unofficial RICOH THETA S Community Guide (Guide 2 of 3)
 The RICOH THETA 360 Developer Community <ricohtheta360@oppkey.com>
 :toc: right
 :toclevels: 1
@@ -24,7 +24,7 @@ Beginners should start here. Web browser using advanced HTTP clients,
 command line curl, Python. Planned examples for JavaScript and other languages.
 ** http://theta360developers.github.io/community-document/community.html[360 Media] -
 360 degree media management. Streaming video, equirectangular conversion, stitching
-** Usage - planned guide to share tips on using the THETA S. Uploading
+** Usage Tips - planned guide to share tips on using the THETA S. Uploading
 content to Facebook, YouTube, Google+, Streetview. Firmware upgrade,
 tripod hacks to access USB power port, WiFi signal tests, TCP/IP network
 packet loss tests. Hacks to control THETA with inexpensive boards such
