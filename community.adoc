@@ -17,10 +17,24 @@ https://developers.google.com/streetview/open-spherical-camera/[Open Spherical C
 == Unofficial Information
 * https://github.com/theta360developers[GitHub listing of community repositories] - libraries and code examples from the community
 * http://theta360developers.github.io/blog/[Blog for developers] - How-To articles from the community
-* http://theta360developers.github.io/community-document/community.html[360 Media] - Organized community information focused on the most common topics for 360 degree media management
-* http://codetricity.github.io/theta-s/index.html[API Guide] - How to use the RICOH THETA S API, a HTTP API based on Open Spherical Camera (OSC) specifications.
-Beginners should start here.
-* Central site for the four components - planned: code samples, blog, guide
+* Guides
+** http://codetricity.github.io/theta-s/index.html[API Guide] - Use the RICOH
+THETA S API, a HTTP API based on Open Spherical Camera (OSC) specifications.
+Beginners should start here. Web browser using advanced HTTP clients,
+command line curl, Python. Planned examples for JavaScript and other languages.
+** http://theta360developers.github.io/community-document/community.html[360 Media] -
+360 degree media management. Streaming video, equirectangular conversion, stitching
+** Usage - planned guide to share tips on using the THETA S. Uploading
+content to Facebook, YouTube, Google+, Streetview. Firmware upgrade,
+tripod hacks to access USB power port, WiFi signal tests, TCP/IP network
+packet loss tests. Hacks to control THETA with inexpensive boards such
+as Raspberry Pi using both GPIO pins and TCP/IP triggers from a secondary
+network interface. Idea book usage examples for real estate, physical
+security (surveillance).
+Although this guide is the most exciting and is needed to demo the
+camera, it's currently the third priority.
+* Central site for the three components -
+planned: code samples, blog, guide. May include physical demos.
 
 == Video Live Streaming
 The THETA S can stream video when connected to a USB or HDMI cable.
