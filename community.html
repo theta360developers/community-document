@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.2">
 <meta name="author" content="The RICOH THETA 360 Developer Community &lt;ricohtheta360@oppkey.com&gt;">
-<title>RICOH THETA Developer Community Guide</title>
+<title>360 Media - Unofficial RICOH THETA S Community Guide (Second Guide in Series)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -412,7 +412,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article toc2 toc-right">
 <div id="header">
-<h1>RICOH THETA Developer Community Guide</h1>
+<h1>360 Media - Unofficial RICOH THETA S Community Guide (Second Guide in Series)</h1>
 <div class="details">
 <span id="author" class="author">The RICOH THETA 360 Developer Community &lt;ricohtheta360@oppkey.com&gt;</span><br>
 </div>
@@ -466,10 +466,13 @@ compliant with
 <p><a href="http://theta360developers.github.io/blog/">Blog for developers</a> - How-To articles from the community</p>
 </li>
 <li>
-<p><a href="http://theta360developers.github.io/community-document/community.html">Developer Community Guide</a> - Organized community information focused on the most common topics</p>
+<p><a href="http://theta360developers.github.io/community-document/community.html">360 Media</a> - Organized community information focused on the most common topics for 360 degree media management</p>
 </li>
 <li>
-<p>Central site for the three components - planned: code samples, blog, guide</p>
+<p><a href="http://codetricity.github.io/theta-s/index.html">API Guide</a></p>
+</li>
+<li>
+<p>Central site for the four components - planned: code samples, blog, guide</p>
 </li>
 </ul>
 </div>
@@ -481,12 +484,115 @@ compliant with
 <div class="paragraph">
 <p>The THETA S can stream video when connected to a USB or HDMI cable.
 The output is in dual fish-eye mode (two spheres). To make the video
-usable in a web browser or with exernal services such as YouTube,
+usable in a web browser or with external services such as YouTube,
 you&#8217;ll need to convert the video into equirectangular mode. To view it with
 360 degree navigation, you&#8217;ll need to stitch it.</p>
 </div>
+<div class="paragraph">
+<p>The first step is to get the camera into live streaming mode</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/video/thetas_livestreaming.jpg" alt="thetas livestreaming">
+</div>
+<div class="title">Figure 1. Set Live streaming video mode on RICOH THETA S</div>
+</div>
 <div class="sect2">
-<h3 id="_example_with_processor_language">3.1. Example with Processor Language</h3>
+<h3 id="_for_usb">3.1. For USB</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Press “mode button” - keep pressing - and press “power button” &#8594; camera goes to the LiveVideoStreamig mode.</p>
+</li>
+<li>
+<p>Connect a usb cable with S and laptop (MAC or PC).</p>
+</li>
+<li>
+<p>The THETA S can be used as a web cam. You can use web cam software such as
+Skype to see live video streaming with the THETA S.</p>
+</li>
+</ol>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/video/usb_live_streaming.png" alt="usb live streaming">
+</div>
+<div class="title">Figure 2. Live video streaming from RICOH THETA S to a computer monitor with USB 3</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_for_hdmi">3.2. For HDMI</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Press “mode button” - keep pressing - and press “power button” &#8594; camera goes to LiveVideoStreamig mode.</p>
+</li>
+<li>
+<p>connect a hdmi cable with S and a monitor.</p>
+</li>
+<li>
+<p>S could be a output video device. The monitor shows the S’s live video streaming .</p>
+</li>
+</ol>
+</div>
+<div id="img-hdmi_live_streaming" class="imageblock thumb">
+<div class="content">
+<img src="img/video/hdmi_live_streaming.jpg" alt="hdmi live streaming">
+</div>
+<div class="title">Figure 3. Live video streaming from RICOH THETA S to a TV with HDMI</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_api_testing">3.3. API Testing</h3>
+<div class="paragraph">
+<p><code>POST</code> to <code><a href="http://192.168.1.1/osc/commands/execute" class="bare">http://192.168.1.1/osc/commands/execute</a></code></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>{"name": "camera.getOptions",
+    "parameters":
+    {
+        "sessionId": "SID_0003",
+        "optionNames": [
+            "captureMode"
+        ]
+    }
+}</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Remember to set your sessionId correctly
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The response:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>{
+  "name": "camera.getOptions",
+  "state": "done",
+  "results":{
+    "options":{
+      "iso": 0,
+      "isoSupport":[],
+      "captureMode": "_liveStreaming"
+      }
+    }
+}</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_with_processor_language">3.4. Example with Processor Language</h3>
 <div class="paragraph">
 <p>Community Contribution from Sunao Hashimoto, kougaku on GitHub. Full
 sample source code is available.</p>
@@ -502,7 +608,7 @@ sample source code is available.</p>
 <div class="content">
 <img src="img/theta_s_live_viewer.gif" alt="theta s live viewer">
 </div>
-<div class="title">Figure 1. Live viewer for THETA S</div>
+<div class="title">Figure 4. Live viewer for THETA S</div>
 </div>
 <div class="paragraph">
 <p>The example above is built with <a href="https://processing.org/">Processing</a>.</p>
@@ -514,11 +620,11 @@ sample source code is available.</p>
 <div class="content">
 <img src="img/kougaku_stitching_english.png" alt="kougaku stitching english">
 </div>
-<div class="title">Figure 2. dual fish-eye video stitching</div>
+<div class="title">Figure 5. dual fish-eye video stitching</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_examples_with_unity">3.2. Examples with Unity</h3>
+<h3 id="_examples_with_unity">3.5. Examples with Unity</h3>
 <div class="paragraph">
 <p>Nora, @steroarts, released a shader pack to convert THETA 360 degree
 media into equirectangular format in real time.</p>
@@ -539,14 +645,14 @@ after an hour of work back in September, 2015. Additional information in
 <div class="content">
 <a class="image" href="https://youtu.be/edWrhCYIS5Q"><img src="img/goro_man.png" alt="goro man"></a>
 </div>
-<div class="title">Figure 3. equirectangular video without stitching</div>
+<div class="title">Figure 6. equirectangular video without stitching</div>
 </div>
 <div class="paragraph">
 <p>Once the video is streamed in equirectangular mode, viewers such as VR Gear
 or a browser using YouTube 360 can stitch the image.</p>
 </div>
 <div class="sect3">
-<h4 id="_community_articles_about_360_display_in_unity">3.2.1. Community Articles About 360 Display in Unity</h4>
+<h4 id="_community_articles_about_360_display_in_unity">3.5.1. Community Articles About 360 Display in Unity</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -567,7 +673,7 @@ or a browser using YouTube 360 can stitch the image.</p>
 <div class="content">
 <img src="img/still_image_stitching_english.png" alt="still image stitching english">
 </div>
-<div class="title">Figure 4. still image stitching</div>
+<div class="title">Figure 7. still image stitching</div>
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/kougaku/PanoramaViewer">Source code available on GitHub</a>.</p>
@@ -579,7 +685,7 @@ or a browser using YouTube 360 can stitch the image.</p>
 <div class="content">
 <img src="img/akokubo_javascript_viewer.png" alt="akokubo javascript viewer">
 </div>
-<div class="title">Figure 5. 360 degree still image in Chrome web browser</div>
+<div class="title">Figure 8. 360 degree still image in Chrome web browser</div>
 </div>
 <div class="ulist">
 <ul>
@@ -733,7 +839,7 @@ libraries in live streaming mode.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-12-16 22:27:36 PST
+Last updated 2015-12-18 06:35:10 PST
 </div>
 </div>
 </body>

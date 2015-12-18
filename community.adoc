@@ -1,4 +1,4 @@
-= RICOH THETA Developer Community Guide
+= 360 Media - Unofficial RICOH THETA S Community Guide (Second Guide in Series)
 The RICOH THETA 360 Developer Community <ricohtheta360@oppkey.com>
 :toc: right
 :toclevels: 1
@@ -17,15 +17,71 @@ https://developers.google.com/streetview/open-spherical-camera/[Open Spherical C
 == Unofficial Information
 * https://github.com/theta360developers[GitHub listing of community repositories] - libraries and code examples from the community
 * http://theta360developers.github.io/blog/[Blog for developers] - How-To articles from the community
-* http://theta360developers.github.io/community-document/community.html[Developer Community Guide] - Organized community information focused on the most common topics
-* Central site for the three components - planned: code samples, blog, guide
+* http://theta360developers.github.io/community-document/community.html[360 Media] - Organized community information focused on the most common topics for 360 degree media management
+* http://codetricity.github.io/theta-s/index.html[API Guide]
+* Central site for the four components - planned: code samples, blog, guide
 
 == Video Live Streaming
 The THETA S can stream video when connected to a USB or HDMI cable.
 The output is in dual fish-eye mode (two spheres). To make the video
-usable in a web browser or with exernal services such as YouTube,
+usable in a web browser or with external services such as YouTube,
 you'll need to convert the video into equirectangular mode. To view it with
 360 degree navigation, you'll need to stitch it.
+
+The first step is to get the camera into live streaming mode
+
+image::img/video/thetas_livestreaming.jpg[role="thumb" title="Set Live streaming video mode on RICOH THETA S"]
+
+
+=== For USB
+
+. Press “mode button” - keep pressing - and press “power button” -> camera goes to the LiveVideoStreamig mode.
+.  Connect a usb cable with S and laptop (MAC or PC).
+. The THETA S can be used as a web cam. You can use web cam software such as
+Skype to see live video streaming with the THETA S.
+
+image::img/video/usb_live_streaming.png[role="thumb" title="Live video streaming from RICOH THETA S to a computer monitor with USB 3"]
+
+
+=== For HDMI
+
+. Press “mode button” - keep pressing - and press “power button” -> camera goes to LiveVideoStreamig mode.
+. connect a hdmi cable with S and a monitor.
+. S could be a output video device. The monitor shows the S’s live video streaming .
+
+
+[[img-hdmi_live_streaming]]
+image::img/video/hdmi_live_streaming.jpg[role="thumb" title="Live video streaming from RICOH THETA S to a TV with HDMI"]
+
+=== API Testing
+
+`POST` to `http://192.168.1.1/osc/commands/execute`
+
+  {"name": "camera.getOptions",
+      "parameters":
+  	{
+      	"sessionId": "SID_0003",
+      	"optionNames": [
+              "captureMode"
+      	]
+  	}
+  }
+
+NOTE: Remember to set your sessionId correctly
+
+The response:
+
+  {
+    "name": "camera.getOptions",
+    "state": "done",
+    "results":{
+      "options":{
+        "iso": 0,
+        "isoSupport":[],
+        "captureMode": "_liveStreaming"
+        }
+      }
+  }
 
 === Example with Processor Language
 Community Contribution from Sunao Hashimoto, kougaku on GitHub. Full
@@ -44,13 +100,13 @@ image::img/kougaku_stitching_english.png[title="dual fish-eye video stitching"]
 
 === Examples with Unity
 Nora, @steroarts, released a shader pack to convert THETA 360 degree
-media into equirectangular format in real time. 
+media into equirectangular format in real time.
 
 * https://dl.dropboxusercontent.com/u/7131835/Programs/ThetaS_LiveView_Sample.unitypackage[Shader Pack]
 
 The developer below, Goroman, was able to get reasonable 360 video live streaming in equirectangular mode
 after an hour of work back in September, 2015. Additional information in
-http://tips.hecomi.com/entry/2015/10/11/211456[Japanese is here]. 
+http://tips.hecomi.com/entry/2015/10/11/211456[Japanese is here].
 
 image::img/goro_man.png[title="equirectangular video without stitching" link="https://youtu.be/edWrhCYIS5Q"]
 
@@ -147,5 +203,3 @@ are not available to developers.
 
 As of December 2015, there is no way to use the RICOH
 libraries in live streaming mode.
-
-
