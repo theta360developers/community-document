@@ -32,7 +32,8 @@ as Raspberry Pi using both GPIO pins and TCP/IP triggers from a secondary
 network interface. Idea book usage examples for real estate, physical
 security (surveillance).
 Although this guide is the most exciting and is needed to demo the
-camera, it's currently the third priority.
+camera, it's currently the third priority. Hope to have this by
+the February 2016 Hackathon in San Francisco.
 * Central site for the three components -
 planned: code samples, blog, guide. May include physical demos.
 
