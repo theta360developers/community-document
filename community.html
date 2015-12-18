@@ -616,7 +616,78 @@ Remember to set your sessionId correctly
 </div>
 </div>
 <div class="sect2">
-<h3 id="_example_with_processor_language">3.4. Example with Processor Language</h3>
+<h3 id="_video_conversion_from_dual_fish_eye_to_equirectangular">3.4. Video Conversion From Dual Fish-Eye to Equirectangular</h3>
+<div class="paragraph">
+<p>Video is stored on the camera in dual fish-eye mode.</p>
+</div>
+<div class="paragraph">
+<p>The official RICOH desktop app will convert this to equirectangular
+mode. By default, the program will take your file name and add <code>_er</code> to it.
+The file is saved in the same directory that the original video file was in.</p>
+</div>
+<div class="paragraph">
+<p>Both the input and output are <code>.mp4</code> format videos.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/video/dual_fish_eye.png" alt="dual fish eye">
+</div>
+<div class="title">Figure 4. dual fish eye video format</div>
+</div>
+<div class="paragraph">
+<p>The program will convert it to equirectangular. Note that there is
+a minor color shading difference on the right side of the screen grab.
+The camera has two lenses. Each lens captures and saves one sphere.
+The software on the computer stitches the image together. The RICOH
+app adds the meta video meta data in for you.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+if you use something like Adobe Premiere Pro to edit your videos, you will need to inject the meta data again
+</td>
+</tr>
+</table>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/video/equirectangular_video.png" alt="equirectangular video">
+</div>
+<div class="title">Figure 5. equirectangular video format</div>
+</div>
+<div class="paragraph">
+<p>You can now load the video up to YouTube to your normal channel.  YouTube
+will grab the meta data and add the 360 degree video controls automatically.
+This is cool!</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/video/youtube_360.png" alt="youtube 360">
+</div>
+<div class="title">Figure 6. YouTube 360 video</div>
+</div>
+<div class="paragraph">
+<p><a href="https://youtu.be/MXX_JjQdtmE">Try it out</a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+I&#8217;ve only successfully tested the YouTube viewer on Windows and Mac. It does not appear to work on Linux. This is a limitation of YouTube.  :-((
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_with_processor_language">3.5. Example with Processor Language</h3>
 <div class="paragraph">
 <p>Community Contribution from Sunao Hashimoto, kougaku on GitHub. Full
 sample source code is available.</p>
@@ -632,7 +703,7 @@ sample source code is available.</p>
 <div class="content">
 <img src="img/theta_s_live_viewer.gif" alt="theta s live viewer">
 </div>
-<div class="title">Figure 4. Live viewer for THETA S</div>
+<div class="title">Figure 7. Live viewer for THETA S</div>
 </div>
 <div class="paragraph">
 <p>The example above is built with <a href="https://processing.org/">Processing</a>.</p>
@@ -644,11 +715,11 @@ sample source code is available.</p>
 <div class="content">
 <img src="img/kougaku_stitching_english.png" alt="kougaku stitching english">
 </div>
-<div class="title">Figure 5. dual fish-eye video stitching</div>
+<div class="title">Figure 8. dual fish-eye video stitching</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_examples_with_unity">3.5. Examples with Unity</h3>
+<h3 id="_examples_with_unity">3.6. Examples with Unity</h3>
 <div class="paragraph">
 <p>Nora, @steroarts, released a shader pack to convert THETA 360 degree
 media into equirectangular format in real time.</p>
@@ -669,14 +740,14 @@ after an hour of work back in September, 2015. Additional information in
 <div class="content">
 <a class="image" href="https://youtu.be/edWrhCYIS5Q"><img src="img/goro_man.png" alt="goro man"></a>
 </div>
-<div class="title">Figure 6. equirectangular video without stitching</div>
+<div class="title">Figure 9. equirectangular video without stitching</div>
 </div>
 <div class="paragraph">
 <p>Once the video is streamed in equirectangular mode, viewers such as VR Gear
 or a browser using YouTube 360 can stitch the image.</p>
 </div>
 <div class="sect3">
-<h4 id="_community_articles_about_360_display_in_unity">3.5.1. Community Articles About 360 Display in Unity</h4>
+<h4 id="_community_articles_about_360_display_in_unity">3.6.1. Community Articles About 360 Display in Unity</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -697,7 +768,7 @@ or a browser using YouTube 360 can stitch the image.</p>
 <div class="content">
 <img src="img/still_image_stitching_english.png" alt="still image stitching english">
 </div>
-<div class="title">Figure 7. still image stitching</div>
+<div class="title">Figure 10. still image stitching</div>
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/kougaku/PanoramaViewer">Source code available on GitHub</a>.</p>
@@ -709,7 +780,7 @@ or a browser using YouTube 360 can stitch the image.</p>
 <div class="content">
 <img src="img/akokubo_javascript_viewer.png" alt="akokubo javascript viewer">
 </div>
-<div class="title">Figure 8. 360 degree still image in Chrome web browser</div>
+<div class="title">Figure 11. 360 degree still image in Chrome web browser</div>
 </div>
 <div class="ulist">
 <ul>
@@ -863,7 +934,7 @@ libraries in live streaming mode.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2015-12-18 07:30:30 PST
+Last updated 2015-12-18 07:50:25 PST
 </div>
 </div>
 </body>
