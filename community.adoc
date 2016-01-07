@@ -1,4 +1,4 @@
-= 360 Media - Unofficial RICOH THETA S Community Guide (Guide 2 of 3)
+= Unofficial Media Guide for RICOH THETA 
 The RICOH THETA 360 Developer Community <ricohtheta360@oppkey.com>
 :toc: right
 :toclevels: 1
@@ -18,25 +18,12 @@ https://developers.google.com/streetview/open-spherical-camera/[Open Spherical C
 * https://github.com/theta360developers[GitHub listing of community repositories] - libraries and code examples from the community
 * http://theta360developers.github.io/blog/[Blog for developers] - How-To articles from the community
 * Guides
-** http://codetricity.github.io/theta-s/index.html[API Guide] - Use the RICOH
+** http://codetricity.github.io/theta-s/index.html[Unofficial API Guide] - Use the RICOH
 THETA S API, a HTTP API based on Open Spherical Camera (OSC) specifications.
 Beginners should start here. Web browser using advanced HTTP clients,
 command line curl, Python. Planned examples for JavaScript and other languages.
-** http://theta360developers.github.io/community-document/community.html[360 Media] -
+** http://theta360developers.github.io/community-document/community.html[Unofficial Media Guide] -
 360 degree media management. Streaming video, equirectangular conversion, stitching
-** Usage Tips - planned guide to share tips on using the THETA S. Uploading
-content to Facebook, YouTube, Google+, Streetview. Firmware upgrade,
-tripod hacks to access USB power port, WiFi signal tests, TCP/IP network
-packet loss tests. Hacks to control THETA with inexpensive boards such
-as Raspberry Pi using both GPIO pins and TCP/IP triggers from a secondary
-network interface. Idea book usage examples for real estate, physical
-security (surveillance).
-Although this guide is the most exciting and is needed to demo the
-camera, it's currently the third priority. Hope to have this by
-the February 2016 Hackathon in San Francisco.
-* Central site for the three components -
-planned: code samples, blog, guide. May include physical demos.
-
 
 == 360 Video Formats
 
