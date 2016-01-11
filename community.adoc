@@ -1,16 +1,20 @@
-= Unofficial Media Guide for RICOH THETA 
-The Unofficial RICOH THETA Developer Community <ricohtheta360@oppkey.com>
+= Unofficial Guides
+:icons: font
 :toc: right
 :toclevels: 1
 :toc-title: Contents
 :sectnums:
 
-== Unofficial and Unauthorized
-This is an unofficial, community-generated guide to using the RICOH THETA S API.
+image::img/media_guide_logo2.png[THETA DEVELOPERS UNOFFICIAL MEDIA GUIDE]
+
+Send comments and corrections to <ricohtheta360@oppkey.com>
+
+This is an unofficial, community-generated guide for developing applications
+that use 360 media from RICOH THETA cameras.
 This is not authorized by RICOH and is based on publicly available information.
 
-
-== Official Information
+==  Resources
+=== Official Information
 
 * https://developers.theta360.com/en/docs/v2/api_reference/[RICOH THETA API v2],
 compliant with
@@ -19,7 +23,7 @@ https://developers.google.com/streetview/open-spherical-camera/[Open Spherical C
 * https://developers.theta360.com/en/docs/sdk/[Official SDK]
 * https://theta360.com/en/support/download/[Windows, Mac, iOS, Android apps]
 
-== Unofficial Information
+=== Unofficial Information
 * https://github.com/theta360developers[GitHub listing of community repositories] - libraries and code examples from the community
 * http://theta360developers.github.io/blog/[Blog for developers] - How-To articles from the community
 * Guides
@@ -29,6 +33,7 @@ Beginners should start here. Web browser using advanced HTTP clients,
 command line curl, Python. Planned examples for JavaScript and other languages.
 ** http://theta360developers.github.io/community-document/community.html[Unofficial Media Guide] -
 360 degree media management. Streaming video, equirectangular conversion, stitching
+
 
 == 360 Video Formats
 
