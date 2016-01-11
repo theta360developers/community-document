@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.2">
-<meta name="author" content="The RICOH THETA 360 Developer Community &lt;ricohtheta360@oppkey.com&gt;">
+<meta name="author" content="The Unofficial RICOH THETA Developer Community &lt;ricohtheta360@oppkey.com&gt;">
 <title>Unofficial Media Guide for RICOH THETA</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400">
 <style>
@@ -414,26 +414,36 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 <h1>Unofficial Media Guide for RICOH THETA</h1>
 <div class="details">
-<span id="author" class="author">The RICOH THETA 360 Developer Community &lt;ricohtheta360@oppkey.com&gt;</span><br>
+<span id="author" class="author">The Unofficial RICOH THETA Developer Community &lt;ricohtheta360@oppkey.com&gt;</span><br>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_official_information">1. Official Information</a></li>
-<li><a href="#_unofficial_information">2. Unofficial Information</a></li>
-<li><a href="#_360_video_formats">3. 360 Video Formats</a></li>
-<li><a href="#_video_live_streaming">4. Video Live Streaming</a></li>
-<li><a href="#_image_viewers">5. Image Viewers</a></li>
-<li><a href="#_linux">6. Linux</a></li>
-<li><a href="#_command_line">7. Command Line</a></li>
-<li><a href="#_programming_languages">8. Programming Languages</a></li>
-<li><a href="#_proprietary_technical_information">9. Proprietary Technical Information</a></li>
+<li><a href="#_unofficial_and_unauthorized">1. Unofficial and Unauthorized</a></li>
+<li><a href="#_official_information">2. Official Information</a></li>
+<li><a href="#_unofficial_information">3. Unofficial Information</a></li>
+<li><a href="#_360_video_formats">4. 360 Video Formats</a></li>
+<li><a href="#_video_live_streaming">5. Video Live Streaming</a></li>
+<li><a href="#_image_viewers">6. Image Viewers</a></li>
+<li><a href="#_linux">7. Linux</a></li>
+<li><a href="#_command_line">8. Command Line</a></li>
+<li><a href="#_programming_languages">9. Programming Languages</a></li>
+<li><a href="#_proprietary_technical_information">10. Proprietary Technical Information</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div class="sect1">
-<h2 id="_official_information">1. Official Information</h2>
+<h2 id="_unofficial_and_unauthorized">1. Unofficial and Unauthorized</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This is an unofficial, community-generated guide to using the RICOH THETA S API.
+This is not authorized by RICOH and is based on publicly available information.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_official_information">2. Official Information</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -456,7 +466,7 @@ compliant with
 </div>
 </div>
 <div class="sect1">
-<h2 id="_unofficial_information">2. Unofficial Information</h2>
+<h2 id="_unofficial_information">3. Unofficial Information</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -488,7 +498,7 @@ command line curl, Python. Planned examples for JavaScript and other languages.<
 </div>
 </div>
 <div class="sect1">
-<h2 id="_360_video_formats">3. 360 Video Formats</h2>
+<h2 id="_360_video_formats">4. 360 Video Formats</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Video is stored on the camera in dual fish-eye mode.</p>
@@ -561,7 +571,7 @@ I&#8217;ve only successfully tested the YouTube viewer on Windows and Mac. It do
 </div>
 </div>
 <div class="sect1">
-<h2 id="_video_live_streaming">4. Video Live Streaming</h2>
+<h2 id="_video_live_streaming">5. Video Live Streaming</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The THETA S can stream video when connected to a USB or HDMI cable.
@@ -580,7 +590,7 @@ you&#8217;ll need to convert the video into equirectangular mode. To view it wit
 <div class="title">Figure 4. Set Live streaming video mode on RICOH THETA S</div>
 </div>
 <div class="sect2">
-<h3 id="_for_usb">4.1. For USB</h3>
+<h3 id="_for_usb">5.1. For USB</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -603,7 +613,7 @@ Skype to see live video streaming with the THETA S.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_for_hdmi">4.2. For HDMI</h3>
+<h3 id="_for_hdmi">5.2. For HDMI</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -625,7 +635,7 @@ Skype to see live video streaming with the THETA S.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_api_testing">4.3. API Testing</h3>
+<h3 id="_api_testing">5.3. API Testing</h3>
 <div class="paragraph">
 <p><code>POST</code> to <code><a href="http://192.168.1.1/osc/commands/execute" class="bare">http://192.168.1.1/osc/commands/execute</a></code></p>
 </div>
@@ -674,7 +684,7 @@ Remember to set your sessionId correctly
 </div>
 </div>
 <div class="sect2">
-<h3 id="_example_with_processor_language">4.4. Example with Processor Language</h3>
+<h3 id="_example_with_processor_language">5.4. Example with Processor Language</h3>
 <div class="paragraph">
 <p>Community Contribution from Sunao Hashimoto, kougaku on GitHub. Full
 sample source code is available.</p>
@@ -706,7 +716,7 @@ sample source code is available.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_examples_with_unity">4.5. Examples with Unity</h3>
+<h3 id="_examples_with_unity">5.5. Examples with Unity</h3>
 <div class="paragraph">
 <p>Nora, @steroarts, released a shader pack to convert THETA 360 degree
 media into equirectangular format in real time.</p>
@@ -734,7 +744,7 @@ after an hour of work back in September, 2015. Additional information in
 or a browser using YouTube 360 can stitch the image.</p>
 </div>
 <div class="sect3">
-<h4 id="_community_articles_about_360_display_in_unity">4.5.1. Community Articles About 360 Display in Unity</h4>
+<h4 id="_community_articles_about_360_display_in_unity">5.5.1. Community Articles About 360 Display in Unity</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -747,10 +757,10 @@ or a browser using YouTube 360 can stitch the image.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_image_viewers">5. Image Viewers</h2>
+<h2 id="_image_viewers">6. Image Viewers</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_example_in_processor_language">5.1. Example in Processor language</h3>
+<h3 id="_example_in_processor_language">6.1. Example in Processor language</h3>
 <div class="imageblock">
 <div class="content">
 <img src="img/still_image_stitching_english.png" alt="still image stitching english">
@@ -762,7 +772,7 @@ or a browser using YouTube 360 can stitch the image.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_example_in_javascript">5.2. Example in Javascript</h3>
+<h3 id="_example_in_javascript">6.2. Example in Javascript</h3>
 <div class="imageblock">
 <div class="content">
 <img src="img/akokubo_javascript_viewer.png" alt="akokubo javascript viewer">
@@ -783,7 +793,7 @@ or a browser using YouTube 360 can stitch the image.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_linux">6. Linux</h2>
+<h2 id="_linux">7. Linux</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>RICOH only supports Mac and Windows desktop. As many developers use
@@ -851,7 +861,7 @@ sudo gnome-desktop-item-edit /usr/share/applications/ --create-new</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_command_line">7. Command Line</h2>
+<h2 id="_command_line">8. Command Line</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -864,7 +874,7 @@ from Ulrich Rossgoderer. Community.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_programming_languages">8. Programming Languages</h2>
+<h2 id="_programming_languages">9. Programming Languages</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The HTTP API of the THETA S can be accessed from almost any programming language.</p>
@@ -879,10 +889,10 @@ from Ulrich Rossgoderer. Community.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_proprietary_technical_information">9. Proprietary Technical Information</h2>
+<h2 id="_proprietary_technical_information">10. Proprietary Technical Information</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lens_parameter_information">9.1. Lens Parameter Information</h3>
+<h3 id="_lens_parameter_information">10.1. Lens Parameter Information</h3>
 <div class="paragraph">
 <p>The lens geometry for the THETA is based on equidistant projection.
 The final projection
@@ -894,7 +904,7 @@ as of December 2015. Stitching is still possible without this information.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_stitching_libraries">9.2. Stitching Libraries</h3>
+<h3 id="_stitching_libraries">10.2. Stitching Libraries</h3>
 <div class="paragraph">
 <p>The RICOH THETA S processes still images inside of the camera. It
 takes 8 seconds for the camera to be ready to take another still
@@ -921,7 +931,7 @@ libraries in live streaming mode.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-01-07 12:55:52 PST
+Last updated 2016-01-11 08:30:55 PST
 </div>
 </div>
 </body>
