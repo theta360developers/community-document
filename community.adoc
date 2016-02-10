@@ -132,7 +132,8 @@ video.
 image::img/livestreaming/streaming.jpg[role="thumb" title="USB live streaming with equirectangular"]
 
 The USB driver appears as a web cam to applications running a Mac or PC.
-In the example above, the video is shown in QuickTime. A video clip
+In the example above, the equirectangular video is shown streaming in
+QuickTime. A video clip
 that shows the output of the
 https://youtu.be/A8Al7U2ZeF0?list=PLxvyAnoL-vu5AF0A_l2wIr9vkMBRjHEgm[THETA S USB live streaming is available on YouTube].
 
