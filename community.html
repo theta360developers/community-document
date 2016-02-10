@@ -849,6 +849,9 @@ command line curl, Python. Planned examples for JavaScript and other languages.<
 <p>Video is stored on the camera in dual fish-eye mode.</p>
 </div>
 <div class="paragraph">
+<p>The dual-fisheye MP4 file has an image size of 1920x1080 or 1280x720.</p>
+</div>
+<div class="paragraph">
 <p>The official RICOH desktop app will convert this to equirectangular
 mode. By default, the program will take your file name and add <code>_er</code> to it.
 The file is saved in the same directory that the original video file was in.</p>
@@ -908,7 +911,7 @@ This is cool!</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-I&#8217;ve only successfully tested the YouTube viewer on Windows and Mac. It does not appear to work on Linux. This is a limitation of YouTube.  :-((
+I&#8217;ve successfully tested the YouTube viewer on Windows and Mac with different browsers and on Linux with FireFox. It does not appear to work on Linux with Chrome. This is a limitation of YouTube.  :-((
 </td>
 </tr>
 </table>
@@ -922,17 +925,98 @@ I&#8217;ve only successfully tested the YouTube viewer on Windows and Mac. It do
 <p>The THETA S can stream video when connected to a USB or HDMI cable.
 The output is in dual fish-eye mode (two spheres). To make the video
 usable in a web browser or with external services such as YouTube,
-you&#8217;ll need to convert the video into equirectangular mode. To view it with
-360 degree navigation, you&#8217;ll need to stitch it.</p>
+you&#8217;ll need to convert the video into equirectangular mode. Note that
+as of February 10, 2016, YouTube does not support live streaming
+ of 360 video with navigation.</p>
 </div>
 <div class="paragraph">
-<p>The first step is to get the camera into live streaming mode</p>
+<p>To view a video with 360 degree navigation, you&#8217;ll need to stitch it into
+equirectangular data.</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Table THETA S Live Streaming</caption>
+<colgroup>
+<col style="width: 16%;">
+<col style="width: 16%;">
+<col style="width: 16%;">
+<col style="width: 16%;">
+<col style="width: 16%;">
+<col style="width: 16%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Format</th>
+<th class="tableblock halign-left valign-top">Camera Mode</th>
+<th class="tableblock halign-left valign-top">Size</th>
+<th class="tableblock halign-left valign-top">Frame Rate</th>
+<th class="tableblock halign-left valign-top">Connection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Live View</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Equirectangular in MotionJPEG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Image Only</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">640x320</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10fps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WiFi</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USB Live Streaming of dual-fisheye</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dual-fisheye in MotionJPEG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">live streaming</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1280x720</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15fps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USB isochronous transfer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HDMI live streaming of dual-fisheye</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dual-fisheye in uncompressed YCbCr</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">live streaming</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1920x1080, 1280x720, 720x480</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30fps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HDMI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USB live streaming of equirectangular</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Equirectangular</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">live streaming</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USB (not publicly available as of 2/10)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>In preparation for a hackathon, we helped RICOH test the pre-release
+version of the upcoming USB live streaming driver that outputs equirectangular
+video.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/streaming.jpg" alt="streaming">
+</div>
+<div class="title">Figure 4. USB live streaming with equirectangular</div>
+</div>
+<div class="paragraph">
+<p>The USB driver appears as a web cam to applications running a Mac or PC.
+In the example above, the video is shown in QuickTime. A video clip
+that shows the output of the
+<a href="https://youtu.be/A8Al7U2ZeF0?list=PLxvyAnoL-vu5AF0A_l2wIr9vkMBRjHEgm">THETA S USB live streaming is available on YouTube</a>.</p>
+</div>
+<div class="paragraph">
+<p>Unless you are using
+<a href="https://developers.theta360.com/en/docs/v2/api_reference/commands/camera._get_live_preview.html"><code>camera._getLivePreview</code></a>
+in image mode to display a low-resolution live view
+with low frame rate, the first step is to get the camera into
+live streaming mode</p>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/video/thetas_livestreaming.jpg" alt="thetas livestreaming">
 </div>
-<div class="title">Figure 4. Set Live streaming video mode on RICOH THETA S</div>
+<div class="title">Figure 5. Set Live streaming video mode on RICOH THETA S</div>
 </div>
 <div class="sect2">
 <h3 id="_for_usb">3.1. For USB</h3>
@@ -954,7 +1038,7 @@ Skype to see live video streaming with the THETA S.</p>
 <div class="content">
 <img src="img/video/usb_live_streaming.png" alt="usb live streaming">
 </div>
-<div class="title">Figure 5. Live video streaming from RICOH THETA S to a computer monitor with USB 3</div>
+<div class="title">Figure 6. Live video streaming from RICOH THETA S to a computer monitor with USB 3</div>
 </div>
 </div>
 <div class="sect2">
@@ -976,7 +1060,7 @@ Skype to see live video streaming with the THETA S.</p>
 <div class="content">
 <img src="img/video/hdmi_live_streaming.jpg" alt="hdmi live streaming">
 </div>
-<div class="title">Figure 6. Live video streaming from RICOH THETA S to a TV with HDMI</div>
+<div class="title">Figure 7. Live video streaming from RICOH THETA S to a TV with HDMI</div>
 </div>
 </div>
 <div class="sect2">
@@ -1045,7 +1129,7 @@ sample source code is available.</p>
 <div class="content">
 <img src="img/theta_s_live_viewer.gif" alt="theta s live viewer">
 </div>
-<div class="title">Figure 7. Live viewer for THETA S</div>
+<div class="title">Figure 8. Live viewer for THETA S</div>
 </div>
 <div class="paragraph">
 <p>The example above is built with <a href="https://processing.org/">Processing</a>.</p>
@@ -1057,7 +1141,7 @@ sample source code is available.</p>
 <div class="content">
 <img src="img/kougaku_stitching_english.png" alt="kougaku stitching english">
 </div>
-<div class="title">Figure 8. dual fish-eye video stitching</div>
+<div class="title">Figure 9. dual fish-eye video stitching</div>
 </div>
 </div>
 <div class="sect2">
@@ -1082,7 +1166,7 @@ after an hour of work back in September, 2015. Additional information in
 <div class="content">
 <a class="image" href="https://youtu.be/edWrhCYIS5Q"><img src="img/goro_man.png" alt="goro man"></a>
 </div>
-<div class="title">Figure 9. equirectangular video without stitching</div>
+<div class="title">Figure 10. equirectangular video without stitching</div>
 </div>
 <div class="paragraph">
 <p>Once the video is streamed in equirectangular mode, viewers such as VR Gear
@@ -1104,13 +1188,17 @@ or a browser using YouTube 360 can stitch the image.</p>
 <div class="sect1">
 <h2 id="_image_viewers">4. Image Viewers</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>The RICOH THETA S will will generate a equirectangular JPEG file of
+5376x2688 or 2048x1024.</p>
+</div>
 <div class="sect2">
 <h3 id="_example_in_processor_language">4.1. Example in Processor language</h3>
 <div class="imageblock">
 <div class="content">
 <img src="img/still_image_stitching_english.png" alt="still image stitching english">
 </div>
-<div class="title">Figure 10. still image stitching</div>
+<div class="title">Figure 11. still image stitching</div>
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/kougaku/PanoramaViewer">Source code available on GitHub</a>.</p>
@@ -1122,7 +1210,7 @@ or a browser using YouTube 360 can stitch the image.</p>
 <div class="content">
 <img src="img/akokubo_javascript_viewer.png" alt="akokubo javascript viewer">
 </div>
-<div class="title">Figure 11. 360 degree still image in Chrome web browser</div>
+<div class="title">Figure 12. 360 degree still image in Chrome web browser</div>
 </div>
 <div class="ulist">
 <ul>
@@ -1276,7 +1364,7 @@ libraries in live streaming mode.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-02-03 19:10:11 PST
+Last updated 2016-02-10 06:00:43 PST
 </div>
 </div>
 </body>

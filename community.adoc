@@ -50,6 +50,8 @@ command line curl, Python. Planned examples for JavaScript and other languages.
 
 Video is stored on the camera in dual fish-eye mode.
 
+The dual-fisheye MP4 file has an image size of 1920x1080 or 1280x720.
+
 The official RICOH desktop app will convert this to equirectangular
 mode. By default, the program will take your file name and add `_er` to it.
 The file is saved in the same directory that the original video file was in.
@@ -76,17 +78,70 @@ image::img/video/youtube_360.png[role="thumb" title="YouTube 360 video"]
 
 https://youtu.be/MXX_JjQdtmE[Try it out].
 
-NOTE: I've only successfully tested the YouTube viewer on Windows and Mac. It does not appear to work on Linux. This is a limitation of YouTube.  :-((
+NOTE: I've successfully tested the YouTube viewer on Windows and Mac with different browsers and on Linux with FireFox. It does not appear to work on Linux with Chrome. This is a limitation of YouTube.  :-((
 
 
 == Video Live Streaming
 The THETA S can stream video when connected to a USB or HDMI cable.
 The output is in dual fish-eye mode (two spheres). To make the video
 usable in a web browser or with external services such as YouTube,
-you'll need to convert the video into equirectangular mode. To view it with
-360 degree navigation, you'll need to stitch it.
+you'll need to convert the video into equirectangular mode. Note that
+as of February 10, 2016, YouTube does not support live streaming
+ of 360 video with navigation.
 
-The first step is to get the camera into live streaming mode
+To view a video with 360 degree navigation, you'll need to stitch it into
+equirectangular data.
+
+.Table THETA S Live Streaming
+|===
+|Type |Format |Camera Mode |Size |Frame Rate| Connection
+
+|Live View
+|Equirectangular in MotionJPEG
+|Image Only
+|640x320
+|10fps
+|WiFi
+
+|USB Live Streaming of dual-fisheye
+|Dual-fisheye in MotionJPEG
+|live streaming
+|1280x720
+|15fps
+|USB isochronous transfer
+
+|HDMI live streaming of dual-fisheye
+|Dual-fisheye in uncompressed YCbCr
+|live streaming
+|1920x1080, 1280x720, 720x480
+|30fps
+|HDMI
+
+|USB live streaming of equirectangular
+|Equirectangular
+|live streaming
+|
+|
+|USB (not publicly available as of 2/10)
+|===
+
+In preparation for a hackathon, we helped RICOH test the pre-release
+version of the upcoming USB live streaming driver that outputs equirectangular
+video.
+
+image::img/livestreaming/streaming.jpg[role="thumb" title="USB live streaming with equirectangular"]
+
+The USB driver appears as a web cam to applications running a Mac or PC.
+In the example above, the video is shown in QuickTime. A video clip
+that shows the output of the
+https://youtu.be/A8Al7U2ZeF0?list=PLxvyAnoL-vu5AF0A_l2wIr9vkMBRjHEgm[THETA S USB live streaming is available on YouTube].
+
+
+Unless you are using
+https://developers.theta360.com/en/docs/v2/api_reference/commands/camera._get_live_preview.html[`camera._getLivePreview`]
+in image mode to display a low-resolution live view
+with low frame rate, the first step is to get the camera into
+live streaming mode
 
 image::img/video/thetas_livestreaming.jpg[role="thumb" title="Set Live streaming video mode on RICOH THETA S"]
 
@@ -177,6 +232,9 @@ or a browser using YouTube 360 can stitch the image.
 
 
 == Image Viewers
+The RICOH THETA S will will generate a equirectangular JPEG file of
+5376x2688 or 2048x1024.
+
 === Example in Processor language
 image::img/still_image_stitching_english.png[title="still image stitching"]
 
