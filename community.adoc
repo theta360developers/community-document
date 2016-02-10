@@ -66,7 +66,7 @@ The camera has two lenses. Each lens captures and saves one sphere.
 The software on the computer stitches the image together. The RICOH
 app adds the meta video meta data in for you.
 
-NOTE: if you use something like Adobe Premiere Pro to edit your videos, you will need to inject the meta data again
+NOTE: if you use something like Adobe Premiere Pro to edit your videos, you will need to https://support.google.com/youtube/answer/6178631?hl=en[inject the meta data] again
 
 image::img/video/equirectangular_video.png[role="thumb" title="equirectangular video format"]
 
@@ -78,7 +78,7 @@ image::img/video/youtube_360.png[role="thumb" title="YouTube 360 video"]
 
 https://youtu.be/MXX_JjQdtmE[Try it out].
 
-NOTE: I've successfully tested the YouTube viewer on Windows and Mac with different browsers and on Linux with FireFox. It does not appear to work on Linux with Chrome. This is a limitation of YouTube.  :-((
+NOTE: I've successfully tested the YouTube viewer on Windows and Mac with different browsers and on Linux with FireFox. It does not appear to work on Linux with Chrome.
 
 
 == Video Live Streaming
