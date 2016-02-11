@@ -320,3 +320,26 @@ are not available to developers.
 
 As of December 2015, there is no way to use the RICOH
 libraries in live streaming mode.
+
+== FAQ for Media Editing
+=== Q: How do I edit video in Adobe Premiere Pro?
+*A:*
+
+1. Download dual-fisheye media file to your computer
+2. Convert with official RICOH THETA desktop application. File name will
+end in _er
+3. Edit in Premiere Pro. Change audio track or add special effects with After Effects
+4. On your desktop computer https://support.google.com/youtube/answer/6178631?hl=en[inject metadata] again using another tool.
+5. Upload to YouTube or other 360 degree video player or site
+
+=== Q: How do I connect the camera as a USB storage device?
+*A:* Hold the WiFi and Shutter buttons on your camera while you plug the camera
+into the USB port of your computer. The camera will appear as RICODCX. This is
+generally more of a problem on Macs. Make sure you turn off auto-import into
+Photos. People have experienced problems with importing the 360 images
+into Photos. Save them to disk and use the RICOH app.
+
+=== Q: What are the technical specifications of images and video?
+*A:* The
+https://developers.theta360.com/en/docs/introduction/[official RICOH site]
+has great information in the overview section.
