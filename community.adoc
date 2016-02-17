@@ -270,8 +270,9 @@ Tips from the community:
 
 * YouTube 360 videos work with Firefox on Linux. Some people have had problems with FireFox
 * If you're running Linux in VirtualBox as a guest, turn off 3D hardware acceleration
-* There are a large number of viewers at the [Panotools.org](http://wiki.panotools.org/Panorama_Viewers) site. I've been using [FSPViewer](http://www.fsoft.it/FSPViewer/)
-
+* There are a large number of viewers at the
+http://wiki.panotools.org/Panorama_Viewers[Panotools.org] site. I've been using
+http://www.fsoft.it/FSPViewer/[FSPViewer].
 
 If you want to use Linux to
 download media from the THETA and view it on your Linux box,
