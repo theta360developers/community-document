@@ -118,11 +118,11 @@ equirectangular data.
 |HDMI
 
 |USB live streaming of equirectangular
-|Equirectangular
+|Equirectangular in MotionJPEG
 |live streaming
-|
-|
-|USB (not publicly available as of 2/10)
+|720x480
+|15fps
+|USB (not publicly available as of 2/17)
 |===
 
 In preparation for a hackathon, we helped RICOH test the pre-release
@@ -247,6 +247,17 @@ image::img/akokubo_javascript_viewer.png[title="360 degree still image in Chrome
 * http://akokubo.github.io/ThetaViewer/demo1.html[Demo of 360 image in browser]
 * https://github.com/theta360developers/ThetaViewer[Javascript source code]
 
+At the hackathon, we used the open source viewer from Akokubo listed above as
+part of our
+https://github.com/KaiyoteSoft/realEstate[real estate demo built by a high school student].
+
+There are other open source JavaScript viewers that we have not tested:
+
+* http://leandigo.github.io/leanorama/[Leanorama on GitHub]
+* https://pannellum.org/[Pannellum]
+* http://www.vrhabitat.com/#vr5[VR5 Pano Viewer]
+
+
 == Linux
 RICOH only supports Mac and Windows desktop. As many developers use
 Linux, we've collected some information from the community to help
@@ -254,6 +265,13 @@ people with basic tasks.
 
 Linux can be used to control the camera HTTP API. There are also a number of
 scripts to get media from the camera.
+
+Tips from the community:
+
+* YouTube 360 videos work with Firefox on Linux. Some people have had problems with FireFox
+* If you're running Linux in VirtualBox as a guest, turn off 3D hardware acceleration
+* There are a large number of viewers at the [Panotools.org](http://wiki.panotools.org/Panorama_Viewers) site. I've been using [FSPViewer](http://www.fsoft.it/FSPViewer/)
+
 
 If you want to use Linux to
 download media from the THETA and view it on your Linux box,
