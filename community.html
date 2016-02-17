@@ -1432,7 +1432,61 @@ end in _er</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_q_how_do_i_connect_the_camera_as_a_usb_storage_device">9.2. Q: How do I connect the camera as a USB storage device?</h3>
+<h3 id="_q_how_do_i_edit_a_still_image_in_photoshop_or_other_image_editing_software">9.2. Q: How do I edit a still image in Photoshop or other image editing software?</h3>
+<div class="paragraph">
+<p>Example of use: The photographer wants to lighten an image.</p>
+</div>
+<div class="paragraph">
+<p><strong>A:</strong>
+DennisMabrey wrote a
+<a href="https://developers.theta360.com/en/forums/viewtopic.php?f=5&amp;t=482">guide on how to add metadata for the image back into the still image</a>.</p>
+</div>
+<div class="paragraph">
+<p>Here is the 'workflow':</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Edit your JPEG in Photoshop</p>
+</li>
+<li>
+<p>EXPORT as JPEG to a NEW FILE. Do not overwrite the original (heck back it up or something).</p>
+</li>
+<li>
+<p>Run EXifToolGUI</p>
+</li>
+<li>
+<p>Select the exported JPEG file</p>
+</li>
+<li>
+<p>Select Menu option Modify/Remove Metadata</p>
+</li>
+<li>
+<p>Select the top option '-remove ALL metadata' and click 'Execute' button</p>
+</li>
+<li>
+<p>Make sure your exported JPEG file is still selected</p>
+</li>
+<li>
+<p>Select Menu option 'Export/Import'/Copy metadata into JPG or TIFF.</p>
+</li>
+<li>
+<p>In the File Dialog select the ORIGINAL panorama JPG file.</p>
+</li>
+<li>
+<p>Make sure ALL options are selected and click 'Execute'</p>
+</li>
+<li>
+<p>If you look at the Metadata tag with the ALL button clicked you should see both a section labeled 'Ricoh' AND one labeled 'XMP-GPano' (Googles XMP pano)</p>
+</li>
+<li>
+<p>Test the exported JPG in the RICOH program. Hopefully it worked.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_q_how_do_i_connect_the_camera_as_a_usb_storage_device">9.3. Q: How do I connect the camera as a USB storage device?</h3>
 <div class="paragraph">
 <p><strong>A:</strong> Hold the WiFi and Shutter buttons on your camera while you plug the camera
 into the USB port of your computer. The camera will appear as RICODCX. This is
@@ -1442,7 +1496,7 @@ into Photos. Save them to disk and use the RICOH app.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_q_what_are_the_technical_specifications_of_images_and_video">9.3. Q: What are the technical specifications of images and video?</h3>
+<h3 id="_q_what_are_the_technical_specifications_of_images_and_video">9.4. Q: What are the technical specifications of images and video?</h3>
 <div class="paragraph">
 <p><strong>A:</strong> The
 <a href="https://developers.theta360.com/en/docs/introduction/">official RICOH site</a>
@@ -1454,7 +1508,7 @@ has great information in the overview section.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-02-17 05:45:33 PST
+Last updated 2016-02-17 06:27:27 PST
 </div>
 </div>
 </body>

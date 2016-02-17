@@ -351,6 +351,28 @@ end in _er
 4. On your desktop computer https://support.google.com/youtube/answer/6178631?hl=en[inject metadata] again using another tool.
 5. Upload to YouTube or other 360 degree video player or site
 
+=== Q: How do I edit a still image in Photoshop or other image editing software?
+Example of use: The photographer wants to lighten an image.
+
+*A:*
+DennisMabrey wrote a
+https://developers.theta360.com/en/forums/viewtopic.php?f=5&t=482[guide on how to add metadata for the image back into the still image].
+
+Here is the 'workflow':
+
+* Edit your JPEG in Photoshop
+* EXPORT as JPEG to a NEW FILE. Do not overwrite the original (heck back it up or something).
+* Run EXifToolGUI
+* Select the exported JPEG file
+* Select Menu option Modify/Remove Metadata
+* Select the top option '-remove ALL metadata' and click 'Execute' button
+* Make sure your exported JPEG file is still selected
+* Select Menu option 'Export/Import'/Copy metadata into JPG or TIFF.
+* In the File Dialog select the ORIGINAL panorama JPG file.
+* Make sure ALL options are selected and click 'Execute'
+* If you look at the Metadata tag with the ALL button clicked you should see both a section labeled 'Ricoh' AND one labeled 'XMP-GPano' (Googles XMP pano)
+* Test the exported JPG in the RICOH program. Hopefully it worked.
+
 === Q: How do I connect the camera as a USB storage device?
 *A:* Hold the WiFi and Shutter buttons on your camera while you plug the camera
 into the USB port of your computer. The camera will appear as RICODCX. This is
