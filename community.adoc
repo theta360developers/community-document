@@ -86,7 +86,7 @@ The THETA S can stream video when connected to a USB or HDMI cable.
 The output is in dual fish-eye mode (two spheres). To make the video
 usable in a web browser or with external services such as YouTube,
 you'll need to convert the video into equirectangular mode. Note that
-as of February 10, 2016, YouTube does not support live streaming
+as of March 12, 2016, YouTube does not support live streaming
  of 360 video with navigation.
 
 To view a video with 360 degree navigation, you'll need to stitch it into
@@ -122,20 +122,8 @@ equirectangular data.
 |live streaming
 |720x480
 |15fps
-|USB (not publicly available as of 2/17)
+|USB (not publicly available as of 3/12)
 |===
-
-In preparation for a hackathon, we helped RICOH test the pre-release
-version of the upcoming USB live streaming driver that outputs equirectangular
-video.
-
-image::img/livestreaming/streaming.jpg[role="thumb" title="USB live streaming with equirectangular"]
-
-The USB driver appears as a web cam to applications running a Mac or PC.
-In the example above, the equirectangular video is shown streaming in
-QuickTime. A video clip
-that shows the output of the
-https://youtu.be/A8Al7U2ZeF0?list=PLxvyAnoL-vu5AF0A_l2wIr9vkMBRjHEgm[THETA S USB live streaming is available on YouTube].
 
 
 Unless you are using
@@ -166,6 +154,47 @@ image::img/video/usb_live_streaming.png[role="thumb" title="Live video streaming
 
 [[img-hdmi_live_streaming]]
 image::img/video/hdmi_live_streaming.jpg[role="thumb" title="Live video streaming from RICOH THETA S to a TV with HDMI"]
+
+=== RICOH Live Streaming Driver with Equirectangular Output
+
+image::img/livestreaming/streaming.jpg[role="thumb" title="USB live streaming with equirectangular"]
+
+The USB driver appears as a web cam to applications running a Mac or PC.
+In the example above, the equirectangular video is shown streaming in
+QuickTime. A video clip
+that shows the output of the
+https://youtu.be/A8Al7U2ZeF0?list=PLxvyAnoL-vu5AF0A_l2wIr9vkMBRjHEgm[THETA S USB live streaming is available on YouTube].
+
+You must install the live streaming driver, UVC THETA. As of 3/12, this is not
+released. This walkthrough on Windows 10 64bit was created using the beta version of the driver.
+File and driver names may change in the production version.
+
+image::img/livestreaming/setup-run-as-admin.png[role="thumb" title="Right click to run setup as admin"]
+
+After installation, you will need to connect a THETA that is powered off to register
+the device. You may need to reboot. Using the beta version, I could not advance to the
+UVC register step without a reboot.
+
+image::img/livestreaming/register.png[role="thumb" title="THETA UVC Register"]
+
+If you need to reboot, run the THETA UVC Register application as administrator.
+
+image::img/livestreaming/theta-uvc-register.png[role="thumb" title="Run THETA UVC Register as administrator"]
+
+At this stage, you may need to reboot again. If you do, it is a one-time requirement.
+
+Now, press power and mode to start the THETA S in live streaming mode. Test it
+with a common video streaming application such as Google Hangout.
+
+image::img/livestreaming/hangout.png[role="thumb" title="Test with Google Hangout"]
+
+Go into the settings of Google Hangout to select the THETA UVC Blender webcam.
+
+image::img/livestreaming/select-uvc-blender.png[role="thumb" title="Select THETA UVC Blender, not THETA S"]
+
+image::img/livestreaming/uvc-blender-selected.png[role="thumb" title="video should be in equirectangular"]
+
+image::img/livestreaming/google-hangout-in-use.png[role="thumb" title="THETA S in use as webcam"]
 
 === API Testing
 
