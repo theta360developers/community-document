@@ -925,14 +925,14 @@ I&#8217;ve successfully tested the YouTube viewer on Windows and Mac with differ
 <div class="paragraph">
 <p>The THETA S can stream video when connected to a USB or HDMI cable.
 The output is in dual fish-eye mode (two spheres). To make the video
-usable in a web browser or with external services such as YouTube,
-you&#8217;ll need to convert the video into equirectangular mode. Note that
-as of February 10, 2016, YouTube does not support live streaming
- of 360 video with navigation.</p>
+usable in a web browser or with external services,
+you&#8217;ll need to convert the video into equirectangular mode.</p>
 </div>
 <div class="paragraph">
 <p>To view a video with 360 degree navigation, you&#8217;ll need to stitch it into
-equirectangular data.</p>
+equirectangular data. Note that
+as of March 12, 2016, YouTube does not support live streaming
+ of 360 video with navigation.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <caption class="title">Table 1. Table THETA S Live Streaming</caption>
@@ -985,28 +985,56 @@ equirectangular data.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">live streaming</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">720x480</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">15fps</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">USB (not publicly available as of 2/17)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USB (not publicly available as of 3/12)</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>In preparation for a hackathon, we helped RICOH test the pre-release
-version of the upcoming USB live streaming driver that outputs equirectangular
-video.</p>
+<p>There are pros and cons of each method.</p>
 </div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="img/livestreaming/streaming.jpg" alt="streaming">
-</div>
-<div class="title">Figure 4. USB live streaming with equirectangular</div>
-</div>
-<div class="paragraph">
-<p>The USB driver appears as a web cam to applications running a Mac or PC.
-In the example above, the equirectangular video is shown streaming in
-QuickTime. A video clip
-that shows the output of the
-<a href="https://youtu.be/A8Al7U2ZeF0?list=PLxvyAnoL-vu5AF0A_l2wIr9vkMBRjHEgm">THETA S USB live streaming is available on YouTube</a>.</p>
-</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 2. Table of Pros and Cons for each Live Streaming Method</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Live Stream Type</th>
+<th class="tableblock halign-left valign-top">Pro</th>
+<th class="tableblock halign-left valign-top">Con</th>
+<th class="tableblock halign-left valign-top">Community Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USB equirectangular</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">easy. appears as webcam to your application</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Low resolution (720). Slow framerate (15fps)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Looking forward to seeing this after release! Hope they output to HDMI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HDMI conversion to equirectangular</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highest resolution and framerate. Most common input for broadcast equipment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">difficult. no packaged solution. people are building their own.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">most people using Unity and then connecting to third-party equipment for live event broadcasting</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USB dual-fisheye</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">easy. appears as webcam. higher resolution than equirectangular. less load on CPU.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">It&#8217;s in dual-fisheye, so you&#8217;ll need to build an application to process it</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Experimenting with facial and object recognition, suveillance</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WiFi Live View</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Works over WiFi. equirectangular.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">low resolution. slow. not designed for live streaming, just preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">preview scenes</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>Unless you are using
 <a href="https://developers.theta360.com/en/docs/v2/api_reference/commands/camera._get_live_preview.html"><code>camera._getLivePreview</code></a>
@@ -1018,7 +1046,7 @@ live streaming mode</p>
 <div class="content">
 <img src="img/video/thetas_livestreaming.jpg" alt="thetas livestreaming">
 </div>
-<div class="title">Figure 5. Set Live streaming video mode on RICOH THETA S</div>
+<div class="title">Figure 4. Set Live streaming video mode on RICOH THETA S</div>
 </div>
 <div class="sect2">
 <h3 id="_for_usb">3.1. For USB</h3>
@@ -1040,7 +1068,7 @@ Skype to see live video streaming with the THETA S.</p>
 <div class="content">
 <img src="img/video/usb_live_streaming.png" alt="usb live streaming">
 </div>
-<div class="title">Figure 6. Live video streaming from RICOH THETA S to a computer monitor with USB 3</div>
+<div class="title">Figure 5. Live video streaming from RICOH THETA S to a computer monitor with USB 3</div>
 </div>
 </div>
 <div class="sect2">
@@ -1062,11 +1090,92 @@ Skype to see live video streaming with the THETA S.</p>
 <div class="content">
 <img src="img/video/hdmi_live_streaming.jpg" alt="hdmi live streaming">
 </div>
-<div class="title">Figure 7. Live video streaming from RICOH THETA S to a TV with HDMI</div>
+<div class="title">Figure 6. Live video streaming from RICOH THETA S to a TV with HDMI</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_api_testing">3.3. API Testing</h3>
+<h3 id="_ricoh_live_streaming_driver_with_equirectangular_output">3.3. RICOH Live Streaming Driver with Equirectangular Output</h3>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/streaming.jpg" alt="streaming">
+</div>
+<div class="title">Figure 7. USB live streaming with equirectangular</div>
+</div>
+<div class="paragraph">
+<p>The USB driver appears as a web cam to applications running a Mac or PC.
+In the example above, the equirectangular video is shown streaming in
+QuickTime. A video clip
+that shows the output of the
+<a href="https://youtu.be/A8Al7U2ZeF0?list=PLxvyAnoL-vu5AF0A_l2wIr9vkMBRjHEgm">THETA S USB live streaming is available on YouTube</a>.</p>
+</div>
+<div class="paragraph">
+<p>You must install the live streaming driver, UVC THETA. As of 3/12, this is not
+released. This walkthrough on Windows 10 64bit was created using the beta version of the driver.
+File and driver names may change in the production version.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/setup-run-as-admin.png" alt="setup run as admin">
+</div>
+<div class="title">Figure 8. Right click to run setup as admin</div>
+</div>
+<div class="paragraph">
+<p>After installation, you will need to connect a THETA that is powered off to register
+the device. You may need to reboot. Using the beta version, I could not advance to the
+UVC register step without a reboot.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/register.png" alt="register">
+</div>
+<div class="title">Figure 9. THETA UVC Register</div>
+</div>
+<div class="paragraph">
+<p>If you need to reboot, run the THETA UVC Register application as administrator.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/theta-uvc-register.png" alt="theta uvc register">
+</div>
+<div class="title">Figure 10. Run THETA UVC Register as administrator</div>
+</div>
+<div class="paragraph">
+<p>At this stage, you may need to reboot again. If you do, it is a one-time requirement.</p>
+</div>
+<div class="paragraph">
+<p>Now, press power and mode to start the THETA S in live streaming mode. Test it
+with a common video streaming application such as Google Hangout.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/hangout.png" alt="hangout">
+</div>
+<div class="title">Figure 11. Test with Google Hangout</div>
+</div>
+<div class="paragraph">
+<p>Go into the settings of Google Hangout to select the THETA UVC Blender webcam.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/select-uvc-blender.png" alt="select uvc blender">
+</div>
+<div class="title">Figure 12. Select THETA UVC Blender, not THETA S</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/uvc-blender-selected.png" alt="uvc blender selected">
+</div>
+<div class="title">Figure 13. video should be in equirectangular</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/google-hangout-in-use.png" alt="google hangout in use">
+</div>
+<div class="title">Figure 14. THETA S in use as webcam</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_api_testing">3.4. API Testing</h3>
 <div class="paragraph">
 <p><code>POST</code> to <code><a href="http://192.168.1.1/osc/commands/execute" class="bare">http://192.168.1.1/osc/commands/execute</a></code></p>
 </div>
@@ -1115,7 +1224,7 @@ Remember to set your sessionId correctly
 </div>
 </div>
 <div class="sect2">
-<h3 id="_example_with_processor_language">3.4. Example with Processor Language</h3>
+<h3 id="_example_with_processor_language">3.5. Example with Processor Language</h3>
 <div class="paragraph">
 <p>Community Contribution from Sunao Hashimoto, kougaku on GitHub. Full
 sample source code is available.</p>
@@ -1131,7 +1240,7 @@ sample source code is available.</p>
 <div class="content">
 <img src="img/theta_s_live_viewer.gif" alt="theta s live viewer">
 </div>
-<div class="title">Figure 8. Live viewer for THETA S</div>
+<div class="title">Figure 15. Live viewer for THETA S</div>
 </div>
 <div class="paragraph">
 <p>The example above is built with <a href="https://processing.org/">Processing</a>.</p>
@@ -1143,11 +1252,11 @@ sample source code is available.</p>
 <div class="content">
 <img src="img/kougaku_stitching_english.png" alt="kougaku stitching english">
 </div>
-<div class="title">Figure 9. dual fish-eye video stitching</div>
+<div class="title">Figure 16. dual fish-eye video stitching</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_examples_with_unity">3.5. Examples with Unity</h3>
+<h3 id="_examples_with_unity">3.6. Examples with Unity</h3>
 <div class="paragraph">
 <p>Nora, @steroarts, released a shader pack to convert THETA 360 degree
 media into equirectangular format in real time.</p>
@@ -1168,14 +1277,14 @@ after an hour of work back in September, 2015. Additional information in
 <div class="content">
 <a class="image" href="https://youtu.be/edWrhCYIS5Q"><img src="img/goro_man.png" alt="goro man"></a>
 </div>
-<div class="title">Figure 10. equirectangular video without stitching</div>
+<div class="title">Figure 17. equirectangular video without stitching</div>
 </div>
 <div class="paragraph">
 <p>Once the video is streamed in equirectangular mode, viewers such as VR Gear
 or a browser using YouTube 360 can stitch the image.</p>
 </div>
 <div class="sect3">
-<h4 id="_community_articles_about_360_display_in_unity">3.5.1. Community Articles About 360 Display in Unity</h4>
+<h4 id="_community_articles_about_360_display_in_unity">3.6.1. Community Articles About 360 Display in Unity</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1200,7 +1309,7 @@ or a browser using YouTube 360 can stitch the image.</p>
 <div class="content">
 <img src="img/still_image_stitching_english.png" alt="still image stitching english">
 </div>
-<div class="title">Figure 11. still image stitching</div>
+<div class="title">Figure 18. still image stitching</div>
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/kougaku/PanoramaViewer">Source code available on GitHub</a>.</p>
@@ -1212,7 +1321,7 @@ or a browser using YouTube 360 can stitch the image.</p>
 <div class="content">
 <img src="img/akokubo_javascript_viewer.png" alt="akokubo javascript viewer">
 </div>
-<div class="title">Figure 12. 360 degree still image in Chrome web browser</div>
+<div class="title">Figure 19. 360 degree still image in Chrome web browser</div>
 </div>
 <div class="ulist">
 <ul>
@@ -1508,7 +1617,7 @@ has great information in the overview section.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-02-19 10:16:15 PST
+Last updated 2016-03-12 08:16:01 PST
 </div>
 </div>
 </body>

@@ -84,13 +84,13 @@ NOTE: I've successfully tested the YouTube viewer on Windows and Mac with differ
 == Video Live Streaming
 The THETA S can stream video when connected to a USB or HDMI cable.
 The output is in dual fish-eye mode (two spheres). To make the video
-usable in a web browser or with external services such as YouTube,
-you'll need to convert the video into equirectangular mode. Note that
-as of March 12, 2016, YouTube does not support live streaming
- of 360 video with navigation.
+usable in a web browser or with external services,
+you'll need to convert the video into equirectangular mode.
 
 To view a video with 360 degree navigation, you'll need to stitch it into
-equirectangular data.
+equirectangular data. Note that
+as of March 12, 2016, YouTube does not support live streaming
+ of 360 video with navigation.
 
 .Table THETA S Live Streaming
 |===
@@ -125,6 +125,33 @@ equirectangular data.
 |USB (not publicly available as of 3/12)
 |===
 
+There are pros and cons of each method.
+
+.Table of Pros and Cons for each Live Streaming Method
+|===
+|Live Stream Type |Pro |Con |Community Implementation
+
+|USB equirectangular
+|easy. appears as webcam to your application
+|Low resolution (720). Slow framerate (15fps)
+|Looking forward to seeing this after release! Hope they output to HDMI
+
+|HDMI conversion to equirectangular
+|highest resolution and framerate. Most common input for broadcast equipment
+|difficult. no packaged solution. people are building their own.
+|most people using Unity and then connecting to third-party equipment for live event broadcasting
+
+|USB dual-fisheye
+|easy. appears as webcam. higher resolution than equirectangular. less load on CPU.
+|It's in dual-fisheye, so you'll need to build an application to process it
+|Experimenting with facial and object recognition, suveillance
+
+|WiFi Live View
+|Works over WiFi. equirectangular.
+|low resolution. slow. not designed for live streaming, just preview
+|preview scenes
+
+|===
 
 Unless you are using
 https://developers.theta360.com/en/docs/v2/api_reference/commands/camera._get_live_preview.html[`camera._getLivePreview`]

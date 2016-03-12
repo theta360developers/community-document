@@ -925,14 +925,14 @@ I&#8217;ve successfully tested the YouTube viewer on Windows and Mac with differ
 <div class="paragraph">
 <p>The THETA S can stream video when connected to a USB or HDMI cable.
 The output is in dual fish-eye mode (two spheres). To make the video
-usable in a web browser or with external services such as YouTube,
-you&#8217;ll need to convert the video into equirectangular mode. Note that
-as of March 12, 2016, YouTube does not support live streaming
- of 360 video with navigation.</p>
+usable in a web browser or with external services,
+you&#8217;ll need to convert the video into equirectangular mode.</p>
 </div>
 <div class="paragraph">
 <p>To view a video with 360 degree navigation, you&#8217;ll need to stitch it into
-equirectangular data.</p>
+equirectangular data. Note that
+as of March 12, 2016, YouTube does not support live streaming
+ of 360 video with navigation.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <caption class="title">Table 1. Table THETA S Live Streaming</caption>
@@ -986,6 +986,52 @@ equirectangular data.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">720x480</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">15fps</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">USB (not publicly available as of 3/12)</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>There are pros and cons of each method.</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 2. Table of Pros and Cons for each Live Streaming Method</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Live Stream Type</th>
+<th class="tableblock halign-left valign-top">Pro</th>
+<th class="tableblock halign-left valign-top">Con</th>
+<th class="tableblock halign-left valign-top">Community Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USB equirectangular</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">easy. appears as webcam to your application</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Low resolution (720). Slow framerate (15fps)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Looking forward to seeing this after release! Hope they output to HDMI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HDMI conversion to equirectangular</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highest resolution and framerate. Most common input for broadcast equipment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">difficult. no packaged solution. people are building their own.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">most people using Unity and then connecting to third-party equipment for live event broadcasting</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USB dual-fisheye</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">easy. appears as webcam. higher resolution than equirectangular. less load on CPU.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">It&#8217;s in dual-fisheye, so you&#8217;ll need to build an application to process it</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Experimenting with facial and object recognition, suveillance</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WiFi Live View</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Works over WiFi. equirectangular.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">low resolution. slow. not designed for live streaming, just preview</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">preview scenes</p></td>
 </tr>
 </tbody>
 </table>
@@ -1571,7 +1617,7 @@ has great information in the overview section.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-03-12 07:41:55 PST
+Last updated 2016-03-12 08:16:01 PST
 </div>
 </div>
 </body>
