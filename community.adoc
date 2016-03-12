@@ -268,7 +268,7 @@ Additional information is on his http://d.hatena.ne.jp/kougaku-navi/[blog post i
 image::img/kougaku_stitching_english.png[title="dual fish-eye video stitching"]
 
 
-=== Examples with Unity
+=== Examples with 3D Tools such as Unity and Maya LT
 Nora, @steroarts, released a shader pack to convert THETA 360 degree
 media into equirectangular format in real time.
 
@@ -280,10 +280,10 @@ http://tips.hecomi.com/entry/2015/10/11/211456[Japanese is here].
 
 image::img/goro_man.png[title="equirectangular video without stitching" link="https://youtu.be/edWrhCYIS5Q"]
 
-Once the video is streamed in equirectangular mode, viewers such as VR Gear
-or a browser using YouTube 360 can stitch the image.
+include::unity-maya.adoc[]
 
-==== Community Articles About 360 Display in Unity
+
+=== Community Articles About 360 Display in Unity
 
 * http://horriblepain.com/2015/05/360-display-in-unity-w-blender/[Horrible Pain's notes on 360 display in Unity w/Blender]
 
