@@ -51,3 +51,7 @@ image::img/livestreaming/streamer2.png[role="thumb" title="streaming concept"]
 
 I don't have access to something like LiveShell or VidiU Teradek. I'm also now sure
 how the navigation of the video would work.
+
+Refer to the RICOH THETA S Unofficial Guides for more information.
+
+http://theta360.guide/
