@@ -45,6 +45,10 @@ image::img/livestreaming/uvc-blender-selected.png[role="thumb" title="video shou
 
 image::img/livestreaming/google-hangout-in-use.png[role="thumb" title="THETA S in use as webcam"]
 
+Here's an example with Open Broadcaster Software.
+
+image::img/livestreaming/obs.png[role="thumb" title="Live Streaming with Open Broadcaster Software"]
+
 Ideally, I would like to test the output to a streaming server like the one shown below.
 
 image::img/livestreaming/streamer2.png[role="thumb" title="streaming concept"]
