@@ -929,7 +929,7 @@ you&#8217;ll need to convert the video into equirectangular mode.</p>
 <div class="paragraph">
 <p>To view a video with 360 degree navigation, you&#8217;ll need to stitch it into
 equirectangular data. Note that
-as of March 12, 2016, YouTube does not support live streaming
+as of March 24, 2016, YouTube does not support live streaming
  of 360 video with navigation.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
@@ -1141,7 +1141,112 @@ Remember to set your sessionId correctly
 </div>
 </div>
 <div class="sect2">
-<h3 id="_example_with_processor_language">3.4. Example with Processor Language</h3>
+<h3 id="_ricoh_live_streaming_driver_uvc_theta_with_equirectangular_output">3.4. RICOH Live Streaming Driver (UVC THETA) with Equirectangular Output</h3>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/streaming.jpg" alt="streaming">
+</div>
+<div class="title">Figure 7. USB live streaming with equirectangular</div>
+</div>
+<div class="paragraph">
+<p>The USB driver appears as a web cam to applications running a Mac or PC.
+In the example above, the equirectangular video is shown streaming in
+QuickTime. A video clip
+that shows the output of the
+<a href="https://youtu.be/A8Al7U2ZeF0?list=PLxvyAnoL-vu5AF0A_l2wIr9vkMBRjHEgm">THETA S USB live streaming is available on YouTube</a>.</p>
+</div>
+<div class="paragraph">
+<p>You must install the live streaming driver, UVC THETA. Download it from</p>
+</div>
+<div class="paragraph">
+<p><a href="https://theta360.com/en/support/download/" class="bare">https://theta360.com/en/support/download/</a></p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/driver-download.png" alt="driver download">
+</div>
+<div class="title">Figure 8. Download the official RICOH live streaming driver</div>
+</div>
+<div class="paragraph">
+<p>This walkthrough on Windows 10 64bit was created using the beta version of the driver.
+File and driver names may change in the production version.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/setup-run-as-admin.png" alt="setup run as admin">
+</div>
+<div class="title">Figure 9. Right click to run setup as admin</div>
+</div>
+<div class="paragraph">
+<p>After installation, you will need to connect a THETA that is powered off to register
+the device. You may need to reboot. Using the beta version, I could not advance to the
+UVC register step without a reboot.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/register.png" alt="register">
+</div>
+<div class="title">Figure 10. THETA UVC Register</div>
+</div>
+<div class="paragraph">
+<p>If you need to reboot, run the THETA UVC Register application as administrator.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/theta-uvc-register.png" alt="theta uvc register">
+</div>
+<div class="title">Figure 11. Run THETA UVC Register as administrator</div>
+</div>
+<div class="paragraph">
+<p>At this stage, you may need to reboot again. If you do, it is a one-time requirement.</p>
+</div>
+<div class="paragraph">
+<p>Now, press power and mode to start the THETA S in live streaming mode. Test it
+with a common video streaming application such as Google Hangout.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/hangout.png" alt="hangout">
+</div>
+<div class="title">Figure 12. Test with Google Hangout</div>
+</div>
+<div class="paragraph">
+<p>Go into the settings of Google Hangout to select the THETA UVC Blender webcam.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/select-uvc-blender.png" alt="select uvc blender">
+</div>
+<div class="title">Figure 13. Select THETA UVC Blender, not THETA S</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/uvc-blender-selected.png" alt="uvc blender selected">
+</div>
+<div class="title">Figure 14. video should be in equirectangular</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/google-hangout-in-use.png" alt="google hangout in use">
+</div>
+<div class="title">Figure 15. THETA S in use as webcam</div>
+</div>
+<div class="paragraph">
+<p>Ideally, I would like to test the output to a streaming server like the one shown below.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/streamer2.png" alt="streamer2">
+</div>
+<div class="title">Figure 16. streaming concept</div>
+</div>
+<div class="paragraph">
+<p>I don&#8217;t have access to something like LiveShell or VidiU Teradek. I&#8217;m also now sure
+how the navigation of the video would work.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_example_with_processor_language">3.5. Example with Processor Language</h3>
 <div class="paragraph">
 <p>Community Contribution from Sunao Hashimoto, kougaku on GitHub. Full
 sample source code is available.</p>
@@ -1157,7 +1262,7 @@ sample source code is available.</p>
 <div class="content">
 <img src="img/theta_s_live_viewer.gif" alt="theta s live viewer">
 </div>
-<div class="title">Figure 7. Live viewer for THETA S</div>
+<div class="title">Figure 17. Live viewer for THETA S</div>
 </div>
 <div class="paragraph">
 <p>The example above is built with <a href="https://processing.org/">Processing</a>.</p>
@@ -1169,11 +1274,11 @@ sample source code is available.</p>
 <div class="content">
 <img src="img/kougaku_stitching_english.png" alt="kougaku stitching english">
 </div>
-<div class="title">Figure 8. dual fish-eye video stitching</div>
+<div class="title">Figure 18. dual fish-eye video stitching</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_examples_with_3d_tools_such_as_unity_and_maya_lt">3.5. Examples with 3D Tools such as Unity and Maya LT</h3>
+<h3 id="_examples_with_3d_tools_such_as_unity_and_maya_lt">3.6. Examples with 3D Tools such as Unity and Maya LT</h3>
 <div class="paragraph">
 <p>Nora, @steroarts, released a shader pack to convert THETA 360 degree
 media into equirectangular format in real time.</p>
@@ -1194,7 +1299,7 @@ after an hour of work back in September, 2015. Additional information in
 <div class="content">
 <a class="image" href="https://youtu.be/edWrhCYIS5Q"><img src="img/goro_man.png" alt="goro man"></a>
 </div>
-<div class="title">Figure 9. equirectangular video without stitching</div>
+<div class="title">Figure 19. equirectangular video without stitching</div>
 </div>
 <div class="paragraph">
 <p>The section below was translated from Japanese by Jesse Casman.</p>
@@ -1250,13 +1355,13 @@ Equirectangular in Unity and supporting scripts.
 <div class="content">
 <img src="img/livestreaming/unity/dual-fish-eye.jpg" alt="dual fish eye">
 </div>
-<div class="title">Figure 10. dual fish eye image</div>
+<div class="title">Figure 20. dual fish eye image</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="img/livestreaming/unity/dual-fisheye-tripod.jpg" alt="dual fisheye tripod">
 </div>
-<div class="title">Figure 11. dual fish eye image with tripod</div>
+<div class="title">Figure 21. dual fish eye image with tripod</div>
 </div>
 <div class="paragraph">
 <p>In doing this, I&#8217;ve made an adjustment using sample texture, which Goroman filmed using WebCamTexture.</p>
@@ -1271,7 +1376,7 @@ Equirectangular in Unity and supporting scripts.
 <div class="content">
 <img src="img/livestreaming/unity/MayaLT-UV-mapping.png" alt="MayaLT UV mapping">
 </div>
-<div class="title">Figure 12. Maya LT UV Mapping</div>
+<div class="title">Figure 22. Maya LT UV Mapping</div>
 </div>
 <div class="paragraph">
 <p>It would look like below, if you make a plane with the UV.</p>
@@ -1280,7 +1385,7 @@ Equirectangular in Unity and supporting scripts.
 <div class="content">
 <img src="img/livestreaming/unity/MayaLT-UV-mapping-2.png" alt="MayaLT UV mapping 2">
 </div>
-<div class="title">Figure 13. Maya LT UV Mapping 2</div>
+<div class="title">Figure 23. Maya LT UV Mapping 2</div>
 </div>
 <div class="paragraph">
 <p>All it needs is to be cut in half and be moved appropriately.</p>
@@ -1289,13 +1394,13 @@ Equirectangular in Unity and supporting scripts.
 <div class="content">
 <img src="img/livestreaming/unity/MayaLT-UV-mapping-3.png" alt="MayaLT UV mapping 3">
 </div>
-<div class="title">Figure 14. Maya LT UV Mapping 3</div>
+<div class="title">Figure 24. Maya LT UV Mapping 3</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="img/livestreaming/unity/MayaLT-UV-mapping-4.png" alt="MayaLT UV mapping 4">
 </div>
-<div class="title">Figure 15. Maya LT UV Mapping 4</div>
+<div class="title">Figure 25. Maya LT UV Mapping 4</div>
 </div>
 <div class="paragraph">
 <p>It looks like this. (I did not adjust it, so it might be slightly off.)</p>
@@ -1304,7 +1409,7 @@ Equirectangular in Unity and supporting scripts.
 <div class="content">
 <img src="img/livestreaming/unity/crescent-moon.png" alt="crescent moon">
 </div>
-<div class="title">Figure 16. Crescent Moon image</div>
+<div class="title">Figure 26. Crescent Moon image</div>
 </div>
 <div class="paragraph">
 <p>Actually, I wanted to use alphablend for the border, so I used 2 overlapping half spheres instead of one sphere. The UV border is adequately stretched manually.</p>
@@ -1313,7 +1418,7 @@ Equirectangular in Unity and supporting scripts.
 <div class="content">
 <img src="img/livestreaming/unity/overlapping.png" alt="overlapping">
 </div>
-<div class="title">Figure 17. Overlapping</div>
+<div class="title">Figure 27. Overlapping</div>
 </div>
 <div class="paragraph">
 <p>Incidentally, surface is set to face inward, by reversing all normal vectors. UV position and size are fine to adjust later with shader.</p>
@@ -1423,7 +1528,7 @@ uniform float _ScaleCenterV;</pre>
 <div class="content">
 <img src="img/livestreaming/unity/two-circles.png" alt="two circles">
 </div>
-<div class="title">Figure 18. Two Circles</div>
+<div class="title">Figure 28. Two Circles</div>
 </div>
 <div class="paragraph">
 <p>Then, adjust the parameters and you&#8217;ve got a whole sphere.</p>
@@ -1432,19 +1537,19 @@ uniform float _ScaleCenterV;</pre>
 <div class="content">
 <img src="img/livestreaming/unity/parameters.png" alt="parameters">
 </div>
-<div class="title">Figure 19. Parameters</div>
+<div class="title">Figure 29. Parameters</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="img/livestreaming/unity/sphere-unity.png" alt="sphere unity">
 </div>
-<div class="title">Figure 20. Unity Sphere</div>
+<div class="title">Figure 30. Unity Sphere</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="img/livestreaming/unity/realtime-stitching.png" alt="realtime stitching">
 </div>
-<div class="title">Figure 21. Realtime Stitching</div>
+<div class="title">Figure 31. Realtime Stitching</div>
 </div>
 <div class="paragraph">
 <p>Changing into Equirectangular</p>
@@ -1612,7 +1717,7 @@ float ez = 0;</pre>
 <div class="content">
 <img src="img/livestreaming/unity/results.png" alt="results">
 </div>
-<div class="title">Figure 22. Results</div>
+<div class="title">Figure 32. Results</div>
 </div>
 <div class="paragraph">
 <p>When taking a look at the mesh, it moves around like this.</p>
@@ -1621,7 +1726,7 @@ float ez = 0;</pre>
 <div class="content">
 <img src="img/livestreaming/unity/results-mesh.png" alt="results mesh">
 </div>
-<div class="title">Figure 23. Results Mesh</div>
+<div class="title">Figure 33. Results Mesh</div>
 </div>
 <div class="paragraph">
 <p>Because polygon did not fit, there is a blank space in the corner. This could have been avoided if we have used a direct fragment shader like Nora.</p>
@@ -1648,7 +1753,7 @@ UV mapping with webgl.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_community_articles_about_360_display_in_unity">3.6. Community Articles About 360 Display in Unity</h3>
+<h3 id="_community_articles_about_360_display_in_unity">3.7. Community Articles About 360 Display in Unity</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1672,7 +1777,7 @@ UV mapping with webgl.</p>
 <div class="content">
 <img src="img/still_image_stitching_english.png" alt="still image stitching english">
 </div>
-<div class="title">Figure 24. still image stitching</div>
+<div class="title">Figure 34. still image stitching</div>
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/kougaku/PanoramaViewer">Source code available on GitHub</a>.</p>
@@ -1684,7 +1789,7 @@ UV mapping with webgl.</p>
 <div class="content">
 <img src="img/akokubo_javascript_viewer.png" alt="akokubo javascript viewer">
 </div>
-<div class="title">Figure 25. 360 degree still image in Chrome web browser</div>
+<div class="title">Figure 35. 360 degree still image in Chrome web browser</div>
 </div>
 <div class="ulist">
 <ul>
@@ -1952,7 +2057,7 @@ has great information in the overview section.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-03-12 10:43:03 PST
+Last updated 2016-03-24 07:31:21 PDT
 </div>
 </div>
 </body>

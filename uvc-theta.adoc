@@ -9,8 +9,13 @@ QuickTime. A video clip
 that shows the output of the
 https://youtu.be/A8Al7U2ZeF0?list=PLxvyAnoL-vu5AF0A_l2wIr9vkMBRjHEgm[THETA S USB live streaming is available on YouTube].
 
-You must install the live streaming driver, UVC THETA. As of 3/12, this is not
-released. This walkthrough on Windows 10 64bit was created using the beta version of the driver.
+You must install the live streaming driver, UVC THETA. Download it from
+
+https://theta360.com/en/support/download/
+
+image::img/livestreaming/driver-download.png[role="thumb" title="Download the official RICOH live streaming driver"]
+
+This walkthrough on Windows 10 64bit was created using the beta version of the driver.
 File and driver names may change in the production version.
 
 image::img/livestreaming/setup-run-as-admin.png[role="thumb" title="Right click to run setup as admin"]

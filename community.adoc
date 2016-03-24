@@ -89,7 +89,7 @@ you'll need to convert the video into equirectangular mode.
 
 To view a video with 360 degree navigation, you'll need to stitch it into
 equirectangular data. Note that
-as of March 12, 2016, YouTube does not support live streaming
+as of March 24, 2016, YouTube does not support live streaming
  of 360 video with navigation.
 
 .Table THETA S Live Streaming
@@ -213,7 +213,7 @@ The response:
       }
   }
 
-// include::uvc-theta.adoc[]
+include::uvc-theta.adoc[]
 
 === Example with Processor Language
 Community Contribution from Sunao Hashimoto, kougaku on GitHub. Full
