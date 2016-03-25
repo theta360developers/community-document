@@ -18,6 +18,7 @@ image::img/livestreaming/driver-download.png[role="thumb" title="Download the of
 This walkthrough is for Windows 10 64 bit.
 
 Right click on the UVCBlender_setup64_en.exe icon. Run as administrator
+
 image::img/livestreaming/uvc-blender-setup-icon.png[role="thumb" title="Right click to run setup as admin"]
 
 image::img/livestreaming/setup-run-as-admin.png[role="thumb" title="Make sure you run it as administrator"]
@@ -30,7 +31,7 @@ image::img/livestreaming/install-shield-complete.png[role="thumb" title="Install
 After installation, you will need to connect a THETA that is powered off to register
 the device. You may need to reboot. In my tests, I could not advance to the
 UVC register step without a reboot. If I try and register the device without
-a boot, I see a flashing _Establishing as Connection_ dialog, but the connection
+rebooting, I see a flashing _Establishing as Connection_ dialog, but the connection
 is never completed.
 
 image::img/livestreaming/register.png[role="thumb" title="THETA UVC Register"]
@@ -46,7 +47,7 @@ image::img/livestreaming/register-button.png[role="thumb" title="If you don't se
 
 The registration completes.
 
-image::img/livestreaming/register-complete.png[role="thumb" title="Make sure the registration is successful"]
+image::img/livestreaming/registration-complete.png[role="thumb" title="Make sure the registration is successful"]
 
 At this stage, you may need to reboot again. If you do, it is a one-time requirement.
 
