@@ -120,9 +120,9 @@ as of March 24, 2016, YouTube does not support live streaming
 |USB live streaming of equirectangular
 |Equirectangular in MotionJPEG
 |live streaming
-|720x480
+|1280x720
 |15fps
-|USB 
+|USB
 |===
 
 There are pros and cons of each method.
