@@ -24,6 +24,7 @@ image::img/livestreaming/uvc-blender-setup-icon.png[role="thumb" title="Right cl
 image::img/livestreaming/setup-run-as-admin.png[role="thumb" title="Make sure you run it as administrator"]
 
 Run through the install wizard.
+
 image::img/livestreaming/install-shield.png[role="thumb" title="Follow onscreen instructions"]
 
 image::img/livestreaming/install-shield-complete.png[role="thumb" title="InstallShield Wizard Completes"]
