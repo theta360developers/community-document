@@ -39,10 +39,24 @@ If you need to reboot, run the THETA UVC Register application as administrator.
 
 image::img/livestreaming/theta-uvc-register.png[role="thumb" title="Run THETA UVC Register as administrator"]
 
+After a reboot and starting THETA UVC Register as administrator, I then plug the THETA
+in. The THETA is turned off. The connection is established.
+
+image::img/livestreaming/register-button.png[role="thumb" title="If you don't see the register button, go back a few steps"]
+
+The registration completes.
+
+image::img/livestreaming/register-complete.png[role="thumb" title="Make sure the registration is successful"]
+
 At this stage, you may need to reboot again. If you do, it is a one-time requirement.
 
 Now, press power and mode to start the THETA S in live streaming mode. Test it
-with a common video streaming application such as Google Hangout.
+with a common video streaming application such as Google Hangout. I have heard
+of people having problems displaying the stream. Start your application first with
+the camera unplugged. Once the application is running, select THETA UVC Blender,
+then start your THETA in live streaming mode, and plug it in. There are
+probably other ways to get the application to recognize the live stream, but this
+sequence consistently works for me.
 
 image::img/livestreaming/hangout.png[role="thumb" title="Test with Google Hangout"]
 
