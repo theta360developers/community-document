@@ -774,25 +774,40 @@ that shows the output of the
 <div class="title">Figure 2. Download the official RICOH live streaming driver</div>
 </div>
 <div class="paragraph">
-<p>This walkthrough on Windows 10 64bit was created using the beta version of the driver.
-File and driver names may change in the production version.</p>
+<p>This walkthrough is for Windows 10 64 bit.</p>
+</div>
+<div class="paragraph">
+<p>Right click on the UVCBlender_setup64_en.exe icon. Run as administrator
+image::img/livestreaming/uvc-blender-setup-icon.png[role="thumb" title="Right click to run setup as admin"]</p>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/setup-run-as-admin.png" alt="setup run as admin">
 </div>
-<div class="title">Figure 3. Right click to run setup as admin</div>
+<div class="title">Figure 3. Make sure you run it as administrator</div>
+</div>
+<div class="paragraph">
+<p>Run through the install wizard.
+image::img/livestreaming/install-shield.png[role="thumb" title="Follow onscreen instructions"]</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/install-shield-complete.png" alt="install shield complete">
+</div>
+<div class="title">Figure 4. InstallShield Wizard Completes</div>
 </div>
 <div class="paragraph">
 <p>After installation, you will need to connect a THETA that is powered off to register
-the device. You may need to reboot. Using the beta version, I could not advance to the
-UVC register step without a reboot.</p>
+the device. You may need to reboot. In my tests, I could not advance to the
+UVC register step without a reboot. If I try and register the device without
+a boot, I see a flashing <em>Establishing as Connection</em> dialog, but the connection
+is never completed.</p>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/register.png" alt="register">
 </div>
-<div class="title">Figure 4. THETA UVC Register</div>
+<div class="title">Figure 5. THETA UVC Register</div>
 </div>
 <div class="paragraph">
 <p>If you need to reboot, run the THETA UVC Register application as administrator.</p>
@@ -801,7 +816,7 @@ UVC register step without a reboot.</p>
 <div class="content">
 <img src="img/livestreaming/theta-uvc-register.png" alt="theta uvc register">
 </div>
-<div class="title">Figure 5. Run THETA UVC Register as administrator</div>
+<div class="title">Figure 6. Run THETA UVC Register as administrator</div>
 </div>
 <div class="paragraph">
 <p>At this stage, you may need to reboot again. If you do, it is a one-time requirement.</p>
@@ -814,7 +829,7 @@ with a common video streaming application such as Google Hangout.</p>
 <div class="content">
 <img src="img/livestreaming/hangout.png" alt="hangout">
 </div>
-<div class="title">Figure 6. Test with Google Hangout</div>
+<div class="title">Figure 7. Test with Google Hangout</div>
 </div>
 <div class="paragraph">
 <p>Go into the settings of Google Hangout to select the THETA UVC Blender webcam.</p>
@@ -823,19 +838,19 @@ with a common video streaming application such as Google Hangout.</p>
 <div class="content">
 <img src="img/livestreaming/select-uvc-blender.png" alt="select uvc blender">
 </div>
-<div class="title">Figure 7. Select THETA UVC Blender, not THETA S</div>
+<div class="title">Figure 8. Select THETA UVC Blender, not THETA S</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/uvc-blender-selected.png" alt="uvc blender selected">
 </div>
-<div class="title">Figure 8. video should be in equirectangular</div>
+<div class="title">Figure 9. video should be in equirectangular</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/google-hangout-in-use.png" alt="google hangout in use">
 </div>
-<div class="title">Figure 9. THETA S in use as webcam</div>
+<div class="title">Figure 10. THETA S in use as webcam</div>
 </div>
 <div class="paragraph">
 <p>Here&#8217;s an example with
@@ -849,7 +864,7 @@ new <em>Video Capture Device</em></p>
 <div class="content">
 <img src="img/livestreaming/obs-video-capture.png" alt="obs video capture">
 </div>
-<div class="title">Figure 10. Add THETA S as Video Capture Device to OBS</div>
+<div class="title">Figure 11. Add THETA S as Video Capture Device to OBS</div>
 </div>
 <div class="paragraph">
 <p>Under the <em>Device Selection</em> window, select <em>THETA UVC Blender</em>. Click <em>OK</em>.</p>
@@ -858,7 +873,7 @@ new <em>Video Capture Device</em></p>
 <div class="content">
 <img src="img/livestreaming/obs-video-device-selection.png" alt="obs video device selection">
 </div>
-<div class="title">Figure 11. Select THETA UVC Blender as Device</div>
+<div class="title">Figure 12. Select THETA UVC Blender as Device</div>
 </div>
 <div class="paragraph">
 <p>The video stream will fill a portion of the screen. Select <em>Edit Scene</em> to size the video stream to fit.</p>
@@ -867,13 +882,13 @@ new <em>Video Capture Device</em></p>
 <div class="content">
 <img src="img/livestreaming/obs-base.png" alt="obs base">
 </div>
-<div class="title">Figure 12. Edit Scene to Fit the Stream</div>
+<div class="title">Figure 13. Edit Scene to Fit the Stream</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/obs.png" alt="obs">
 </div>
-<div class="title">Figure 13. Live Streaming with Open Broadcaster Software</div>
+<div class="title">Figure 14. Live Streaming with Open Broadcaster Software</div>
 </div>
 <div class="paragraph">
 <p>Ideally, I would like to test the output to a streaming server like the one shown below.</p>
@@ -882,7 +897,7 @@ new <em>Video Capture Device</em></p>
 <div class="content">
 <img src="img/livestreaming/streamer2.png" alt="streamer2">
 </div>
-<div class="title">Figure 14. streaming concept</div>
+<div class="title">Figure 15. streaming concept</div>
 </div>
 <div class="paragraph">
 <p>I don&#8217;t have access to something like LiveShell or VidiU Teradek. I&#8217;m also now sure
@@ -898,7 +913,7 @@ how the navigation of the video would work.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-03-24 19:36:09 PDT
+Last updated 2016-03-24 20:01:31 PDT
 </div>
 </div>
 </body>
