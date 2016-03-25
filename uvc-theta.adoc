@@ -32,7 +32,7 @@ image::img/livestreaming/install-shield-complete.png[role="thumb" title="Install
 After installation, you will need to connect a THETA that is powered off to register
 the device. You may need to reboot. In my tests, I could not advance to the
 UVC register step without a reboot. If I try and register the device without
-rebooting, I see a flashing _Establishing as Connection_ dialog, but the connection
+rebooting, I see a flashing _Establishing a Connection_ dialog, but the connection
 is never completed.
 
 image::img/livestreaming/register.png[role="thumb" title="THETA UVC Register"]
