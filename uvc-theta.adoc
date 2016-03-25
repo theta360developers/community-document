@@ -48,6 +48,19 @@ image::img/livestreaming/google-hangout-in-use.png[role="thumb" title="THETA S i
 Here's an example with
 https://obsproject.com/[Open Broadcaster Software].
 
+Create a new Scene called _THETA Test_. Right click in _Sources_ to _Add_ a
+new _Video Capture Device_
+
+image::img/livestreaming/obs-video-capture.png[role="thumb" title="Add THETA S as Video Capture Device to OBS"]
+
+Under the _Device Selection_ window, select _THETA UVC Blender_. Click _OK_.
+
+image::img/livestreaming/obs-video-device-selection.png[role="thumb" title="Select THETA UVC Blender as Device"]
+
+The video stream will fill a portion of the screen. Select _Edit Scene_ to size the video stream to fit.
+
+image::img/livestreaming/obs-base.png[role="thumb" title="Edit Scene to Fit the Stream"]
+
 image::img/livestreaming/obs.png[role="thumb" title="Live Streaming with Open Broadcaster Software"]
 
 Ideally, I would like to test the output to a streaming server like the one shown below.
