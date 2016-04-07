@@ -1,4 +1,3 @@
-
 === RICOH Live Streaming Driver (UVC THETA) with Equirectangular Output
 
 image::img/livestreaming/streaming.jpg[role="thumb" title="USB live streaming with equirectangular"]
@@ -98,3 +97,14 @@ how the navigation of the video would work.
 Refer to the RICOH THETA S Unofficial Guides for more information.
 
 http://theta360.guide/
+
+++++
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-73311422-1', 'auto');
+ga('send', 'pageview');
+</script>
+++++
