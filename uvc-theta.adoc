@@ -1,4 +1,4 @@
-=== RICOH Live Streaming Driver (UVC THETA) with Equirectangular Output
+=== RICOH Live Streaming Driver (THETA UVC Blender) with Equirectangular Output
 
 image::img/livestreaming/streaming.jpg[role="thumb" title="USB live streaming with equirectangular"]
 
@@ -8,7 +8,7 @@ QuickTime. A video clip
 that shows the output of the
 https://youtu.be/A8Al7U2ZeF0?list=PLxvyAnoL-vu5AF0A_l2wIr9vkMBRjHEgm[THETA S USB live streaming is available on YouTube].
 
-You must install the live streaming driver, UVC THETA. Download it from
+You must install the live streaming driver, THETA UVC Blender. Download it from
 
 https://theta360.com/en/support/download/
 
