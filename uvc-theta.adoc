@@ -87,16 +87,11 @@ image::img/livestreaming/obs-base.png[role="thumb" title="Edit Scene to Fit the 
 
 image::img/livestreaming/obs.png[role="thumb" title="Live Streaming with Open Broadcaster Software"]
 
-Ideally, I would like to test the output to a streaming server like the one shown below.
+You can use OBS or other software to stream the image to YouTube. Refer to the blog
+post below for more information:
 
-image::img/livestreaming/streamer2.png[role="thumb" title="streaming concept"]
+* https://theta360blog.wordpress.com/2016/04/22/ricoh-theta-s-360-degree-live-streaming-on-youtube/[RICOH THETA S 360 Degree Live Streaming on YouTube]
 
-I don't have access to something like LiveShell or VidiU Teradek. I'm also now sure
-how the navigation of the video would work.
-
-Refer to the RICOH THETA S Unofficial Guides for more information.
-
-http://theta360.guide/
 
 ++++
 <script>
