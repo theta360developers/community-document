@@ -1,0 +1,13 @@
+== Graphic Tech
+
+=== HDR
+
+[Simple HDR]https://itunes.apple.com/us/app/simple-hdr/id1035541353?mt=8 is
+a great application that works with the RICOH THETA S and m15 models.
+It is developed by [Brad Herman], the CTO and co-founder of SPACES.
+
+Nick Campbell produced a video that gives a good
+[overview of Simple HDR and 360 HDRIs]http://greyscalegorilla.com/2016/02/simple-hdr-update-make-your-own-360-hdris/
+
+
+

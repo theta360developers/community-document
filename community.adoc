@@ -275,6 +275,7 @@ There are other open source JavaScript viewers that we have not tested:
 * https://pannellum.org/[Pannellum]
 * http://www.vrhabitat.com/#vr5[VR5 Pano Viewer]
 
+include::graphicTech.adoc[]
 
 == Linux
 RICOH only supports Mac and Windows desktop. As many developers use
