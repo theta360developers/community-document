@@ -4,12 +4,18 @@
 
 https://itunes.apple.com/us/app/simple-hdr/id1035541353?mt=8[Simple HDR] is
 a great application that works with the RICOH THETA S and m15 models.
-It is developed by
-https://www.linkedin.com/in/bradherman[Brad Herman],
-the CTO and co-founder of SPACES.
+It is developed by 
+http://www.builtlight.org/us/[Built Light]
+
 
 Nick Campbell produced a video that gives a good
 http://greyscalegorilla.com/2016/02/simple-hdr-update-make-your-own-360-hdris/[overview of Simple HDR and 360 HDRIs]
+
+Another HDR application is 
+https://itunes.apple.com/us/app/hdr-360-bracket-pro-for-ricoh/id987157511?mt=8[HDR 360 Bracket Pro for RICOH THETA] by
+https://www.linkedin.com/in/bradherman[Brad Herman],
+the CTO and co-founder of SPACES.
+
 
 
 

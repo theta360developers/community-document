@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.2">
+<meta name="generator" content="Asciidoctor 1.5.4">
 <title>Unofficial Guides</title>
 <style>
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
@@ -741,7 +741,7 @@ p { margin-bottom: 1.25rem; }
   .show-for-print { display: inherit !important; } }
 
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 <body class="article toc2 toc-right">
 <div id="header">
@@ -753,9 +753,10 @@ p { margin-bottom: 1.25rem; }
 <li><a href="#_360_video_formats">2. 360 Video Formats</a></li>
 <li><a href="#_video_live_streaming">3. Video Live Streaming</a></li>
 <li><a href="#_image_viewers">4. Image Viewers</a></li>
-<li><a href="#_linux">5. Linux</a></li>
-<li><a href="#_proprietary_technical_information">6. Proprietary Technical Information</a></li>
-<li><a href="#_faq_for_media_editing">7. FAQ for Media Editing</a></li>
+<li><a href="#_graphic_tech">5. Graphic Tech</a></li>
+<li><a href="#_linux">6. Linux</a></li>
+<li><a href="#_proprietary_technical_information">7. Proprietary Technical Information</a></li>
+<li><a href="#_faq_for_media_editing">8. FAQ for Media Editing</a></li>
 </ul>
 </div>
 </div>
@@ -929,18 +930,18 @@ you&#8217;ll need to convert the video into equirectangular mode.</p>
 <div class="paragraph">
 <p>To view a video with 360 degree navigation, you&#8217;ll need to stitch it into
 equirectangular data. Note that
-as of March 12, 2016, YouTube does not support live streaming
+as of March 24, 2016, YouTube does not support live streaming
  of 360 video with navigation.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <caption class="title">Table 1. Table THETA S Live Streaming</caption>
 <colgroup>
-<col style="width: 16%;">
-<col style="width: 16%;">
-<col style="width: 16%;">
-<col style="width: 16%;">
-<col style="width: 16%;">
-<col style="width: 16%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.667%;">
 </colgroup>
 <thead>
 <tr>
@@ -981,9 +982,9 @@ as of March 12, 2016, YouTube does not support live streaming
 <td class="tableblock halign-left valign-top"><p class="tableblock">USB live streaming of equirectangular</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Equirectangular in MotionJPEG</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">live streaming</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">720x480</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1280x720</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">15fps</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">USB (not publicly available as of 3/12)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USB</p></td>
 </tr>
 </tbody>
 </table>
@@ -1100,12 +1101,12 @@ Skype to see live video streaming with the THETA S.</p>
 <div class="content">
 <pre>{"name": "camera.getOptions",
     "parameters":
-    {
-        "sessionId": "SID_0003",
-        "optionNames": [
+	{
+    	"sessionId": "SID_0003",
+    	"optionNames": [
             "captureMode"
-        ]
-    }
+    	]
+	}
 }</pre>
 </div>
 </div>
@@ -1141,7 +1142,205 @@ Remember to set your sessionId correctly
 </div>
 </div>
 <div class="sect2">
-<h3 id="_example_with_processor_language">3.4. Example with Processor Language</h3>
+<h3 id="_ricoh_live_streaming_driver_theta_uvc_blender_with_equirectangular_output">3.4. RICOH Live Streaming Driver (THETA UVC Blender) with Equirectangular Output</h3>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/streaming.jpg" alt="streaming">
+</div>
+<div class="title">Figure 7. USB live streaming with equirectangular</div>
+</div>
+<div class="paragraph">
+<p>The USB driver appears as a web cam to applications running a Mac or PC.
+In the example above, the equirectangular video is shown streaming in
+QuickTime. A video clip
+that shows the output of the
+<a href="https://youtu.be/A8Al7U2ZeF0?list=PLxvyAnoL-vu5AF0A_l2wIr9vkMBRjHEgm">THETA S USB live streaming is available on YouTube</a>.</p>
+</div>
+<div class="paragraph">
+<p>You must install the live streaming driver, THETA UVC Blender. Download it from</p>
+</div>
+<div class="paragraph">
+<p><a href="https://theta360.com/en/support/download/" class="bare">https://theta360.com/en/support/download/</a></p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/driver-download.png" alt="driver download">
+</div>
+<div class="title">Figure 8. Download the official RICOH live streaming driver</div>
+</div>
+<div class="paragraph">
+<p>This walkthrough is for Windows 10 64 bit.</p>
+</div>
+<div class="paragraph">
+<p>Right click on the UVCBlender_setup64_en.exe icon. Run as administrator</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/uvc-blender-setup-icon.png" alt="uvc blender setup icon">
+</div>
+<div class="title">Figure 9. Right click to run setup as admin</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/setup-run-as-admin.png" alt="setup run as admin">
+</div>
+<div class="title">Figure 10. Make sure you run it as administrator</div>
+</div>
+<div class="paragraph">
+<p>Run through the install wizard.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/install-shield.png" alt="install shield">
+</div>
+<div class="title">Figure 11. Follow onscreen instructions</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/install-shield-complete.png" alt="install shield complete">
+</div>
+<div class="title">Figure 12. InstallShield Wizard Completes</div>
+</div>
+<div class="paragraph">
+<p>After installation, you will need to connect a THETA that is powered off to register
+the device. You may need to reboot. In my tests, I could not advance to the
+UVC register step without a reboot. If I try and register the device without
+rebooting, I see a flashing <em>Establishing a Connection</em> dialog, but the connection
+is never completed.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/register.png" alt="register">
+</div>
+<div class="title">Figure 13. THETA UVC Register</div>
+</div>
+<div class="paragraph">
+<p>If you need to reboot, run the THETA UVC Register application as administrator.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/theta-uvc-register.png" alt="theta uvc register">
+</div>
+<div class="title">Figure 14. Run THETA UVC Register as administrator</div>
+</div>
+<div class="paragraph">
+<p>After a reboot and starting THETA UVC Register as administrator, I then plug the THETA
+in. The THETA is turned off. The connection is established.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/register-button.png" alt="register button">
+</div>
+<div class="title">Figure 15. If you don&#8217;t see the register button, go back a few steps</div>
+</div>
+<div class="paragraph">
+<p>The registration completes.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/registration-complete.png" alt="registration complete">
+</div>
+<div class="title">Figure 16. Make sure the registration is successful</div>
+</div>
+<div class="paragraph">
+<p>At this stage, you may need to reboot again. If you do, it is a one-time requirement.</p>
+</div>
+<div class="paragraph">
+<p>Now, press power and mode to start the THETA S in live streaming mode. Test it
+with a common video streaming application such as Google Hangout. I have heard
+of people having problems displaying the stream. Start your application first with
+the camera unplugged. Once the application is running, select THETA UVC Blender,
+then start your THETA in live streaming mode, and plug it in. There are
+probably other ways to get the application to recognize the live stream, but this
+sequence consistently works for me.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/hangout.png" alt="hangout">
+</div>
+<div class="title">Figure 17. Test with Google Hangout</div>
+</div>
+<div class="paragraph">
+<p>Go into the settings of Google Hangout to select the THETA UVC Blender webcam.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/select-uvc-blender.png" alt="select uvc blender">
+</div>
+<div class="title">Figure 18. Select THETA UVC Blender, not THETA S</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/uvc-blender-selected.png" alt="uvc blender selected">
+</div>
+<div class="title">Figure 19. video should be in equirectangular</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/google-hangout-in-use.png" alt="google hangout in use">
+</div>
+<div class="title">Figure 20. THETA S in use as webcam</div>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s an example with
+<a href="https://obsproject.com/">Open Broadcaster Software</a>.</p>
+</div>
+<div class="paragraph">
+<p>Create a new Scene called <em>THETA Test</em>. Right click in <em>Sources</em> to <em>Add</em> a
+new <em>Video Capture Device</em></p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/obs-video-capture.png" alt="obs video capture">
+</div>
+<div class="title">Figure 21. Add THETA S as Video Capture Device to OBS</div>
+</div>
+<div class="paragraph">
+<p>Under the <em>Device Selection</em> window, select <em>THETA UVC Blender</em>. Click <em>OK</em>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/obs-video-device-selection.png" alt="obs video device selection">
+</div>
+<div class="title">Figure 22. Select THETA UVC Blender as Device</div>
+</div>
+<div class="paragraph">
+<p>The video stream will fill a portion of the screen. Select <em>Edit Scene</em> to size the video stream to fit.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/obs-base.png" alt="obs base">
+</div>
+<div class="title">Figure 23. Edit Scene to Fit the Stream</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/obs.png" alt="obs">
+</div>
+<div class="title">Figure 24. Live Streaming with Open Broadcaster Software</div>
+</div>
+<div class="paragraph">
+<p>You can use OBS or other software to stream the image to YouTube. Refer to the blog
+post below for more information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://theta360blog.wordpress.com/2016/04/22/ricoh-theta-s-360-degree-live-streaming-on-youtube/">RICOH THETA S 360 Degree Live Streaming on YouTube</a></p>
+</li>
+</ul>
+</div>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-73311422-1', 'auto');
+ga('send', 'pageview');
+</script>
+</div>
+<div class="sect2">
+<h3 id="_example_with_processor_language">3.5. Example with Processor Language</h3>
 <div class="paragraph">
 <p>Community Contribution from Sunao Hashimoto, kougaku on GitHub. Full
 sample source code is available.</p>
@@ -1157,7 +1356,7 @@ sample source code is available.</p>
 <div class="content">
 <img src="img/theta_s_live_viewer.gif" alt="theta s live viewer">
 </div>
-<div class="title">Figure 7. Live viewer for THETA S</div>
+<div class="title">Figure 25. Live viewer for THETA S</div>
 </div>
 <div class="paragraph">
 <p>The example above is built with <a href="https://processing.org/">Processing</a>.</p>
@@ -1169,11 +1368,11 @@ sample source code is available.</p>
 <div class="content">
 <img src="img/kougaku_stitching_english.png" alt="kougaku stitching english">
 </div>
-<div class="title">Figure 8. dual fish-eye video stitching</div>
+<div class="title">Figure 26. dual fish-eye video stitching</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_examples_with_3d_tools_such_as_unity_and_maya_lt">3.5. Examples with 3D Tools such as Unity and Maya LT</h3>
+<h3 id="_examples_with_3d_tools_such_as_unity_and_maya_lt">3.6. Examples with 3D Tools such as Unity and Maya LT</h3>
 <div class="paragraph">
 <p>Nora, @steroarts, released a shader pack to convert THETA 360 degree
 media into equirectangular format in real time.</p>
@@ -1194,7 +1393,7 @@ after an hour of work back in September, 2015. Additional information in
 <div class="content">
 <a class="image" href="https://youtu.be/edWrhCYIS5Q"><img src="img/goro_man.png" alt="goro man"></a>
 </div>
-<div class="title">Figure 9. equirectangular video without stitching</div>
+<div class="title">Figure 27. equirectangular video without stitching</div>
 </div>
 <div class="paragraph">
 <p>The section below was translated from Japanese by Jesse Casman.</p>
@@ -1250,13 +1449,13 @@ Equirectangular in Unity and supporting scripts.
 <div class="content">
 <img src="img/livestreaming/unity/dual-fish-eye.jpg" alt="dual fish eye">
 </div>
-<div class="title">Figure 10. dual fish eye image</div>
+<div class="title">Figure 28. dual fish eye image</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="img/livestreaming/unity/dual-fisheye-tripod.jpg" alt="dual fisheye tripod">
 </div>
-<div class="title">Figure 11. dual fish eye image with tripod</div>
+<div class="title">Figure 29. dual fish eye image with tripod</div>
 </div>
 <div class="paragraph">
 <p>In doing this, I&#8217;ve made an adjustment using sample texture, which Goroman filmed using WebCamTexture.</p>
@@ -1271,7 +1470,7 @@ Equirectangular in Unity and supporting scripts.
 <div class="content">
 <img src="img/livestreaming/unity/MayaLT-UV-mapping.png" alt="MayaLT UV mapping">
 </div>
-<div class="title">Figure 12. Maya LT UV Mapping</div>
+<div class="title">Figure 30. Maya LT UV Mapping</div>
 </div>
 <div class="paragraph">
 <p>It would look like below, if you make a plane with the UV.</p>
@@ -1280,7 +1479,7 @@ Equirectangular in Unity and supporting scripts.
 <div class="content">
 <img src="img/livestreaming/unity/MayaLT-UV-mapping-2.png" alt="MayaLT UV mapping 2">
 </div>
-<div class="title">Figure 13. Maya LT UV Mapping 2</div>
+<div class="title">Figure 31. Maya LT UV Mapping 2</div>
 </div>
 <div class="paragraph">
 <p>All it needs is to be cut in half and be moved appropriately.</p>
@@ -1289,13 +1488,13 @@ Equirectangular in Unity and supporting scripts.
 <div class="content">
 <img src="img/livestreaming/unity/MayaLT-UV-mapping-3.png" alt="MayaLT UV mapping 3">
 </div>
-<div class="title">Figure 14. Maya LT UV Mapping 3</div>
+<div class="title">Figure 32. Maya LT UV Mapping 3</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="img/livestreaming/unity/MayaLT-UV-mapping-4.png" alt="MayaLT UV mapping 4">
 </div>
-<div class="title">Figure 15. Maya LT UV Mapping 4</div>
+<div class="title">Figure 33. Maya LT UV Mapping 4</div>
 </div>
 <div class="paragraph">
 <p>It looks like this. (I did not adjust it, so it might be slightly off.)</p>
@@ -1304,7 +1503,7 @@ Equirectangular in Unity and supporting scripts.
 <div class="content">
 <img src="img/livestreaming/unity/crescent-moon.png" alt="crescent moon">
 </div>
-<div class="title">Figure 16. Crescent Moon image</div>
+<div class="title">Figure 34. Crescent Moon image</div>
 </div>
 <div class="paragraph">
 <p>Actually, I wanted to use alphablend for the border, so I used 2 overlapping half spheres instead of one sphere. The UV border is adequately stretched manually.</p>
@@ -1313,7 +1512,7 @@ Equirectangular in Unity and supporting scripts.
 <div class="content">
 <img src="img/livestreaming/unity/overlapping.png" alt="overlapping">
 </div>
-<div class="title">Figure 17. Overlapping</div>
+<div class="title">Figure 35. Overlapping</div>
 </div>
 <div class="paragraph">
 <p>Incidentally, surface is set to face inward, by reversing all normal vectors. UV position and size are fine to adjust later with shader.</p>
@@ -1423,7 +1622,7 @@ uniform float _ScaleCenterV;</pre>
 <div class="content">
 <img src="img/livestreaming/unity/two-circles.png" alt="two circles">
 </div>
-<div class="title">Figure 18. Two Circles</div>
+<div class="title">Figure 36. Two Circles</div>
 </div>
 <div class="paragraph">
 <p>Then, adjust the parameters and you&#8217;ve got a whole sphere.</p>
@@ -1432,19 +1631,19 @@ uniform float _ScaleCenterV;</pre>
 <div class="content">
 <img src="img/livestreaming/unity/parameters.png" alt="parameters">
 </div>
-<div class="title">Figure 19. Parameters</div>
+<div class="title">Figure 37. Parameters</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="img/livestreaming/unity/sphere-unity.png" alt="sphere unity">
 </div>
-<div class="title">Figure 20. Unity Sphere</div>
+<div class="title">Figure 38. Unity Sphere</div>
 </div>
 <div class="imageblock">
 <div class="content">
 <img src="img/livestreaming/unity/realtime-stitching.png" alt="realtime stitching">
 </div>
-<div class="title">Figure 21. Realtime Stitching</div>
+<div class="title">Figure 39. Realtime Stitching</div>
 </div>
 <div class="paragraph">
 <p>Changing into Equirectangular</p>
@@ -1612,7 +1811,7 @@ float ez = 0;</pre>
 <div class="content">
 <img src="img/livestreaming/unity/results.png" alt="results">
 </div>
-<div class="title">Figure 22. Results</div>
+<div class="title">Figure 40. Results</div>
 </div>
 <div class="paragraph">
 <p>When taking a look at the mesh, it moves around like this.</p>
@@ -1621,7 +1820,7 @@ float ez = 0;</pre>
 <div class="content">
 <img src="img/livestreaming/unity/results-mesh.png" alt="results mesh">
 </div>
-<div class="title">Figure 23. Results Mesh</div>
+<div class="title">Figure 41. Results Mesh</div>
 </div>
 <div class="paragraph">
 <p>Because polygon did not fit, there is a blank space in the corner. This could have been avoided if we have used a direct fragment shader like Nora.</p>
@@ -1648,7 +1847,7 @@ UV mapping with webgl.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_community_articles_about_360_display_in_unity">3.6. Community Articles About 360 Display in Unity</h3>
+<h3 id="_community_articles_about_360_display_in_unity">3.7. Community Articles About 360 Display in Unity</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1672,7 +1871,7 @@ UV mapping with webgl.</p>
 <div class="content">
 <img src="img/still_image_stitching_english.png" alt="still image stitching english">
 </div>
-<div class="title">Figure 24. still image stitching</div>
+<div class="title">Figure 42. still image stitching</div>
 </div>
 <div class="paragraph">
 <p><a href="https://github.com/kougaku/PanoramaViewer">Source code available on GitHub</a>.</p>
@@ -1684,7 +1883,7 @@ UV mapping with webgl.</p>
 <div class="content">
 <img src="img/akokubo_javascript_viewer.png" alt="akokubo javascript viewer">
 </div>
-<div class="title">Figure 25. 360 degree still image in Chrome web browser</div>
+<div class="title">Figure 43. 360 degree still image in Chrome web browser</div>
 </div>
 <div class="ulist">
 <ul>
@@ -1721,7 +1920,31 @@ part of our
 </div>
 </div>
 <div class="sect1">
-<h2 id="_linux">5. Linux</h2>
+<h2 id="_graphic_tech">5. Graphic Tech</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_hdr">5.1. HDR</h3>
+<div class="paragraph">
+<p><a href="https://itunes.apple.com/us/app/simple-hdr/id1035541353?mt=8">Simple HDR</a> is
+a great application that works with the RICOH THETA S and m15 models.
+It is developed by
+<a href="http://www.builtlight.org/us/">Built Light</a></p>
+</div>
+<div class="paragraph">
+<p>Nick Campbell produced a video that gives a good
+<a href="http://greyscalegorilla.com/2016/02/simple-hdr-update-make-your-own-360-hdris/">overview of Simple HDR and 360 HDRIs</a></p>
+</div>
+<div class="paragraph">
+<p>Another HDR application is
+<a href="https://itunes.apple.com/us/app/hdr-360-bracket-pro-for-ricoh/id987157511?mt=8">HDR 360 Bracket Pro for RICOH THETA</a> by
+<a href="https://www.linkedin.com/in/bradherman">Brad Herman</a>,
+the CTO and co-founder of SPACES.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_linux">6. Linux</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>RICOH only supports Mac and Windows desktop. As many developers use
@@ -1807,10 +2030,10 @@ sudo gnome-desktop-item-edit /usr/share/applications/ --create-new</pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_proprietary_technical_information">6. Proprietary Technical Information</h2>
+<h2 id="_proprietary_technical_information">7. Proprietary Technical Information</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_lens_parameter_information">6.1. Lens Parameter Information</h3>
+<h3 id="_lens_parameter_information">7.1. Lens Parameter Information</h3>
 <div class="paragraph">
 <p>The lens geometry for the THETA is based on equidistant projection.
 The final projection
@@ -1822,7 +2045,7 @@ as of December 2015. Stitching is still possible without this information.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_stitching_libraries">6.2. Stitching Libraries</h3>
+<h3 id="_stitching_libraries">7.2. Stitching Libraries</h3>
 <div class="paragraph">
 <p>The RICOH THETA S processes still images inside of the camera. It
 takes 8 seconds for the camera to be ready to take another still
@@ -1847,10 +2070,10 @@ libraries in live streaming mode.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_faq_for_media_editing">7. FAQ for Media Editing</h2>
+<h2 id="_faq_for_media_editing">8. FAQ for Media Editing</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_q_how_do_i_edit_video_in_adobe_premiere_pro">7.1. Q: How do I edit video in Adobe Premiere Pro?</h3>
+<h3 id="_q_how_do_i_edit_video_in_adobe_premiere_pro">8.1. Q: How do I edit video in Adobe Premiere Pro?</h3>
 <div class="paragraph">
 <p><strong>A:</strong></p>
 </div>
@@ -1876,7 +2099,7 @@ end in _er</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_q_how_do_i_edit_a_still_image_in_photoshop_or_other_image_editing_software">7.2. Q: How do I edit a still image in Photoshop or other image editing software?</h3>
+<h3 id="_q_how_do_i_edit_a_still_image_in_photoshop_or_other_image_editing_software">8.2. Q: How do I edit a still image in Photoshop or other image editing software?</h3>
 <div class="paragraph">
 <p>Example of use: The photographer wants to lighten an image.</p>
 </div>
@@ -1930,7 +2153,7 @@ DennisMabrey wrote a
 </div>
 </div>
 <div class="sect2">
-<h3 id="_q_how_do_i_connect_the_camera_as_a_usb_storage_device">7.3. Q: How do I connect the camera as a USB storage device?</h3>
+<h3 id="_q_how_do_i_connect_the_camera_as_a_usb_storage_device">8.3. Q: How do I connect the camera as a USB storage device?</h3>
 <div class="paragraph">
 <p><strong>A:</strong> Hold the WiFi and Shutter buttons on your camera while you plug the camera
 into the USB port of your computer. The camera will appear as RICODCX. This is
@@ -1940,7 +2163,7 @@ into Photos. Save them to disk and use the RICOH app.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_q_what_are_the_technical_specifications_of_images_and_video">7.4. Q: What are the technical specifications of images and video?</h3>
+<h3 id="_q_what_are_the_technical_specifications_of_images_and_video">8.4. Q: What are the technical specifications of images and video?</h3>
 <div class="paragraph">
 <p><strong>A:</strong> The
 <a href="https://developers.theta360.com/en/docs/introduction/">official RICOH site</a>
@@ -1952,7 +2175,7 @@ has great information in the overview section.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-03-12 10:43:03 PST
+Last updated 2016-04-22 14:44:42 PDT
 </div>
 </div>
 </body>
