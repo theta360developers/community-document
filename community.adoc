@@ -87,10 +87,10 @@ The output is in dual fish-eye mode (two spheres). To make the video
 usable in a web browser or with external services,
 you'll need to convert the video into equirectangular mode.
 
-To view a video with 360 degree navigation, you'll need to stitch it into
-equirectangular data. Note that
-as of March 24, 2016, YouTube does not support live streaming
- of 360 video with navigation.
+To view a live streaming video with 360 degree navigation, you can upload it to
+YouTube. Follow this guide for
+https://theta360blog.wordpress.com/2016/04/22/ricoh-theta-s-360-degree-live-streaming-on-youtube/[RICOH THETA 360 degree live streaming on YouTube].
+
 
 .Table THETA S Live Streaming
 |===
