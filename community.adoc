@@ -44,7 +44,7 @@ Beginners should start here. Web browser using advanced HTTP clients,
 command line curl, Python. Planned examples for JavaScript and other languages.
 ** http://theta360developers.github.io/community-document/community.html[Unofficial Media Guide] -
 360 degree media management. Streaming video, equirectangular conversion, stitching
-** http://www.meetup.com/RICOH-THETA-Developers-SF-Bay-Area/[RICOH THETA Developers SF Bay Area Meetup Group]
+** http://www.meetup.com/RICOH-THETA-Developers-SF-Bay-Area/[RICOH THETA Developers SF Bay Area Meetup Group] - Focused on developers and companies using the RICOH THETA camera
 
 
 == 360 Video Formats
