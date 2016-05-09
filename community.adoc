@@ -24,6 +24,9 @@ This is an unofficial, community-generated guide for developing applications
 that use 360 media from RICOH THETA cameras.
 This is not authorized by RICOH and is based on publicly available information.
 
+== News
+=== http://theta360.guide/contest/[THETA Developer Contest with $45,000 in Prizes]
+
 ==  Resources
 === Official Information
 
