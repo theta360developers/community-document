@@ -13,12 +13,14 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 ga('create', 'UA-73311422-1', 'auto');
 ga('send', 'pageview');
+ga('set', 'contentGroup1', 'All RICOH');
 </script>
 ++++
 
 image::img/media_guide_logo2.png[THETA DEVELOPERS UNOFFICIAL MEDIA GUIDE]
 
-Send comments and corrections to <ricohtheta360@oppkey.com>
+Post comments and corrections to <http://lists.theta360.guide> in a public
+category or direct message jcasman or craig on the lists system.
 
 This is an unofficial, community-generated guide for developing applications
 that use 360 media from RICOH THETA cameras.
