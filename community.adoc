@@ -26,7 +26,7 @@ This is an unofficial, community-generated guide for developing applications
 that use 360 media from RICOH THETA cameras.
 This is not authorized by RICOH and is based on publicly available information.
 
-== http://theta360.guide/contest/[$45,000 THETA Dev Contest]
+== http://theta360.guide/ecosystem/[THETA Developer Ecosystem Registration]
 
 ==  Resources
 === Official Information
@@ -95,7 +95,7 @@ you'll need to convert the video into equirectangular mode.
 To view a live streaming video with 360 degree navigation, you can connect it
 to a YouTube live streaming event.
 
-CAUTION: YouTube live streaming needs to be an *Event* and not *Stream now*. You must check *This live stream is 360* under the *Advanced Settings* tab. 
+CAUTION: YouTube live streaming needs to be an *Event* and not *Stream now*. You must check *This live stream is 360* under the *Advanced Settings* tab.
 
 Follow this guide for
 http://lists.theta360.guide/t/theta-live-streaming-on-youtube/13[RICOH THETA 360 degree live streaming on YouTube].
