@@ -22,14 +22,17 @@ image::img/media_guide_logo2.png[THETA DEVELOPERS UNOFFICIAL MEDIA GUIDE]
 Post comments and corrections to <http://lists.theta360.guide> in a public
 category or direct message
 http://lists.theta360.guide/users/jcasman/[@jcasman] or
-http://lists.theta360.guide/users/codetricity[@craig] on the lists system. 
+http://lists.theta360.guide/users/codetricity[@craig] on the lists system.
 You must be logged in to send a message.
 
 This is an unofficial, community-generated guide for developing applications
 that use 360 media from RICOH THETA cameras.
 This is not authorized by RICOH and is based on publicly available information.
 
-== http://theta360.guide/ecosystem/[THETA Developer Ecosystem Registration]
+// == http://theta360.guide/ecosystem/[THETA Developer Ecosystem Registration]
+
+Get the latest news and updates on Twitter
+**https://twitter.com/theta360dev[@theta360dev]**
 
 ==  Resources
 === Official Information
