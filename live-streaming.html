@@ -759,6 +759,15 @@ p { margin-bottom: 1.25rem; }
 <li><a href="#__a_href_https_obsproject_com_download_and_install_obs_a">3.2. <a href="https://obsproject.com/">Download and Install OBS</a></a></li>
 </ul>
 </li>
+<li><a href="#_create_a_youtube_live_360_event">4. Create a YouTube Live 360 Event</a></li>
+<li><a href="#_using_hdmi">5. Using HDMI</a></li>
+<li><a href="#_troubleshooting">6. Troubleshooting</a>
+<ul class="sectlevel2">
+<li><a href="#_problem_status_0x800705aa">6.1. Problem: Status:0x800705AA</a></li>
+<li><a href="#_problem_screen_is_black_with_nothing_on_it">6.2. Problem: Screen is black with nothing on it</a></li>
+<li><a href="#_problem_video_on_youtube_is_equirectangular_with_no_navigation">6.3. Problem: Video on YouTube is Equirectangular with No Navigation</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -941,14 +950,314 @@ look like a distorted rectangle. Skype is for testing only, not for use.
 </div>
 <div class="sect2">
 <h3 id="__a_href_https_obsproject_com_download_and_install_obs_a">3.2. <a href="https://obsproject.com/">Download and Install OBS</a></h3>
-
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/obs-icon.png" alt="obs icon">
+</div>
+<div class="title">Figure 10. OBS Studio</div>
+</div>
+<div class="paragraph">
+<p>Create a new <em>Scene</em>. Any name is fine. Click on the plus sign. Under
+<em>Sources</em>, add THETA UVC Blender (any name is fine) and add
+a video capture device. Right click to open the pop-up menu.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/obs-video-capture.png" alt="obs video capture">
+</div>
+<div class="title">Figure 11. Add Video Capture Device to OBS <em>Sources</em></div>
+</div>
+<div class="paragraph">
+<p>Select <em>THETA UVC Blender</em> as the Device. Verify that the video stream is in equirectangular format.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/obs-device.png" alt="obs device">
+</div>
+<div class="title">Figure 12. Verify THETA UVC Blender works in OBS</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If you see a black screen that says <em>Status:0x800705AA</em>, try to toggle your device between your two
+webcams. If you still see the error, disconnect all other webcams or disable the webcam on your laptop
+and then reboot your computer. The error above indicates that a connection is not established. See Troubleshooting
+section below
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Leave the Resolution/FPS Type as <em>Device Default</em>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/resolution-fps.png" alt="resolution fps">
+</div>
+<div class="title">Figure 13. Leave Resolution/FPS Type as Default</div>
+</div>
+<div class="paragraph">
+<p>Under Settings &#8594; Video, set the resolution to 1280x720.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/obs-settings-video.png" alt="obs settings video">
+</div>
+<div class="title">Figure 14. Configure Resolution to 1280x720</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+As of Oct 2016, the maximum resolution for UVC Blender is 720p. It&#8217;s likely that a higher resolution
+driver may be available in the future. Please check the maximum resolution and adjust your settings if needed.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Select Stretch to screen.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/obs-stretch-to-screen.png" alt="obs stretch to screen">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_a_youtube_live_360_event">4. Create a YouTube Live 360 Event</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Log into YouTube. Click on the <em>Upload</em> button.
+Click the <em>Get started</em> button on live streaming.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-livestream.png" alt="youtube livestream">
+</div>
+<div class="title">Figure 15. Click Live Streaming after you click upload</div>
+</div>
+<div class="paragraph">
+<p>Select <em>Events</em>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-event.png" alt="youtube event">
+</div>
+<div class="title">Figure 16. Select Events</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Make sure you select Events. You will not get a 360 stream with <em>Stream now</em>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In the right side of the screen, select <em>New live event</em>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-new-live-event.png" alt="youtube new live event">
+</div>
+<div class="title">Figure 17. New live event</div>
+</div>
+<div class="paragraph">
+<p>Add a title.</p>
+</div>
+<div class="paragraph">
+<p>Select Advanced Settings</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-advanced-settings.png" alt="youtube advanced settings">
+</div>
+</div>
+<div class="paragraph">
+<p>Select <em>This live stream is 360</em>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-livestream360.png" alt="youtube livestream360">
+</div>
+<div class="title">Figure 18. Select <em>This live stream is 360</em></div>
+</div>
+<div class="paragraph">
+<p>Grab stream name from <em>Ingestion Settings</em></p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-ingestion-1.png" alt="youtube ingestion 1">
+</div>
+</div>
+<div class="paragraph">
+<p>Once you click on <em>Basic ingestion</em> information on your encoder will open up.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-basic-ingestion.png" alt="youtube basic ingestion">
+</div>
+</div>
+<div class="paragraph">
+<p>Copy the stream name. You will need this for OBS. In OBS, it is called, <em>Stream key</em>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-streamname.png" alt="youtube streamname">
+</div>
+</div>
+<div class="paragraph">
+<p>Open OBS, go to Settings &#8594; Stream. Paste the YouTube stream name into the box
+on OBS called, <em>Stream key</em>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/obs-streamkey.png" alt="obs streamkey">
+</div>
+</div>
+<div class="paragraph">
+<p>On the main OBS front control panel, press <em>Start Streaming</em> in the right hand
+side of the control panel.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/obs-start-streaming.png" alt="obs start streaming">
+</div>
+</div>
+<div class="paragraph">
+<p>On YouTube, go to the <em>Live Control Room</em> and click <em>Preview Stream</em>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-preview.png" alt="youtube preview">
+</div>
+</div>
+<div class="paragraph">
+<p>You can preview the stream if you have good bandwidth. I have limited
+upstream bandwidth in my office. I reduced the ingestion bandwidth,
+making my resolution lower.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-preview-test.png" alt="youtube preview test">
+</div>
+</div>
+<div class="paragraph">
+<p>When you&#8217;re ready, start the stream.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-streaming.png" alt="youtube streaming">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_using_hdmi">5. Using HDMI</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Using USB output for live streaming, you will get a maximum resolution of 720p.
+If you save your video files to your camera, the resolution will be 1920x1080.
+If you save still images as timelapse, you can get 5376x2688, which will be displayed
+as 4K on YouTube.</p>
+</div>
+<div class="paragraph">
+<p>The THETA S has an HDMI port that can output 1920x1080 at 30fps. In order to use
+this signal, you need to use something like
+<a href="https://www.blackmagicdesign.com/products/ultrastudiothunderbolt">Blackmagicdesign UltraStudio for Thunderbolt</a>.</p>
+</div>
+<div class="paragraph">
+<p>Once you get the video stream onto your computer, it will be in dual-fisheye.
+To get this into equirectangular, you will need to use a third-party product
+such as
+<a href="http://theta360.guide/showcase/ricoh-product-streambox.html">Streambox Cloud Encoder</a>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/streambox-theta.png" alt="streambox theta">
+</div>
+</div>
+<div class="paragraph">
+<p>This is the workflow.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/streambox-workflow.png" alt="streambox workflow">
+</div>
+</div>
+<div class="paragraph">
+<p>This is a
+<a href="https://www.youtube.com/watch?v=d8TN_Vc6wL0">sample of the live stream using a THETA</a>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/streambox-sample.png" alt="streambox sample">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_troubleshooting">6. Troubleshooting</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_problem_status_0x800705aa">6.1. Problem: Status:0x800705AA</h3>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/obs-error.png" alt="obs error">
+</div>
+<div class="title">Figure 19. Error message when device not detected</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Verify your firmware is 01.42 or above</p>
+</li>
+<li>
+<p>Make sure your camera has the blue word <code>Live</code> in LED lights on</p>
+</li>
+<li>
+<p>Toggle between webcam and UV Blender. If this still fails to resolve the problem,
+disable all other webcams and reboot</p>
+</li>
+<li>
+<p>Try a different USB cable. Plug it into the port on the back of your computer</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_problem_screen_is_black_with_nothing_on_it">6.2. Problem: Screen is black with nothing on it</h3>
+<div class="paragraph">
+<p>Check video resolution. Set to 1280x720</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_problem_video_on_youtube_is_equirectangular_with_no_navigation">6.3. Problem: Video on YouTube is Equirectangular with No Navigation</h3>
+<div class="paragraph">
+<p>If the stream is in equirectangular on OBS and it can&#8217;t be navigated on YouTube, check
+your YouTube configuration.</p>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-06 20:39:33 UTC
+Last updated 2016-10-06 23:09:51 UTC
 </div>
 </div>
 </body>

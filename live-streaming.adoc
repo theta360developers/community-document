@@ -81,4 +81,147 @@ NOTE: In Skype, the video does not have 360 navigation (as of Oct 2016) and it w
 look like a distorted rectangle. Skype is for testing only, not for use.
 
 === https://obsproject.com/[Download and Install OBS]
-image::img/livestreaming/obs-icon.png[role="thumb" title="OBS-Studio"]
+image::img/livestreaming/obs-icon.png[role="thumb" title="OBS Studio"]
+
+Create a new _Scene_. Any name is fine. Click on the plus sign. Under
+_Sources_, add THETA UVC Blender (any name is fine) and add
+a video capture device. Right click to open the pop-up menu.
+
+image::img/livestreaming/obs-video-capture.png[role="thumb" title="Add Video Capture Device to OBS _Sources_"]
+
+Select _THETA UVC Blender_ as the Device. Verify that the video stream is in equirectangular format.
+
+image::img/livestreaming/obs-device.png[role="thumb" title="Verify THETA UVC Blender works in OBS"]
+
+TIP: If you see a black screen that says _Status:0x800705AA_, try to toggle your device between your two
+webcams. If you still see the error, disconnect all other webcams or disable the webcam on your laptop
+and then reboot your computer. The error above indicates that a connection is not established. See Troubleshooting
+section below
+
+Leave the Resolution/FPS Type as _Device Default_.
+
+image::img/livestreaming/resolution-fps.png[role="thumb" title="Leave Resolution/FPS Type as Default"]
+
+Under Settings -> Video, set the resolution to 1280x720.
+
+image::img/livestreaming/obs-settings-video.png[role="thumb" title="Configure Resolution to 1280x720"]
+
+NOTE: As of Oct 2016, the maximum resolution for UVC Blender is 720p. It's likely that a higher resolution
+driver may be available in the future. Please check the maximum resolution and adjust your settings if needed.
+
+Select Stretch to screen.
+
+image::img/livestreaming/obs-stretch-to-screen.png[role="thumb"]
+
+## Create a YouTube Live 360 Event
+
+Log into YouTube. Click on the _Upload_ button.
+Click the _Get started_ button on live streaming.
+
+image::img/livestreaming/youtube-livestream.png[role="thumb" title="Click Live Streaming after you click upload"]
+
+Select _Events_.
+
+image::img/livestreaming/youtube-event.png[role="thumb" title="Select Events"]
+
+WARNING: Make sure you select Events. You will not get a 360 stream with _Stream now_.
+
+In the right side of the screen, select _New live event_.
+
+image::img/livestreaming/youtube-new-live-event.png[role="thumb" title="New live event"]
+
+Add a title.
+
+Select Advanced Settings
+
+image::img/livestreaming/youtube-advanced-settings.png[role="thumb"]
+
+Select _This live stream is 360_.
+
+image::img/livestreaming/youtube-livestream360.png[role="thumb" title="Select _This live stream is 360_"]
+
+Grab stream name from _Ingestion Settings_
+
+image::img/livestreaming/youtube-ingestion-1.png[role="thumb"]
+
+Once you click on _Basic ingestion_ information on your encoder will open up.
+
+image::img/livestreaming/youtube-basic-ingestion.png[role="thumb"]
+
+Copy the stream name. You will need this for OBS. In OBS, it is called, _Stream key_.
+
+image::img/livestreaming/youtube-streamname.png[role="thumb"]
+
+Open OBS, go to Settings -> Stream. Paste the YouTube stream name into the box
+on OBS called, _Stream key_.
+
+image::img/livestreaming/obs-streamkey.png[role="thumb"]
+
+On the main OBS front control panel, press _Start Streaming_ in the right hand
+side of the control panel.
+
+image::img/livestreaming/obs-start-streaming.png[role="thumb"]
+
+On YouTube, go to the _Live Control Room_ and click _Preview Stream_.
+
+image::img/livestreaming/youtube-preview.png[role="thumb"]
+
+You can preview the stream if you have good bandwidth. I have limited
+upstream bandwidth in my office. I reduced the ingestion bandwidth,
+making my resolution lower.
+
+image::img/livestreaming/youtube-preview-test.png[role="thumb"]
+
+When you're ready, start the stream.
+
+image::img/livestreaming/youtube-streaming.png[role="thumb"]
+
+## Using HDMI
+
+Using USB output for live streaming, you will get a maximum resolution of 720p.
+If you save your video files to your camera, the resolution will be 1920x1080.
+If you save still images as timelapse, you can get 5376x2688, which will be displayed
+as 4K on YouTube.
+
+The THETA S has an HDMI port that can output 1920x1080 at 30fps. In order to use
+this signal, you need to use something like
+https://www.blackmagicdesign.com/products/ultrastudiothunderbolt[Blackmagicdesign UltraStudio for Thunderbolt].
+
+Once you get the video stream onto your computer, it will be in dual-fisheye.
+To get this into equirectangular, you will need to use a third-party product
+such as
+http://theta360.guide/showcase/ricoh-product-streambox.html[Streambox Cloud Encoder].
+
+image::img/livestreaming/streambox-theta.png[role="thumb"]
+
+This is the workflow.
+
+image::img/livestreaming/streambox-workflow.png[role="thumb"]
+
+This is a
+https://www.youtube.com/watch?v=d8TN_Vc6wL0[sample of the live stream using a THETA].
+
+image::img/livestreaming/streambox-sample.png[role="thumb"]
+
+
+
+## Troubleshooting
+
+### Problem: Status:0x800705AA
+
+image::img/livestreaming/obs-error.png[role="thumb" title="Error message when device not detected"]
+
+1. Verify your firmware is 01.42 or above
+2. Make sure your camera has the blue word `Live` in LED lights on
+3. Toggle between webcam and UV Blender. If this still fails to resolve the problem,
+disable all other webcams and reboot
+4. Try a different USB cable. Plug it into the port on the back of your computer
+
+### Problem: Screen is black with nothing on it
+
+Check video resolution. Set to 1280x720
+
+### Problem: Video on YouTube is Equirectangular with No Navigation
+
+If the stream is in equirectangular on OBS and it can't be navigated on YouTube, check
+your YouTube configuration.
