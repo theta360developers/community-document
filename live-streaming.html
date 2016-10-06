@@ -743,10 +743,24 @@ p { margin-bottom: 1.25rem; }
   .show-for-print { display: inherit !important; } }
 
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
-<body class="article">
+<body class="article toc2 toc-right">
 <div id="header">
 <h1>RICOH THETA Live Streaming</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_enable_live_streaming_mode">1. Enable Live Streaming Mode</a></li>
+<li><a href="#_connect_camera_to_computer">2. Connect Camera to Computer</a></li>
+<li><a href="#_install_live_streaming_software">3. Install Live Streaming Software</a>
+<ul class="sectlevel2">
+<li><a href="#__a_href_https_theta360_com_en_support_download_download_and_install_ricoh_live_streaming_app_a">3.1. <a href="https://theta360.com/en/support/download/">Download and Install RICOH Live-Streaming App</a></a></li>
+<li><a href="#__a_href_https_obsproject_com_download_and_install_obs_a">3.2. <a href="https://obsproject.com/">Download and Install OBS</a></a></li>
+</ul>
+</li>
+</ul>
+</div>
 </div>
 <div id="content">
 <div id="preamble">
@@ -768,7 +782,7 @@ ga('set', 'contentGroup1', 'All RICOH');
 </div>
 </div>
 <div class="sect1">
-<h2 id="_live_streaming_mode">1. Live Streaming Mode</h2>
+<h2 id="_enable_live_streaming_mode">1. Enable Live Streaming Mode</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>With the THETA off, press and hold the <em>mode</em> button. Keep pressing mode
@@ -818,22 +832,123 @@ The data is in MotionJPEG format.</p>
 <a href="https://theta360.com/en/support/download/">RICOH Live-streaming app</a> and
 <a href="https://obsproject.com/">OBS</a>.</p>
 </div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">NOTE</dt>
-<dd>
-<p>Many software can be used to stream to YouTube. Refer to
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Many software can be used to stream to YouTube. Refer to
 <a href="https://support.google.com/youtube/answer/2907883?hl=en">YouTube Live Verified Devices and Software</a>
-for more information.</p>
-</dd>
-</dl>
+for more information.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="__a_href_https_theta360_com_en_support_download_download_and_install_ricoh_live_streaming_app_a">3.1. <a href="https://theta360.com/en/support/download/">Download and Install RICOH Live-Streaming App</a></h3>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/live-streaming-download.png" alt="live streaming download">
+</div>
+<div class="title">Figure 4. Download the RICOH Live-Streaming App</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select Windows 32bit, Windows 64bit, or Mac</p>
+</li>
+<li>
+<p>Turn your THETA off</p>
+</li>
+<li>
+<p>Unplug THETA from your computer</p>
+</li>
+<li>
+<p>Install software</p>
+</li>
+</ol>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/uvcblender-install.png" alt="uvcblender install">
+</div>
+<div class="title">Figure 5. Live-Streaming App File is Called UVC Blender</div>
+</div>
+<div class="paragraph">
+<p>With the THETA turned off, the software will prompt you to reconnect the THETA to register your camera.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/register.png" alt="register">
+</div>
+<div class="title">Figure 6. Register THETA with computer</div>
+</div>
+<div class="paragraph">
+<p>After you connect your THETA, a <em>Register</em> button will appear.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/register-button.png" alt="register button">
+</div>
+<div class="title">Figure 7. Register buttons appears after connection</div>
+</div>
+<div class="paragraph">
+<p>Complete the registration.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/registration-complete.png" alt="registration complete">
+</div>
+<div class="title">Figure 8. Camera and computer registration complete</div>
+</div>
+<div class="paragraph">
+<p>Test the THETA UVC Blender driver with any software that works with a webcam. In the example
+below, I am using Skype.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/theta-uvc-skype-select.png" alt="theta uvc skype select">
+</div>
+<div class="title">Figure 9. Testing THETA UVC Blender with Skype</div>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+Make sure you select <em>THETA UVC Blender</em> and not <em>RICOH THETA S</em>.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In Skype, the video does not have 360 navigation (as of Oct 2016) and it will
+look like a distorted rectangle. Skype is for testing only, not for use.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="__a_href_https_obsproject_com_download_and_install_obs_a">3.2. <a href="https://obsproject.com/">Download and Install OBS</a></h3>
+
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-06 16:23:25 UTC
+Last updated 2016-10-06 20:39:33 UTC
 </div>
 </div>
 </body>
