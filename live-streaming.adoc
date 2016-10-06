@@ -203,6 +203,18 @@ https://www.youtube.com/watch?v=d8TN_Vc6wL0[sample of the live stream using a TH
 
 image::img/livestreaming/streambox-sample.png[role="thumb"]
 
+This is the equipment and service list used:
+
+* Streamed live using Streambox Cloud Encoder
+* RICOH THETA S Camera
+* BlackMagic UltraStudio Mini Recorder
+* MacBook Pro with USB Modems
+* Streambox Cloud
+
+http://shop.videostream360.com/vr-cams-equipment/360camera[Videostream360]
+advertises using THETA at 1920x1080 with HDMI. They're even selling the
+THETA on their site. I am trying to get more information on this deployment.
+
 
 
 ## Troubleshooting
