@@ -767,10 +767,11 @@ p { margin-bottom: 1.25rem; }
 <li><a href="#_using_a_raspberry_pi">6.2. Using a Raspberry Pi</a></li>
 </ul>
 </li>
-<li><a href="#_troubleshooting">7. Troubleshooting</a>
+<li><a href="#_faq">7. FAQ</a></li>
+<li><a href="#_troubleshooting">8. Troubleshooting</a>
 <ul class="sectlevel2">
-<li><a href="#_streaming_to_youtube">7.1. Streaming to YouTube</a></li>
-<li><a href="#_heat">7.2. Heat</a></li>
+<li><a href="#_streaming_to_youtube">8.1. Streaming to YouTube</a></li>
+<li><a href="#_heat">8.2. Heat</a></li>
 </ul>
 </li>
 </ul>
@@ -1322,12 +1323,113 @@ a navigable 360 video. Transmission uses
 </div>
 </div>
 <div class="sect1">
-<h2 id="_troubleshooting">7. Troubleshooting</h2>
+<h2 id="_faq">7. FAQ</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Q: What&#8217;s the Resolution and FPS?</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>A:</strong> Updated Oct 2016.</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Table THETA S Live Streaming</caption>
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Type</th>
+<th class="tableblock halign-left valign-top">Format</th>
+<th class="tableblock halign-left valign-top">Camera Mode</th>
+<th class="tableblock halign-left valign-top">Size</th>
+<th class="tableblock halign-left valign-top">Frame Rate</th>
+<th class="tableblock halign-left valign-top">Connection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Live View</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Equirectangular in MotionJPEG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Image Only</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">640x320</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10fps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WiFi</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USB Live Streaming of dual-fisheye</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dual-fisheye in MotionJPEG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">live streaming</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1280x720</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15fps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USB isochronous transfer</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HDMI live streaming of dual-fisheye</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dual-fisheye in uncompressed YCbCr</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">live streaming</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1920x1080, 1280x720, 720x480</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30fps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">HDMI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USB live streaming of equirectangular</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Equirectangular in MotionJPEG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">live streaming</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1280x720</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15fps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USB</p></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<div class="paragraph">
+<p><strong>Q: Can I stream from a drone to a headset?</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>A:</strong> Only with expensive equipment. This is not a good use of the THETA for
+recreational hobbyists.
+<a href="http://lists.theta360.guide/t/using-theta-360-video-from-a-drone/133?u=codetricity">Refer to this article</a> for more
+information.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p><strong>Q: Does the THETA have auto-stabilization?</strong>
+<strong>A:</strong> No. You&#8217;ll need to use a third-party
+<a href="http://lists.theta360.guide/t/theta-s-dokumentation-on-a-clasic-mc-rally/211/11?u=codetricity">gimbal</a>.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p><strong>Q: Is anyone using the THETA 360 stream for object recognition?</strong>
+<strong>A:</strong> Yes. Most people use the raw video from 2 fisheye spheres. Most people do not convert
+to equirectangular video. Just extract a portion of the sphere and perform the
+image recognition or measurement on that section. The HDMI stream has higher resolution. Most
+people are using that and extracting a frame, then performing the calculation. Known applications
+include facial recognition, audience emotion recognition, autonomous vehicle operation.
+As just one example, the winner of the RICOH prize at the 2016 DeveloperWeek Hackathon used
+the
+<a href="https://www.microsoft.com/cognitive-services/en-us/emotion-api">Microsoft Emotion API</a> on
+the dual-fisheye spheres.</p>
+</div>
+<div class="paragraph">
+<p><strong>Q: Is anyone working on panoramic sound?</strong>
+<strong>A:</strong> Yes. There are many projects for 3D sound, including
+<a href="http://lists.theta360.guide/t/panoramic-videos-with-panoramic-sounds/304?u=codetricity">SOPA</a>,
+an open source JavaScript library.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_troubleshooting">8. Troubleshooting</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_streaming_to_youtube">7.1. Streaming to YouTube</h3>
+<h3 id="_streaming_to_youtube">8.1. Streaming to YouTube</h3>
 <div class="sect3">
-<h4 id="_problem_status_0x800705aa">7.1.1. Problem: Status:0x800705AA</h4>
+<h4 id="_problem_status_0x800705aa">8.1.1. Problem: Status:0x800705AA</h4>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/obs-error.png" alt="obs error">
@@ -1353,13 +1455,13 @@ disable all other webcams and reboot</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_problem_screen_is_black_with_nothing_on_it">7.1.2. Problem: Screen is black with nothing on it</h4>
+<h4 id="_problem_screen_is_black_with_nothing_on_it">8.1.2. Problem: Screen is black with nothing on it</h4>
 <div class="paragraph">
 <p>Check video resolution. Set to 1280x720</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_problem_video_on_youtube_is_equirectangular_with_no_navigation">7.1.3. Problem: Video on YouTube is Equirectangular with No Navigation</h4>
+<h4 id="_problem_video_on_youtube_is_equirectangular_with_no_navigation">8.1.3. Problem: Video on YouTube is Equirectangular with No Navigation</h4>
 <div class="paragraph">
 <p>If the stream is in equirectangular on OBS and it can&#8217;t be navigated on YouTube, check
 your YouTube configuration.</p>
@@ -1367,7 +1469,7 @@ your YouTube configuration.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_heat">7.2. Heat</h3>
+<h3 id="_heat">8.2. Heat</h3>
 <div class="paragraph">
 <p>The unit below overheated 16 minutes into the shoot. It is using UVC Blender and a
 USB cable during an indoor shoot at Stanford during a crowded VR event.</p>
@@ -1423,7 +1525,7 @@ was too high.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-07 14:57:04 UTC
+Last updated 2016-10-07 15:32:33 UTC
 </div>
 </div>
 </body>

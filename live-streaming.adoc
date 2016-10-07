@@ -270,6 +270,79 @@ https://webrtc.org/[WebRTC].
 
 image::img/livestreaming/thetaview-360view.png[role="thumb" title="stream conversion done in browser"]
 
+## FAQ
+
+**Q: What's the Resolution and FPS?**
+
+**A:** Updated Oct 2016.
+
+.Table THETA S Live Streaming
+|===
+|Type |Format |Camera Mode |Size |Frame Rate| Connection
+
+|Live View
+|Equirectangular in MotionJPEG
+|Image Only
+|640x320
+|10fps
+|WiFi
+
+|USB Live Streaming of dual-fisheye
+|Dual-fisheye in MotionJPEG
+|live streaming
+|1280x720
+|15fps
+|USB isochronous transfer
+
+|HDMI live streaming of dual-fisheye
+|Dual-fisheye in uncompressed YCbCr
+|live streaming
+|1920x1080, 1280x720, 720x480
+|30fps
+|HDMI
+
+|USB live streaming of equirectangular
+|Equirectangular in MotionJPEG
+|live streaming
+|1280x720
+|15fps
+|USB
+|===
+
+---
+
+**Q: Can I stream from a drone to a headset?**
+
+**A:** Only with expensive equipment. This is not a good use of the THETA for
+recreational hobbyists.
+http://lists.theta360.guide/t/using-theta-360-video-from-a-drone/133?u=codetricity[Refer to this article] for more
+information.
+
+---
+
+**Q: Does the THETA have auto-stabilization?**
+**A:** No. You'll need to use a third-party
+http://lists.theta360.guide/t/theta-s-dokumentation-on-a-clasic-mc-rally/211/11?u=codetricity[gimbal].
+
+---
+
+**Q: Is anyone using the THETA 360 stream for object recognition?**
+**A:** Yes. Most people use the raw video from 2 fisheye spheres. Most people do not convert
+to equirectangular video. Just extract a portion of the sphere and perform the
+image recognition or measurement on that section. The HDMI stream has higher resolution. Most
+people are using that and extracting a frame, then performing the calculation. Known applications
+include facial recognition, audience emotion recognition, autonomous vehicle operation.
+As just one example, the winner of the RICOH prize at the 2016 DeveloperWeek Hackathon used
+the
+https://www.microsoft.com/cognitive-services/en-us/emotion-api[Microsoft Emotion API] on
+the dual-fisheye spheres. 
+
+**Q: Is anyone working on panoramic sound?**
+**A:** Yes. There are many projects for 3D sound, including
+http://lists.theta360.guide/t/panoramic-videos-with-panoramic-sounds/304?u=codetricity[SOPA],
+an open source JavaScript library.
+
+
 ## Troubleshooting
 
 ### Streaming to YouTube
