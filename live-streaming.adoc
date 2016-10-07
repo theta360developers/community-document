@@ -272,7 +272,8 @@ image::img/livestreaming/thetaview-360view.png[role="thumb" title="stream conver
 
 ## Troubleshooting
 
-### Problem: Status:0x800705AA
+### Streaming to YouTube
+#### Problem: Status:0x800705AA
 
 image::img/livestreaming/obs-error.png[role="thumb" title="Error message when device not detected"]
 
@@ -282,11 +283,36 @@ image::img/livestreaming/obs-error.png[role="thumb" title="Error message when de
 disable all other webcams and reboot
 4. Try a different USB cable. Plug it into the port on the back of your computer
 
-### Problem: Screen is black with nothing on it
+#### Problem: Screen is black with nothing on it
 
 Check video resolution. Set to 1280x720
 
-### Problem: Video on YouTube is Equirectangular with No Navigation
+#### Problem: Video on YouTube is Equirectangular with No Navigation
 
 If the stream is in equirectangular on OBS and it can't be navigated on YouTube, check
 your YouTube configuration.
+
+### Heat
+The unit below overheated 16 minutes into the shoot. It is using UVC Blender and a
+USB cable during an indoor shoot at Stanford during a crowded VR event.
+
+image::img/livestreaming/heat/overheat-example.png[role="thumb" title="Overheating during livestream"]
+
+If the THETA is overheating, point a standard household fan at it. The airflow
+may be enough to cool the outside of the THETA and help with the internal
+overheating.
+
+People have reported success by sticking $6 Raspberry Pi heatsinks onto the body of the THETA or
+taping or attaching a small fan used for computer CPUs to the outside of the THETA.
+
+image::img/livestreaming/heat/heatsinks.png[role="thumb" title="Raspberry Pi Heatsinks (L), small computer fan bracket (R)"]
+
+* https://amzn.com/B00LKX618Q[6 piece Addicore heatsink] for Raspberry Pi for $5.95
+* https://amzn.com/B01GE7Q060[Mudder 8 piece black heatsink cooler for RPi] for $6.99
+* https://www.tinkercad.com/things/7oICypvba1i-theta-s-cooling-fan-holder[TinkerCad Fan Holder for 3D printing]
+
+The enthusiast below created custom cases in plastic through a shop
+in Akihabara. He wanted to use metal, but the cost
+was too high.
+
+image::img/livestreaming/heat/case-mod.png[role="thumb" title="Not recommended, but an example of community enthusiasm"]
