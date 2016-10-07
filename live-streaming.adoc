@@ -346,6 +346,14 @@ the dual-fisheye spheres.
 http://lists.theta360.guide/t/panoramic-videos-with-panoramic-sounds/304?u=codetricity[SOPA],
 an open source JavaScript library.
 
+**Q: How do I increase the sound quality?**
+
+**A:** Use an external microphone and add it to your mixer. Set the THETA's input
+to zero using your mixer. If you're using OBS for the stream, plug your microphones into your
+computer and then add a new audio source from the main dashboard to your stream.
+There is no way to plug a microphone directly into the THETA.
+
+image::img/livestreaming/mixer.png[role="thumb" title="OBS mixer"]
 
 ## Troubleshooting
 
