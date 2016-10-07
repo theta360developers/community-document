@@ -47,7 +47,9 @@ NOTE: Many software can be used to stream to YouTube. Refer to
 https://support.google.com/youtube/answer/2907883?hl=en[YouTube Live Verified Devices and Software]
 for more information.
 
-=== https://theta360.com/en/support/download/[Download and Install RICOH Live-Streaming App]
+=== Download and Install RICOH Live-Streaming App
+
+https://theta360.com/en/support/download/[Download]
 
 image::img/livestreaming/live-streaming-download.png[role="thumb" title="Download the RICOH Live-Streaming App"]
 
@@ -77,11 +79,13 @@ image::img/livestreaming/theta-uvc-skype-select.png[role="thumb" title="Testing 
 
 CAUTION: Make sure you select _THETA UVC Blender_ and not _RICOH THETA S_.
 
-NOTE: In Skype, the video does not have 360 navigation (as of Oct 2016) and it will
+NOTE: In Skype, the video does not have 360&#176; navigation (as of Oct 2016) and it will
 look like a distorted rectangle. Skype is for testing only, not for use.
 
-=== https://obsproject.com/[Download and Install OBS]
+=== Download and Install OBS
 image::img/livestreaming/obs-icon.png[role="thumb" title="OBS Studio"]
+
+https://obsproject.com/[Download OBS]
 
 Create a new _Scene_. Any name is fine. Click on the plus sign. Under
 _Sources_, add THETA UVC Blender (any name is fine) and add
@@ -113,7 +117,7 @@ Select Stretch to screen.
 
 image::img/livestreaming/obs-stretch-to-screen.png[role="thumb"]
 
-## Create a YouTube Live 360 Event
+## Create a YouTube Live 360&#176; Event
 
 Log into YouTube. Click on the _Upload_ button.
 Click the _Get started_ button on live streaming.
@@ -124,7 +128,7 @@ Select _Events_.
 
 image::img/livestreaming/youtube-event.png[role="thumb" title="Select Events"]
 
-WARNING: Make sure you select Events. You will not get a 360 stream with _Stream now_.
+WARNING: Make sure you select Events. You will not get a 360&#176; stream with _Stream now_.
 
 In the right side of the screen, select _New live event_.
 
@@ -217,7 +221,7 @@ http://shop.videostream360.com/vr-cams-equipment/360camera[Videostream360]
 advertises using THETA at 1920x1080 with HDMI. They're even selling the
 THETA on their site. I am trying to get more information on this deployment.
 
-If you have a solution for HDMI 360 streaming and you've verified that it
+If you have a solution for HDMI 360&#176; streaming and you've verified that it
 works with the THETA, please join the
 http://theta360.guide/ecosystem/[THETA Ecosystem] and
 http://lists.theta360.guide/c/theta-media/ecosystem-discussion[post]
@@ -239,7 +243,7 @@ to mobile phones, primarily using Unity.
 This is a short Vine video of a
 https://vine.co/v/eV9XDQBEujt[demo].
 
-image::img/livestreaming/wifi-unity.png[role="thumb" title="360 video stream using WiFi"]
+image::img/livestreaming/wifi-unity.png[role="thumb" title="360&#176; video stream using WiFi"]
 
 Here is
 https://github.com/theta360developers/ThetaWifiStreaming[sample code]
@@ -265,7 +269,7 @@ uses node.
 image::img/livestreaming/thetaview-fisheye.png[role="thumb" title="video stream prior to conversion"]
 
 The sample code uses JavaScript to convert the dual-fisheye video stream into
-a navigable 360 video. Transmission uses
+a navigable 360&#176; video. Transmission uses
 https://webrtc.org/[WebRTC].
 
 image::img/livestreaming/thetaview-360view.png[role="thumb" title="stream conversion done in browser"]
@@ -327,7 +331,7 @@ http://lists.theta360.guide/t/theta-s-dokumentation-on-a-clasic-mc-rally/211/11?
 
 ---
 
-**Q: Is anyone using the THETA 360 stream for object recognition?**
+**Q: Is anyone using the THETA 360&#176; stream for object recognition?**
 
 **A:** Yes. Most people use the raw video from 2 fisheye spheres. Most people do not convert
 to equirectangular video. Just extract a portion of the sphere and perform the
@@ -404,3 +408,16 @@ in Akihabara. He wanted to use metal, but the cost
 was too high.
 
 image::img/livestreaming/heat/case-mod.png[role="thumb" title="Not recommended, but an example of community enthusiasm"]
+
+== Discuss
+
+If you have questions, comments or additions, please post them in the
+http://lists.theta360.guide/t/new-theta-360-video-live-streaming-guide-available/477?u=codetricity[THETA Unofficial Guide Forum].
+
+If you have a product or service that you've _verified works with the THETA_,
+please join the
+http://theta360.guide/ecosystem/[THETA Developer Ecosystem]. Once you've joined the ecosystem, you
+can post your product information in the
+http://lists.theta360.guide/c/theta-media/ecosystem-discussion[Ecosystem Discussion] category.
+
+== http://theta360.guide/[Return to theta360.guide]
