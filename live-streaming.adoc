@@ -327,6 +327,7 @@ http://lists.theta360.guide/t/theta-s-dokumentation-on-a-clasic-mc-rally/211/11?
 ---
 
 **Q: Is anyone using the THETA 360 stream for object recognition?**
+
 **A:** Yes. Most people use the raw video from 2 fisheye spheres. Most people do not convert
 to equirectangular video. Just extract a portion of the sphere and perform the
 image recognition or measurement on that section. The HDMI stream has higher resolution. Most
@@ -335,9 +336,12 @@ include facial recognition, audience emotion recognition, autonomous vehicle ope
 As just one example, the winner of the RICOH prize at the 2016 DeveloperWeek Hackathon used
 the
 https://www.microsoft.com/cognitive-services/en-us/emotion-api[Microsoft Emotion API] on
-the dual-fisheye spheres. 
+the dual-fisheye spheres.
+
+---
 
 **Q: Is anyone working on panoramic sound?**
+
 **A:** Yes. There are many projects for 3D sound, including
 http://lists.theta360.guide/t/panoramic-videos-with-panoramic-sounds/304?u=codetricity[SOPA],
 an open source JavaScript library.
