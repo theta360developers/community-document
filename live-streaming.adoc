@@ -211,11 +211,64 @@ This is the equipment and service list used:
 * MacBook Pro with USB Modems
 * Streambox Cloud
 
+
+
 http://shop.videostream360.com/vr-cams-equipment/360camera[Videostream360]
 advertises using THETA at 1920x1080 with HDMI. They're even selling the
 THETA on their site. I am trying to get more information on this deployment.
 
+If you have a solution for HDMI 360 streaming and you've verified that it
+works with the THETA, please join the
+http://theta360.guide/ecosystem/[THETA Ecosystem] and
+http://lists.theta360.guide/c/theta-media/ecosystem-discussion[post]
+information about it.
 
+## Using WiFi
+
+Streaming from the THETA using WiFi is primarily of interest to developers
+and hobbyists.
+
+### Using Unity
+
+The THETA can live stream a 640x320 MotionJPEG at 10fps over WiFi.
+This is intended to preview
+a picture prior to taking the picture. It's not intended for headset navigation.
+The community has built some solutions to stream this low-res, low fps video
+to mobile phones, primarily using Unity.
+
+This is a short Vine video of a
+https://vine.co/v/eV9XDQBEujt[demo].
+
+image::img/livestreaming/wifi-unity.png[role="thumb" title="360 video stream using WiFi"]
+
+Here is
+https://github.com/theta360developers/ThetaWifiStreaming[sample code]
+of the THETA S WiFi streaming demo with Unity.
+
+There's
+http://lists.theta360.guide/t/using-ricoh-theta-live-view-with-unity/70?u=codetricity[more information]
+on using Unity with the THETA.
+
+### Using a Raspberry Pi
+
+A Raspberry Pi can take the video live stream from the THETA using USB
+and transmit the stream to another device using WiFi. This is intended
+for software developers to use as starting point.
+
+There is
+https://github.com/theta360developers/video-streaming-sample-app[sample code]
+ available for both the transmission of the live stream
+and the conversion of the live stream into a navigable 360 video. Both the
+browser and the server applications are written in JavaScript. The server application
+uses node.
+
+image::img/livestreaming/thetaview-fisheye.png[role="thumb" title="video stream prior to conversion"]
+
+The sample code uses JavaScript to convert the dual-fisheye video stream into
+a navigable 360 video. Transmission uses
+https://webrtc.org/[WebRTC].
+
+image::img/livestreaming/thetaview-360view.png[role="thumb" title="stream conversion done in browser"]
 
 ## Troubleshooting
 

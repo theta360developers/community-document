@@ -761,11 +761,17 @@ p { margin-bottom: 1.25rem; }
 </li>
 <li><a href="#_create_a_youtube_live_360_event">4. Create a YouTube Live 360 Event</a></li>
 <li><a href="#_using_hdmi">5. Using HDMI</a></li>
-<li><a href="#_troubleshooting">6. Troubleshooting</a>
+<li><a href="#_using_wifi">6. Using WiFi</a>
 <ul class="sectlevel2">
-<li><a href="#_problem_status_0x800705aa">6.1. Problem: Status:0x800705AA</a></li>
-<li><a href="#_problem_screen_is_black_with_nothing_on_it">6.2. Problem: Screen is black with nothing on it</a></li>
-<li><a href="#_problem_video_on_youtube_is_equirectangular_with_no_navigation">6.3. Problem: Video on YouTube is Equirectangular with No Navigation</a></li>
+<li><a href="#_using_unity">6.1. Using Unity</a></li>
+<li><a href="#_using_a_raspberry_pi">6.2. Using a Raspberry Pi</a></li>
+</ul>
+</li>
+<li><a href="#_troubleshooting">7. Troubleshooting</a>
+<ul class="sectlevel2">
+<li><a href="#_problem_status_0x800705aa">7.1. Problem: Status:0x800705AA</a></li>
+<li><a href="#_problem_screen_is_black_with_nothing_on_it">7.2. Problem: Screen is black with nothing on it</a></li>
+<li><a href="#_problem_video_on_youtube_is_equirectangular_with_no_navigation">7.3. Problem: Video on YouTube is Equirectangular with No Navigation</a></li>
 </ul>
 </li>
 </ul>
@@ -1235,18 +1241,97 @@ such as
 advertises using THETA at 1920x1080 with HDMI. They&#8217;re even selling the
 THETA on their site. I am trying to get more information on this deployment.</p>
 </div>
+<div class="paragraph">
+<p>If you have a solution for HDMI 360 streaming and you&#8217;ve verified that it
+works with the THETA, please join the
+<a href="http://theta360.guide/ecosystem/">THETA Ecosystem</a> and
+<a href="http://lists.theta360.guide/c/theta-media/ecosystem-discussion">post</a>
+information about it.</p>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_troubleshooting">6. Troubleshooting</h2>
+<h2 id="_using_wifi">6. Using WiFi</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Streaming from the THETA using WiFi is primarily of interest to developers
+and hobbyists.</p>
+</div>
+<div class="sect2">
+<h3 id="_using_unity">6.1. Using Unity</h3>
+<div class="paragraph">
+<p>The THETA can live stream a 640x320 MotionJPEG at 10fps over WiFi.
+This is intended to preview
+a picture prior to taking the picture. It&#8217;s not intended for headset navigation.
+The community has built some solutions to stream this low-res, low fps video
+to mobile phones, primarily using Unity.</p>
+</div>
+<div class="paragraph">
+<p>This is a short Vine video of a
+<a href="https://vine.co/v/eV9XDQBEujt">demo</a>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/wifi-unity.png" alt="wifi unity">
+</div>
+<div class="title">Figure 19. 360 video stream using WiFi</div>
+</div>
+<div class="paragraph">
+<p>Here is
+<a href="https://github.com/theta360developers/ThetaWifiStreaming">sample code</a>
+of the THETA S WiFi streaming demo with Unity.</p>
+</div>
+<div class="paragraph">
+<p>There&#8217;s
+<a href="http://lists.theta360.guide/t/using-ricoh-theta-live-view-with-unity/70?u=codetricity">more information</a>
+on using Unity with the THETA.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_a_raspberry_pi">6.2. Using a Raspberry Pi</h3>
+<div class="paragraph">
+<p>A Raspberry Pi can take the video live stream from the THETA using USB
+and transmit the stream to another device using WiFi. This is intended
+for software developers to use as starting point.</p>
+</div>
+<div class="paragraph">
+<p>There is
+<a href="https://github.com/theta360developers/video-streaming-sample-app">sample code</a>
+ available for both the transmission of the live stream
+and the conversion of the live stream into a navigable 360 video. Both the
+browser and the server applications are written in JavaScript. The server application
+uses node.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/thetaview-fisheye.png" alt="thetaview fisheye">
+</div>
+<div class="title">Figure 20. video stream prior to conversion</div>
+</div>
+<div class="paragraph">
+<p>The sample code uses JavaScript to convert the dual-fisheye video stream into
+a navigable 360 video. Transmission uses
+<a href="https://webrtc.org/">WebRTC</a>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/thetaview-360view.png" alt="thetaview 360view">
+</div>
+<div class="title">Figure 21. stream conversion done in browser</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_troubleshooting">7. Troubleshooting</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_problem_status_0x800705aa">6.1. Problem: Status:0x800705AA</h3>
+<h3 id="_problem_status_0x800705aa">7.1. Problem: Status:0x800705AA</h3>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/obs-error.png" alt="obs error">
 </div>
-<div class="title">Figure 19. Error message when device not detected</div>
+<div class="title">Figure 22. Error message when device not detected</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1267,13 +1352,13 @@ disable all other webcams and reboot</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_problem_screen_is_black_with_nothing_on_it">6.2. Problem: Screen is black with nothing on it</h3>
+<h3 id="_problem_screen_is_black_with_nothing_on_it">7.2. Problem: Screen is black with nothing on it</h3>
 <div class="paragraph">
 <p>Check video resolution. Set to 1280x720</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_problem_video_on_youtube_is_equirectangular_with_no_navigation">6.3. Problem: Video on YouTube is Equirectangular with No Navigation</h3>
+<h3 id="_problem_video_on_youtube_is_equirectangular_with_no_navigation">7.3. Problem: Video on YouTube is Equirectangular with No Navigation</h3>
 <div class="paragraph">
 <p>If the stream is in equirectangular on OBS and it can&#8217;t be navigated on YouTube, check
 your YouTube configuration.</p>
@@ -1284,7 +1369,7 @@ your YouTube configuration.</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-06 23:22:32 UTC
+Last updated 2016-10-07 00:09:56 UTC
 </div>
 </div>
 </body>
