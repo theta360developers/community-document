@@ -347,7 +347,7 @@ the dual-fisheye spheres.
 http://lists.theta360.guide/t/panoramic-videos-with-panoramic-sounds/304?u=codetricity[SOPA],
 an open source JavaScript library.
 
---
+---
 
 **Q: How do I increase the sound quality?**
 
