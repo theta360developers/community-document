@@ -419,3 +419,5 @@ please join the
 http://theta360.guide/ecosystem/[THETA Developer Ecosystem]. Once you've joined the ecosystem, you
 can post your product information in the
 http://lists.theta360.guide/c/theta-media/ecosystem-discussion[Ecosystem Discussion] category.
+
+== http://theta360.guide/[Return to theta360.guide]
