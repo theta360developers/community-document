@@ -761,21 +761,22 @@ p { margin-bottom: 1.25rem; }
 </li>
 <li><a href="#_create_a_youtube_live_360_event">4. Create a YouTube Live 360&#176; Event</a></li>
 <li><a href="#_using_hdmi">5. Using HDMI</a></li>
-<li><a href="#_using_wifi">6. Using WiFi</a>
+<li><a href="#_tethered_streaming_with_unity">6. Tethered Streaming with Unity</a></li>
+<li><a href="#_untethered_wifi_streaming">7. Untethered WiFi Streaming</a>
 <ul class="sectlevel2">
-<li><a href="#_using_unity">6.1. Using Unity</a></li>
-<li><a href="#_using_a_raspberry_pi">6.2. Using a Raspberry Pi</a></li>
+<li><a href="#_using_unity">7.1. Using Unity</a></li>
+<li><a href="#_using_a_raspberry_pi">7.2. Using a Raspberry Pi</a></li>
 </ul>
 </li>
-<li><a href="#_faq">7. FAQ</a></li>
-<li><a href="#_troubleshooting">8. Troubleshooting</a>
+<li><a href="#_faq">8. FAQ</a></li>
+<li><a href="#_troubleshooting">9. Troubleshooting</a>
 <ul class="sectlevel2">
-<li><a href="#_streaming_to_youtube">8.1. Streaming to YouTube</a></li>
-<li><a href="#_heat">8.2. Heat</a></li>
+<li><a href="#_streaming_to_youtube">9.1. Streaming to YouTube</a></li>
+<li><a href="#_heat">9.2. Heat</a></li>
 </ul>
 </li>
-<li><a href="#_discuss">9. Discuss</a></li>
-<li><a href="#__a_href_http_theta360_guide_return_to_theta360_guide_a">10. <a href="http://theta360.guide/">Return to theta360.guide</a></a></li>
+<li><a href="#_discuss">10. Discuss</a></li>
+<li><a href="#__a_href_http_theta360_guide_return_to_theta360_guide_a">11. <a href="http://theta360.guide/">Return to theta360.guide</a></a></li>
 </ul>
 </div>
 </div>
@@ -1259,14 +1260,24 @@ information about it.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_using_wifi">6. Using WiFi</h2>
+<h2 id="_tethered_streaming_with_unity">6. Tethered Streaming with Unity</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Please refer to this
+<a href="http://lists.theta360.guide/t/using-ricoh-theta-live-view-with-unity/70?u=codetricity">separate article</a>
+on using Unity with a tethered THETA.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_untethered_wifi_streaming">7. Untethered WiFi Streaming</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Streaming from the THETA using WiFi is primarily of interest to developers
 and hobbyists.</p>
 </div>
 <div class="sect2">
-<h3 id="_using_unity">6.1. Using Unity</h3>
+<h3 id="_using_unity">7.1. Using Unity</h3>
 <div class="paragraph">
 <p>The THETA can live stream a 640x320 MotionJPEG at 10fps over WiFi.
 This is intended to preview
@@ -1285,18 +1296,256 @@ to mobile phones, primarily using Unity.</p>
 <div class="title">Figure 19. 360&#176; video stream using WiFi</div>
 </div>
 <div class="paragraph">
-<p>Here is
-<a href="https://github.com/theta360developers/ThetaWifiStreaming">sample code</a>
-of the THETA S WiFi streaming demo with Unity.</p>
+<p>Most developers have challenges processing the MotionJPEG stream.</p>
 </div>
 <div class="paragraph">
-<p>There&#8217;s
-<a href="http://lists.theta360.guide/t/using-ricoh-theta-live-view-with-unity/70?u=codetricity">more information</a>
-on using Unity with the THETA.</p>
+<p>Fortunately,
+<a href="https://github.com/theta360developers/ThetaWifiStreaming">sample code</a>
+ of a THETA S WiFi streaming demo with Unity was developed by community member
+<a href="https://github.com/makoto-unity">Makoto Ito</a>.
+ I&#8217;ve translated the
+ <a href="https://github.com/makoto-unity/ThetaWifiStreaming/blob/master/README.md">README</a>
+to his code as well as a
+<a href="http://noshipu.hateblo.jp/entry/2016/04/21/183439">related blog</a> written by
+<a href="https://twitter.com/noshipu">@noshipu</a>, CEO of
+<a href="http://vird.co.jp/">ViRD, Inc</a> for his contribution.</p>
+</div>
+<div class="sect3">
+<h4 id="_about_the_ricoh_theta_api">7.1.1. About the RICOH THETA API</h4>
+<div class="paragraph">
+<p>In order to use Wifi live streaming, you must use the <code>_getLivePreview</code> API.
+<a href="https://developers.theta360.com/en/docs/v2.0/api_reference/commands/camera._get_live_preview.html">Official Reference</a></p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>NOTE from Craig: This was replaced by
+<a href="https://developers.theta360.com/en/docs/v2.1/api_reference/commands/camera.get_live_preview.html">getLivePreview</a>
+in version 2.1 of the API. This blog by Noshipu-san refers to the 2.0 API, which is still supported by
+the THETA S. Be aware of the differences in your code.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Unlike the other APIs, <code>_getLivePreview</code> is different because the data is in a stream and keeps going. You will not be able to get a WWW class to wait until the request is complete (maybe).</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>NOTE from Craig: This is the major problem developers have when working with <code>getLivePreview</code>. As the data
+is a stream, you can&#8217;t want for the data to end before running your next command. For example, it&#8217;s
+different from downloading and displaying an image or video file because you know when the transfer is
+complete.</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_processing_flow">7.1.2. Processing Flow</h4>
+<div class="sect4">
+<h5 id="_set_the_post_request_to_create_a_httpwebrequest_class">Set the POST request to create a HttpWebRequest class</h5>
+<div class="literalblock">
+<div class="content">
+<pre>string url = "Enter HTTP path of THETA here";
+var request = HttpWebRequest.Create (url);
+HttpWebResponse response = null;
+request.Method = "POST";
+request.Timeout = (int) (30 * 10000f); // to ensure  no timeout
+request.ContentType = "application/json; charset = utf-8";</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>byte [] postBytes = Encoding.Default.GetBytes ( "Put the JSON data here");
+request.ContentLength = postBytes.Length;</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_generate_a_class_of_binaryreader_to_get_the_byte_data_you_get_the_bytes_one_by_one">Generate a class of BinaryReader to get the byte data (you get the bytes one by one)</h5>
+<div class="literalblock">
+<div class="content">
+<pre>// The start of transmission of the post data
+Stream reqStream = request.GetRequestStream ();
+reqStream.Write (postBytes, 0, postBytes.Length) ;
+reqStream.Close ();
+stream = request.GetResponse () .GetResponseStream ();</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>BinaryReader reader = new BinaryReader (new BufferedStream (stream), new System.Text.ASCIIEncoding ());</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_get_the_start_and_stop_bytes_of_1_frame_of_the_motionjpeg_and_cut_out_one_frame">Get the start and stop bytes of 1 frame of the MotionJPEG and cut out one frame</h5>
+<div class="paragraph">
+<p>With the byte, check the partion value of the MotionJPEG.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>...(http)
+0xFF 0xD8      --|
+[jpeg data]      |--1 frame of MotionJPEG
+0xFF 0xD9      --|
+...(http)
+0xFF 0xD8      --|
+[jpeg data]      |--1 frame of MotionJPEG
+0xFF 0xD9      --|
+...(http)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Please refer this answer on StackOverflow to
+<a href="http://stackoverflow.com/questions/21702477/how-to-parse-mjpeg-http-stream-from-ip-camera">How to Parse MJPEG HTTP stream from IP camera?</a></p>
+</div>
+<div class="paragraph">
+<p>The starting 2 bytes are <code>0xFF, 0xD8</code>. The end bye is <code>0xD9</code></p>
+</div>
+<div class="paragraph">
+<p>The code is shown below.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>List&lt;byte&gt; imageBytes = new List&lt;byte&gt; ();
+bool isLoadStart = false; // Binary flag taken at head of image
+byte oldByte = 0; // Stores one previous byte of data
+while( true ) {
+    byte byteData = reader.ReadByte ();</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>if (!isLoadStart) {
+    if (oldByte == 0xFF){
+        // First binary image
+       imageBytes.Add(0xFF);
+    }
+    if (byteData == 0xD8){
+       // Second binary image
+       imageBytes.Add(0xD8);</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>       // I took the head of the image up to the end binary
+       isLoadStart = true;
+    }
+} else {
+    // Put the image binaries into an array
+    imageBytes.Add(byteData);</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>        // if the byte was the end byte
+        // 0xFF -&gt; 0xD9 case、end byte
+        if(oldByte == 0xFF &amp;&amp; byteData == 0xD9){
+            // As this is the end byte
+            // we'll generate the image from the data and can create the texture
+            // imageBytes are used to reflect the texture
+            // imageBytes are left empty
+            // the loop returns the binary image head
+            isLoadStart = false;
+        }
+    }
+    oldByte = byteData;
+}</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_texture_generation_separated_by_byte">Texture Generation Separated by Byte</h5>
+<div class="paragraph">
+<p>This is the byte to reflect the texture.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>mainTexture.LoadImage ((byte[])imageBytes.ToArray ());</pre>
+</div>
+</div>
+<hr>
+<div class="paragraph">
+<p>Portion of Python code taken from
+<a href="http://stackoverflow.com/questions/21702477/how-to-parse-mjpeg-http-stream-from-ip-camera">StackOverflow answer</a>.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>import cv2
+import urllib
+import numpy as np</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    stream=urllib.urlopen('http://localhost:8080/frame.mjpg')
+    bytes=''
+    while True:
+        bytes+=stream.read(1024)
+        a = bytes.find('\xff\xd8')
+        b = bytes.find('\xff\xd9')
+        if a!=-1 and b!=-1:
+            jpg = bytes[a:b+2]
+            bytes= bytes[b+2:]
+            i = cv2.imdecode(np.fromstring(jpg, dtype=np.uint8),cv2.CV_LOAD_IMAGE_COLOR)
+            cv2.imshow('i',i)
+            if cv2.waitKey(1) ==27:
+                exit(0)
+Mjpeg over http is multipart/x-mixed-replace with boundary frame info and jpeg data is just sent in binary. So you don't really need to care about http protocol headers. All jpeg frames start with marker 0xff 0xd8 and end with 0xff 0xd9. So the code above extracts such frames from the http stream and decodes them one by one. like below.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>...(http)
+0xff 0xd8      --|
+[jpeg data]      |--this part is extracted and decoded
+0xff 0xd9      --|
+...(http)
+0xff 0xd8      --|
+[jpeg data]      |--this part is extracted and decoded
+0xff 0xd9      --|
+...(http)</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_testing_wifi_streaming">Testing WiFi Streaming</h5>
+<div class="paragraph">
+<p>You can test out WiFi Streaming without having to program.
+Download and install
+<a href="https://store.unity.com/products/unity-personal">Unity Personal Edition</a>. It&#8217;s free.</p>
+</div>
+<div class="paragraph">
+<p>Get Makoto Ito&#8217;s code for
+<a href="https://github.com/theta360developers/ThetaWifiStreaming">ThetaWifiStreaming</a>.</p>
+</div>
+<div class="paragraph">
+<p>Press <em>Play</em>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/wifi/game-view-crop.png" alt="game view crop">
+</div>
+<div class="title">Figure 20. Unity WiFi Live Stream in Game Mode</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/wifi/scene-4-crop.png" alt="scene 4 crop">
+</div>
+<div class="title">Figure 21. Unity Scene View of WiFi Live Stream</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/wifi/top-down-sphere.png" alt="top down sphere">
+</div>
+<div class="title">Figure 22. Top down view of sphere with THETA camera positions</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_using_a_raspberry_pi">6.2. Using a Raspberry Pi</h3>
+<h3 id="_using_a_raspberry_pi">7.2. Using a Raspberry Pi</h3>
 <div class="paragraph">
 <p>A Raspberry Pi can take the video live stream from the THETA using USB
 and transmit the stream to another device using WiFi. This is intended
@@ -1314,7 +1563,7 @@ uses node.</p>
 <div class="content">
 <img src="img/livestreaming/thetaview-fisheye.png" alt="thetaview fisheye">
 </div>
-<div class="title">Figure 20. video stream prior to conversion</div>
+<div class="title">Figure 23. video stream prior to conversion</div>
 </div>
 <div class="paragraph">
 <p>The sample code uses JavaScript to convert the dual-fisheye video stream into
@@ -1325,13 +1574,13 @@ a navigable 360&#176; video. Transmission uses
 <div class="content">
 <img src="img/livestreaming/thetaview-360view.png" alt="thetaview 360view">
 </div>
-<div class="title">Figure 21. stream conversion done in browser</div>
+<div class="title">Figure 24. stream conversion done in browser</div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_faq">7. FAQ</h2>
+<h2 id="_faq">8. FAQ</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><strong>Q: What&#8217;s the Resolution and FPS?</strong></p>
@@ -1450,22 +1699,22 @@ There is no way to plug a microphone directly into the THETA.</p>
 <div class="content">
 <img src="img/livestreaming/mixer.png" alt="mixer">
 </div>
-<div class="title">Figure 22. OBS mixer</div>
+<div class="title">Figure 25. OBS mixer</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_troubleshooting">8. Troubleshooting</h2>
+<h2 id="_troubleshooting">9. Troubleshooting</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_streaming_to_youtube">8.1. Streaming to YouTube</h3>
+<h3 id="_streaming_to_youtube">9.1. Streaming to YouTube</h3>
 <div class="sect3">
-<h4 id="_problem_status_0x800705aa">8.1.1. Problem: Status:0x800705AA</h4>
+<h4 id="_problem_status_0x800705aa">9.1.1. Problem: Status:0x800705AA</h4>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/obs-error.png" alt="obs error">
 </div>
-<div class="title">Figure 23. Error message when device not detected</div>
+<div class="title">Figure 26. Error message when device not detected</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1486,13 +1735,13 @@ disable all other webcams and reboot</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_problem_screen_is_black_with_nothing_on_it">8.1.2. Problem: Screen is black with nothing on it</h4>
+<h4 id="_problem_screen_is_black_with_nothing_on_it">9.1.2. Problem: Screen is black with nothing on it</h4>
 <div class="paragraph">
 <p>Check video resolution. Set to 1280x720</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_problem_video_on_youtube_is_equirectangular_with_no_navigation">8.1.3. Problem: Video on YouTube is Equirectangular with No Navigation</h4>
+<h4 id="_problem_video_on_youtube_is_equirectangular_with_no_navigation">9.1.3. Problem: Video on YouTube is Equirectangular with No Navigation</h4>
 <div class="paragraph">
 <p>If the stream is in equirectangular on OBS and it can&#8217;t be navigated on YouTube, check
 your YouTube configuration.</p>
@@ -1500,7 +1749,7 @@ your YouTube configuration.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_heat">8.2. Heat</h3>
+<h3 id="_heat">9.2. Heat</h3>
 <div class="paragraph">
 <p>The unit below overheated 16 minutes into the shoot. It is using UVC Blender and a
 USB cable during an indoor shoot at Stanford during a crowded VR event.</p>
@@ -1509,7 +1758,7 @@ USB cable during an indoor shoot at Stanford during a crowded VR event.</p>
 <div class="content">
 <img src="img/livestreaming/heat/overheat-example.png" alt="overheat example">
 </div>
-<div class="title">Figure 24. Overheating during livestream</div>
+<div class="title">Figure 27. Overheating during livestream</div>
 </div>
 <div class="paragraph">
 <p>If the THETA is overheating, point a standard household fan at it. The airflow
@@ -1524,7 +1773,7 @@ taping or attaching a small fan used for computer CPUs to the outside of the THE
 <div class="content">
 <img src="img/livestreaming/heat/heatsinks.png" alt="heatsinks">
 </div>
-<div class="title">Figure 25. Raspberry Pi Heatsinks (L), small computer fan bracket &#174;</div>
+<div class="title">Figure 28. Raspberry Pi Heatsinks (L), small computer fan bracket &#174;</div>
 </div>
 <div class="ulist">
 <ul>
@@ -1548,13 +1797,13 @@ was too high.</p>
 <div class="content">
 <img src="img/livestreaming/heat/case-mod.png" alt="case mod">
 </div>
-<div class="title">Figure 26. Not recommended, but an example of community enthusiasm</div>
+<div class="title">Figure 29. Not recommended, but an example of community enthusiasm</div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_discuss">9. Discuss</h2>
+<h2 id="_discuss">10. Discuss</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>If you have questions, comments or additions, please post them in the
@@ -1570,7 +1819,7 @@ can post your product information in the
 </div>
 </div>
 <div class="sect1">
-<h2 id="__a_href_http_theta360_guide_return_to_theta360_guide_a">10. <a href="http://theta360.guide/">Return to theta360.guide</a></h2>
+<h2 id="__a_href_http_theta360_guide_return_to_theta360_guide_a">11. <a href="http://theta360.guide/">Return to theta360.guide</a></h2>
 <div class="sectionbody">
 
 </div>
@@ -1578,7 +1827,7 @@ can post your product information in the
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-07 20:53:45 UTC
+Last updated 2016-10-17 21:56:40 UTC
 </div>
 </div>
 </body>
