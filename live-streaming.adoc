@@ -194,7 +194,10 @@ https://www.blackmagicdesign.com/products/ultrastudiothunderbolt[Blackmagicdesig
 Once you get the video stream onto your computer, it will be in dual-fisheye.
 To get this into equirectangular, you will need to use a third-party product
 such as
-http://theta360.guide/showcase/ricoh-product-streambox.html[Streambox Cloud Encoder].
+http://theta360.guide/showcase/ricoh-product-streambox.html[Streambox Cloud Encoder] or
+MimoLive.
+
+### Streambox
 
 image::img/livestreaming/streambox-theta.png[role="thumb"]
 
@@ -216,10 +219,58 @@ This is the equipment and service list used:
 * Streambox Cloud
 
 
+### mimoLive
+Boinx Software offers https://boinx.com/mimolive/[mimoLive].
 
+They have a good video that provides an https://youtu.be/nNQES53S2jc[overview of their service]
+specifically for the THETA S.
+
+mimoLive can accept a USB or HDMI stream in dual-fisheye.
+
+In order to use the HDMI output from the THETA, you will need a HDMI video grabber.
+Boinx Software recommends the Blackmagic Design
+https://www.blackmagicdesign.com/products/ultrastudiothunderbolt[UltraStudio] Mini Recorder for Thunderbolt or the
+http://www.magewell.com/usb-capture-hdmi[Magewell USB Capture HDMI adapter for USB 3].
+
+image::img/livestreaming/mimolive/hdmi-usb.png[role="thumb" title="Getting THETA S HDMI Output Into Your Computer"]
+
+image::img/livestreaming/mimolive/dual-fisheye.png[role="thumb" title="mimoLive dual-fisheye before conversion to equirectangular"]
+
+mimoLive can take the THETA S dual-fisheye video stream source and apply a filter convert it to equirectangular for
+streaming to places like YouTube Live 360 events.
+
+image::img/livestreaming/mimolive/sources-thetas.png[role="thumb" title="Preset configuration and filter for THETA S"]
+
+image::img/livestreaming/mimolive/placerlive.png[role="thumb" title="Filter converts dual-fisheye stream to equirectangular"]
+
+mimoLive provides sliders to adjust the sphere stitching. You'll only be able to get a _good enough_ stitch. The
+edges of the spheres will not match perfectly.
+
+image::img/livestreaming/mimolive/adjustment.png[role="thumb" title="Use sliders to adjust sphere edges"]
+
+This is an example of the https://youtu.be/8CEB2_YQgkU[360 live stream]. The quality of the stitch
+is good.
+
+Even if you are using USB output, you still may want to use mimoLive instead of the free RICOH THETA
+UVC Blender app to take advantage of mimoLive features to add text, Twitter, and slides into the
+YouTube live streaming event.
+
+image::img/livestreaming/mimolive/text-placement360.png[role="thumb" title="Place text into live stream to YouTube"]
+
+image::img/livestreaming/mimolive/twitter.png[role="thumb" title="Insert Twitter into live stream to YouTube"]
+
+image::img/livestreaming/mimolive/slides.png[role="thumb" title="Insert presentation slides into 360 live stream"]
+
+You can also center your video stream.
+
+image::img/livestreaming/mimolive/adjust-center.png[role="thumb" title="Center 360 live stream"]
+
+https://youtu.be/8CEB2_YQgkU[Example Stream Archive]
+
+
+### Other
 http://shop.videostream360.com/vr-cams-equipment/360camera[Videostream360]
-advertises using THETA at 1920x1080 with HDMI. They're even selling the
-THETA on their site. I am trying to get more information on this deployment.
+offers a service to use THETA at 1920x1080 with HDMI. They even sell the THETA on their site.
 
 If you have a solution for HDMI 360&#176; streaming and you've verified that it
 works with the THETA, please join the
