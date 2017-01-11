@@ -751,14 +751,14 @@ p { margin-bottom: 1.25rem; }
 <div id="toc" class="toc2">
 <div id="toctitle">Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_enable_live_streaming_mode">1. Enable Live Streaming Mode</a></li>
-<li><a href="#_connect_camera_to_computer">2. Connect Camera to Computer</a></li>
-<li><a href="#_install_live_streaming_software">3. Install Live Streaming Software</a>
+<li><a href="#_camera_models">1. Camera Models</a></li>
+<li><a href="#_theta_s_live_streaming_mode">2. THETA S Live Streaming Mode</a>
 <ul class="sectlevel2">
-<li><a href="#_download_and_install_ricoh_live_streaming_app">3.1. Download and Install RICOH Live-Streaming App</a></li>
-<li><a href="#_download_and_install_obs">3.2. Download and Install OBS</a></li>
+<li><a href="#_connect_camera_to_computer">2.1. Connect Camera to Computer</a></li>
+<li><a href="#_install_live_streaming_software">2.2. Install Live Streaming Software</a></li>
 </ul>
 </li>
+<li><a href="#_configure_computer_to_stream_to_internet">3. Configure Computer To Stream to Internet</a></li>
 <li><a href="#_create_a_youtube_live_360_event">4. Create a YouTube Live 360&#176; Event</a></li>
 <li><a href="#_using_hdmi">5. Using HDMI</a>
 <ul class="sectlevel2">
@@ -806,7 +806,61 @@ ga('set', 'contentGroup1', 'All RICOH');
 </div>
 </div>
 <div class="sect1">
-<h2 id="_enable_live_streaming_mode">1. Enable Live Streaming Mode</h2>
+<h2 id="_camera_models">1. Camera Models</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Table Live Streaming Cameras</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Model</th>
+<th class="tableblock halign-left valign-top">Streaming Supported</th>
+<th class="tableblock halign-left valign-top">Stitching</th>
+<th class="tableblock halign-left valign-top">Resolution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">THETA S</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">External</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1920x1080 @ 30fps</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RICOH R Dev Kit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Internal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1920x1080 @ 30fps</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">THETA SC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not supported</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The RICOH THETA R Dev Kit may not be released.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_theta_s_live_streaming_mode">2. THETA S Live Streaming Mode</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>With the THETA off, press and hold the <em>mode</em> button. Keep pressing mode
@@ -827,11 +881,8 @@ and then press <em>power</em>. The camera will go into live streaming mode.</p>
 </div>
 <div class="title">Figure 2. Verify that the camera&#8217;s <em>Live</em> light is on</div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_connect_camera_to_computer">2. Connect Camera to Computer</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_connect_camera_to_computer">2.1. Connect Camera to Computer</h3>
 <div class="paragraph">
 <p>Plug the camera into your computer with a micro USB cable. It will appear as a normal
 webcam. The camera will be called <em>RICOH THETA S</em>.</p>
@@ -847,10 +898,8 @@ webcam. The camera will be called <em>RICOH THETA S</em>.</p>
 The data is in MotionJPEG format.</p>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_install_live_streaming_software">3. Install Live Streaming Software</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_install_live_streaming_software">2.2. Install Live Streaming Software</h3>
 <div class="paragraph">
 <p>To stream the video to YouTube, install the official
 <a href="https://theta360.com/en/support/download/">RICOH Live-streaming app</a> and
@@ -870,8 +919,8 @@ for more information.
 </tr>
 </table>
 </div>
-<div class="sect2">
-<h3 id="_download_and_install_ricoh_live_streaming_app">3.1. Download and Install RICOH Live-Streaming App</h3>
+<div class="sect3">
+<h4 id="_download_and_install_ricoh_live_streaming_app">2.2.1. Download and Install RICOH Live-Streaming App</h4>
 <div class="paragraph">
 <p><a href="https://theta360.com/en/support/download/">Download</a></p>
 </div>
@@ -966,8 +1015,15 @@ look like a distorted rectangle. Skype is for testing only, not for use.
 </table>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_download_and_install_obs">3.2. Download and Install OBS</h3>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configure_computer_to_stream_to_internet">3. Configure Computer To Stream to Internet</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Download and install OBS.</p>
+</div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/obs-icon.png" alt="obs icon">
@@ -1049,7 +1105,6 @@ driver may be available in the future. Please check the maximum resolution and a
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/obs-stretch-to-screen.png" alt="obs stretch to screen">
-</div>
 </div>
 </div>
 </div>
@@ -1697,7 +1752,7 @@ a navigable 360&#176; video. Transmission uses
 <p><strong>A:</strong> Updated Oct 2016.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 1. Table THETA S Live Streaming</caption>
+<caption class="title">Table 2. Table THETA S Live Streaming</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -1731,7 +1786,15 @@ a navigable 360&#176; video. Transmission uses
 <td class="tableblock halign-left valign-top"><p class="tableblock">live streaming</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1280x720</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">15fps</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">USB isochronous transfer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USB Video Class 1.1 or 1.5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USB Live Streaming firmware 01.82 or above</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dual-fisheye with H.264</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">live streaming</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1920x1080</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30fps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USB Video Class 1.5</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">HDMI live streaming of dual-fisheye</p></td>
@@ -1933,9 +1996,15 @@ can post your product information in the
 </div>
 </div>
 </div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnote_1">
+<a href="#_footnoteref_1">1</a>. RICOH R Dev Kit is expected to be availabile in April 2017
+</div>
+</div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-10-18 18:52:31 UTC
+Last updated 2017-01-11 01:19:47 UTC
 </div>
 </div>
 </body>

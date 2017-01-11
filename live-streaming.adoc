@@ -18,7 +18,31 @@ ga('set', 'contentGroup1', 'All RICOH');
 ++++
 image::img/livestreaming/doc-banner.png[role="thumb"]
 
-== Enable Live Streaming Mode
+== Camera Models
+
+.Table Live Streaming Cameras
+|===
+|Model |Streaming Supported |Stitching |Resolution
+
+|THETA S
+|Yes
+|External
+|1920x1080 @ 30fps
+
+|RICOH R Dev Kit
+|Yes
+|Internal
+|1920x1080 @ 30fps
+
+|THETA SC
+|No
+|Not supported
+|N/A
+|===
+
+NOTE: The RICOH THETA R Dev Kit may not be released.footnote:[RICOH R Dev Kit is expected to be availabile in April 2017]
+
+== THETA S Live Streaming Mode
 With the THETA off, press and hold the _mode_ button. Keep pressing mode
 and then press _power_. The camera will go into live streaming mode.
 
@@ -29,7 +53,7 @@ With the camera in live streaming mode, the word _Live_ will appear in blue.
 
 image::img/livestreaming/live-light.png[role="thumb" title="Verify that the camera's _Live_ light is on"]
 
-== Connect Camera to Computer
+=== Connect Camera to Computer
 Plug the camera into your computer with a micro USB cable. It will appear as a normal
 webcam. The camera will be called _RICOH THETA S_.
 
@@ -38,7 +62,7 @@ image::img/livestreaming/skype-webcam.png[role="thumb" title="Confirm you can se
 The THETA is now streaming in dual-fisheye mode. The stream is 1280x720 at 15fps.
 The data is in MotionJPEG format.
 
-== Install Live Streaming Software
+=== Install Live Streaming Software
 To stream the video to YouTube, install the official
 https://theta360.com/en/support/download/[RICOH Live-streaming app] and
 https://obsproject.com/[OBS].
@@ -47,7 +71,7 @@ NOTE: Many software can be used to stream to YouTube. Refer to
 https://support.google.com/youtube/answer/2907883?hl=en[YouTube Live Verified Devices and Software]
 for more information.
 
-=== Download and Install RICOH Live-Streaming App
+==== Download and Install RICOH Live-Streaming App
 
 https://theta360.com/en/support/download/[Download]
 
@@ -82,7 +106,10 @@ CAUTION: Make sure you select _THETA UVC Blender_ and not _RICOH THETA S_.
 NOTE: In Skype, the video does not have 360&#176; navigation (as of Oct 2016) and it will
 look like a distorted rectangle. Skype is for testing only, not for use.
 
-=== Download and Install OBS
+== Configure Computer To Stream to Internet
+
+Download and install OBS.
+
 image::img/livestreaming/obs-icon.png[role="thumb" title="OBS Studio"]
 
 https://obsproject.com/[Download OBS]
@@ -516,7 +543,14 @@ image::img/livestreaming/thetaview-360view.png[role="thumb" title="stream conver
 |live streaming
 |1280x720
 |15fps
-|USB isochronous transfer
+|USB Video Class 1.1 or 1.5
+
+|USB Live Streaming firmware 01.82 or above
+|Dual-fisheye with H.264
+|live streaming
+|1920x1080
+|30fps
+|USB Video Class 1.5
 
 |HDMI live streaming of dual-fisheye
 |Dual-fisheye in uncompressed YCbCr
