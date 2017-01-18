@@ -246,6 +246,18 @@ When you're ready, start the stream.
 
 image::img/livestreaming/youtube-streaming.png[role="thumb"]
 
+This is an example of the THETA S streamed to YouTube with faster bandwidth.
+
+image::img/livestreaming/youtube-1080.png[role="thumb" title="THETA UVC FullHD Blender and YouTube Live Event"]
+
+This is a screenshot from the live stream of the RICOH R Development Kit from their
+demo at CES in January of 2017.
+
+image::img/livestreaming/youtube-1080-ces.jpg[role="thumb" title="RICOH R Dev Kit Live Stream at CES"]
+
+The RICOH R Dev Kit was plugged into
+http://static-shell.cerevo.com/en/index.html[LiveShell] at the event.
+
 ## Using HDMI
 
 Using USB output for live streaming, you will get a maximum resolution of 1080p.
