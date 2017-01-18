@@ -756,6 +756,7 @@ p { margin-bottom: 1.25rem; }
 <ul class="sectlevel2">
 <li><a href="#_connect_camera_to_computer">2.1. Connect Camera to Computer</a></li>
 <li><a href="#_install_live_streaming_software">2.2. Install Live Streaming Software</a></li>
+<li><a href="#_video_devices">2.3. Video Devices</a></li>
 </ul>
 </li>
 <li><a href="#_configure_computer_to_stream_to_internet">3. Configure Computer To Stream to Internet</a></li>
@@ -961,6 +962,20 @@ for more information.
 </div>
 <div class="title">Figure 6. Register THETA with computer</div>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+RICOH updated UVCBlender to 2.0.0 on November 24, 2016. <a href="https://theta360.com/en/info/news/2016-11-24-1/">Official announcement</a>.
+This was a significant upgrade that enabled full HD at 30 fps with USB. It also moved to USB Video Class (UVC) 1.5.
+See <a href="http://www.usb.org/developers/docs/devclass_docs/">USB device class specifications</a>.
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>After you connect your THETA, a <em>Register</em> button will appear.</p>
 </div>
@@ -980,14 +995,14 @@ for more information.
 <div class="title">Figure 8. Camera and computer registration complete</div>
 </div>
 <div class="paragraph">
-<p>Test the THETA UVC Blender driver with any software that works with a webcam. In the example
+<p>Test the THETA UVC FullHD Blender driver with any software that works with a webcam. In the example
 below, I am using Skype.</p>
 </div>
 <div class="imageblock thumb">
 <div class="content">
-<img src="img/livestreaming/theta-uvc-skype-select.png" alt="theta uvc skype select">
+<img src="img/livestreaming/webcam-options.png" alt="webcam options">
 </div>
-<div class="title">Figure 9. Testing THETA UVC Blender with Skype</div>
+<div class="title">Figure 9. Testing THETA UVC FullHD Blender with Skype</div>
 </div>
 <div class="admonitionblock caution">
 <table>
@@ -996,7 +1011,7 @@ below, I am using Skype.</p>
 <i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
-Make sure you select <em>THETA UVC Blender</em> and not <em>RICOH THETA S</em>.
+Make sure you select <em>THETA UVC FullHD Blender</em> and not <em>RICOH THETA S</em>.
 </td>
 </tr>
 </table>
@@ -1008,13 +1023,54 @@ Make sure you select <em>THETA UVC Blender</em> and not <em>RICOH THETA S</em>.
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-In Skype, the video does not have 360&#176; navigation (as of Oct 2016) and it will
+In Skype, the video does not have 360&#176; navigation (as of Jan 2017) and it will
 look like a distorted rectangle. Skype is for testing only, not for use.
 </td>
 </tr>
 </table>
 </div>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_video_devices">2.3. Video Devices</h3>
+<div class="paragraph">
+<p>You have three options: RICOH THETA S, THETA UVC HD Blender, THETA UV FullHD Blender. As ofr
+Jan 2017, this is my understanding of the differences. This is based on the
+<a href="https://developers.theta360.com/en/docs/introduction/">official RICOH specifications</a>. If this
+table is in error, please join the discussion <a href="http://lists.theta360.guide/t/360-live-streaming-guide-for-ricoh-theta/621">here</a>.</p>
+</div>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 2. Table Live Streaming Drivers</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Driver</th>
+<th class="tableblock halign-left valign-top">Display Format</th>
+<th class="tableblock halign-left valign-top">Image Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">THETA S</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dual-fisheye</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1920x1080 with firmware 01.82</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">THETA UVC FullHD Blender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Equirectangular</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1920x1080</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">THETA UVC HD Blender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Equirectangular</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1280x720</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </div>
@@ -1035,7 +1091,7 @@ look like a distorted rectangle. Skype is for testing only, not for use.
 </div>
 <div class="paragraph">
 <p>Create a new <em>Scene</em>. Any name is fine. Click on the plus sign. Under
-<em>Sources</em>, add THETA UVC Blender (any name is fine) and add
+<em>Sources</em>, add THETA Full HD UVC Blender (any name is fine) and add
 a video capture device. Right click to open the pop-up menu.</p>
 </div>
 <div class="imageblock thumb">
@@ -1752,7 +1808,7 @@ a navigable 360&#176; video. Transmission uses
 <p><strong>A:</strong> Updated Oct 2016.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 2. Table THETA S Live Streaming</caption>
+<caption class="title">Table 3. Table THETA S Live Streaming</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -2004,7 +2060,7 @@ can post your product information in the
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-01-18 16:43:54 UTC
+Last updated 2017-01-18 17:26:44 UTC
 </div>
 </div>
 </body>
