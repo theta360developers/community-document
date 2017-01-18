@@ -103,18 +103,25 @@ image::img/livestreaming/registration-complete.png[role="thumb" title="Camera an
 Test the THETA UVC FullHD Blender driver with any software that works with a webcam. In the example
 below, I am using Skype.
 
-image::img/livestreaming/webcam-options.png[role="thumb" title="Testing THETA UVC FullHD Blender with Skype"]
-
-CAUTION: Make sure you select _THETA UVC FullHD Blender_ and not _RICOH THETA S_.
+image::img/livestreaming/skype-test.png[role="thumb" title="Testing THETA UVC FullHD Blender with Skype"]
 
 NOTE: In Skype, the video does not have 360&#176; navigation (as of Jan 2017) and it will
 look like a distorted rectangle. Skype is for testing only, not for use.
 
+You can also test it with other software such as OBS if you already have it installed.
+
+image::img/livestreaming/webcam-options.png[role="thumb" title="Testing THETA UVC FullHD Blender with OBS"]
+
+CAUTION: Make sure you select _THETA UVC FullHD Blender_ and not _RICOH THETA S_.
+
+
 === Video Devices
-You have three options: RICOH THETA S, THETA UVC HD Blender, THETA UV FullHD Blender. As ofr
+You probably noticed that you have three options for THETA webcam devices: RICOH THETA S,
+THETA UVC HD Blender,  THETA UV FullHD Blender. You're probably wondering what the differences
+are between the three webcam devices. As of
 Jan 2017, this is my understanding of the differences. This is based on the
 https://developers.theta360.com/en/docs/introduction/[official RICOH specifications]. If this
-table is in error, please join the discussion http://lists.theta360.guide/t/360-live-streaming-guide-for-ricoh-theta/621[here].
+table is in error, please add to the discussion http://lists.theta360.guide/t/360-live-streaming-guide-for-ricoh-theta/621[here].
 
 .Table Live Streaming Drivers
 |===
@@ -141,11 +148,17 @@ Create a new _Scene_. Any name is fine. Click on the plus sign. Under
 _Sources_, add THETA Full HD UVC Blender (any name is fine) and add
 a video capture device. Right click to open the pop-up menu.
 
+
 image::img/livestreaming/obs-video-capture.png[role="thumb" title="Add Video Capture Device to OBS _Sources_"]
 
 Select _THETA UVC Blender_ as the Device. Verify that the video stream is in equirectangular format.
 
 image::img/livestreaming/obs-device.png[role="thumb" title="Verify THETA UVC Blender works in OBS"]
+
+If you see this message, the camera is not connected properly. Go to the troubleshooting section or read the tip
+below.
+image::img/livestreaming/error-message.png[role="thumb" title="Error message when camera not detected"]
+
 
 TIP: If you see a black screen that says _Status:0x800705AA_, try to toggle your device between your two
 webcams. If you still see the error, disconnect all other webcams or disable the webcam on your laptop
@@ -156,12 +169,12 @@ Leave the Resolution/FPS Type as _Device Default_.
 
 image::img/livestreaming/resolution-fps.png[role="thumb" title="Leave Resolution/FPS Type as Default"]
 
-Under Settings -> Video, set the resolution to 1280x720.
+Under Settings -> Video, set the resolution to 1920x1080 at 29.97fps (30fps will also work).
 
-image::img/livestreaming/obs-settings-video.png[role="thumb" title="Configure Resolution to 1280x720"]
+image::img/livestreaming/obs-settings-video.png[role="thumb" title="Configure Resolution to 1920x1080"]
 
-NOTE: As of Oct 2016, the maximum resolution for UVC Blender is 720p. It's likely that a higher resolution
-driver may be available in the future. Please check the maximum resolution and adjust your settings if needed.
+NOTE: In November of 2016, the maximum resolution for UVC Blender got upgraded to 1080p from 720.
+You need the latest driver and firmware to achieve the higher resolution.
 
 Select Stretch to screen.
 
@@ -194,11 +207,13 @@ Select _This live stream is 360_.
 
 image::img/livestreaming/youtube-livestream360.png[role="thumb" title="Select _This live stream is 360_"]
 
-Grab stream name from _Ingestion Settings_
+Create the event. On the next screen, grab stream name from _Ingestion Settings_
 
 image::img/livestreaming/youtube-ingestion-1.png[role="thumb"]
 
-Once you click on _Basic ingestion_ information on your encoder will open up.
+Once you click on _Basic ingestion_ information on your encoder will open up. Set your bandwidth to the
+highest value your network can support. In the example below, I have it set to 720p as I have only
+1.5Mbps upstream at my house.
 
 image::img/livestreaming/youtube-basic-ingestion.png[role="thumb"]
 
@@ -222,7 +237,8 @@ image::img/livestreaming/youtube-preview.png[role="thumb"]
 
 You can preview the stream if you have good bandwidth. I have limited
 upstream bandwidth in my office. I reduced the ingestion bandwidth,
-making my resolution lower.
+making my resolution lower. Navigation in 360 works fine. My resolution
+is limited by my 1.5Mbps upload bandwidth.
 
 image::img/livestreaming/youtube-preview-test.png[role="thumb"]
 
@@ -232,17 +248,25 @@ image::img/livestreaming/youtube-streaming.png[role="thumb"]
 
 ## Using HDMI
 
-Using USB output for live streaming, you will get a maximum resolution of 720p.
-If you save your video files to your camera, the resolution will be 1920x1080.
+Using USB output for live streaming, you will get a maximum resolution of 1080p.
+This is the same resolution as saving video files to your camera.
 If you save still images as timelapse, you can get 5376x2688, which will be displayed
 as 4K on YouTube.
 
-The THETA S has an HDMI port that can output 1920x1080 at 30fps. In order to use
+The THETA S has an HDMI port that can output 1920x1080 at 30fps. Until
+November 2016, this resolution was higher than the USB port. People were using
+the HDMI to get higher resolution.
+
+In order to use
 this signal, you need to use something like
 https://www.blackmagicdesign.com/products/ultrastudiothunderbolt[Blackmagicdesign UltraStudio for Thunderbolt].
 
 Once you get the video stream onto your computer, it will be in dual-fisheye.
-To get this into equirectangular, you will need to use a third-party product
+Although I have not tested it, you can may be able to use THETA UVC FullHD Blender to
+get this into equirectangular. With the previous driver, this was definitely not possible.
+If you test it and get it to work, let me know.
+
+There are third-party products
 such as
 http://theta360.guide/showcase/ricoh-product-streambox.html[Streambox Cloud Encoder] or
 MimoLive.
@@ -328,10 +352,23 @@ http://theta360.guide/ecosystem/[THETA Ecosystem] and
 http://lists.theta360.guide/c/theta-media/ecosystem-discussion[post]
 information about it.
 
+## Problems with VLC 3.0.0
+VLC 3.0.0 is currently not released. As of January 18, 2017, nightly builds
+will not play the THETA stream correctly. The stream is upside down and the color is
+off.
+
+image::img/livestreaming/vlc-nightly-build.png[Problems with VLC 3.0.0 nightly builds]
+
 ## Tethered Streaming with Unity
 Please refer to this
 http://lists.theta360.guide/t/using-ricoh-theta-live-view-with-unity/70?u=codetricity[separate article]
 on using Unity with a tethered THETA.
+
+The article was written prior to the release of UVC Blender and UVC FullHD Blender.
+It is still relevant. As of January 2017, we can't get Unity to recognize the
+UVC FullHD Blender webcam.
+
+image::img/livestreaming/unity/uvc-blender-webcam-failure.png[role="thumb" title="Unity failure to find webcam"]
 
 ## Untethered WiFi Streaming
 
