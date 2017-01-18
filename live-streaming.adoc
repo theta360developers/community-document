@@ -40,7 +40,7 @@ image::img/livestreaming/doc-banner.png[role="thumb"]
 |N/A
 |===
 
-NOTE: The RICOH THETA R Dev Kit may not be released.footnote:[RICOH R Dev Kit is expected to be availabile in April 2017]
+NOTE: The RICOH R Dev Kit may not be released.footnote:[RICOH R Dev Kit is expected to be availabile in April 2017]
 
 == THETA S Live Streaming Mode
 With the THETA off, press and hold the _mode_ button. Keep pressing mode
