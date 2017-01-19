@@ -42,6 +42,29 @@ image::img/livestreaming/doc-banner.png[role="thumb"]
 
 NOTE: The RICOH R Dev Kit may not be released.footnote:[RICOH R Dev Kit is expected to be availabile in April 2017]
 
+== Software Video Devices
+On your Mac or Windows computer, you have three options for THETA webcam devices: RICOH THETA S,
+THETA UVC HD Blender,  THETA UV FullHD Blender. You're probably wondering what the differences
+are between the three webcam devices. As of
+Jan 2017, this is my understanding of the differences. This is based on the
+https://developers.theta360.com/en/docs/introduction/[official RICOH specifications]. If this
+table is in error, please add to the discussion http://lists.theta360.guide/t/360-live-streaming-guide-for-ricoh-theta/621[here].
+
+.Table Live Streaming Drivers
+|===
+|Driver |Display Format |Image Size and FPS | Streaming Format | USB Standard
+
+|THETA S |dual-fisheye | 1280x720 @ 15fps | MotionJPEG | UVC 1.1
+
+|THETA S |dual-fisheye | 1920x1080 @ 30fps with firmware 01.82 | H.264 |UVC 1.5
+
+|THETA UVC HD Blender | Equirectangular | 1280x720 @ 15fps | MotionJPEG | UVC 1.1
+
+|THETA UVC FullHD Blender | Equirectangular |1920x1080 @ 30fps with firmware 01.82 | H.264 | UVC 1.5
+
+
+|===
+
 == THETA S Live Streaming Mode
 With the THETA off, press and hold the _mode_ button. Keep pressing mode
 and then press _power_. The camera will go into live streaming mode.
@@ -115,25 +138,7 @@ image::img/livestreaming/webcam-options.png[role="thumb" title="Testing THETA UV
 CAUTION: Make sure you select _THETA UVC FullHD Blender_ and not _RICOH THETA S_.
 
 
-=== Video Devices
-You probably noticed that you have three options for THETA webcam devices: RICOH THETA S,
-THETA UVC HD Blender,  THETA UV FullHD Blender. You're probably wondering what the differences
-are between the three webcam devices. As of
-Jan 2017, this is my understanding of the differences. This is based on the
-https://developers.theta360.com/en/docs/introduction/[official RICOH specifications]. If this
-table is in error, please add to the discussion http://lists.theta360.guide/t/360-live-streaming-guide-for-ricoh-theta/621[here].
 
-.Table Live Streaming Drivers
-|===
-|Driver |Display Format |Image Size
-
-|THETA S |dual-fisheye | 1920x1080 with firmware 01.82
-
-|THETA UVC FullHD Blender | Equirectangular |1920x1080
-
-|THETA UVC HD Blender | Equirectangular | 1280x720
-
-|===
 
 
 == Configure Computer To Stream to Internet
