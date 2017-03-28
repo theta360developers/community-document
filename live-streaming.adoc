@@ -263,6 +263,17 @@ image::img/livestreaming/youtube-1080-ces.jpg[role="thumb" title="RICOH R Dev Ki
 The RICOH R Dev Kit was plugged into
 http://static-shell.cerevo.com/en/index.html[LiveShell] at the event.
 
+## Create a Facebook Live 360&#176; Event
+We have a separate guide for
+http://lists.theta360.guide/t/how-to-facebook-live-360-with-ricoh-theta-s/1078[Facebook Live 360 with RICOH THETA S].
+
+image::img/livestreaming/facebook/facebook-overview.jpg[role="thumb" title="Overview of Facebook Live 360 with RICOH THETA S"]
+
+image::img/livestreaming/facebook/page-sample.png[role="thumb" title="RICOH THETA S Live 360 Event on Facebook Page"]
+
+http://lists.theta360.guide/t/how-to-facebook-live-360-with-ricoh-theta-s/1078[Go to Facebook Live 360 Guide for RICOH THETA S].
+
+
 ## Using HDMI
 
 Using USB output for live streaming, you will get a maximum resolution of 1080p.
