@@ -263,17 +263,9 @@ image::img/livestreaming/youtube-1080-ces.jpg[role="thumb" title="RICOH R Dev Ki
 The RICOH R Dev Kit was plugged into
 http://static-shell.cerevo.com/en/index.html[LiveShell] at the event.
 
-## Create a Facebook Live 360&#176; Event
-We are working on a separate guide for Facebook Live 360 with RICOH THETA S. See http://lists.theta360.guide[unoffical forum]
-for updates.
-// http://lists.theta360.guide/t/how-to-facebook-live-360-with-ricoh-theta-s/1078[Facebook Live 360 with RICOH THETA S].
 
-// image::img/livestreaming/facebook/facebook-overview.jpg[role="thumb" title="Overview of Facebook Live 360 with RICOH THETA S"]
-//
-// image::img/livestreaming/facebook/page-sample.png[role="thumb" title="RICOH THETA S Live 360 Event on Facebook Page"]
-//
-// http://lists.theta360.guide/t/how-to-facebook-live-360-with-ricoh-theta-s/1078[Go to Facebook Live 360 Guide for RICOH THETA S].
-
+// Facebook Section
+include::facebook.adoc[]
 
 ## Using HDMI
 
@@ -705,6 +697,7 @@ There is no way to plug a microphone directly into the THETA.
 
 image::img/livestreaming/mixer.png[role="thumb" title="OBS mixer"]
 
+[[troubleshooting]]
 == Troubleshooting
 
 === Streaming to YouTube
@@ -712,7 +705,7 @@ image::img/livestreaming/mixer.png[role="thumb" title="OBS mixer"]
 
 image::img/livestreaming/obs-error.png[role="thumb" title="Error message when device not detected"]
 
-1. Verify your firmware is 01.42 or above
+1. Verify your firmware is 01.82 or above for UVC FullHD
 2. Make sure your camera has the blue word `Live` in LED lights on
 3. Toggle between webcam and UV Blender. If this still fails to resolve the problem,
 disable all other webcams and reboot
@@ -720,7 +713,7 @@ disable all other webcams and reboot
 
 ==== Problem: Screen is black with nothing on it
 
-Check video resolution. Set to 1280x720
+Check video resolution. Set to 1920x1080 if using UVC FullHD Blender.
 
 ==== Problem: Video on YouTube is Equirectangular with No Navigation
 

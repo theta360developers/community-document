@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<title>Unofficial Guides</title>
+<title>RICOH THETA Live Streaming</title>
 <style>
 /*! normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
@@ -747,18 +747,45 @@ p { margin-bottom: 1.25rem; }
 </head>
 <body class="article toc2 toc-right">
 <div id="header">
-<h1><a href="http://theta360developers.github.io/">Unofficial Guides</a></h1>
+<h1>RICOH THETA Live Streaming</h1>
 <div id="toc" class="toc2">
 <div id="toctitle">Contents</div>
 <ul class="sectlevel1">
-<li><a href="#_resources">1. Resources</a></li>
-<li><a href="#_360_video_formats">2. 360 Video Formats</a></li>
-<li><a href="#_video_live_streaming">3. Video Live Streaming</a></li>
-<li><a href="#_image_viewers">4. Image Viewers</a></li>
-<li><a href="#_graphic_tech">5. Graphic Tech</a></li>
-<li><a href="#_linux">6. Linux</a></li>
-<li><a href="#_proprietary_technical_information">7. Proprietary Technical Information</a></li>
-<li><a href="#_faq_for_media_editing">8. FAQ for Media Editing</a></li>
+<li><a href="#_camera_models">1. Camera Models</a></li>
+<li><a href="#_software_video_devices">2. Software Video Devices</a></li>
+<li><a href="#_theta_s_live_streaming_mode">3. THETA S Live Streaming Mode</a>
+<ul class="sectlevel2">
+<li><a href="#_connect_camera_to_computer">3.1. Connect Camera to Computer</a></li>
+<li><a href="#_install_live_streaming_software">3.2. Install Live Streaming Software</a></li>
+</ul>
+</li>
+<li><a href="#_configure_computer_to_stream_to_internet">4. Configure Computer To Stream to Internet</a></li>
+<li><a href="#_create_a_youtube_live_360_event">5. Create a YouTube Live 360&#176; Event</a></li>
+<li><a href="#_facebook_live_360_event">6. Facebook Live 360&#176; Event</a></li>
+<li><a href="#_using_hdmi">7. Using HDMI</a>
+<ul class="sectlevel2">
+<li><a href="#_streambox">7.1. Streambox</a></li>
+<li><a href="#_mimolive">7.2. mimoLive</a></li>
+<li><a href="#_other">7.3. Other</a></li>
+</ul>
+</li>
+<li><a href="#_problems_with_vlc_3_0_0">8. Problems with VLC 3.0.0</a></li>
+<li><a href="#_tethered_streaming_with_unity">9. Tethered Streaming with Unity</a></li>
+<li><a href="#_untethered_wifi_streaming">10. Untethered WiFi Streaming</a>
+<ul class="sectlevel2">
+<li><a href="#_using_unity">10.1. Using Unity</a></li>
+<li><a href="#_using_a_raspberry_pi">10.2. Using a Raspberry Pi</a></li>
+</ul>
+</li>
+<li><a href="#_faq">11. FAQ</a></li>
+<li><a href="#troubleshooting">12. Troubleshooting</a>
+<ul class="sectlevel2">
+<li><a href="#_streaming_to_youtube">12.1. Streaming to YouTube</a></li>
+<li><a href="#_heat">12.2. Heat</a></li>
+</ul>
+</li>
+<li><a href="#_discuss">13. Discuss</a></li>
+<li><a href="#__a_href_http_theta360_guide_return_to_theta360_guide_a">14. <a href="http://theta360.guide/">Return to theta360.guide</a></a></li>
 </ul>
 </div>
 </div>
@@ -774,117 +801,174 @@ ga('create', 'UA-73311422-1', 'auto');
 ga('send', 'pageview');
 ga('set', 'contentGroup1', 'All RICOH');
 </script>
-<div class="imageblock">
+<div class="imageblock thumb">
 <div class="content">
-<img src="img/media_guide_logo2.png" alt="THETA DEVELOPERS UNOFFICIAL MEDIA GUIDE">
-</div>
-</div>
-<div class="paragraph">
-<p>Post comments and corrections to <a href="http://lists.theta360.guide" class="bare">http://lists.theta360.guide</a> in a public
-category or direct message
-<a href="http://lists.theta360.guide/users/jcasman/">@jcasman</a> or
-<a href="http://lists.theta360.guide/users/codetricity">@craig</a> on the lists system.
-You must be logged in to send a message.</p>
-</div>
-<div class="paragraph">
-<p>This is an unofficial, community-generated guide for developing applications
-that use 360 media from RICOH THETA cameras.
-This is not authorized by RICOH and is based on publicly available information.</p>
-</div>
-<div class="paragraph">
-<p>Get the latest news and updates on Twitter
-<strong><a href="https://twitter.com/theta360dev">@theta360dev</a></strong></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_resources">1. Resources</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_official_information">1.1. Official Information</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://developers.theta360.com/en/docs/v2/api_reference/">RICOH THETA API v2</a>,
-compliant with
-<a href="https://developers.google.com/streetview/open-spherical-camera/">Open Spherical Camera API version 1.0</a> from Google.</p>
-</li>
-<li>
-<p><a href="https://developers.theta360.com/en/forums/">THETA Developers Official Forum</a></p>
-</li>
-<li>
-<p><a href="https://developers.theta360.com/en/docs/sdk/">Official SDK</a></p>
-</li>
-<li>
-<p><a href="https://theta360.com/en/support/download/">Windows, Mac, iOS, Android apps</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_unofficial_information">1.2. Unofficial Information</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/theta360developers">GitHub listing of community repositories</a> - libraries and code examples from the community</p>
-</li>
-<li>
-<p><a href="http://theta360developers.github.io/blog/">Blog for developers</a> - How-To articles from the community</p>
-</li>
-<li>
-<p>Guides</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="http://codetricity.github.io/theta-s/index.html">Unofficial API Guide</a> - Use the RICOH
-THETA S API, a HTTP API based on Open Spherical Camera (OSC) specifications.
-Beginners should start here. Web browser using advanced HTTP clients,
-command line curl, Python. Planned examples for JavaScript and other languages.</p>
-</li>
-<li>
-<p><a href="http://theta360developers.github.io/community-document/community.html">Unofficial Media Guide</a> -
-360 degree media management. Streaming video, equirectangular conversion, stitching</p>
-</li>
-<li>
-<p><a href="http://www.meetup.com/RICOH-THETA-Developers-SF-Bay-Area/">RICOH THETA Developers SF Bay Area Meetup Group</a> - Focused on developers and companies using the RICOH THETA camera</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
+<img src="img/livestreaming/doc-banner.png" alt="doc banner">
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_360_video_formats">2. 360 Video Formats</h2>
+<h2 id="_camera_models">1. Camera Models</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 1. Table Live Streaming Cameras</caption>
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Model</th>
+<th class="tableblock halign-left valign-top">Streaming Supported</th>
+<th class="tableblock halign-left valign-top">Stitching</th>
+<th class="tableblock halign-left valign-top">Resolution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">THETA S</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">External</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1920x1080 @ 30fps</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RICOH R Dev Kit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Internal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1920x1080 @ 30fps</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">THETA SC</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not supported</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The RICOH R Dev Kit may not be released.<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnote_1" title="View footnote.">1</a>]</sup>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_software_video_devices">2. Software Video Devices</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Video is stored on the camera in dual fish-eye mode.</p>
+<p>On your Mac or Windows computer, you have three options for THETA webcam devices: RICOH THETA S,
+THETA UVC HD Blender,  THETA UV FullHD Blender. You&#8217;re probably wondering what the differences
+are between the three webcam devices. As of
+Jan 2017, this is my understanding of the differences. This is based on the
+<a href="https://developers.theta360.com/en/docs/introduction/">official RICOH specifications</a>. If this
+table is in error, please add to the discussion <a href="http://lists.theta360.guide/t/360-live-streaming-guide-for-ricoh-theta/621">here</a>.</p>
 </div>
-<div class="paragraph">
-<p>The dual-fisheye MP4 file has an image size of 1920x1080 or 1280x720.</p>
+<table class="tableblock frame-all grid-all spread">
+<caption class="title">Table 2. Table Live Streaming Drivers</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Driver</th>
+<th class="tableblock halign-left valign-top">Display Format</th>
+<th class="tableblock halign-left valign-top">Image Size and FPS</th>
+<th class="tableblock halign-left valign-top">Streaming Format</th>
+<th class="tableblock halign-left valign-top">USB Standard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">THETA S</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dual-fisheye</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1280x720 @ 15fps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MotionJPEG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UVC 1.1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">THETA S</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">dual-fisheye</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1920x1080 @ 30fps with firmware 01.82</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">H.264</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UVC 1.5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">THETA UVC HD Blender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Equirectangular</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1280x720 @ 15fps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">MotionJPEG</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UVC 1.1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">THETA UVC FullHD Blender</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Equirectangular</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1920x1080 @ 30fps with firmware 01.82</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">H.264</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">UVC 1.5</p></td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="paragraph">
-<p>The official RICOH desktop app will convert this to equirectangular
-mode. By default, the program will take your file name and add <code>_er</code> to it.
-The file is saved in the same directory that the original video file was in.</p>
 </div>
+<div class="sect1">
+<h2 id="_theta_s_live_streaming_mode">3. THETA S Live Streaming Mode</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Both the input and output are <code>.mp4</code> format videos.</p>
+<p>With the THETA off, press and hold the <em>mode</em> button. Keep pressing mode
+and then press <em>power</em>. The camera will go into live streaming mode.</p>
 </div>
 <div class="imageblock thumb">
 <div class="content">
-<img src="img/video/dual_fish_eye.png" alt="dual fish eye">
+<img src="img/livestreaming/mode-buttons.png" alt="mode buttons">
 </div>
-<div class="title">Figure 1. dual fish eye video format</div>
+<div class="title">Figure 1. Start THETA in LiveStreaming mode</div>
 </div>
 <div class="paragraph">
-<p>The program will convert it to equirectangular. Note that there is
-a minor color shading difference on the right side of the screen grab.
-The camera has two lenses. Each lens captures and saves one sphere.
-The software on the computer stitches the image together. The RICOH
-app adds the meta video meta data in for you.</p>
+<p>With the camera in live streaming mode, the word <em>Live</em> will appear in blue.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/live-light.png" alt="live light">
+</div>
+<div class="title">Figure 2. Verify that the camera&#8217;s <em>Live</em> light is on</div>
+</div>
+<div class="sect2">
+<h3 id="_connect_camera_to_computer">3.1. Connect Camera to Computer</h3>
+<div class="paragraph">
+<p>Plug the camera into your computer with a micro USB cable. It will appear as a normal
+webcam. The camera will be called <em>RICOH THETA S</em>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/skype-webcam.png" alt="skype webcam">
+</div>
+<div class="title">Figure 3. Confirm you can see <em>RICOH THETA S</em> as a webcam</div>
+</div>
+<div class="paragraph">
+<p>The THETA is now streaming in dual-fisheye mode. If you&#8217;re using firmware 01.82 or above,
+the stream is 1920x1080 at 30fps using H.264. Earlier firmware will produce a 1280x720  stream at 15fps</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_install_live_streaming_software">3.2. Install Live Streaming Software</h3>
+<div class="paragraph">
+<p>To stream the video to YouTube, install the official
+<a href="https://theta360.com/en/support/download/">RICOH Live-streaming app</a> and
+<a href="https://obsproject.com/">OBS</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -893,30 +977,54 @@ app adds the meta video meta data in for you.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-if you use something like Adobe Premiere Pro to edit your videos, you will need to <a href="https://support.google.com/youtube/answer/6178631?hl=en">inject the meta data</a> again
+Many software can be used to stream to YouTube. Refer to
+<a href="https://support.google.com/youtube/answer/2907883?hl=en">YouTube Live Verified Devices and Software</a>
+for more information.
 </td>
 </tr>
 </table>
 </div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="img/video/equirectangular_video.png" alt="equirectangular video">
-</div>
-<div class="title">Figure 2. equirectangular video format</div>
-</div>
+<div class="sect3">
+<h4 id="_download_and_install_ricoh_live_streaming_app">3.2.1. Download and Install RICOH Live-Streaming App</h4>
 <div class="paragraph">
-<p>You can now load the video up to YouTube to your normal channel.  YouTube
-will grab the meta data and add the 360 degree video controls automatically.
-This is cool!</p>
+<p><a href="https://theta360.com/en/support/download/">Download</a></p>
 </div>
 <div class="imageblock thumb">
 <div class="content">
-<img src="img/video/youtube_360.png" alt="youtube 360">
+<img src="img/livestreaming/live-streaming-download.png" alt="live streaming download">
 </div>
-<div class="title">Figure 3. YouTube 360 video</div>
+<div class="title">Figure 4. Download the RICOH Live-Streaming App</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Select Windows 32bit, Windows 64bit, or Mac</p>
+</li>
+<li>
+<p>Turn your THETA off</p>
+</li>
+<li>
+<p>Unplug THETA from your computer</p>
+</li>
+<li>
+<p>Install software</p>
+</li>
+</ol>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/uvcblender-install.png" alt="uvcblender install">
+</div>
+<div class="title">Figure 5. Live-Streaming App File is Called UVC Blender</div>
 </div>
 <div class="paragraph">
-<p><a href="https://youtu.be/MXX_JjQdtmE">Try it out</a>.</p>
+<p>With the THETA turned off, the software will prompt you to reconnect the THETA to register your camera.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/register.png" alt="register">
+</div>
+<div class="title">Figure 6. Register THETA with computer</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -925,25 +1033,62 @@ This is cool!</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-I&#8217;ve successfully tested the YouTube viewer on Windows and Mac with different browsers and on Linux with FireFox. It does not appear to work on Linux with Chrome.
+RICOH updated UVCBlender to 2.0.0 on November 24, 2016. <a href="https://theta360.com/en/info/news/2016-11-24-1/">Official announcement</a>.
+This was a significant upgrade that enabled full HD at 30 fps with USB. It also moved to USB Video Class (UVC) 1.5.
+See <a href="http://www.usb.org/developers/docs/devclass_docs/">USB device class specifications</a>.
 </td>
 </tr>
 </table>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_video_live_streaming">3. Video Live Streaming</h2>
-<div class="sectionbody">
 <div class="paragraph">
-<p>The THETA S can stream video when connected to a USB or HDMI cable.
-The output is in dual fish-eye mode (two spheres). To make the video
-usable in a web browser or with external services,
-you&#8217;ll need to convert the video into equirectangular mode.</p>
+<p>After you connect your THETA, a <em>Register</em> button will appear.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/register-button.png" alt="register button">
+</div>
+<div class="title">Figure 7. Register buttons appears after connection</div>
 </div>
 <div class="paragraph">
-<p>To view a live streaming video with 360 degree navigation, you can connect it
-to a YouTube live streaming event.</p>
+<p>Complete the registration.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/registration-complete.png" alt="registration complete">
+</div>
+<div class="title">Figure 8. Camera and computer registration complete</div>
+</div>
+<div class="paragraph">
+<p>Test the THETA UVC FullHD Blender driver with any software that works with a webcam. In the example
+below, I am using Skype.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/skype-test.png" alt="skype test">
+</div>
+<div class="title">Figure 9. Testing THETA UVC FullHD Blender with Skype</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In Skype, the video does not have 360&#176; navigation (as of Jan 2017) and it will
+look like a distorted rectangle. Skype is for testing only, not for use.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You can also test it with other software such as OBS if you already have it installed.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/webcam-options.png" alt="webcam options">
+</div>
+<div class="title">Figure 10. Testing THETA UVC FullHD Blender with OBS</div>
 </div>
 <div class="admonitionblock caution">
 <table>
@@ -952,17 +1097,1076 @@ to a YouTube live streaming event.</p>
 <i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
-YouTube live streaming needs to be an <strong>Event</strong> and not <strong>Stream now</strong>. You must check <strong>This live stream is 360</strong> under the <strong>Advanced Settings</strong> tab.
+Make sure you select <em>THETA UVC FullHD Blender</em> and not <em>RICOH THETA S</em>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_configure_computer_to_stream_to_internet">4. Configure Computer To Stream to Internet</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Download and install OBS.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/obs-icon.png" alt="obs icon">
+</div>
+<div class="title">Figure 11. OBS Studio</div>
+</div>
+<div class="paragraph">
+<p><a href="https://obsproject.com/">Download OBS</a></p>
+</div>
+<div class="paragraph">
+<p>Create a new <em>Scene</em>. Any name is fine. Click on the plus sign. Under
+<em>Sources</em>, add THETA Full HD UVC Blender (any name is fine) and add
+a video capture device. Right click to open the pop-up menu.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/obs-video-capture.png" alt="obs video capture">
+</div>
+<div class="title">Figure 12. Add Video Capture Device to OBS <em>Sources</em></div>
+</div>
+<div class="paragraph">
+<p>Select <em>THETA UVC Blender</em> as the Device. Verify that the video stream is in equirectangular format.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/obs-device.png" alt="obs device">
+</div>
+<div class="title">Figure 13. Verify THETA UVC Blender works in OBS</div>
+</div>
+<div class="paragraph">
+<p>If you see this message, the camera is not connected properly. Go to the troubleshooting section or read the tip
+below.
+image::img/livestreaming/error-message.png[role="thumb" title="Error message when camera not detected"]</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If you see a black screen that says <em>Status:0x800705AA</em>, try to toggle your device between your two
+webcams. If you still see the error, disconnect all other webcams or disable the webcam on your laptop
+and then reboot your computer. The error above indicates that a connection is not established. See Troubleshooting
+section below
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
-<p>Follow this guide for
-<a href="http://lists.theta360.guide/t/theta-live-streaming-on-youtube/13">RICOH THETA 360 degree live streaming on YouTube</a>.</p>
+<p>Leave the Resolution/FPS Type as <em>Device Default</em>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/resolution-fps.png" alt="resolution fps">
+</div>
+<div class="title">Figure 14. Leave Resolution/FPS Type as Default</div>
+</div>
+<div class="paragraph">
+<p>Under Settings &#8594; Video, set the resolution to 1920x1080 at 29.97fps (30fps will also work).</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/obs-settings-video.png" alt="obs settings video">
+</div>
+<div class="title">Figure 15. Configure Resolution to 1920x1080</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In November of 2016, the maximum resolution for UVC Blender got upgraded to 1080p from 720.
+You need the latest driver and firmware to achieve the higher resolution.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Select Stretch to screen.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/obs-stretch-to-screen.png" alt="obs stretch to screen">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_create_a_youtube_live_360_event">5. Create a YouTube Live 360&#176; Event</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Log into YouTube. Click on the <em>Upload</em> button.
+Click the <em>Get started</em> button on live streaming.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-livestream.png" alt="youtube livestream">
+</div>
+<div class="title">Figure 16. Click Live Streaming after you click upload</div>
+</div>
+<div class="paragraph">
+<p>Select <em>Events</em>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-event.png" alt="youtube event">
+</div>
+<div class="title">Figure 17. Select Events</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+Make sure you select Events. You will not get a 360&#176; stream with <em>Stream now</em>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In the right side of the screen, select <em>New live event</em>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-new-live-event.png" alt="youtube new live event">
+</div>
+<div class="title">Figure 18. New live event</div>
+</div>
+<div class="paragraph">
+<p>Add a title.</p>
+</div>
+<div class="paragraph">
+<p>Select Advanced Settings</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-advanced-settings.png" alt="youtube advanced settings">
+</div>
+</div>
+<div class="paragraph">
+<p>Select <em>This live stream is 360</em>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-livestream360.png" alt="youtube livestream360">
+</div>
+<div class="title">Figure 19. Select <em>This live stream is 360</em></div>
+</div>
+<div class="paragraph">
+<p>Create the event. On the next screen, grab stream name from <em>Ingestion Settings</em></p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-ingestion-1.png" alt="youtube ingestion 1">
+</div>
+</div>
+<div class="paragraph">
+<p>Once you click on <em>Basic ingestion</em> information on your encoder will open up. Set your bandwidth to the
+highest value your network can support. In the example below, I have it set to 720p as I have only
+1.5Mbps upstream at my house.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-basic-ingestion.png" alt="youtube basic ingestion">
+</div>
+</div>
+<div class="paragraph">
+<p>Copy the stream name. You will need this for OBS. In OBS, it is called, <em>Stream key</em>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-streamname.png" alt="youtube streamname">
+</div>
+</div>
+<div class="paragraph">
+<p>Open OBS, go to Settings &#8594; Stream. Paste the YouTube stream name into the box
+on OBS called, <em>Stream key</em>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/obs-streamkey.png" alt="obs streamkey">
+</div>
+</div>
+<div class="paragraph">
+<p>On the main OBS front control panel, press <em>Start Streaming</em> in the right hand
+side of the control panel.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/obs-start-streaming.png" alt="obs start streaming">
+</div>
+</div>
+<div class="paragraph">
+<p>On YouTube, go to the <em>Live Control Room</em> and click <em>Preview Stream</em>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-preview.png" alt="youtube preview">
+</div>
+</div>
+<div class="paragraph">
+<p>You can preview the stream if you have good bandwidth. I have limited
+upstream bandwidth in my office. I reduced the ingestion bandwidth,
+making my resolution lower. Navigation in 360 works fine. My resolution
+is limited by my 1.5Mbps upload bandwidth.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-preview-test.png" alt="youtube preview test">
+</div>
+</div>
+<div class="paragraph">
+<p>When you&#8217;re ready, start the stream.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-streaming.png" alt="youtube streaming">
+</div>
+</div>
+<div class="paragraph">
+<p>This is an example of the THETA S streamed to YouTube with faster bandwidth.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-1080.png" alt="youtube 1080">
+</div>
+<div class="title">Figure 20. THETA UVC FullHD Blender and YouTube Live Event</div>
+</div>
+<div class="paragraph">
+<p>This is a screenshot from the live stream of the RICOH R Development Kit from their
+demo at CES in January of 2017.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/youtube-1080-ces.jpg" alt="youtube 1080 ces">
+</div>
+<div class="title">Figure 21. RICOH R Dev Kit Live Stream at CES</div>
+</div>
+<div class="paragraph">
+<p>The RICOH R Dev Kit was plugged into
+<a href="http://static-shell.cerevo.com/en/index.html">LiveShell</a> at the event.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_facebook_live_360_event">6. Facebook Live 360&#176; Event</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We are working on a separate guide for Facebook Live 360 with RICOH THETA S. See <a href="http://lists.theta360.guide">unoffical forum</a>
+for updates.</p>
+</div>
+<div class="paragraph">
+<p><strong>What We&#8217;re Doing</strong></p>
+</div>
+<div class="paragraph">
+<p>We&#8217;re using a RICOH THETA S to live stream 360 events to Facebook Live 360. The live 360 events can be viewed in VR headsets, on a mobile phone, or in a web browser.</p>
+</div>
+<div class="paragraph">
+<p><strong>What You Need</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>RICOH THETA S in live streaming mode</p>
+</li>
+<li>
+<p>Mac or PC connected to the THETA S with a USB cable</p>
+</li>
+<li>
+<p>THETA UVC FullHD Blender software from RICOH. Called Live-streaming app on their site. <a href="https://theta360.com/en/support/download/">download</a></p>
+</li>
+<li>
+<p><a href="https://obsproject.com/">OBS</a> or equivalent encoding software</p>
+</li>
+<li>
+<p>Internet access with good upstream bandwidth</p>
+</li>
+<li>
+<p>Facebook Live 360</p>
+</li>
+</ul>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/facebook/facebook-overview.jpg" alt="facebook overview">
+</div>
+<div class="title">Figure 22. Overview of Facebook Live 360 with RICOH THETA S</div>
+</div>
+<div class="paragraph">
+<p><strong>Process</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Set up UVC FullHD Blender. We&#8217;re assuming that you have the THETA working with THETA UVC FullHD Blender in live streaming mode. If you do not, refer to the [live streaming guide](<a href="http://theta360.guide/community-document/live-streaming.html" class="bare">http://theta360.guide/community-document/live-streaming.html</a>) for detailed instruction.</p>
+</li>
+<li>
+<p>Set up Facebook Live 360</p>
+</li>
+<li>
+<p>Configure OBS with information from Facebook Live 360  event</p>
+</li>
+<li>
+<p>Stream from OBS to Facebook Live</p>
+</li>
+<li>
+<p>From FB Live, stream the event to your audience</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Configure Facebook Live</strong></p>
+</div>
+<div class="paragraph">
+<p><a href="http://fb.com/live/create">fb.com/live/create</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Click on Create Live Stream</strong></p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/facebook/click-live-stream.jpg" alt="click live stream">
+</div>
+<div class="title">Figure 23. Facebook Live page to create new event</div>
+</div>
+<div class="paragraph">
+<p><strong>Select Location to Post</strong></p>
+</div>
+<div class="paragraph">
+<p>Show on your own timeline, a group, create an event, or broadcast to a page you manage.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/facebook/location-post.png" alt="location post">
+</div>
+<div class="title">Figure 24. Select where you want to share your live 360 event</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/facebook/page-sample.png" alt="page sample">
+</div>
+<div class="title">Figure 25. RICOH THETA S Live 360 Event on Facebook Page</div>
+</div>
+<div class="paragraph">
+<p><strong>Select 360 video</strong></p>
+</div>
+<div class="paragraph">
+<p>Make sure you check, <strong>This live stream is a 360 video</strong></p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/facebook/live-stream-360.png" alt="live stream 360">
+</div>
+<div class="title">Figure 26. The checkbox for 360 video needs to be selected</div>
+</div>
+<div class="paragraph">
+<p><strong>Get Streaming Information</strong></p>
+</div>
+<div class="paragraph">
+<p>On Facebook, get the <strong>Server URL</strong> and <strong>Stream Key</strong></p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/facebook/stream-key.png" alt="stream key">
+</div>
+<div class="title">Figure 27. Copy the information above for the OBS stream configuration</div>
+</div>
+<div class="paragraph">
+<p><strong>Configure OBS</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>Create Source</strong></p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/facebook/create-source.png" alt="create source">
+</div>
+<div class="title">Figure 28. Source can be any name that is meaningful to you</div>
+</div>
+<div class="paragraph">
+<p><strong>Configuration Overview</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Target Resolution: 1080p at 2:1 aspect ratio (1920x960) • Frame Rate: 30fps</p>
+</li>
+<li>
+<p>Target bitrate: 4 Mbps (megabits)</p>
+</li>
+<li>
+<p>Keyframe frequency: 1 I-frame every 2 seconds (minimum) • Audio: AAC</p>
+</li>
+<li>
+<p>Audio Sample Rate: 44.1 KHz</p>
+</li>
+<li>
+<p>Audio Bitrate: 128 Kbps (kilobits)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Configure Video</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Device: THETA UVC FullHD Blender</p>
+</li>
+<li>
+<p>Resolution: 1920x1080 (if using driver above)</p>
+</li>
+<li>
+<p>FPS: Match Output FPS (which is 30 fps)</p>
+</li>
+</ul>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/facebook/obs-video-config.png" alt="obs video config">
+</div>
+<div class="title">Figure 29. OBS video configuration</div>
+</div>
+<div class="paragraph">
+<p><strong>OBS Settings</strong></p>
+</div>
+<div class="paragraph">
+<p>Under <strong>Settings &#8594; Stream</strong></p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/facebook/obs-stream-config.png" alt="obs stream config">
+</div>
+<div class="title">Figure 30. Get this info from Facebook Live 360 config</div>
+</div>
+<div class="paragraph">
+<p><strong>Settings &#8594; Video</strong></p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/facebook/obs-video-settings.png" alt="obs video settings">
+</div>
+<div class="title">Figure 31. 1920x1080 if you use THETA UVC FullHD Blender</div>
+</div>
+<div class="paragraph">
+<p><strong>Preview Live Stream on OBS</strong></p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/facebook/obs-preview.jpg" alt="obs preview">
+</div>
+<div class="title">Figure 32. OBS preview is in equirectangular</div>
+</div>
+<div class="paragraph">
+<p>If you don&#8217;t see an equirectangular stream that is similar to image above, go to the <a href="#troubleshooting">Troubleshooting</a> section.</p>
+</div>
+<div class="paragraph">
+<p><strong>Start Stream on OBS</strong></p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/facebook/obs-start-stream.png" alt="obs start stream">
+</div>
+<div class="title">Figure 33. start the stream on OBS and send to Facebook Live 360 server</div>
+</div>
+<div class="paragraph">
+<p><strong>Go Live 360 Broadcast on Facebook</strong></p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/facebook/fb-go-live.png" alt="fb go live">
+</div>
+<div class="title">Figure 34. Go Live on Facebook and send event to your page or timeline</div>
+</div>
+<div class="paragraph">
+<p><strong>View Live on Facebook</strong></p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/facebook/fb-live-event.png" alt="fb live event">
+</div>
+<div class="title">Figure 35. Your audience can now view a live 360 event on your page or timeline</div>
+</div>
+<div class="paragraph">
+<p><strong>Automatically Promote Saved Event on Facebook Timeline</strong></p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/facebook/saved-event.png" alt="saved event">
+</div>
+<div class="title">Figure 36. Promote your saved event on your page or timeline</div>
+</div>
+<div class="paragraph">
+<p><strong>Adjust Sharing, Expiration or Delete</strong></p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/facebook/fb-delete.png" alt="fb delete">
+</div>
+<div class="title">Figure 37. Manage archived events on your page or timeline</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_using_hdmi">7. Using HDMI</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Using USB output for live streaming, you will get a maximum resolution of 1080p.
+This is the same resolution as saving video files to your camera.
+If you save still images as timelapse, you can get 5376x2688, which will be displayed
+as 4K on YouTube.</p>
+</div>
+<div class="paragraph">
+<p>The THETA S has an HDMI port that can output 1920x1080 at 30fps. Until
+November 2016, this resolution was higher than the USB port. People were using
+the HDMI to get higher resolution.</p>
+</div>
+<div class="paragraph">
+<p>In order to use
+this signal, you need to use something like
+<a href="https://www.blackmagicdesign.com/products/ultrastudiothunderbolt">Blackmagicdesign UltraStudio for Thunderbolt</a>.</p>
+</div>
+<div class="paragraph">
+<p>Once you get the video stream onto your computer, it will be in dual-fisheye.
+Although I have not tested it, you can may be able to use THETA UVC FullHD Blender to
+get this into equirectangular. With the previous driver, this was definitely not possible.
+If you test it and get it to work, let me know.</p>
+</div>
+<div class="paragraph">
+<p>There are third-party products
+such as
+<a href="http://theta360.guide/showcase/ricoh-product-streambox.html">Streambox Cloud Encoder</a> or
+MimoLive.</p>
+</div>
+<div class="sect2">
+<h3 id="_streambox">7.1. Streambox</h3>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/streambox-theta.png" alt="streambox theta">
+</div>
+</div>
+<div class="paragraph">
+<p>This is the workflow.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/streambox-workflow.png" alt="streambox workflow">
+</div>
+</div>
+<div class="paragraph">
+<p>This is a
+<a href="https://www.youtube.com/watch?v=d8TN_Vc6wL0">sample of the live stream using a THETA</a>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/streambox-sample.png" alt="streambox sample">
+</div>
+</div>
+<div class="paragraph">
+<p>This is the equipment and service list used:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Streamed live using Streambox Cloud Encoder</p>
+</li>
+<li>
+<p>RICOH THETA S Camera</p>
+</li>
+<li>
+<p>BlackMagic UltraStudio Mini Recorder</p>
+</li>
+<li>
+<p>MacBook Pro with USB Modems</p>
+</li>
+<li>
+<p>Streambox Cloud</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mimolive">7.2. mimoLive</h3>
+<div class="paragraph">
+<p>Boinx Software offers <a href="https://boinx.com/mimolive/">mimoLive</a>.</p>
+</div>
+<div class="paragraph">
+<p>They have a good video that provides an <a href="https://youtu.be/nNQES53S2jc">overview of their service</a>
+specifically for the THETA S.</p>
+</div>
+<div class="paragraph">
+<p>mimoLive can accept a USB or HDMI stream in dual-fisheye.</p>
+</div>
+<div class="paragraph">
+<p>In order to use the HDMI output from the THETA, you will need a HDMI video grabber.
+Boinx Software recommends the Blackmagic Design
+<a href="https://www.blackmagicdesign.com/products/ultrastudiothunderbolt">UltraStudio</a> Mini Recorder for Thunderbolt or the
+<a href="http://www.magewell.com/usb-capture-hdmi">Magewell USB Capture HDMI adapter for USB 3</a>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/mimolive/hdmi-usb.png" alt="hdmi usb">
+</div>
+<div class="title">Figure 38. Getting THETA S HDMI Output Into Your Computer</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/mimolive/dual-fisheye.png" alt="dual fisheye">
+</div>
+<div class="title">Figure 39. mimoLive dual-fisheye before conversion to equirectangular</div>
+</div>
+<div class="paragraph">
+<p>mimoLive can take the THETA S dual-fisheye video stream source and apply a filter convert it to equirectangular for
+streaming to places like YouTube Live 360 events.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/mimolive/sources-thetas.png" alt="sources thetas">
+</div>
+<div class="title">Figure 40. Preset configuration and filter for THETA S</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/mimolive/placerlive.png" alt="placerlive">
+</div>
+<div class="title">Figure 41. Filter converts dual-fisheye stream to equirectangular</div>
+</div>
+<div class="paragraph">
+<p>mimoLive provides sliders to adjust the sphere stitching. You&#8217;ll only be able to get a <em>good enough</em> stitch. The
+edges of the spheres will not match perfectly.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/mimolive/adjustment.png" alt="adjustment">
+</div>
+<div class="title">Figure 42. Use sliders to adjust sphere edges</div>
+</div>
+<div class="paragraph">
+<p>This is an example of the <a href="https://youtu.be/8CEB2_YQgkU">360 live stream</a>. The quality of the stitch
+is good.</p>
+</div>
+<div class="paragraph">
+<p>Even if you are using USB output, you still may want to use mimoLive instead of the free RICOH THETA
+UVC Blender app to take advantage of mimoLive features to add text, Twitter, and slides into the
+YouTube live streaming event.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/mimolive/text-placement360.png" alt="text placement360">
+</div>
+<div class="title">Figure 43. Place text into live stream to YouTube</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/mimolive/twitter.png" alt="twitter">
+</div>
+<div class="title">Figure 44. Insert Twitter into live stream to YouTube</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/mimolive/slides.png" alt="slides">
+</div>
+<div class="title">Figure 45. Insert presentation slides into 360 live stream</div>
+</div>
+<div class="paragraph">
+<p>You can also center your video stream.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/mimolive/adjust-center.png" alt="adjust center">
+</div>
+<div class="title">Figure 46. Center 360 live stream</div>
+</div>
+<div class="paragraph">
+<p><a href="https://youtu.be/8CEB2_YQgkU">Example Stream Archive</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_other">7.3. Other</h3>
+<div class="paragraph">
+<p><a href="http://shop.videostream360.com/vr-cams-equipment/360camera">Videostream360</a>
+offers a service to use THETA at 1920x1080 with HDMI. They even sell the THETA on their site.</p>
+</div>
+<div class="paragraph">
+<p>If you have a solution for HDMI 360&#176; streaming and you&#8217;ve verified that it
+works with the THETA, please join the
+<a href="http://theta360.guide/ecosystem/">THETA Ecosystem</a> and
+<a href="http://lists.theta360.guide/c/theta-media/ecosystem-discussion">post</a>
+information about it.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_problems_with_vlc_3_0_0">8. Problems with VLC 3.0.0</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>VLC 3.0.0 is currently not released. As of January 18, 2017, nightly builds
+will not play the THETA stream correctly. The stream is upside down and the color is
+off.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="img/livestreaming/vlc-nightly-build.png" alt="Problems with VLC 3.0.0 nightly builds">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tethered_streaming_with_unity">9. Tethered Streaming with Unity</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Please refer to this
+<a href="http://lists.theta360.guide/t/using-ricoh-theta-live-view-with-unity/70?u=codetricity">separate article</a>
+on using Unity with a tethered THETA.</p>
+</div>
+<div class="paragraph">
+<p>The article was written prior to the release of UVC Blender and UVC FullHD Blender.
+It is still relevant. As of January 2017, we can&#8217;t get Unity to recognize the
+UVC FullHD Blender webcam.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/uvc-blender-webcam-failure.png" alt="uvc blender webcam failure">
+</div>
+<div class="title">Figure 47. Unity failure to find webcam</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_untethered_wifi_streaming">10. Untethered WiFi Streaming</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Streaming from the THETA using WiFi is primarily of interest to developers
+and hobbyists.</p>
+</div>
+<div class="sect2">
+<h3 id="_using_unity">10.1. Using Unity</h3>
+<div class="paragraph">
+<p>The THETA can live stream a 640x320 MotionJPEG at 10fps over WiFi.
+This is intended to preview
+a picture prior to taking the picture. It&#8217;s not intended for headset navigation.
+The community has built some solutions to stream this low-res, low fps video
+to mobile phones, primarily using Unity.</p>
+</div>
+<div class="paragraph">
+<p>This is a short Vine video of a
+<a href="https://vine.co/v/eV9XDQBEujt">demo</a>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/wifi-unity.png" alt="wifi unity">
+</div>
+<div class="title">Figure 48. 360&#176; video stream using WiFi</div>
+</div>
+<div class="paragraph">
+<p>Most developers have challenges processing the MotionJPEG stream.</p>
+</div>
+<div class="paragraph">
+<p>Fortunately,
+<a href="https://github.com/theta360developers/ThetaWifiStreaming">sample code</a>
+ of a THETA S WiFi streaming demo with Unity was developed by community member
+<a href="https://github.com/makoto-unity">Makoto Ito</a>.
+ I&#8217;ve translated the
+ <a href="https://github.com/makoto-unity/ThetaWifiStreaming/blob/master/README.md">README</a>
+to his code as well as a
+<a href="http://noshipu.hateblo.jp/entry/2016/04/21/183439">related blog</a> written by
+<a href="https://twitter.com/noshipu">@noshipu</a>, CEO of
+<a href="http://vird.co.jp/">ViRD, Inc</a> for his contribution.</p>
+</div>
+<div class="sect3">
+<h4 id="_about_the_ricoh_theta_api">10.1.1. About the RICOH THETA API</h4>
+<div class="paragraph">
+<p>In order to use Wifi live streaming, you must use the <code>_getLivePreview</code> API.
+<a href="https://developers.theta360.com/en/docs/v2.0/api_reference/commands/camera._get_live_preview.html">Official Reference</a></p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>NOTE from Craig: This was replaced by
+<a href="https://developers.theta360.com/en/docs/v2.1/api_reference/commands/camera.get_live_preview.html">getLivePreview</a>
+in version 2.1 of the API. This blog by Noshipu-san refers to the 2.0 API, which is still supported by
+the THETA S. Be aware of the differences in your code.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>Unlike the other APIs, <code>_getLivePreview</code> is different because the data is in a stream and keeps going. You will not be able to get a WWW class to wait until the request is complete (maybe).</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>NOTE from Craig: This is the major problem developers have when working with <code>getLivePreview</code>. As the data
+is a stream, you can&#8217;t want for the data to end before running your next command. For example, it&#8217;s
+different from downloading and displaying an image or video file because you know when the transfer is
+complete.</p>
+</div>
+</blockquote>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_processing_flow">10.1.2. Processing Flow</h4>
+<div class="sect4">
+<h5 id="_set_the_post_request_to_create_a_httpwebrequest_class">Set the POST request to create a HttpWebRequest class</h5>
+<div class="literalblock">
+<div class="content">
+<pre>string url = "Enter HTTP path of THETA here";
+var request = HttpWebRequest.Create (url);
+HttpWebResponse response = null;
+request.Method = "POST";
+request.Timeout = (int) (30 * 10000f); // to ensure  no timeout
+request.ContentType = "application/json; charset = utf-8";</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>byte [] postBytes = Encoding.Default.GetBytes ( "Put the JSON data here");
+request.ContentLength = postBytes.Length;</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_generate_a_class_of_binaryreader_to_get_the_byte_data_you_get_the_bytes_one_by_one">Generate a class of BinaryReader to get the byte data (you get the bytes one by one)</h5>
+<div class="literalblock">
+<div class="content">
+<pre>// The start of transmission of the post data
+Stream reqStream = request.GetRequestStream ();
+reqStream.Write (postBytes, 0, postBytes.Length) ;
+reqStream.Close ();
+stream = request.GetResponse () .GetResponseStream ();</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>BinaryReader reader = new BinaryReader (new BufferedStream (stream), new System.Text.ASCIIEncoding ());</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_get_the_start_and_stop_bytes_of_1_frame_of_the_motionjpeg_and_cut_out_one_frame">Get the start and stop bytes of 1 frame of the MotionJPEG and cut out one frame</h5>
+<div class="paragraph">
+<p>With the byte, check the partion value of the MotionJPEG.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>...(http)
+0xFF 0xD8      --|
+[jpeg data]      |--1 frame of MotionJPEG
+0xFF 0xD9      --|
+...(http)
+0xFF 0xD8      --|
+[jpeg data]      |--1 frame of MotionJPEG
+0xFF 0xD9      --|
+...(http)</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Please refer this answer on StackOverflow to
+<a href="http://stackoverflow.com/questions/21702477/how-to-parse-mjpeg-http-stream-from-ip-camera">How to Parse MJPEG HTTP stream from IP camera?</a></p>
+</div>
+<div class="paragraph">
+<p>The starting 2 bytes are <code>0xFF, 0xD8</code>. The end bye is <code>0xD9</code></p>
+</div>
+<div class="paragraph">
+<p>The code is shown below.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>List&lt;byte&gt; imageBytes = new List&lt;byte&gt; ();
+bool isLoadStart = false; // Binary flag taken at head of image
+byte oldByte = 0; // Stores one previous byte of data
+while( true ) {
+    byte byteData = reader.ReadByte ();</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>if (!isLoadStart) {
+    if (oldByte == 0xFF){
+        // First binary image
+       imageBytes.Add(0xFF);
+    }
+    if (byteData == 0xD8){
+       // Second binary image
+       imageBytes.Add(0xD8);</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>       // I took the head of the image up to the end binary
+       isLoadStart = true;
+    }
+} else {
+    // Put the image binaries into an array
+    imageBytes.Add(byteData);</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>        // if the byte was the end byte
+        // 0xFF -&gt; 0xD9 case、end byte
+        if(oldByte == 0xFF &amp;&amp; byteData == 0xD9){
+            // As this is the end byte
+            // we'll generate the image from the data and can create the texture
+            // imageBytes are used to reflect the texture
+            // imageBytes are left empty
+            // the loop returns the binary image head
+            isLoadStart = false;
+        }
+    }
+    oldByte = byteData;
+}</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_texture_generation_separated_by_byte">Texture Generation Separated by Byte</h5>
+<div class="paragraph">
+<p>This is the byte to reflect the texture.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>mainTexture.LoadImage ((byte[])imageBytes.ToArray ());</pre>
+</div>
+</div>
+<hr>
+<div class="paragraph">
+<p>Portion of Python code taken from
+<a href="http://stackoverflow.com/questions/21702477/how-to-parse-mjpeg-http-stream-from-ip-camera">StackOverflow answer</a>.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>import cv2
+import urllib
+import numpy as np</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>    stream=urllib.urlopen('http://localhost:8080/frame.mjpg')
+    bytes=''
+    while True:
+        bytes+=stream.read(1024)
+        a = bytes.find('\xff\xd8')
+        b = bytes.find('\xff\xd9')
+        if a!=-1 and b!=-1:
+            jpg = bytes[a:b+2]
+            bytes= bytes[b+2:]
+            i = cv2.imdecode(np.fromstring(jpg, dtype=np.uint8),cv2.CV_LOAD_IMAGE_COLOR)
+            cv2.imshow('i',i)
+            if cv2.waitKey(1) ==27:
+                exit(0)
+Mjpeg over http is multipart/x-mixed-replace with boundary frame info and jpeg data is just sent in binary. So you don't really need to care about http protocol headers. All jpeg frames start with marker 0xff 0xd8 and end with 0xff 0xd9. So the code above extracts such frames from the http stream and decodes them one by one. like below.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>...(http)
+0xff 0xd8      --|
+[jpeg data]      |--this part is extracted and decoded
+0xff 0xd9      --|
+...(http)
+0xff 0xd8      --|
+[jpeg data]      |--this part is extracted and decoded
+0xff 0xd9      --|
+...(http)</pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_testing_wifi_streaming">Testing WiFi Streaming</h5>
+<div class="paragraph">
+<p>You can test out WiFi Streaming without having to program.
+Download and install
+<a href="https://store.unity.com/products/unity-personal">Unity Personal Edition</a>. It&#8217;s free.</p>
+</div>
+<div class="paragraph">
+<p>Get Makoto Ito&#8217;s code for
+<a href="https://github.com/theta360developers/ThetaWifiStreaming">ThetaWifiStreaming</a>.</p>
+</div>
+<div class="paragraph">
+<p>Press <em>Play</em>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/wifi/game-view-crop.png" alt="game view crop">
+</div>
+<div class="title">Figure 49. Unity WiFi Live Stream in Game Mode</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/wifi/scene-4-crop.png" alt="scene 4 crop">
+</div>
+<div class="title">Figure 50. Unity Scene View of WiFi Live Stream</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/wifi/top-down-sphere.png" alt="top down sphere">
+</div>
+<div class="title">Figure 51. Top down view of sphere with THETA camera positions</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_a_raspberry_pi">10.2. Using a Raspberry Pi</h3>
+<div class="paragraph">
+<p>A Raspberry Pi can take the video live stream from the THETA using USB
+and transmit the stream to another device using WiFi. This is intended
+for software developers to use as starting point.</p>
+</div>
+<div class="paragraph">
+<p>There is
+<a href="https://github.com/theta360developers/video-streaming-sample-app">sample code</a>
+ available for both the transmission of the live stream
+and the conversion of the live stream into a navigable 360 video. Both the
+browser and the server applications are written in JavaScript. The server application
+uses node.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/thetaview-fisheye.png" alt="thetaview fisheye">
+</div>
+<div class="title">Figure 52. video stream prior to conversion</div>
+</div>
+<div class="paragraph">
+<p>The sample code uses JavaScript to convert the dual-fisheye video stream into
+a navigable 360&#176; video. Transmission uses
+<a href="https://webrtc.org/">WebRTC</a>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/thetaview-360view.png" alt="thetaview 360view">
+</div>
+<div class="title">Figure 53. stream conversion done in browser</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_faq">11. FAQ</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Q: What&#8217;s the Resolution and FPS?</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>A:</strong> Updated Oct 2016.</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 1. Table THETA S Live Streaming</caption>
+<caption class="title">Table 3. Table THETA S Live Streaming</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -996,7 +2200,15 @@ YouTube live streaming needs to be an <strong>Event</strong> and not <strong>Str
 <td class="tableblock halign-left valign-top"><p class="tableblock">live streaming</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1280x720</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">15fps</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">USB isochronous transfer</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USB Video Class 1.1 or 1.5</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USB Live Streaming firmware 01.82 or above</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Dual-fisheye with H.264</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">live streaming</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1920x1080</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30fps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USB Video Class 1.5</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">HDMI live streaming of dual-fisheye</p></td>
@@ -1016,1195 +2228,197 @@ YouTube live streaming needs to be an <strong>Event</strong> and not <strong>Str
 </tr>
 </tbody>
 </table>
+<hr>
 <div class="paragraph">
-<p>There are pros and cons of each method.</p>
+<p><strong>Q: Can I stream from a drone to a headset?</strong></p>
 </div>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 2. Table of Pros and Cons for each Live Streaming Method</caption>
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-<col style="width: 25%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Live Stream Type</th>
-<th class="tableblock halign-left valign-top">Pro</th>
-<th class="tableblock halign-left valign-top">Con</th>
-<th class="tableblock halign-left valign-top">Community Implementation</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">USB equirectangular</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">easy. appears as webcam to your application</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Low resolution (720). Slow framerate (15fps)</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Looking forward to seeing this after release! Hope they output to HDMI</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">HDMI conversion to equirectangular</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">highest resolution and framerate. Most common input for broadcast equipment</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">difficult. no packaged solution. people are building their own.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">most people using Unity and then connecting to third-party equipment for live event broadcasting</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">USB dual-fisheye</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">easy. appears as webcam. higher resolution than equirectangular. less load on CPU.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">It&#8217;s in dual-fisheye, so you&#8217;ll need to build an application to process it</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Experimenting with facial and object recognition, suveillance</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">WiFi Live View</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Works over WiFi. equirectangular.</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">low resolution. slow. not designed for live streaming, just preview</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">preview scenes</p></td>
-</tr>
-</tbody>
-</table>
 <div class="paragraph">
-<p>Unless you are using
-<a href="https://developers.theta360.com/en/docs/v2/api_reference/commands/camera._get_live_preview.html"><code>camera._getLivePreview</code></a>
-in image mode to display a low-resolution live view
-with low frame rate, the first step is to get the camera into
-live streaming mode</p>
+<p><strong>A:</strong> Only with expensive equipment. This is not a good use of the THETA for
+recreational hobbyists.
+<a href="http://lists.theta360.guide/t/using-theta-360-video-from-a-drone/133?u=codetricity">Refer to this article</a> for more
+information.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p><strong>Q: Does the THETA have auto-stabilization?</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>A:</strong> No. You&#8217;ll need to use a third-party
+<a href="http://lists.theta360.guide/t/theta-s-dokumentation-on-a-clasic-mc-rally/211/11?u=codetricity">gimbal</a>.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p><strong>Q: Is anyone using the THETA 360&#176; stream for object recognition?</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>A:</strong> Yes. Most people use the raw video from 2 fisheye spheres. Most people do not convert
+to equirectangular video. Just extract a portion of the sphere and perform the
+image recognition or measurement on that section. The HDMI stream has higher resolution. Most
+people are using that and extracting a frame, then performing the calculation. Known applications
+include facial recognition, audience emotion recognition, autonomous vehicle operation.
+As just one example, the winner of the RICOH prize at the 2016 DeveloperWeek Hackathon used
+the
+<a href="https://www.microsoft.com/cognitive-services/en-us/emotion-api">Microsoft Emotion API</a> on
+the dual-fisheye spheres.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p><strong>Q: Is anyone working on panoramic sound?</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>A:</strong> Yes. There are many projects for 3D sound, including
+<a href="http://lists.theta360.guide/t/panoramic-videos-with-panoramic-sounds/304?u=codetricity">SOPA</a>,
+an open source JavaScript library.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p><strong>Q: How do I increase the sound quality?</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>A:</strong> Use an external microphone and add it to your mixer. Set the THETA&#8217;s input
+to zero using your mixer. If you&#8217;re using OBS for the stream, plug your microphones into your
+computer and then add a new audio source from the main dashboard to your stream.
+There is no way to plug a microphone directly into the THETA.</p>
 </div>
 <div class="imageblock thumb">
 <div class="content">
-<img src="img/video/thetas_livestreaming.jpg" alt="thetas livestreaming">
+<img src="img/livestreaming/mixer.png" alt="mixer">
 </div>
-<div class="title">Figure 4. Set Live streaming video mode on RICOH THETA S</div>
-</div>
-<div class="sect2">
-<h3 id="_for_usb">3.1. For USB</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Press “mode button” - keep pressing - and press “power button” &#8594; camera goes to the LiveVideoStreamig mode.</p>
-</li>
-<li>
-<p>Connect a usb cable with S and laptop (MAC or PC).</p>
-</li>
-<li>
-<p>The THETA S can be used as a web cam. You can use web cam software such as
-Skype to see live video streaming with the THETA S.</p>
-</li>
-</ol>
-</div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="img/video/usb_live_streaming.png" alt="usb live streaming">
-</div>
-<div class="title">Figure 5. Live video streaming from RICOH THETA S to a computer monitor with USB 3</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_for_hdmi">3.2. For HDMI</h3>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Press “mode button” - keep pressing - and press “power button” &#8594; camera goes to LiveVideoStreamig mode.</p>
-</li>
-<li>
-<p>connect a hdmi cable with S and a monitor.</p>
-</li>
-<li>
-<p>S could be a output video device. The monitor shows the S’s live video streaming .</p>
-</li>
-</ol>
-</div>
-<div id="img-hdmi_live_streaming" class="imageblock thumb">
-<div class="content">
-<img src="img/video/hdmi_live_streaming.jpg" alt="hdmi live streaming">
-</div>
-<div class="title">Figure 6. Live video streaming from RICOH THETA S to a TV with HDMI</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_api_testing">3.3. API Testing</h3>
-<div class="paragraph">
-<p><code>POST</code> to <code><a href="http://192.168.1.1/osc/commands/execute" class="bare">http://192.168.1.1/osc/commands/execute</a></code></p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>{"name": "camera.getOptions",
-    "parameters":
-	{
-    	"sessionId": "SID_0003",
-    	"optionNames": [
-            "captureMode"
-    	]
-	}
-}</pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-Remember to set your sessionId correctly
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The response:</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>{
-  "name": "camera.getOptions",
-  "state": "done",
-  "results":{
-    "options":{
-      "iso": 0,
-      "isoSupport":[],
-      "captureMode": "_liveStreaming"
-      }
-    }
-}</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_ricoh_live_streaming_driver_theta_uvc_blender_with_equirectangular_output">3.4. RICOH Live Streaming Driver (THETA UVC Blender) with Equirectangular Output</h3>
-<div class="imageblock thumb">
-<div class="content">
-<img src="img/livestreaming/streaming.jpg" alt="streaming">
-</div>
-<div class="title">Figure 7. USB live streaming with equirectangular</div>
-</div>
-<div class="paragraph">
-<p>The USB driver appears as a web cam to applications running a Mac or PC.
-In the example above, the equirectangular video is shown streaming in
-QuickTime. A video clip
-that shows the output of the
-<a href="https://youtu.be/A8Al7U2ZeF0?list=PLxvyAnoL-vu5AF0A_l2wIr9vkMBRjHEgm">THETA S USB live streaming is available on YouTube</a>.</p>
-</div>
-<div class="paragraph">
-<p>You must install the live streaming driver, THETA UVC Blender. Download it from</p>
-</div>
-<div class="paragraph">
-<p><a href="https://theta360.com/en/support/download/" class="bare">https://theta360.com/en/support/download/</a></p>
-</div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="img/livestreaming/driver-download.png" alt="driver download">
-</div>
-<div class="title">Figure 8. Download the official RICOH live streaming driver</div>
-</div>
-<div class="paragraph">
-<p>This walkthrough is for Windows 10 64 bit.</p>
-</div>
-<div class="paragraph">
-<p>Right click on the UVCBlender_setup64_en.exe icon. Run as administrator</p>
-</div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="img/livestreaming/uvc-blender-setup-icon.png" alt="uvc blender setup icon">
-</div>
-<div class="title">Figure 9. Right click to run setup as admin</div>
-</div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="img/livestreaming/setup-run-as-admin.png" alt="setup run as admin">
-</div>
-<div class="title">Figure 10. Make sure you run it as administrator</div>
-</div>
-<div class="paragraph">
-<p>Run through the install wizard.</p>
-</div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="img/livestreaming/install-shield.png" alt="install shield">
-</div>
-<div class="title">Figure 11. Follow onscreen instructions</div>
-</div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="img/livestreaming/install-shield-complete.png" alt="install shield complete">
-</div>
-<div class="title">Figure 12. InstallShield Wizard Completes</div>
-</div>
-<div class="paragraph">
-<p>After installation, you will need to connect a THETA that is powered off to register
-the device. You may need to reboot. In my tests, I could not advance to the
-UVC register step without a reboot. If I try and register the device without
-rebooting, I see a flashing <em>Establishing a Connection</em> dialog, but the connection
-is never completed.</p>
-</div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="img/livestreaming/register.png" alt="register">
-</div>
-<div class="title">Figure 13. THETA UVC Register</div>
-</div>
-<div class="paragraph">
-<p>If you need to reboot, run the THETA UVC Register application as administrator.</p>
-</div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="img/livestreaming/theta-uvc-register.png" alt="theta uvc register">
-</div>
-<div class="title">Figure 14. Run THETA UVC Register as administrator</div>
-</div>
-<div class="paragraph">
-<p>After a reboot and starting THETA UVC Register as administrator, I then plug the THETA
-in. The THETA is turned off. The connection is established.</p>
-</div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="img/livestreaming/register-button.png" alt="register button">
-</div>
-<div class="title">Figure 15. If you don&#8217;t see the register button, go back a few steps</div>
-</div>
-<div class="paragraph">
-<p>The registration completes.</p>
-</div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="img/livestreaming/registration-complete.png" alt="registration complete">
-</div>
-<div class="title">Figure 16. Make sure the registration is successful</div>
-</div>
-<div class="paragraph">
-<p>At this stage, you may need to reboot again. If you do, it is a one-time requirement.</p>
-</div>
-<div class="paragraph">
-<p>Now, press power and mode to start the THETA S in live streaming mode. Test it
-with a common video streaming application such as Google Hangout. I have heard
-of people having problems displaying the stream. Start your application first with
-the camera unplugged. Once the application is running, select THETA UVC Blender,
-then start your THETA in live streaming mode, and plug it in. There are
-probably other ways to get the application to recognize the live stream, but this
-sequence consistently works for me.</p>
-</div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="img/livestreaming/hangout.png" alt="hangout">
-</div>
-<div class="title">Figure 17. Test with Google Hangout</div>
-</div>
-<div class="paragraph">
-<p>Go into the settings of Google Hangout to select the THETA UVC Blender webcam.</p>
-</div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="img/livestreaming/select-uvc-blender.png" alt="select uvc blender">
-</div>
-<div class="title">Figure 18. Select THETA UVC Blender, not THETA S</div>
-</div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="img/livestreaming/uvc-blender-selected.png" alt="uvc blender selected">
-</div>
-<div class="title">Figure 19. video should be in equirectangular</div>
-</div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="img/livestreaming/google-hangout-in-use.png" alt="google hangout in use">
-</div>
-<div class="title">Figure 20. THETA S in use as webcam</div>
-</div>
-<div class="paragraph">
-<p>Here&#8217;s an example with
-<a href="https://obsproject.com/">Open Broadcaster Software</a>.</p>
-</div>
-<div class="paragraph">
-<p>Create a new Scene called <em>THETA Test</em>. Right click in <em>Sources</em> to <em>Add</em> a
-new <em>Video Capture Device</em></p>
-</div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="img/livestreaming/obs-video-capture.png" alt="obs video capture">
-</div>
-<div class="title">Figure 21. Add THETA S as Video Capture Device to OBS</div>
-</div>
-<div class="paragraph">
-<p>Under the <em>Device Selection</em> window, select <em>THETA UVC Blender</em>. Click <em>OK</em>.</p>
-</div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="img/livestreaming/obs-video-device-selection.png" alt="obs video device selection">
-</div>
-<div class="title">Figure 22. Select THETA UVC Blender as Device</div>
-</div>
-<div class="paragraph">
-<p>The video stream will fill a portion of the screen. Select <em>Edit Scene</em> to size the video stream to fit.</p>
-</div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="img/livestreaming/obs-base.png" alt="obs base">
-</div>
-<div class="title">Figure 23. Edit Scene to Fit the Stream</div>
-</div>
-<div class="imageblock thumb">
-<div class="content">
-<img src="img/livestreaming/obs.png" alt="obs">
-</div>
-<div class="title">Figure 24. Live Streaming with Open Broadcaster Software</div>
-</div>
-<div class="paragraph">
-<p>You can use OBS or other software to stream the image to YouTube. Refer to the blog
-post below for more information:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="http://lists.theta360.guide/t/theta-live-streaming-on-youtube/13">RICOH THETA S 360 Degree Live Streaming on YouTube</a></p>
-</li>
-</ul>
-</div>
-<script>
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga('create', 'UA-73311422-1', 'auto');
-ga('send', 'pageview');
-ga('set', 'contentGroup1', 'All RICOH');
-</script>
-</div>
-<div class="sect2">
-<h3 id="_example_with_processor_language">3.5. Example with Processor Language</h3>
-<div class="paragraph">
-<p>Community Contribution from Sunao Hashimoto, kougaku on GitHub. Full
-sample source code is available.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/theta360developers/THETA-S-LiveViewer-P5">THETA S LiveViewer P5</a></p>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/theta_s_live_viewer.gif" alt="theta s live viewer">
-</div>
-<div class="title">Figure 25. Live viewer for THETA S</div>
-</div>
-<div class="paragraph">
-<p>The example above is built with <a href="https://processing.org/">Processing</a>.</p>
-</div>
-<div class="paragraph">
-<p>Additional information is on his <a href="http://d.hatena.ne.jp/kougaku-navi/">blog post in Japanese</a>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/kougaku_stitching_english.png" alt="kougaku stitching english">
-</div>
-<div class="title">Figure 26. dual fish-eye video stitching</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_examples_with_3d_tools_such_as_unity_and_maya_lt">3.6. Examples with 3D Tools such as Unity and Maya LT</h3>
-<div class="paragraph">
-<p>Nora, @steroarts, released a shader pack to convert THETA 360 degree
-media into equirectangular format in real time.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://dl.dropboxusercontent.com/u/7131835/Programs/ThetaS_LiveView_Sample.unitypackage">Shader Pack</a></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The developer below, Goroman, was able to get reasonable 360 video live streaming in equirectangular mode
-after an hour of work back in September, 2015. Additional information in
-<a href="http://tips.hecomi.com/entry/2015/10/11/211456">Japanese is here</a>.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<a class="image" href="https://youtu.be/edWrhCYIS5Q"><img src="img/goro_man.png" alt="goro man"></a>
-</div>
-<div class="title">Figure 27. equirectangular video without stitching</div>
-</div>
-<div class="paragraph">
-<p>The section below was translated from Japanese by Jesse Casman.</p>
-</div>
-<div class="paragraph">
-<p><a href="http://tips.hecomi.com/about">hecomi</a> recently wrote an <a href="http://tips.hecomi.com/entry/2015/10/11/211456">interesting blog post</a> u
-sing Unity to view realtime 360 degree video streaming. I personally have very little experience with Unity, but the content and pictures were useful, so I translated the blog post for others to use. This is not an exact translation, but it should be much more clear than doing Google translate.</p>
-</div>
-<div class="paragraph">
-<p>I noticed GOROman ([@GOROman](<a href="https://twitter.com/GOROman)" class="bare">https://twitter.com/GOROman)</a>) tweeting about the info below, so I decided to try it myself right then and there.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://twitter.com/GOROman/status/645896791469068288?ref_src=twsrc%5Etfw">@GOROman tweet</a>:
-You should be able to easily build a live VR stream from this.
-Stitching might be an issue… For the time being, it might be fine to just connect the sphere to the UV texture.</p>
-</div>
-<div class="paragraph">
-<p>The THETA S&#8230;&#8203;includes features
-like Dual-Eye Fisheye streaming over USB (1280x720 15fps) and
-HDMI streaming (1920x1080 30fps). In order to view this using Unity, I made a an
-appropriately UV developed sphere and a shader appropriate to AlphaBlend border.
-Ultimately, for the purpose of making a full sphere with the THETA S,
-it would be much higher quality and more convenient (can use Skybox too!) to use the
-fragment shader, made by Nora
-<a href="https://twitter.com/stereoarts(">@Stereoarts</a>),
-which directly writes Equirectangular onto a plane.</p>
-</div>
-<div class="paragraph">
-<p><a href="http://stereoarts.jp/">Stereoarts Homepage</a></p>
-</div>
-<div class="paragraph">
-<p><a href="https://twitter.com/Stereoarts/status/647737666520248321?ref_src=twsrc%5Etfw">@Stereoarts tweet</a>:
-I’ve released a Theta Shader Pack. A shader for converting THETA / THETA S full sphere video to
-Equirectangular in Unity and supporting scripts.
-<a href="http://stereoarts.jp/ThetaShaderPack_20150926.zip">stereoarts.jp/ThetaShaderPack_20150926.zip</a></p>
-</div>
-<div class="paragraph">
-<p>For this article, I wanted to jot down my techniques as well.</p>
-</div>
-<div class="paragraph">
-<p>Sample</p>
-</div>
-<div class="paragraph">
-<p><a href="https://dl.dropboxusercontent.com/u/7131835/Programs/ThetaS_LiveView_Sample.unitypackage">ThetaS_LiveView_Sample.unitypackage @ Dropbox</a></p>
-</div>
-<div class="paragraph">
-<p>Example of taking a video with THETA</p>
-</div>
-<div class="paragraph">
-<p>The THETA S gives beautifully separated spheres. The angle covered in one sphere is slightly larger than 180 degrees.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/livestreaming/unity/dual-fish-eye.jpg" alt="dual fish eye">
-</div>
-<div class="title">Figure 28. dual fish eye image</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/livestreaming/unity/dual-fisheye-tripod.jpg" alt="dual fisheye tripod">
-</div>
-<div class="title">Figure 29. dual fish eye image with tripod</div>
-</div>
-<div class="paragraph">
-<p>In doing this, I&#8217;ve made an adjustment using sample texture, which Goroman filmed using WebCamTexture.</p>
-</div>
-<div class="paragraph">
-<p>Making a sphere with good UV setting</p>
-</div>
-<div class="paragraph">
-<p>Working with Maya LT, the UV comes out like this, if you make a normal sphere.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/livestreaming/unity/MayaLT-UV-mapping.png" alt="MayaLT UV mapping">
-</div>
-<div class="title">Figure 30. Maya LT UV Mapping</div>
-</div>
-<div class="paragraph">
-<p>It would look like below, if you make a plane with the UV.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/livestreaming/unity/MayaLT-UV-mapping-2.png" alt="MayaLT UV mapping 2">
-</div>
-<div class="title">Figure 31. Maya LT UV Mapping 2</div>
-</div>
-<div class="paragraph">
-<p>All it needs is to be cut in half and be moved appropriately.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/livestreaming/unity/MayaLT-UV-mapping-3.png" alt="MayaLT UV mapping 3">
-</div>
-<div class="title">Figure 32. Maya LT UV Mapping 3</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/livestreaming/unity/MayaLT-UV-mapping-4.png" alt="MayaLT UV mapping 4">
-</div>
-<div class="title">Figure 33. Maya LT UV Mapping 4</div>
-</div>
-<div class="paragraph">
-<p>It looks like this. (I did not adjust it, so it might be slightly off.)</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/livestreaming/unity/crescent-moon.png" alt="crescent moon">
-</div>
-<div class="title">Figure 34. Crescent Moon image</div>
-</div>
-<div class="paragraph">
-<p>Actually, I wanted to use alphablend for the border, so I used 2 overlapping half spheres instead of one sphere. The UV border is adequately stretched manually.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/livestreaming/unity/overlapping.png" alt="overlapping">
-</div>
-<div class="title">Figure 35. Overlapping</div>
-</div>
-<div class="paragraph">
-<p>Incidentally, surface is set to face inward, by reversing all normal vectors. UV position and size are fine to adjust later with shader.</p>
-</div>
-<div class="paragraph">
-<p>Setting with Unity</p>
-</div>
-<div class="paragraph">
-<p>Import the Maya LT built model with Unity, and put the camera in the center. Write a shader, so the model&#8217;s UV position can be adjusted or can alphablend. In order to control the drawing order and to prevent the border from changing at certain orientations, each half sphere has a different shader.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Shader "Theta/Sphere1" {
-    Properties {
-        _MainTex ("Base (RGB)", 2D) = "white" {}
-        _AlphaBlendTex ("Alpha Blend (RGBA)", 2D) = "white" {}
-        _OffsetU ("Offset U", Range(-0.5, 0.5)) = 0
-        _OffsetV ("Offset V", Range(-0.5, 0.5)) = 0
-        _ScaleU ("Scale U", Range(0.8, 1.2)) = 1
-        _ScaleV ("Scale V", Range(0.8, 1.2)) = 1
-        _ScaleCenterU ("Scale Center U", Range(0.0, 1.0)) = 0
-        _ScaleCenterV ("Scale Center V", Range(0.0, 1.0)) = 0
-    }
-    SubShader {
-        Tags { "RenderType" = "Transparent" "Queue" = "Background" }
-        Pass {
-            Name "BASE"</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Blend SrcAlpha OneMinusSrcAlpha
-Lighting Off
-ZWrite Off</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>CGPROGRAM
-#pragma vertex vert_img
-#pragma fragment frag</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>#include "UnityCG.cginc"</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>uniform sampler2D _MainTex;
-uniform sampler2D _AlphaBlendTex;
-uniform float _OffsetU;
-uniform float _OffsetV;
-uniform float _ScaleU;
-uniform float _ScaleV;
-uniform float _ScaleCenterU;
-uniform float _ScaleCenterV;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>            float4 frag(v2f_img i) : COLOR {
-                // 中心位置や大きさを微調整
-                float2 uvCenter = float2(_ScaleCenterU, _ScaleCenterV);
-                float2 uvOffset = float2(_OffsetU, _OffsetV);
-                float2 uvScale = float2(_ScaleU, _ScaleV);
-                float2 uv =  (i.uv - uvCenter) * uvScale + uvCenter + uvOffset;
-                // アルファブレンド用のテクスチャを参照してアルファを調整
-                float4 tex = tex2D(_MainTex, uv);
-                tex.a *= pow(1.0 - tex2D(_AlphaBlendTex, i.uv).a, 2);
-                return tex;
-            }
-            ENDCG
-        }
-    }
-}</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Here&#8217;s a second section of code.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Shader "Theta/Sphere2" {
-    Properties {
-        _MainTex ("Base (RGB)", 2D) = "white" {}
-        _AlphaBlendTex ("Alpha Blend (RGBA)", 2D) = "white" {}
-        _OffsetU ("Offset U", Range(-0.5, 0.5)) = 0
-        _OffsetV ("Offset V", Range(-0.5, 0.5)) = 0
-        _ScaleU ("Scale U", Range(0.8, 1.2)) = 1
-        _ScaleV ("Scale V", Range(0.8, 1.2)) = 1
-        _ScaleCenterU ("Scale Center U", Range(0.0, 1.0)) = 0
-        _ScaleCenterV ("Scale Center V", Range(0.0, 1.0)) = 0
-    }
-    SubShader {
-        Tags { "RenderType" = "Transparent" "Queue" = "Background+1" }
-        UsePass "Theta/Sphere1/BASE"
-    }
-}</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>As below, for alphablend, have a texture made, that is alpha adjusted to UV. I made adjustment for perfectly fit, by exporting UV with postscript and reading with illustrator (white circle inside is alpha=1; around the circle, from inside to outside, changes from 1 to 0; outside will not be used so whatever fits.)</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/livestreaming/unity/two-circles.png" alt="two circles">
-</div>
-<div class="title">Figure 36. Two Circles</div>
-</div>
-<div class="paragraph">
-<p>Then, adjust the parameters and you&#8217;ve got a whole sphere.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/livestreaming/unity/parameters.png" alt="parameters">
-</div>
-<div class="title">Figure 37. Parameters</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/livestreaming/unity/sphere-unity.png" alt="sphere unity">
-</div>
-<div class="title">Figure 38. Unity Sphere</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/livestreaming/unity/realtime-stitching.png" alt="realtime stitching">
-</div>
-<div class="title">Figure 39. Realtime Stitching</div>
-</div>
-<div class="paragraph">
-<p>Changing into Equirectangular</p>
-</div>
-<div class="paragraph">
-<p>I tried it with a modified vertex shader.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Shader "Theta/Equirectangular1" {
-    Properties {
-        _MainTex ("Base (RGB)", 2D) = "white" {}
-        _AlphaBlendTex ("Alpha Blend (RGBA)", 2D) = "white" {}
-        _OffsetU ("Offset U", Range(-0.5, 0.5)) = 0
-        _OffsetV ("Offset V", Range(-0.5, 0.5)) = 0
-        _ScaleU ("Scale U", Range(0.8, 1.2)) = 1
-        _ScaleV ("Scale V", Range(0.8, 1.2)) = 1
-        _ScaleCenterU ("Scale Center U", Range(0.0, 1.0)) = 0
-        _ScaleCenterV ("Scale Center V", Range(0.0, 1.0)) = 0
-        _Aspect ("Aspect", Float) = 1.777777777
-    }
-    SubShader {
-        Tags { "RenderType" = "Transparent" "Queue" = "Background" }
-        Pass {
-            Name "BASE"</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Blend SrcAlpha OneMinusSrcAlpha
-Lighting Off
-ZWrite Off</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>CGPROGRAM
-#pragma vertex vert
-#pragma fragment frag
-#define PI 3.1415925358979</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>#include "UnityCG.cginc"</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>uniform sampler2D _MainTex;
-uniform sampler2D _AlphaBlendTex;
-uniform float _OffsetU;
-uniform float _OffsetV;
-uniform float _ScaleU;
-uniform float _ScaleV;
-uniform float _ScaleCenterU;
-uniform float _ScaleCenterV;
-uniform float _Aspect;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>struct v2f {
-    float4 position : SV_POSITION;
-    float2 uv       : TEXCOORD0;
-};</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>v2f vert(appdata_base v) {
-    float4 modelBase = mul(_Object2World, float4(0, 0, 0, 1));
-    float4 modelVert = mul(_Object2World, v.vertex);</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>float x = modelVert.x;
-float y = modelVert.y;
-float z = modelVert.z;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>float r = sqrt(x*x + y*y + z*z);
-x /= 2 * r;
-y /= 2 * r;
-z /= 2 * r;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>float latitude  = atan2(0.5, -y);
-float longitude = atan2(x, z);</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>float ex = longitude / (2 * PI);
-float ey = (latitude - PI / 2) / PI * 2;
-float ez = 0;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>ex *= _Aspect;</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>modelVert = float4(float3(ex, ey, ez) * 2 * r, 1);</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>    v2f o;
-    o.position = mul(UNITY_MATRIX_VP, modelVert);
-    o.uv       = MultiplyUV(UNITY_MATRIX_TEXTURE0, v.texcoord);
-    return o;
-}</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>            float4 frag(v2f i) : COLOR {
-                float2 uvCenter = float2(_ScaleCenterU, _ScaleCenterV);
-                float2 uvOffset = float2(_OffsetU, _OffsetV);
-                float2 uvScale = float2(_ScaleU, _ScaleV);
-                float2 uv =  (i.uv - uvCenter) * uvScale + uvCenter + uvOffset;
-                float4 tex = tex2D(_MainTex, uv);
-                tex.a *= pow(1.0 - tex2D(_AlphaBlendTex, i.uv).a, 2);
-                return tex;
-            }
-            ENDCG
-        }
-    }
-}</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Here&#8217;s a second section of code.</p>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>Shader "Theta/Equirectangular2" {
-    Properties {
-        _MainTex ("Base (RGB)", 2D) = "white" {}
-        _AlphaBlendTex ("Alpha Blend (RGBA)", 2D) = "white" {}
-        _OffsetU ("Offset U", Range(-0.5, 0.5)) = 0
-        _OffsetV ("Offset V", Range(-0.5, 0.5)) = 0
-        _ScaleU ("Scale U", Range(0.8, 1.2)) = 1
-        _ScaleV ("Scale V", Range(0.8, 1.2)) = 1
-        _ScaleCenterU ("Scale Center U", Range(0.0, 1.0)) = 0
-        _ScaleCenterV ("Scale Center V", Range(0.0, 1.0)) = 0
-        _Aspect ("Aspect", Float) = 1.777777777
-    }
-    SubShader {
-        Tags { "RenderType" = "Transparent" "Queue" = "Background+1" }
-        UsePass "Theta/Equirectangular1/BASE"
-    }
-}</pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/livestreaming/unity/results.png" alt="results">
-</div>
-<div class="title">Figure 40. Results</div>
-</div>
-<div class="paragraph">
-<p>When taking a look at the mesh, it moves around like this.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/livestreaming/unity/results-mesh.png" alt="results mesh">
-</div>
-<div class="title">Figure 41. Results Mesh</div>
-</div>
-<div class="paragraph">
-<p>Because polygon did not fit, there is a blank space in the corner. This could have been avoided if we have used a direct fragment shader like Nora.</p>
-</div>
-<div class="paragraph">
-<p>Conclusion</p>
-</div>
-<div class="paragraph">
-<p>It looks like there’s the possibility of multiple fun topics here like spherical AR and Stabilization. After the THETA S goes on sale, I would love to play with it more.</p>
-</div>
-<div class="paragraph">
-<p>Update March 9, 2016</p>
-</div>
-<div class="paragraph">
-<p>Maya Planar UV Mapping Instruction</p>
-</div>
-<div class="paragraph">
-<p>Thanks to <a href="https://twitter.com/hecomi">@hecomi</a> for providing this video that shows how to tweak
-the UV mapping. He produced it to help Flex van Geuns who was trying to use the
-UV mapping with webgl.</p>
-</div>
-<div class="paragraph">
-<p><a href="https://youtu.be/FfhZltDqJ2U">Video for Maya Planar UV Mapping Instruction</a></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_community_articles_about_360_display_in_unity">3.7. Community Articles About 360 Display in Unity</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="http://horriblepain.com/2015/05/360-display-in-unity-w-blender/">Horrible Pain&#8217;s notes on 360 display in Unity w/Blender</a></p>
-</li>
-</ul>
-</div>
+<div class="title">Figure 54. OBS mixer</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_image_viewers">4. Image Viewers</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The RICOH THETA S will will generate a equirectangular JPEG file of
-5376x2688 or 2048x1024.</p>
-</div>
-<div class="sect2">
-<h3 id="_example_in_processor_language">4.1. Example in Processor language</h3>
-<div class="imageblock">
-<div class="content">
-<img src="img/still_image_stitching_english.png" alt="still image stitching english">
-</div>
-<div class="title">Figure 42. still image stitching</div>
-</div>
-<div class="paragraph">
-<p><a href="https://github.com/kougaku/PanoramaViewer">Source code available on GitHub</a>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_example_in_javascript">4.2. Example in Javascript</h3>
-<div class="imageblock">
-<div class="content">
-<img src="img/akokubo_javascript_viewer.png" alt="akokubo javascript viewer">
-</div>
-<div class="title">Figure 43. 360 degree still image in Chrome web browser</div>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="http://akokubo.github.io/ThetaViewer/demo1.html">Demo of 360 image in browser</a></p>
-</li>
-<li>
-<p><a href="https://github.com/theta360developers/ThetaViewer">Javascript source code</a></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>At the hackathon, we used the open source viewer from Akokubo listed above as
-part of our
-<a href="https://github.com/KaiyoteSoft/realEstate">real estate demo built by a high school student</a>.</p>
-</div>
-<div class="paragraph">
-<p>There are other open source JavaScript viewers that we have not tested:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="http://leandigo.github.io/leanorama/">Leanorama on GitHub</a></p>
-</li>
-<li>
-<p><a href="https://pannellum.org/">Pannellum</a></p>
-</li>
-<li>
-<p><a href="http://www.vrhabitat.com/#vr5">VR5 Pano Viewer</a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_graphic_tech">5. Graphic Tech</h2>
+<h2 id="troubleshooting">12. Troubleshooting</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_hdr">5.1. HDR</h3>
-<div class="paragraph">
-<p><a href="https://itunes.apple.com/us/app/simple-hdr/id1035541353?mt=8">Simple HDR</a> is
-a great application that works with the RICOH THETA S and m15 models.
-It is developed by
-<a href="http://www.builtlight.org/us/">Built Light</a></p>
-</div>
-<div class="paragraph">
-<p>Nick Campbell produced a video that gives a good
-<a href="http://greyscalegorilla.com/2016/02/simple-hdr-update-make-your-own-360-hdris/">overview of Simple HDR and 360 HDRIs</a></p>
-</div>
-<div class="paragraph">
-<p>Another HDR application is
-<a href="https://itunes.apple.com/us/app/hdr-360-bracket-pro-for-ricoh/id987157511?mt=8">HDR 360 Bracket Pro for RICOH THETA</a> by
-<a href="https://www.linkedin.com/in/bradherman">Brad Herman</a>,
-the CTO and co-founder of SPACES.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_linux">6. Linux</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>RICOH only supports Mac and Windows desktop. As many developers use
-Linux, we&#8217;ve collected some information from the community to help
-people with basic tasks.</p>
-</div>
-<div class="paragraph">
-<p>Linux can be used to control the camera HTTP API. There are also a number of
-scripts to get media from the camera.</p>
-</div>
-<div class="paragraph">
-<p>Tips from the community:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>YouTube 360 videos work with Firefox on Linux. Some people have had problems with FireFox</p>
-</li>
-<li>
-<p>If you&#8217;re running Linux in VirtualBox as a guest, turn off 3D hardware acceleration</p>
-</li>
-<li>
-<p>There are a large number of viewers at the
-<a href="http://wiki.panotools.org/Panorama_Viewers">Panotools.org</a> site. I&#8217;ve been using
-<a href="http://www.fsoft.it/FSPViewer/">FSPViewer</a>.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>If you want to use Linux to
-download media from the THETA and view it on your Linux box,
-you can use Wine for image viewing using the
-THETA Windows app or use a third-party application, Pano2VR.</p>
-</div>
-<div class="paragraph">
-<p>Documentation below contributed by Svendus</p>
-</div>
-<div class="paragraph">
-<p>SphericalViewer.exe opens and installs with Wine
-It runs and you can view Spherical images, but videos are not converted.</p>
-</div>
-<div class="paragraph">
-<p>Linux users can also import the files and use Pano2VR5.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="http://ggnome.com/pano2vr">PANO2VR</a></p>
-<div class="literalblock">
+<h3 id="_streaming_to_youtube">12.1. Streaming to YouTube</h3>
+<div class="sect3">
+<h4 id="_problem_status_0x800705aa">12.1.1. Problem: Status:0x800705AA</h4>
+<div class="imageblock thumb">
 <div class="content">
-<pre>sudo apt-get install --no-install-recommends gnome-panel
-sudo gnome-desktop-item-edit /usr/share/applications/ --create-new</pre>
+<img src="img/livestreaming/obs-error.png" alt="obs error">
 </div>
-</div>
-</li>
-</ul>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/linux/new-app.png" alt="new app">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/linux/pano2vr-1.png" alt="pano2vr 1">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/linux/pano2vr-2.png" alt="pano2vr 2">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/linux/pano2vr-3.png" alt="pano2vr 3">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="img/linux/pano2vr-4.png" alt="pano2vr 4">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_proprietary_technical_information">7. Proprietary Technical Information</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_lens_parameter_information">7.1. Lens Parameter Information</h3>
-<div class="paragraph">
-<p>The lens geometry for the THETA is based on equidistant projection.
-The final projection
-style for both videos and images is equirectangular projection.
-RICOH does not make detailed lens parameter information available. This is
-also known as lens distortion data. Developers often ask for this
-information to improve stitching. It is proprietary and not available
-as of December 2015. Stitching is still possible without this information.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_stitching_libraries">7.2. Stitching Libraries</h3>
-<div class="paragraph">
-<p>The RICOH THETA S processes still images inside of the camera. It
-takes 8 seconds for the camera to be ready to take another still
-image.</p>
-</div>
-<div class="paragraph">
-<p>The videos are stored in dual-fisheye format (two spheres). The
-official RICOH applications will convert this into equirectagular
-format on either mobile devices or desktop computers. This format
-can then be viewed locally or uploaded to YouTube, Facebook, or
-other sites.</p>
-</div>
-<div class="paragraph">
-<p>The source code and algorithms to perform this stitching
-are not available to developers.</p>
-</div>
-<div class="paragraph">
-<p>As of December 2015, there is no way to use the RICOH
-libraries in live streaming mode.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_faq_for_media_editing">8. FAQ for Media Editing</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_q_how_do_i_edit_video_in_adobe_premiere_pro">8.1. Q: How do I edit video in Adobe Premiere Pro?</h3>
-<div class="paragraph">
-<p><strong>A:</strong></p>
+<div class="title">Figure 55. Error message when device not detected</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Download dual-fisheye media file to your computer</p>
+<p>Verify your firmware is 01.82 or above for UVC FullHD</p>
 </li>
 <li>
-<p>Convert with official RICOH THETA desktop application. File name will
-end in _er</p>
+<p>Make sure your camera has the blue word <code>Live</code> in LED lights on</p>
 </li>
 <li>
-<p>Edit in Premiere Pro. Change audio track or add special effects with After Effects</p>
+<p>Toggle between webcam and UV Blender. If this still fails to resolve the problem,
+disable all other webcams and reboot</p>
 </li>
 <li>
-<p>On your desktop computer <a href="https://support.google.com/youtube/answer/6178631?hl=en">inject metadata</a> again using another tool.</p>
-</li>
-<li>
-<p>Upload to YouTube or other 360 degree video player or site</p>
+<p>Try a different USB cable. Plug it into the port on the back of your computer</p>
 </li>
 </ol>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_problem_screen_is_black_with_nothing_on_it">12.1.2. Problem: Screen is black with nothing on it</h4>
+<div class="paragraph">
+<p>Check video resolution. Set to 1920x1080 if using UVC FullHD Blender.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_problem_video_on_youtube_is_equirectangular_with_no_navigation">12.1.3. Problem: Video on YouTube is Equirectangular with No Navigation</h4>
+<div class="paragraph">
+<p>If the stream is in equirectangular on OBS and it can&#8217;t be navigated on YouTube, check
+your YouTube configuration.</p>
+</div>
+</div>
+</div>
 <div class="sect2">
-<h3 id="_q_how_do_i_edit_a_still_image_in_photoshop_or_other_image_editing_software">8.2. Q: How do I edit a still image in Photoshop or other image editing software?</h3>
+<h3 id="_heat">12.2. Heat</h3>
 <div class="paragraph">
-<p>Example of use: The photographer wants to lighten an image.</p>
+<p>The unit below overheated 16 minutes into the shoot. It is using UVC Blender and a
+USB cable during an indoor shoot at Stanford during a crowded VR event.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/heat/overheat-example.png" alt="overheat example">
+</div>
+<div class="title">Figure 56. Overheating during livestream</div>
 </div>
 <div class="paragraph">
-<p><strong>A:</strong>
-DennisMabrey wrote a
-<a href="https://developers.theta360.com/en/forums/viewtopic.php?f=5&amp;t=482">guide on how to add metadata for the image back into the still image</a>.</p>
+<p>If the THETA is overheating, point a standard household fan at it. The airflow
+may be enough to cool the outside of the THETA and help with the internal
+overheating.</p>
 </div>
 <div class="paragraph">
-<p>Here is the 'workflow':</p>
+<p>People have reported success by sticking $6 Raspberry Pi heatsinks onto the body of the THETA or
+taping or attaching a small fan used for computer CPUs to the outside of the THETA.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/heat/heatsinks.png" alt="heatsinks">
+</div>
+<div class="title">Figure 57. Raspberry Pi Heatsinks (L), small computer fan bracket &#174;</div>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Edit your JPEG in Photoshop</p>
+<p><a href="https://amzn.com/B00LKX618Q">6 piece Addicore heatsink</a> for Raspberry Pi for $5.95</p>
 </li>
 <li>
-<p>EXPORT as JPEG to a NEW FILE. Do not overwrite the original (heck back it up or something).</p>
+<p><a href="https://amzn.com/B01GE7Q060">Mudder 8 piece black heatsink cooler for RPi</a> for $6.99</p>
 </li>
 <li>
-<p>Run EXifToolGUI</p>
-</li>
-<li>
-<p>Select the exported JPEG file</p>
-</li>
-<li>
-<p>Select Menu option Modify/Remove Metadata</p>
-</li>
-<li>
-<p>Select the top option '-remove ALL metadata' and click 'Execute' button</p>
-</li>
-<li>
-<p>Make sure your exported JPEG file is still selected</p>
-</li>
-<li>
-<p>Select Menu option 'Export/Import'/Copy metadata into JPG or TIFF.</p>
-</li>
-<li>
-<p>In the File Dialog select the ORIGINAL panorama JPG file.</p>
-</li>
-<li>
-<p>Make sure ALL options are selected and click 'Execute'</p>
-</li>
-<li>
-<p>If you look at the Metadata tag with the ALL button clicked you should see both a section labeled 'Ricoh' AND one labeled 'XMP-GPano' (Googles XMP pano)</p>
-</li>
-<li>
-<p>Test the exported JPG in the RICOH program. Hopefully it worked.</p>
+<p><a href="https://www.tinkercad.com/things/7oICypvba1i-theta-s-cooling-fan-holder">TinkerCad Fan Holder for 3D printing</a></p>
 </li>
 </ul>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_q_how_do_i_connect_the_camera_as_a_usb_storage_device">8.3. Q: How do I connect the camera as a USB storage device?</h3>
 <div class="paragraph">
-<p><strong>A:</strong> Hold the WiFi and Shutter buttons on your camera while you plug the camera
-into the USB port of your computer. The camera will appear as RICODCX. This is
-generally more of a problem on Macs. Make sure you turn off auto-import into
-Photos. People have experienced problems with importing the 360 images
-into Photos. Save them to disk and use the RICOH app.</p>
+<p>The enthusiast below created custom cases in plastic through a shop
+in Akihabara. He wanted to use metal, but the cost
+was too high.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/heat/case-mod.png" alt="case mod">
+</div>
+<div class="title">Figure 58. Not recommended, but an example of community enthusiasm</div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_q_what_are_the_technical_specifications_of_images_and_video">8.4. Q: What are the technical specifications of images and video?</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_discuss">13. Discuss</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><strong>A:</strong> The
-<a href="https://developers.theta360.com/en/docs/introduction/">official RICOH site</a>
-has great information in the overview section.</p>
+<p>If you have questions, comments or additions, please post them in the
+<a href="http://lists.theta360.guide/t/new-theta-360-video-live-streaming-guide-available/477?u=codetricity">THETA Unofficial Guide Forum</a>.</p>
+</div>
+<div class="paragraph">
+<p>If you have a product or service that you&#8217;ve <em>verified works with the THETA</em>,
+please join the
+<a href="http://theta360.guide/ecosystem/">THETA Developer Ecosystem</a>. Once you&#8217;ve joined the ecosystem, you
+can post your product information in the
+<a href="http://lists.theta360.guide/c/theta-media/ecosystem-discussion">Ecosystem Discussion</a> category.</p>
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="__a_href_http_theta360_guide_return_to_theta360_guide_a">14. <a href="http://theta360.guide/">Return to theta360.guide</a></h2>
+<div class="sectionbody">
+
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnote_1">
+<a href="#_footnoteref_1">1</a>. RICOH R Dev Kit is expected to be availabile in April 2017
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2016-08-19 13:56:09 PDT
+Last updated 2017-03-29 22:39:17 UTC
 </div>
 </div>
 </body>
