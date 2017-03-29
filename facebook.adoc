@@ -19,7 +19,8 @@ image::img/livestreaming/facebook/facebook-overview.jpg[role="thumb" title="Over
 
 **Process**
 
-1. Set up UVC FullHD Blender. We're assuming that you have the THETA working with THETA UVC FullHD Blender in live streaming mode. If you do not, refer to the [live streaming guide](http://theta360.guide/community-document/live-streaming.html) for detailed instruction.
+1. Set up UVC FullHD Blender. We're assuming that you have the THETA working with THETA UVC FullHD Blender in live streaming mode. If you do not,
+refer to the http://theta360.guide/community-document/live-streaming.html[live streaming guide] for detailed instruction.
 2. Set up Facebook Live 360
 3. Configure OBS with information from Facebook Live 360  event
 4. Stream from OBS to Facebook Live
