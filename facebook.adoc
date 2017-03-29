@@ -40,7 +40,6 @@ Show on your own timeline, a group, create an event, or broadcast to a page you 
 image::img/livestreaming/facebook/location-post.png[role="thumb" title="Select where you want to share your live 360 event"]
 
 
-image::img/livestreaming/facebook/page-sample.png[role="thumb" title="RICOH THETA S Live 360 Event on Facebook Page"]
 
 **Select 360 video**
 
@@ -103,7 +102,10 @@ image::img/livestreaming/facebook/fb-go-live.png[role="thumb" title="Go Live on 
 
 **View Live on Facebook**
 
-image::img/livestreaming/facebook/fb-live-event.png[role="thumb" title="Your audience can now view a live 360 event on your page or timeline"]
+
+image::img/livestreaming/facebook/page-sample.png[role="thumb" title="RICOH THETA S Live 360 Event on Facebook Page"]
+
+// image::img/livestreaming/facebook/fb-live-event.png[role="thumb" title="Your audience can now view a live 360 event on your page or timeline"]
 
 **Automatically Promote Saved Event on Facebook Timeline**
 
