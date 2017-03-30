@@ -380,16 +380,7 @@ off.
 
 image::img/livestreaming/vlc-nightly-build.png[Problems with VLC 3.0.0 nightly builds]
 
-## Tethered Streaming with Unity
-Please refer to this
-http://lists.theta360.guide/t/using-ricoh-theta-live-view-with-unity/70?u=codetricity[separate article]
-on using Unity with a tethered THETA.
-
-The article was written prior to the release of UVC Blender and UVC FullHD Blender.
-It is still relevant. As of January 2017, we can't get Unity to recognize the
-UVC FullHD Blender webcam.
-
-image::img/livestreaming/unity/uvc-blender-webcam-failure.png[role="thumb" title="Unity failure to find webcam"]
+include::unity-tethered.adoc[]
 
 ## Untethered WiFi Streaming
 

@@ -770,7 +770,12 @@ p { margin-bottom: 1.25rem; }
 </ul>
 </li>
 <li><a href="#_problems_with_vlc_3_0_0">8. Problems with VLC 3.0.0</a></li>
-<li><a href="#_tethered_streaming_with_unity">9. Tethered Streaming with Unity</a></li>
+<li><a href="#_tethered_streaming_with_unity">9. Tethered Streaming with Unity</a>
+<ul class="sectlevel2">
+<li><a href="#_manual_stitching">9.1. Manual Stitching</a></li>
+<li><a href="#_uvc_fullhd_blender_with_unity">9.2. UVC FullHD Blender with Unity</a></li>
+</ul>
+</li>
 <li><a href="#_untethered_wifi_streaming">10. Untethered WiFi Streaming</a>
 <ul class="sectlevel2">
 <li><a href="#_using_unity">10.1. Using Unity</a></li>
@@ -1824,20 +1829,206 @@ off.</p>
 <h2 id="_tethered_streaming_with_unity">9. Tethered Streaming with Unity</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Please refer to this
-<a href="http://lists.theta360.guide/t/using-ricoh-theta-live-view-with-unity/70?u=codetricity">separate article</a>
-on using Unity with a tethered THETA.</p>
+<p>There are three techniques to live stream from the THETA into a Unity application.</p>
 </div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="http://lists.theta360.guide/t/tutorial-live-ricoh-theta-s-dual-fish-eye-for-steamvr-in-unity/938?u=codetricity">SteamVR</a> with manual stitch adjustment. Uses RICOH THETA S driver.</p>
+</li>
+<li>
+<p>Generic <a href="https://github.com/theta360developers/unity-streaming">Unity application</a> with manual stitch adjustment. Uses RICOH THETA S driver.</p>
+</li>
+<li>
+<p><a href="http://lists.theta360.guide/t/getting-unity-to-recognize-theta-uvc-fullhd-blender-camera/1035">UVC FullHD Blender with registry hack</a>. Uses THETA UVC FullHD Blender driver.</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_manual_stitching">9.1. Manual Stitching</h3>
 <div class="paragraph">
-<p>The article was written prior to the release of UVC Blender and UVC FullHD Blender.
-It is still relevant. As of January 2017, we can&#8217;t get Unity to recognize the
-UVC FullHD Blender webcam.</p>
+<p>Most people start with <a href="https://github.com/theta360developers/unity-streaming">this</a> set of templates and code.
+This technique involves using the THETA S webcam driver, not UVC Blender.
+It explains how to go from dual-fisheye to a single sphere.</p>
 </div>
 <div class="imageblock thumb">
 <div class="content">
-<img src="img/livestreaming/unity/uvc-blender-webcam-failure.png" alt="uvc blender webcam failure">
+<img src="img/livestreaming/unity/dual-fish-eye.jpg" alt="dual fish eye">
 </div>
-<div class="title">Figure 46. Unity failure to find webcam</div>
+<div class="title">Figure 46. Dual-fisheye with THETA S driver</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/results-mesh.png" alt="results mesh">
+</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/sphere-unity.png" alt="sphere unity">
+</div>
+</div>
+<div class="sect3">
+<h4 id="_problems">9.1.1. Problems</h4>
+<div class="paragraph">
+<p>People encounter two problems with the tutorial above.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>There&#8217;s only a single camera on half the sphere. (you need to add a second camera)</p>
+</li>
+<li>
+<p>There&#8217;s a gap in the sphere that requires manual blender (one time only)</p>
+</li>
+</ol>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/sphere-gap.png" alt="sphere gap">
+</div>
+<div class="title">Figure 47. Webcam texture will result in gap</div>
+</div>
+<div class="paragraph">
+<p>This note from Megan Zimmerman explains the issue.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>The dual projection is implied in Hecomi&#8217;s post as he adds the camera feed
+script to both spheres for their equirectangular solution. In
+the Tanyuan solution, you have equirectangular already and are projecting
+one feed onto one sphere, because we are using two spheres we project onto both.</p>
+</div>
+<div class="paragraph">
+<p>Personally, when I started working on this solution I got caught up in Hecomi&#8217;s
+solution because its harder to understand what is going on if you don&#8217;t do it
+yourself step by step. This has me thinking that I should probably make my
+own shader from scratch, because while I get the idea of what the
+shader is doing, I want to understand how.</p>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>There are different ways to adjust the projection on the sphere to get rid
+of the gap. Manual adjustment is common.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Sphere1:
+Offset U: 0.013
+Offset V: 0.007
+Scale U: 0.983
+Scale V: 1.149
+Scale Center U: 0.0686
+Scale Center V: 0.5</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Sphere2:
+Offset U: -0.01
+Offset V: -0.031
+Scale U: 0.976
+Scale V: 0.958
+Scale Center U: 0.26
+Scale Center V: 0.55</pre>
+</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/megan-closed-gap.png" alt="megan closed gap">
+</div>
+<div class="title">Figure 48. manual adjustment to close gap between each lens</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_uvc_fullhd_blender_with_unity">9.2. UVC FullHD Blender with Unity</h3>
+<div class="paragraph">
+<p>The Ricoh application UVC FullHD Blender will stitch the two spheres on your Windows machine.
+Unfortunately, this is not usable within Unity. If you hack the registry, you can
+get Unity to recognize THETA UVC FullHD Blender.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/uvc-blender-unity.png" alt="uvc blender unity">
+</div>
+<div class="title">Figure 49. UVC Blender recognized by Unity as a webcam</div>
+</div>
+<div class="paragraph">
+<p>Using this technique, you can simply add UVC FullHD Blender as a <code>WebCamTexture</code> in Unity. The stitch
+will look close to perfect.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/uvc-working.png" alt="uvc working">
+</div>
+<div class="title">Figure 50. UVC Blender projected to sphere</div>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s how to do it.</p>
+</div>
+<div class="paragraph">
+<p><strong>Edit Windows Registry</strong></p>
+</div>
+<div class="paragraph">
+<p>Open regedit on Windows. You will need to open the folders for <strong>HKEY_LOCAL_MACHINE &#8594; SOFTWARE &#8594; Classes</strong>.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/regedit_classes.png" alt="regedit classes">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Open CLSID</strong></p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/regedit_clsid.png" alt="regedit clsid">
+</div>
+</div>
+<div class="paragraph">
+<p>Go to:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>{860BB310-5D01-11d0-BD3B-00A0C911CE86}/Instance</pre>
+</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/regedit_instance.png" alt="regedit instance">
+</div>
+</div>
+<div class="paragraph">
+<p>On my computer, THETA UVC FullHD Blender is</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>{2219F8F0-38CB-4B19-9DC1-3F1A5C324545}</pre>
+</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/device_path.png" alt="device path">
+</div>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s a summary from
+<a href="http://alax.info/blog/1433">this</a> blog post that is the source of the regedit info.</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>The registry key is located under HKLM,
+SOFTWARE\Classes\CLSID{860BB310-5D01-11d0-BD3B-00A0C911CE86}\Instance
+(note it’s SOFTWARE\Classes\Wow6432Node\CLSID&#8230;&#8203; in 64-bit OS for 32-bit app space),
+where every subkey corresponds to a registered device
+(find yours there).
+Note that CLSID above is actually CLSID_VideoInputDeviceCategory.</p>
+</div>
+</blockquote>
+</div>
 </div>
 </div>
 </div>
@@ -1865,7 +2056,7 @@ to mobile phones, primarily using Unity.</p>
 <div class="content">
 <img src="img/livestreaming/wifi-unity.png" alt="wifi unity">
 </div>
-<div class="title">Figure 47. 360&#176; video stream using WiFi</div>
+<div class="title">Figure 51. 360&#176; video stream using WiFi</div>
 </div>
 <div class="paragraph">
 <p>Most developers have challenges processing the MotionJPEG stream.</p>
@@ -2099,19 +2290,19 @@ Download and install
 <div class="content">
 <img src="img/livestreaming/unity/wifi/game-view-crop.png" alt="game view crop">
 </div>
-<div class="title">Figure 48. Unity WiFi Live Stream in Game Mode</div>
+<div class="title">Figure 52. Unity WiFi Live Stream in Game Mode</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/unity/wifi/scene-4-crop.png" alt="scene 4 crop">
 </div>
-<div class="title">Figure 49. Unity Scene View of WiFi Live Stream</div>
+<div class="title">Figure 53. Unity Scene View of WiFi Live Stream</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/unity/wifi/top-down-sphere.png" alt="top down sphere">
 </div>
-<div class="title">Figure 50. Top down view of sphere with THETA camera positions</div>
+<div class="title">Figure 54. Top down view of sphere with THETA camera positions</div>
 </div>
 </div>
 </div>
@@ -2135,7 +2326,7 @@ uses node.</p>
 <div class="content">
 <img src="img/livestreaming/thetaview-fisheye.png" alt="thetaview fisheye">
 </div>
-<div class="title">Figure 51. video stream prior to conversion</div>
+<div class="title">Figure 55. video stream prior to conversion</div>
 </div>
 <div class="paragraph">
 <p>The sample code uses JavaScript to convert the dual-fisheye video stream into
@@ -2146,7 +2337,7 @@ a navigable 360&#176; video. Transmission uses
 <div class="content">
 <img src="img/livestreaming/thetaview-360view.png" alt="thetaview 360view">
 </div>
-<div class="title">Figure 52. stream conversion done in browser</div>
+<div class="title">Figure 56. stream conversion done in browser</div>
 </div>
 </div>
 </div>
@@ -2279,7 +2470,7 @@ There is no way to plug a microphone directly into the THETA.</p>
 <div class="content">
 <img src="img/livestreaming/mixer.png" alt="mixer">
 </div>
-<div class="title">Figure 53. OBS mixer</div>
+<div class="title">Figure 57. OBS mixer</div>
 </div>
 </div>
 </div>
@@ -2294,7 +2485,7 @@ There is no way to plug a microphone directly into the THETA.</p>
 <div class="content">
 <img src="img/livestreaming/obs-error.png" alt="obs error">
 </div>
-<div class="title">Figure 54. Error message when device not detected</div>
+<div class="title">Figure 58. Error message when device not detected</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -2338,7 +2529,7 @@ USB cable during an indoor shoot at Stanford during a crowded VR event.</p>
 <div class="content">
 <img src="img/livestreaming/heat/overheat-example.png" alt="overheat example">
 </div>
-<div class="title">Figure 55. Overheating during livestream</div>
+<div class="title">Figure 59. Overheating during livestream</div>
 </div>
 <div class="paragraph">
 <p>If the THETA is overheating, point a standard household fan at it. The airflow
@@ -2353,7 +2544,7 @@ taping or attaching a small fan used for computer CPUs to the outside of the THE
 <div class="content">
 <img src="img/livestreaming/heat/heatsinks.png" alt="heatsinks">
 </div>
-<div class="title">Figure 56. Raspberry Pi Heatsinks (L), small computer fan bracket &#174;</div>
+<div class="title">Figure 60. Raspberry Pi Heatsinks (L), small computer fan bracket &#174;</div>
 </div>
 <div class="ulist">
 <ul>
@@ -2377,7 +2568,7 @@ was too high.</p>
 <div class="content">
 <img src="img/livestreaming/heat/case-mod.png" alt="case mod">
 </div>
-<div class="title">Figure 57. Not recommended, but an example of community enthusiasm</div>
+<div class="title">Figure 61. Not recommended, but an example of community enthusiasm</div>
 </div>
 </div>
 </div>
@@ -2413,7 +2604,7 @@ can post your product information in the
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2017-03-29 22:39:17 UTC
+Last updated 2017-03-30 01:04:21 UTC
 </div>
 </div>
 </body>
