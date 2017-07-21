@@ -40,13 +40,14 @@ image::img/livestreaming/doc-banner.png[role="thumb"]
 |N/A
 |===
 
-NOTE: The RICOH R Dev Kit may not be released.footnote:[RICOH R Dev Kit is expected to be availabile in April 2017]
+NOTE: The RICOH R Dev Kit supports internal stitching for both USB and HDMI. The video
+quality is 1920 x 960 with actual size output of 1920  x 960 + 120.
 
 == Software Video Devices
 On your Mac or Windows computer, you have three options for THETA webcam devices: RICOH THETA S,
 THETA UVC HD Blender,  THETA UV FullHD Blender. You're probably wondering what the differences
 are between the three webcam devices. As of
-Jan 2017, this is my understanding of the differences. This is based on the
+July 2017, this is my understanding of the differences. This is based on the
 https://developers.theta360.com/en/docs/introduction/[official RICOH specifications]. If this
 table is in error, please add to the discussion http://lists.theta360.guide/t/360-live-streaming-guide-for-ricoh-theta/621[here].
 
@@ -62,8 +63,13 @@ table is in error, please add to the discussion http://lists.theta360.guide/t/36
 
 |THETA UVC FullHD Blender | Equirectangular |1920x1080 @ 30fps with firmware 01.82 | H.264 | UVC 1.5
 
+|RICOH R Development Kit UVC Capture | Equirectangular | 1920x960+120 @ 29.97fps | H.264 | UVC 1.5
 
 |===
+
+NOTE: Despite different specifications for the RICOH R and THETA UVC FullHD Blender drivers,
+I believe that the resolution and fps are the same.
+
 
 == THETA S Live Streaming Mode
 With the THETA off, press and hold the _mode_ button. Keep pressing mode
@@ -138,6 +144,42 @@ image::img/livestreaming/webcam-options.png[role="thumb" title="Testing THETA UV
 CAUTION: Make sure you select _THETA UVC FullHD Blender_ and not _RICOH THETA S_.
 
 
+== RICOH R Development Kit
+
+This section refers to the
+http://ricohr.ricoh/en/[RICOH R Development Kit]. If you have a THETA S,
+ignore this section.
+
+The RICOH R Development Kit boots into HDMI out mode when you power it on.
+To use the unit on your desktop, you need to change it from HDMI mode to USB
+output mode.
+
+=== Set to USB out
+If the top LED on the side is blue, change it to green by pressing the bottom button.
+Each press should be 1 second.
+
+image::img/livestreaming/ricohr/mode-image.jpg[role="thumb" title="Set the mode to USB. Green LED is displayed."]
+
+image::img/livestreaming/ricohr/green.jpg[role="thumb" title="Green LED indicates USB output."]
+
+
+
+=== Install USB Driver
+
+You only need this software for USB live streaming with the RICOH R Dev Kit. If you are using HDMI or have a
+THETA S, you can skip this section. Download the
+https://github.com/ricohr/ricoh-r-dk-uvc-capture/releases/tag/%EF%BD%961.0.0[ricoh-r-dk-uvc-capture]
+application from GitHub.
+
+image::img/livestreaming/ricohr/github.png[role="thumb" title="RICOH R Dev Kit USB driver on GitHub"]
+
+CAUTION: Make sure you select _RICOH R Development Kit UVC Capture_ and not _RICOH R Development Kit_.
+
+image::img/livestreaming/ricohr/correctdriver.jpg[role="thumb" title="OBS Studio with the RICOH R  USB Driver"]
+
+If you select the wrong driver, you will not get a video stream.
+
+image::img/livestreaming/ricohr/incorrectdriver.png[role="thumb" title="This is the wrong RICOH R  USB Driver for OBS"]
 
 
 
@@ -262,6 +304,9 @@ image::img/livestreaming/youtube-1080-ces.jpg[role="thumb" title="RICOH R Dev Ki
 
 The RICOH R Dev Kit was plugged into
 http://static-shell.cerevo.com/en/index.html[LiveShell] at the event.
+For information on using HDMI output to stream with a Teradek VidiU, which is
+similar to LiveShell, read the article
+http://lists.theta360.guide/t/youtube-360-live-streaming-with-the-ricoh-r-dev-kit-and-teradek-vidiu/1419[YouTube 360 Live Streaming with the RICOH R Dev Kit and Teradek VidiU]
 
 
 // Facebook Section
@@ -286,6 +331,12 @@ Once you get the video stream onto your computer, it will be in dual-fisheye.
 Although I have not tested it, you can may be able to use THETA UVC FullHD Blender to
 get this into equirectangular. With the previous driver, this was definitely not possible.
 If you test it and get it to work, let me know.
+
+It's possible to use the RICOH R Development Kit to output equirectangular
+directly from HDMI and connect it to a device like VidiU (tested) or Blackmagic (not tested).
+See this
+http://lists.theta360.guide/t/youtube-360-live-streaming-with-the-ricoh-r-dev-kit-and-teradek-vidiu/1419[article]
+for more information on the RICOH R Development Kit.
 
 There are third-party products
 such as
@@ -362,6 +413,13 @@ image::img/livestreaming/mimolive/adjust-center.png[role="thumb" title="Center 3
 
 https://youtu.be/8CEB2_YQgkU[Example Stream Archive]
 
+### RICOH R Dev Kit
+
+The RICOH R Dev Kit can output equirectangular streaming video in Full HD, 59.94i.
+An overview of using the RICOH R Dev Kit with HDMI is available in
+http://lists.theta360.guide/t/youtube-360-live-streaming-with-the-ricoh-r-dev-kit-and-teradek-vidiu/1419[this article].
+
+image::img/livestreaming/ricohr/ricoh-r-teradek-small.jpg[RICOH R Dev Kit works with Teradek VidiU]
 
 ### Other
 http://shop.videostream360.com/vr-cams-equipment/360camera[Videostream360]
@@ -374,7 +432,7 @@ http://lists.theta360.guide/c/theta-media/ecosystem-discussion[post]
 information about it.
 
 ## Problems with VLC 3.0.0
-VLC 3.0.0 is currently not released. As of January 18, 2017, nightly builds
+VLC 3.0.0 is currently not released. As of July 21, 2017, nightly builds
 will not play the THETA stream correctly. The stream is upside down and the color is
 off.
 

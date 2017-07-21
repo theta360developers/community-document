@@ -110,7 +110,7 @@ image::img/livestreaming/facebook/page-sample.png[role="thumb" title="RICOH THET
 
 **Automatically Promote Saved Event on Facebook Timeline**
 
-image::img/livestreaming/facebook/saved-event.png[role="thumb" title="Promote your saved event on your page or timeline"]
+image::img/livestreaming/facebook/saved-event.jpg[role="thumb" title="Promote your saved event on your page or timeline"]
 
 **Adjust Sharing, Expiration or Delete**
 
