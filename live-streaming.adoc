@@ -48,7 +48,9 @@ On your Mac or Windows computer, you have three options for THETA webcam devices
 THETA UVC HD Blender,  THETA UV FullHD Blender. You're probably wondering what the differences
 are between the three webcam devices. As of
 July 2017, this is my understanding of the differences. This is based on the
-https://developers.theta360.com/en/docs/introduction/[official RICOH specifications]. If this
+https://developers.theta360.com/en/docs/introduction/[official RICOH specifications]. RICOH R Development
+Kit information was taken from their
+http://ricohr.ricoh/en/[main site].  If this
 table is in error, please add to the discussion http://lists.theta360.guide/t/360-live-streaming-guide-for-ricoh-theta/621[here].
 
 .Table Live Streaming Drivers
