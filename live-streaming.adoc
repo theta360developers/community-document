@@ -22,28 +22,70 @@ image::img/livestreaming/doc-banner.png[role="thumb"]
 
 .Table Live Streaming Cameras
 |===
-|Model |Streaming Supported |Stitching |Resolution
+|Model |Streaming Supported |Stitching |Resolution | Output Connection
+
+|THETA V
+| Yes
+| Internal 
+| 3840x1920 @ 30fps
+| Wi-Fi, Ethernet,  USB
 
 |THETA S
 |Yes
 |External
 |1920x1080 @ 30fps
+| USB, HDMI
 
 |RICOH R Dev Kit
 |Yes
 |Internal
 |1920x1080 @ 30fps
+| USB, HDMI
 
 |THETA SC
 |No
 |Not supported
 |N/A
+|N/A
+
 |===
 
 NOTE: The RICOH R Dev Kit supports internal stitching for both USB and HDMI. The video
-quality is 1920 x 960 with actual size output of 1920  x 960 + 120.
+quality is 1920 x 960 with actual size output of 1920  x 960 + 120. THETA V Ethernet connection
+requires a USB OTG Ethernet adapter plugged into the USB port. The THETA V will not charge while using Ethernet. The battery will drain.
 
-== Software Video Devices
+== RICOH THETA V Software 
+
+=== Using Wi-Fi
+
+You can stream the THETA V over Wi-Fi or Ethernet using the 
+https://pluginstore.theta360.com/plugins/com.theta360.cloudstreaming/[Wireless Live Streaming] plug-in. A step-by-step guide is available 
+http://theta360.guide/wireless-plugin-guide/[here].
+
+
+
+=== Using a USB Cable
+If you are streaming the THETA V over a USB cable, you must select a THETA V video device on your 
+Windows or Mac computer when you use an encoding software such as 
+https://obsproject.com/[OBS Studio] or https://mpc-hc.org/[MPC-HC] to stream to YouTube
+or Facebook.
+
+==== OS requirements
+
+* Windows 10 version 1703 or later
+* macOS Sierra version 10.12.4 or later.
+
+==== Windows drivers
+
+* https://theta360.com/en/support/download/liveapp4k/win64[Windows 10 64 bit driver download]
+* https://theta360.com/en/support/download/liveapp4k/win32[Windows 10 32 bit driver download]
+
+==== macOS
+
+No driver needed. Select RICOH THETA V in OBS or the encoder software you want to use.
+
+
+== RICOH THETA S Software Video Devices
 On your Mac or Windows computer, you have three options for THETA webcam devices: RICOH THETA S,
 THETA UVC HD Blender,  THETA UV FullHD Blender. You're probably wondering what the differences
 are between the three webcam devices. As of
@@ -53,7 +95,7 @@ Kit information was taken from their
 http://ricohr.ricoh/en/[main site].  If this
 table is in error, please add to the discussion http://lists.theta360.guide/t/360-live-streaming-guide-for-ricoh-theta/621[here].
 
-.Table Live Streaming Drivers
+.Table THETA S Live Streaming Drivers
 |===
 |Driver |Display Format |Image Size and FPS | Streaming Format | USB Standard
 
@@ -72,6 +114,10 @@ table is in error, please add to the discussion http://lists.theta360.guide/t/36
 NOTE: Despite different specifications for the RICOH R and THETA UVC FullHD Blender drivers,
 I believe that the resolution and fps are the same.
 
+== THETA V Live Streaming Mode
+
+If you are streaming over USB, cycle through the image, video, and live modes by pressing 
+and releasing the lower mode button on the side of the camera.
 
 == THETA S Live Streaming Mode
 With the THETA off, press and hold the _mode_ button. Keep pressing mode
@@ -86,12 +132,14 @@ image::img/livestreaming/live-light.png[role="thumb" title="Verify that the came
 
 === Connect Camera to Computer
 Plug the camera into your computer with a micro USB cable. It will appear as a normal
-webcam. The camera will be called _RICOH THETA S_.
+webcam. The camera will be called _RICOH THETA S_ or  _RICOH THETA V_.
 
 image::img/livestreaming/skype-webcam.png[role="thumb" title="Confirm you can see _RICOH THETA S_ as a webcam"]
 
-The THETA is now streaming in dual-fisheye mode. If you're using firmware 01.82 or above,
+The THETA S will stream in dual-fisheye mode. If you're using firmware 01.82 or above,
 the stream is 1920x1080 at 30fps using H.264. Earlier firmware will produce a 1280x720  stream at 15fps
+
+The THETA V will stream in equirectangular mode.
 
 === Install Live Streaming Software
 To stream the video to YouTube, install the official
@@ -103,6 +151,8 @@ https://support.google.com/youtube/answer/2907883?hl=en[YouTube Live Verified De
 for more information.
 
 ==== Download and Install RICOH Live-Streaming App
+
+If you are using a RICOH THETA V, see https://community.theta360.guide/t/howto-ricoh-theta-v-4k-live-streaming-with-uvc-4k-driver-for-windows-10/1647?u=codetricity[this] document.
 
 https://theta360.com/en/support/download/[Download]
 
