@@ -50,11 +50,14 @@ image::img/livestreaming/doc-banner.png[role="thumb"]
 
 |===
 
-NOTE: The RICOH R Dev Kit supports internal stitching for both USB and HDMI. The video
-quality is 1920 x 960 with actual size output of 1920  x 960 + 120. 
+NOTE: icon:puzzle-piece[] Streaming the THETA V through a Wi-Fi router or mobile hotspot requires the Wireless Live Streaming plug-in, a free download from the THETA Store.
 
 CAUTION: THETA V Ethernet connection
 requires a USB OTG Ethernet adapter plugged into the USB port. The THETA V will not charge while using Ethernet. The battery will drain.
+
+NOTE: The RICOH R Dev Kit supports internal stitching for both USB and HDMI. The video
+quality is 1920 x 960 with actual size output of 1920  x 960 + 120. 
+
 
 == RICOH THETA V Software 
 
