@@ -51,38 +51,83 @@ image::img/livestreaming/doc-banner.png[role="thumb"]
 |===
 
 NOTE: The RICOH R Dev Kit supports internal stitching for both USB and HDMI. The video
-quality is 1920 x 960 with actual size output of 1920  x 960 + 120. THETA V Ethernet connection
+quality is 1920 x 960 with actual size output of 1920  x 960 + 120. 
+
+CAUTION: THETA V Ethernet connection
 requires a USB OTG Ethernet adapter plugged into the USB port. The THETA V will not charge while using Ethernet. The battery will drain.
 
 == RICOH THETA V Software 
 
-=== Using Wi-Fi
+=== THETA V Streaming with Wi-Fi
 
-You can stream the THETA V over Wi-Fi or Ethernet using the 
+You can stream the THETA V through a Wi-Fi router or a mobile phone used as a hotspot. 
 https://pluginstore.theta360.com/plugins/com.theta360.cloudstreaming/[Wireless Live Streaming] plug-in. A step-by-step guide is available 
 http://theta360.guide/wireless-plugin-guide/[here].
 
+The plug-in is free to install. 
+https://github.com/ricohapi/theta-wireless-live-streaming-plugin[Source code is also available] if you wish to modify the
+plug-in or build your own streaming application.
+
+image::img/livestreaming/thetav/plugin.png[role="thumb" title="Plug-in installation from store"]
 
 
-=== Using a USB Cable
+The Wireless Live Streaming Guide shows how to configure that THETA V using
+a browser-based configuration tool. You will need to enter the YouTube streaming server
+URL and the Stream key.
+
+image::img/livestreaming/thetav/streaming-server.png[role="thumb" title="Wireless Configuration"]
+
+
+=== THETA V Streaming with Ethernet
+
+You can stream the THETA V using Ethernet using a USB OTG adapter.  See 
+https://community.theta360.guide/t/how-to-connect-theta-v-with-ethernet/3298?u=codetricity[this] article
+for more information. Not all USB OTG Ethernet adapters will work. The camera does not charge
+while you are connected with Ethernet. It's theoretically possible to 
+https://community.theta360.guide/t/possible-theta-v-battery-bypass-hack-untested/3372?u=codetricity[bypass the battery], though
+there have been no supported successed. 
+
+=== THETA V Streaming with a USB Cable
 If you are streaming the THETA V over a USB cable, you must select a THETA V video device on your 
 Windows or Mac computer when you use an encoding software such as 
 https://obsproject.com/[OBS Studio] or https://mpc-hc.org/[MPC-HC] to stream to YouTube
 or Facebook.
 
-==== OS requirements
+==== THETA V live streaming OS requirements
 
 * Windows 10 version 1703 or later
 * macOS Sierra version 10.12.4 or later.
 
-==== Windows drivers
+==== THETA V Windows drivers
 
 * https://theta360.com/en/support/download/liveapp4k/win64[Windows 10 64 bit driver download]
 * https://theta360.com/en/support/download/liveapp4k/win32[Windows 10 32 bit driver download]
 
-==== macOS
+==== THETA V driver for macOS
 
-No driver needed. Select RICOH THETA V in OBS or the encoder software you want to use.
+The driver is installed automatically when you connect the camera. 
+Select RICOH THETA V in OBS or the encoder software you want to use.
+
+==== Encoder Software
+
+Example using OBS.
+
+image::img/livestreaming/thetav/obs.jpg[role="thumb" title="OBS settings"]
+
+
+== THETA V audio
+As of September 2018, spatial audio does not work in streaming mode. You can stream single
+channel audio. Windows computers need build 1709 or later.
+
+If you have trouble with single channel audio, make sure that you have selected RICOH THETA V as the
+default microphone when you are streaming.
+
+image::img/livestreaming/thetav/microphone.png[role="thumb" title="RICOH THETA V Microphone"]
+
+The audio should be set up automatically. The following screenshot is for troubleshooting. 
+You should not need to set this.
+
+image::img/livestreaming/thetav/audio-properties.png[role="thumb" title="Microphone Properties"]
 
 
 == RICOH THETA S Software Video Devices
@@ -494,12 +539,13 @@ include::unity-tethered.adoc[]
 
 ## Untethered WiFi Streaming
 
-Streaming from the THETA using WiFi is primarily of interest to developers
-and hobbyists.
+Streaming from the THETA S using WiFi is primarily of interest to developers
+and hobbyists.  If you have a THETA V, you can stream 4K video directly from the camera with Wi-Fi.
+The THETA V can stream either equirectangular 4K video or dual-fisheye if you use the plug-in technology.
 
 ### Using Unity
 
-The THETA can live stream a 640x320 MotionJPEG at 10fps over WiFi.
+The THETA S can live stream a 640x320 MotionJPEG at 10fps over WiFi.
 This is intended to preview
 a picture prior to taking the picture. It's not intended for headset navigation.
 The community has built some solutions to stream this low-res, low fps video
