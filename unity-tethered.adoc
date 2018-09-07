@@ -54,26 +54,19 @@ image::img/livestreaming/unity/thetav/vive/gear.jpg[role="thumb" title="THETA V 
 
 image::img/livestreaming/unity/thetav/vive/plugin.png[role="thumb" title="SteamVR Unity Plugin"]
 
+You need to have Steam and SteamVR installed.
 
+image::img/livestreaming/unity/thetav/vive/steamvr-install.png[role="thumb" title="Install SteamVR from Steam Library Tools"]
 
+#### Using the Developer Package
 
+Developers can download the https://drive.google.com/file/d/1FOLBZ559fSnwzT2KuXN5hqJhhmlGseMn/view?usp=sharing[Unity Package] with all source code and settings
 
-
-
-#### Application 
-
-* Developers: https://drive.google.com/file/d/1FOLBZ559fSnwzT2KuXN5hqJhhmlGseMn/view?usp=sharing[Unity Package] with all source code and settings
-* User: NEED TO UPDATE DOWNLOAD LINK - binary we use for trade shows. Requires Windows 10 64 bit and SteamVR.
-
-NOTE: The package and binary above contains two simple 3D assets in the scene to illustrate how to import a 3D model. There are two basic moths that are stationary in different lighting areas.
+NOTE: The package contains two simple 3D assets in the scene to illustrate how to import a 3D model. There are two basic moths that are stationary in different lighting areas.
 
 image::img/livestreaming/unity/thetav/vive/mothra.jpg[role="thumb" title="view from headset with moth"]
 
 image::img/livestreaming/unity/thetav/vive/moth2.png[role="thumb" title="example of 3D asset embedded into THETA V live streaming scene"]
-
-Note that if you want to run the application, you need to have Steam and SteamVR installed.
-
-image::img/livestreaming/unity/thetav/vive/steamvr-install.png[role="thumb" title="Install SteamVR from Steam Library Tools"]
 
 #### Turn on THETA V in Live Streaming Mode
 
