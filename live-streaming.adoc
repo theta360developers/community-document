@@ -16,7 +16,7 @@ ga('send', 'pageview');
 ga('set', 'contentGroup1', 'All RICOH');
 </script>
 ++++
-image::img/livestreaming/doc-banner.png[role="thumb"]
+image::img/livestreaming/banner.png[role="thumb"]
 
 == Camera Models
 
