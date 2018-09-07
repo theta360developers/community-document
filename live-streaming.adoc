@@ -731,7 +731,7 @@ image::img/livestreaming/unity/wifi/scene-4-crop.png[role="thumb" title="Unity S
 image::img/livestreaming/unity/wifi/top-down-sphere.png[role="thumb" title="Top down view of sphere with THETA camera positions"]
 
 
-=== Using a Raspberry Pi
+=== Using a Raspberry Pi or Single Board Computer
 
 A Raspberry Pi can take the video live stream from the THETA using USB
 and transmit the stream to another device using WiFi. This is intended
@@ -740,7 +740,7 @@ for software developers to use as starting point.
 There is
 https://github.com/theta360developers/video-streaming-sample-app[sample code]
  available for both the transmission of the live stream
-and the conversion of the live stream into a navigable 360 video. Both the
+and the conversion of the live stream into a navigable 360 video using the THETA S. Both the
 browser and the server applications are written in JavaScript. The server application
 uses node.
 
@@ -752,9 +752,17 @@ https://webrtc.org/[WebRTC].
 
 image::img/livestreaming/thetaview-360view.png[role="thumb" title="stream conversion done in browser"]
 
+As the THETA V uses UVC 1.5 with H.264, there have been no reported successes 
+using the Raspberry Pi. The THETA V can connect directly to the Internet with Wi-Fi 
+and may be able to replace the function of the Raspberry Pi.  The article, 
+https://community.theta360.guide/t/state-of-uvc-1-5-support-for-controlling-h-264/899?u=codetricity[State of UVC 1.5 Support for Controlling H.264] has more information
+on the Linux kernel problem.  Community members have reported success using the
+Linux kernel on Android with additional drivers. The article above has a link to 
+a possible solution on GitHub.
+
 == FAQ
 
-**Q: What's the Resolution and FPS?**
+**Q: What's the Resolution and FPS of the THETA S?**
 
 **A:** Updated Oct 2016.
 
@@ -855,7 +863,7 @@ image::img/livestreaming/mixer.png[role="thumb" title="OBS mixer"]
 
 image::img/livestreaming/obs-error.png[role="thumb" title="Error message when device not detected"]
 
-1. Verify your firmware is 01.82 or above for UVC FullHD
+1. Verify your THETA S firmware is 01.82 or above for UVC FullHD
 2. Make sure your camera has the blue word `Live` in LED lights on
 3. Toggle between webcam and UV Blender. If this still fails to resolve the problem,
 disable all other webcams and reboot

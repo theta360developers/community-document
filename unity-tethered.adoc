@@ -1,11 +1,36 @@
 ## Tethered Streaming with Unity
-There are three techniques to live stream from the THETA into a Unity application.
+
+image::img/livestreaming/unity/gitai.png[role="thumb" title="GITAI example"]
+
+Example above built by http://gitai.tech/[GITAI].
+
+Technical information below originally found 
+http://sekaikigyouka.com/?page_id=846[here] in Japanese.
+
+* Language: HTML/CSS, Javascript, Java, C, C++, C#, PHP
+* Database: MySQL
+* Library: Three.js, A-Frame
+* Tools: Unity
+* Network: Photon, Serial, UDP
+* PaaS: AWS, Heroku, milkcocoa
+* Others: NodeJS, Socket.io, GitHub, Arduino
+
+### THETA V and Unity
+
+The THETA V is easier to work with as it outputs a stitched equirectangular stream
+that you can use directly as a webcam texture in Unity. Just drop it onto a sphere.
+
+
+
+### THETA S and Unity
+
+There are three techniques to live stream from the THETA S into a Unity application.
 
 1. http://lists.theta360.guide/t/tutorial-live-ricoh-theta-s-dual-fish-eye-for-steamvr-in-unity/938?u=codetricity[SteamVR] with manual stitch adjustment. Uses RICOH THETA S driver.
 2. Generic https://github.com/theta360developers/unity-streaming[Unity application] with manual stitch adjustment. Uses RICOH THETA S driver.
 3. http://lists.theta360.guide/t/getting-unity-to-recognize-theta-uvc-fullhd-blender-camera/1035[UVC FullHD Blender with registry hack]. Uses THETA UVC FullHD Blender driver.
 
-### Manual Stitching
+#### Manual Stitching
 
 Most people start with https://github.com/theta360developers/unity-streaming[this] set of templates and code.
 This technique involves using the THETA S webcam driver, not UVC Blender.
@@ -17,7 +42,7 @@ image::img/livestreaming/unity/results-mesh.png[role="thumb"]
 
 image::img/livestreaming/unity/sphere-unity.png[role="thumb"]
 
-#### Problems
+##### Problems
 People encounter two problems with the tutorial above.
 
 1. There's only a single camera on half the sphere. (you need to add a second camera)
@@ -61,7 +86,7 @@ of the gap. Manual adjustment is common.
 
 image::img/livestreaming/unity/megan-closed-gap.png[role="thumb" title="manual adjustment to close gap between each lens"]
 
-### UVC FullHD Blender with Unity
+#### UVC FullHD Blender with Unity
 
 The Ricoh application UVC FullHD Blender will stitch the two spheres on your Windows machine.
 Unfortunately, this is not usable within Unity. If you hack the registry, you can

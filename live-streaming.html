@@ -461,14 +461,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_problems_with_vlc_3_0_0">12. Problems with VLC 3.0.0</a></li>
 <li><a href="#_tethered_streaming_with_unity">13. Tethered Streaming with Unity</a>
 <ul class="sectlevel2">
-<li><a href="#_manual_stitching">13.1. Manual Stitching</a></li>
-<li><a href="#_uvc_fullhd_blender_with_unity">13.2. UVC FullHD Blender with Unity</a></li>
+<li><a href="#_theta_v_and_unity">13.1. THETA V and Unity</a></li>
+<li><a href="#_theta_s_and_unity">13.2. THETA S and Unity</a></li>
 </ul>
 </li>
 <li><a href="#_untethered_wifi_streaming">14. Untethered WiFi Streaming</a>
 <ul class="sectlevel2">
 <li><a href="#_using_unity">14.1. Using Unity</a></li>
-<li><a href="#_using_a_raspberry_pi">14.2. Using a Raspberry Pi</a></li>
+<li><a href="#_using_a_raspberry_pi_or_single_board_computer">14.2. Using a Raspberry Pi or Single Board Computer</a></li>
 </ul>
 </li>
 <li><a href="#_faq">15. FAQ</a></li>
@@ -1820,8 +1820,55 @@ off.</p>
 <div class="sect1">
 <h2 id="_tethered_streaming_with_unity">13. Tethered Streaming with Unity</h2>
 <div class="sectionbody">
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/gitai.png" alt="gitai">
+</div>
+<div class="title">Figure 56. GITAI example</div>
+</div>
 <div class="paragraph">
-<p>There are three techniques to live stream from the THETA into a Unity application.</p>
+<p>Example above built by <a href="http://gitai.tech/">GITAI</a>.</p>
+</div>
+<div class="paragraph">
+<p>Technical information below originally found
+<a href="http://sekaikigyouka.com/?page_id=846">here</a> in Japanese.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Language: HTML/CSS, Javascript, Java, C, C++, C#, PHP</p>
+</li>
+<li>
+<p>Database: MySQL</p>
+</li>
+<li>
+<p>Library: Three.js, A-Frame</p>
+</li>
+<li>
+<p>Tools: Unity</p>
+</li>
+<li>
+<p>Network: Photon, Serial, UDP</p>
+</li>
+<li>
+<p>PaaS: AWS, Heroku, milkcocoa</p>
+</li>
+<li>
+<p>Others: NodeJS, Socket.io, GitHub, Arduino</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_theta_v_and_unity">13.1. THETA V and Unity</h3>
+<div class="paragraph">
+<p>The THETA V is easier to work with as it outputs a stitched equirectangular stream
+that you can use directly as a webcam texture in Unity. Just drop it onto a sphere.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_theta_s_and_unity">13.2. THETA S and Unity</h3>
+<div class="paragraph">
+<p>There are three techniques to live stream from the THETA S into a Unity application.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1836,8 +1883,8 @@ off.</p>
 </li>
 </ol>
 </div>
-<div class="sect2">
-<h3 id="_manual_stitching">13.1. Manual Stitching</h3>
+<div class="sect3">
+<h4 id="_manual_stitching">13.2.1. Manual Stitching</h4>
 <div class="paragraph">
 <p>Most people start with <a href="https://github.com/theta360developers/unity-streaming">this</a> set of templates and code.
 This technique involves using the THETA S webcam driver, not UVC Blender.
@@ -1847,7 +1894,7 @@ It explains how to go from dual-fisheye to a single sphere.</p>
 <div class="content">
 <img src="img/livestreaming/unity/dual-fish-eye.jpg" alt="dual fish eye">
 </div>
-<div class="title">Figure 56. Dual-fisheye with THETA S driver</div>
+<div class="title">Figure 57. Dual-fisheye with THETA S driver</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
@@ -1859,8 +1906,8 @@ It explains how to go from dual-fisheye to a single sphere.</p>
 <img src="img/livestreaming/unity/sphere-unity.png" alt="sphere unity">
 </div>
 </div>
-<div class="sect3">
-<h4 id="_problems">13.1.1. Problems</h4>
+<div class="sect4">
+<h5 id="_problems">Problems</h5>
 <div class="paragraph">
 <p>People encounter two problems with the tutorial above.</p>
 </div>
@@ -1878,7 +1925,7 @@ It explains how to go from dual-fisheye to a single sphere.</p>
 <div class="content">
 <img src="img/livestreaming/unity/sphere-gap.png" alt="sphere gap">
 </div>
-<div class="title">Figure 57. Webcam texture will result in gap</div>
+<div class="title">Figure 58. Webcam texture will result in gap</div>
 </div>
 <div class="paragraph">
 <p>This note from Megan Zimmerman explains the issue.</p>
@@ -1930,12 +1977,12 @@ Scale Center V: 0.55</pre>
 <div class="content">
 <img src="img/livestreaming/unity/megan-closed-gap.png" alt="megan closed gap">
 </div>
-<div class="title">Figure 58. manual adjustment to close gap between each lens</div>
+<div class="title">Figure 59. manual adjustment to close gap between each lens</div>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_uvc_fullhd_blender_with_unity">13.2. UVC FullHD Blender with Unity</h3>
+<div class="sect3">
+<h4 id="_uvc_fullhd_blender_with_unity">13.2.2. UVC FullHD Blender with Unity</h4>
 <div class="paragraph">
 <p>The Ricoh application UVC FullHD Blender will stitch the two spheres on your Windows machine.
 Unfortunately, this is not usable within Unity. If you hack the registry, you can
@@ -1945,7 +1992,7 @@ get Unity to recognize THETA UVC FullHD Blender.</p>
 <div class="content">
 <img src="img/livestreaming/unity/uvc-blender-unity.png" alt="uvc blender unity">
 </div>
-<div class="title">Figure 59. UVC Blender recognized by Unity as a webcam</div>
+<div class="title">Figure 60. UVC Blender recognized by Unity as a webcam</div>
 </div>
 <div class="paragraph">
 <p>Using this technique, you can simply add UVC FullHD Blender as a <code>WebCamTexture</code> in Unity. The stitch
@@ -1955,7 +2002,7 @@ will look close to perfect.</p>
 <div class="content">
 <img src="img/livestreaming/unity/uvc-working.png" alt="uvc working">
 </div>
-<div class="title">Figure 60. UVC Blender projected to sphere</div>
+<div class="title">Figure 61. UVC Blender projected to sphere</div>
 </div>
 <div class="paragraph">
 <p>Here&#8217;s how to do it.</p>
@@ -2024,6 +2071,7 @@ Note that CLSID above is actually CLSID_VideoInputDeviceCategory.</p>
 </div>
 </div>
 </div>
+</div>
 <div class="sect1">
 <h2 id="_untethered_wifi_streaming">14. Untethered WiFi Streaming</h2>
 <div class="sectionbody">
@@ -2049,7 +2097,7 @@ to mobile phones, primarily using Unity.</p>
 <div class="content">
 <img src="img/livestreaming/wifi-unity.png" alt="wifi unity">
 </div>
-<div class="title">Figure 61. 360&#176; video stream using WiFi</div>
+<div class="title">Figure 62. 360&#176; video stream using WiFi</div>
 </div>
 <div class="paragraph">
 <p>Most developers have challenges processing the MotionJPEG stream.</p>
@@ -2283,25 +2331,25 @@ Download and install
 <div class="content">
 <img src="img/livestreaming/unity/wifi/game-view-crop.png" alt="game view crop">
 </div>
-<div class="title">Figure 62. Unity WiFi Live Stream in Game Mode</div>
+<div class="title">Figure 63. Unity WiFi Live Stream in Game Mode</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/unity/wifi/scene-4-crop.png" alt="scene 4 crop">
 </div>
-<div class="title">Figure 63. Unity Scene View of WiFi Live Stream</div>
+<div class="title">Figure 64. Unity Scene View of WiFi Live Stream</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/unity/wifi/top-down-sphere.png" alt="top down sphere">
 </div>
-<div class="title">Figure 64. Top down view of sphere with THETA camera positions</div>
+<div class="title">Figure 65. Top down view of sphere with THETA camera positions</div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_using_a_raspberry_pi">14.2. Using a Raspberry Pi</h3>
+<h3 id="_using_a_raspberry_pi_or_single_board_computer">14.2. Using a Raspberry Pi or Single Board Computer</h3>
 <div class="paragraph">
 <p>A Raspberry Pi can take the video live stream from the THETA using USB
 and transmit the stream to another device using WiFi. This is intended
@@ -2311,7 +2359,7 @@ for software developers to use as starting point.</p>
 <p>There is
 <a href="https://github.com/theta360developers/video-streaming-sample-app">sample code</a>
  available for both the transmission of the live stream
-and the conversion of the live stream into a navigable 360 video. Both the
+and the conversion of the live stream into a navigable 360 video using the THETA S. Both the
 browser and the server applications are written in JavaScript. The server application
 uses node.</p>
 </div>
@@ -2319,7 +2367,7 @@ uses node.</p>
 <div class="content">
 <img src="img/livestreaming/thetaview-fisheye.png" alt="thetaview fisheye">
 </div>
-<div class="title">Figure 65. video stream prior to conversion</div>
+<div class="title">Figure 66. video stream prior to conversion</div>
 </div>
 <div class="paragraph">
 <p>The sample code uses JavaScript to convert the dual-fisheye video stream into
@@ -2330,7 +2378,16 @@ a navigable 360&#176; video. Transmission uses
 <div class="content">
 <img src="img/livestreaming/thetaview-360view.png" alt="thetaview 360view">
 </div>
-<div class="title">Figure 66. stream conversion done in browser</div>
+<div class="title">Figure 67. stream conversion done in browser</div>
+</div>
+<div class="paragraph">
+<p>As the THETA V uses UVC 1.5 with H.264, there have been no reported successes
+using the Raspberry Pi. The THETA V can connect directly to the Internet with Wi-Fi
+and may be able to replace the function of the Raspberry Pi.  The article,
+<a href="https://community.theta360.guide/t/state-of-uvc-1-5-support-for-controlling-h-264/899?u=codetricity">State of UVC 1.5 Support for Controlling H.264</a> has more information
+on the Linux kernel problem.  Community members have reported success using the
+Linux kernel on Android with additional drivers. The article above has a link to
+a possible solution on GitHub.</p>
 </div>
 </div>
 </div>
@@ -2339,7 +2396,7 @@ a navigable 360&#176; video. Transmission uses
 <h2 id="_faq">15. FAQ</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>Q: What&#8217;s the Resolution and FPS?</strong></p>
+<p><strong>Q: What&#8217;s the Resolution and FPS of the THETA S?</strong></p>
 </div>
 <div class="paragraph">
 <p><strong>A:</strong> Updated Oct 2016.</p>
@@ -2463,7 +2520,7 @@ There is no way to plug a microphone directly into the THETA.</p>
 <div class="content">
 <img src="img/livestreaming/mixer.png" alt="mixer">
 </div>
-<div class="title">Figure 67. OBS mixer</div>
+<div class="title">Figure 68. OBS mixer</div>
 </div>
 </div>
 </div>
@@ -2478,12 +2535,12 @@ There is no way to plug a microphone directly into the THETA.</p>
 <div class="content">
 <img src="img/livestreaming/obs-error.png" alt="obs error">
 </div>
-<div class="title">Figure 68. Error message when device not detected</div>
+<div class="title">Figure 69. Error message when device not detected</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Verify your firmware is 01.82 or above for UVC FullHD</p>
+<p>Verify your THETA S firmware is 01.82 or above for UVC FullHD</p>
 </li>
 <li>
 <p>Make sure your camera has the blue word <code>Live</code> in LED lights on</p>
@@ -2522,7 +2579,7 @@ USB cable during an indoor shoot at Stanford during a crowded VR event.</p>
 <div class="content">
 <img src="img/livestreaming/heat/overheat-example.png" alt="overheat example">
 </div>
-<div class="title">Figure 69. Overheating during livestream</div>
+<div class="title">Figure 70. Overheating during livestream</div>
 </div>
 <div class="paragraph">
 <p>If the THETA is overheating, point a standard household fan at it. The airflow
@@ -2537,7 +2594,7 @@ taping or attaching a small fan used for computer CPUs to the outside of the THE
 <div class="content">
 <img src="img/livestreaming/heat/heatsinks.png" alt="heatsinks">
 </div>
-<div class="title">Figure 70. Raspberry Pi Heatsinks (L), small computer fan bracket &#174;</div>
+<div class="title">Figure 71. Raspberry Pi Heatsinks (L), small computer fan bracket &#174;</div>
 </div>
 <div class="ulist">
 <ul>
@@ -2561,7 +2618,7 @@ was too high.</p>
 <div class="content">
 <img src="img/livestreaming/heat/case-mod.png" alt="case mod">
 </div>
-<div class="title">Figure 71. Not recommended, but an example of community enthusiasm</div>
+<div class="title">Figure 72. Not recommended, but an example of community enthusiasm</div>
 </div>
 </div>
 </div>
@@ -2591,7 +2648,7 @@ can post your product information in the
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-09-07 11:51:40 DST
+Last updated 2018-09-07 12:11:35 DST
 </div>
 </div>
 </body>
