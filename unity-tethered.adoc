@@ -40,30 +40,40 @@ This test application illustrates the following techniques:
 * initial configuration tests to orient the headset and the camera to simulate real-world telepresence
 
 These techniques are compiled from the theta360.guide community in the 
-https://community.theta360.guide/c/theta-media/unity-development[Unity Development discussion conference]. If you have any questions or would like to tell us about your project please join this free and independent community of developers. We’d love to hear from you.
+https://community.theta360.guide/c/theta-media/unity-development[Unity Development discussion conference]. 
 
 image::img/livestreaming/unity/thetav/vive/gear.jpg[role="thumb" title="THETA V and HTC Vive"]
 
 #### Software Used in This Test
 
-Tests were done with the following:
-
+* RICOH THETA V firmware 2.11.1 (or higher)
+* RICOH THETA V live streaming driver 1.0.1  64 bit - You NEED 1.0.1 or higher to work with Unity
 * Unity 2017.4.0f1 (earlier version should work)
-** SteamVR Plugin for Unity 
-* RICOH THETA V 
-** RICOH THETA V firmware 2.11.1 (or higher)
-*RICOH THETA V live streaming driver 1.0.1  64 bit - You NEED 1.0.1 or higher to work with Unity
+* SteamVR
+* https://assetstore.unity.com/packages/templates/systems/steamvr-plugin-32647[SteamVR Plugin for Unity] 
 
-#### Software 
+image::img/livestreaming/unity/thetav/vive/plugin.png[role="thumb" title="SteamVR Unity Plugin"]
+
+
+
+
+
+
+
+#### Application 
 
 * Developers: https://drive.google.com/file/d/1FOLBZ559fSnwzT2KuXN5hqJhhmlGseMn/view?usp=sharing[Unity Package] with all source code and settings
-* User: https://drive.google.com/file/d/1uyXxofwbJJIfd34lSJyktr_bhkqA49eF/view?usp=sharing[binary we use for trade shows]. Requires Windows 10 64 bit and SteamVR.
+* User: NEED TO UPDATE DOWNLOAD LINK - binary we use for trade shows. Requires Windows 10 64 bit and SteamVR.
 
 NOTE: The package and binary above contains two simple 3D assets in the scene to illustrate how to import a 3D model. There are two basic moths that are stationary in different lighting areas.
 
 image::img/livestreaming/unity/thetav/vive/mothra.jpg[role="thumb" title="view from headset with moth"]
 
 image::img/livestreaming/unity/thetav/vive/moth2.png[role="thumb" title="example of 3D asset embedded into THETA V live streaming scene"]
+
+Note that if you want to run the application, you need to have Steam and SteamVR installed.
+
+image::img/livestreaming/unity/thetav/vive/steamvr-install.png[role="thumb" title="Install SteamVR from Steam Library Tools"]
 
 #### Turn on THETA V in Live Streaming Mode
 
@@ -81,7 +91,55 @@ The HTC Vive default position is pointed in the same direction as the rear THETA
 
 image::img/livestreaming/unity/thetav/vive/orientation.png[role="thumb" title="Align Camera and HTC Vive "]
 
+#### Start SteamVR
 
+image::img/livestreaming/unity/thetav/vive/steamvr.png[role="thumb" title="SteamVR on Windows 10
+
+#### Start Application on Windows
+
+image::img/livestreaming/unity/thetav/vive/clickme.png[role="thumb" title="Double-click on Icon to Start Application "]
+
+#### Wait for App to Load
+
+The app should load in less than 5 seconds. The headset screen will turn black as the headset adjusts to the THETA V input.
+
+
+image::img/livestreaming/unity/thetav/vive/unitylogo.png[role="thumb" title="Floating Unity Logo "]
+
+#### Success
+
+Congratulations. You've just completed the test. 
+
+image::img/livestreaming/unity/thetav/vive/finshed.png[role="thumb" title="Simple Test Application "]
+
+If you'd like to modify the code, read on.
+
+#### Audio
+
+The script will use the first audio device it finds. Adjust this line in the code to properly identify the THETA V. The script will display the connected microphones to the debug console of Unity.
+
+    public const int THETA_V_AUDIO_NUMBER = 0;   
+
+#### Viewing Inside of Sphere
+
+I am using a flip-normals sphere that I created in blender. This should be included in the package.
+
+If you’re interested in building your own sphere with Blender,
+https://youtu.be/56QGJ76YM-s[this] video will give you a step-by-step process.
+
+image::img/livestreaming/unity/thetav/vive/blender.png[role="thumb" title="Creating a Flip-Normals Sphere in Blender "]
+
+#### Mirroring
+
+The flip-normals sphere causing the scene to appear like a mirror image. To correct this problem, I am inverting the sphere with negative scale. -8, -8, -8.
+
+image::img/livestreaming/unity/thetav/vive/negative-scale.png[role="thumb" title="Assigning negative scale to sphere "]
+
+#### Inverted Camera
+
+I needed to rotate the X axis of the SteamVR rig by 180 degrees in order to get it to work.
+
+image::img/livestreaming/unity/thetav/vive/invert.png[role="thumb" title="Inverting camera"]
 
 ### THETA S and Unity
 

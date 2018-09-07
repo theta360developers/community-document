@@ -427,8 +427,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_camera_models">1. Camera Models</a></li>
 <li><a href="#_ricoh_theta_v_software">2. RICOH THETA V Software</a>
 <ul class="sectlevel2">
-<li><a href="#_theta_v_streaming_with_wi_fi_span_class_icon_i_class_fa_fa_puzzle_piece_i_span">2.1. THETA V Streaming with Wi-Fi - <span class="icon"><i class="fa fa-puzzle-piece"></i></span></a></li>
-<li><a href="#_theta_v_streaming_with_ethernet_span_class_icon_i_class_fa_fa_puzzle_piece_i_span">2.2. THETA V Streaming with Ethernet - <span class="icon"><i class="fa fa-puzzle-piece"></i></span></a></li>
+<li><a href="#_theta_v_streaming_with_wi_fi_span_class_icon_i_class_fa_fa_puzzle_piece_fa_2x_i_span">2.1. THETA V Streaming with Wi-Fi - <span class="icon"><i class="fa fa-puzzle-piece fa-2x"></i></span></a></li>
+<li><a href="#_theta_v_streaming_with_ethernet_span_class_icon_i_class_fa_fa_puzzle_piece_fa_2x_i_span">2.2. THETA V Streaming with Ethernet - <span class="icon"><i class="fa fa-puzzle-piece fa-2x"></i></span></a></li>
 <li><a href="#_theta_v_streaming_with_a_usb_cable">2.3. THETA V Streaming with a USB Cable</a></li>
 </ul>
 </li>
@@ -529,7 +529,7 @@ ga('set', 'contentGroup1', 'All RICOH');
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Internal</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">3840x1920 @ 30fps</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Wi-Fi, Ethernet,  USB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wi-Fi, Ethernet,  USB - <span class="icon"><i class="fa fa-puzzle-piece"></i></span></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">THETA S</p></td>
@@ -561,7 +561,7 @@ ga('set', 'contentGroup1', 'All RICOH');
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<span class="icon"><i class="fa fa-puzzle-piece"></i></span> Streaming the THETA V through a Wi-Fi router or mobile hotspot requires the Wireless Live Streaming plug-in, a free download from the THETA Store.
+<span class="icon"><i class="fa fa-puzzle-piece fa-3x"></i></span> Streaming the THETA V through a Wi-Fi router or mobile hotspot requires the Wireless Live Streaming plug-in, a free download from the THETA Store.
 </td>
 </tr>
 </table>
@@ -598,7 +598,7 @@ quality is 1920 x 960 with actual size output of 1920  x 960 + 120.
 <h2 id="_ricoh_theta_v_software">2. RICOH THETA V Software</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_theta_v_streaming_with_wi_fi_span_class_icon_i_class_fa_fa_puzzle_piece_i_span">2.1. THETA V Streaming with Wi-Fi - <span class="icon"><i class="fa fa-puzzle-piece"></i></span></h3>
+<h3 id="_theta_v_streaming_with_wi_fi_span_class_icon_i_class_fa_fa_puzzle_piece_fa_2x_i_span">2.1. THETA V Streaming with Wi-Fi - <span class="icon"><i class="fa fa-puzzle-piece fa-2x"></i></span></h3>
 <div class="paragraph">
 <p>You can stream the THETA V through a Wi-Fi router or a mobile phone used as a hotspot.
 <a href="https://pluginstore.theta360.com/plugins/com.theta360.cloudstreaming/">Wireless Live Streaming</a> plug-in. A step-by-step guide is available
@@ -628,7 +628,7 @@ URL and the Stream key.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_theta_v_streaming_with_ethernet_span_class_icon_i_class_fa_fa_puzzle_piece_i_span">2.2. THETA V Streaming with Ethernet - <span class="icon"><i class="fa fa-puzzle-piece"></i></span></h3>
+<h3 id="_theta_v_streaming_with_ethernet_span_class_icon_i_class_fa_fa_puzzle_piece_fa_2x_i_span">2.2. THETA V Streaming with Ethernet - <span class="icon"><i class="fa fa-puzzle-piece fa-2x"></i></span></h3>
 <div class="paragraph">
 <p>You can stream the THETA V using Ethernet using a USB OTG adapter.  See
 <a href="https://community.theta360.guide/t/how-to-connect-theta-v-with-ethernet/3298?u=codetricity">this</a> article
@@ -1911,7 +1911,7 @@ that you can use directly as a webcam texture in Unity. Just drop it onto a sphe
 </div>
 <div class="paragraph">
 <p>These techniques are compiled from the theta360.guide community in the
-<a href="https://community.theta360.guide/c/theta-media/unity-development">Unity Development discussion conference</a>. If you have any questions or would like to tell us about your project please join this free and independent community of developers. We’d love to hear from you.</p>
+<a href="https://community.theta360.guide/c/theta-media/unity-development">Unity Development discussion conference</a>.</p>
 </div>
 <div class="imageblock thumb">
 <div class="content">
@@ -1922,44 +1922,41 @@ that you can use directly as a webcam texture in Unity. Just drop it onto a sphe
 </div>
 <div class="sect3">
 <h4 id="_software_used_in_this_test">13.1.2. Software Used in This Test</h4>
-<div class="paragraph">
-<p>Tests were done with the following:</p>
-</div>
 <div class="ulist">
 <ul>
+<li>
+<p>RICOH THETA V firmware 2.11.1 (or higher)</p>
+</li>
+<li>
+<p>RICOH THETA V live streaming driver 1.0.1  64 bit - You NEED 1.0.1 or higher to work with Unity</p>
+</li>
 <li>
 <p>Unity 2017.4.0f1 (earlier version should work)</p>
-<div class="ulist">
-<ul>
+</li>
 <li>
-<p>SteamVR Plugin for Unity</p>
+<p>SteamVR</p>
+</li>
+<li>
+<p><a href="https://assetstore.unity.com/packages/templates/systems/steamvr-plugin-32647">SteamVR Plugin for Unity</a></p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>RICOH THETA V</p>
-<div class="ulist">
-<ul>
-<li>
-<p>RICOH THETA V firmware 2.11.1 (or higher)
-*RICOH THETA V live streaming driver 1.0.1  64 bit - You NEED 1.0.1 or higher to work with Unity</p>
-</li>
-</ul>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/thetav/vive/plugin.png" alt="plugin">
 </div>
-</li>
-</ul>
+<div class="title">Figure 59. SteamVR Unity Plugin</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_software">13.1.3. Software</h4>
+<h4 id="_application">13.1.3. Application</h4>
 <div class="ulist">
 <ul>
 <li>
 <p>Developers: <a href="https://drive.google.com/file/d/1FOLBZ559fSnwzT2KuXN5hqJhhmlGseMn/view?usp=sharing">Unity Package</a> with all source code and settings</p>
 </li>
 <li>
-<p>User: <a href="https://drive.google.com/file/d/1uyXxofwbJJIfd34lSJyktr_bhkqA49eF/view?usp=sharing">binary we use for trade shows</a>. Requires Windows 10 64 bit and SteamVR.</p>
+<p>User: NEED TO UPDATE DOWNLOAD LINK - binary we use for trade shows. Requires Windows 10 64 bit and SteamVR.</p>
 </li>
 </ul>
 </div>
@@ -1979,13 +1976,22 @@ The package and binary above contains two simple 3D assets in the scene to illus
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/mothra.jpg" alt="mothra">
 </div>
-<div class="title">Figure 59. view from headset with moth</div>
+<div class="title">Figure 60. view from headset with moth</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/moth2.png" alt="moth2">
 </div>
-<div class="title">Figure 60. example of 3D asset embedded into THETA V live streaming scene</div>
+<div class="title">Figure 61. example of 3D asset embedded into THETA V live streaming scene</div>
+</div>
+<div class="paragraph">
+<p>Note that if you want to run the application, you need to have Steam and SteamVR installed.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/thetav/vive/steamvr-install.png" alt="steamvr install">
+</div>
+<div class="title">Figure 62. Install SteamVR from Steam Library Tools</div>
 </div>
 </div>
 <div class="sect3">
@@ -1997,7 +2003,7 @@ The package and binary above contains two simple 3D assets in the scene to illus
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/thetav-live.jpg" alt="thetav live">
 </div>
-<div class="title">Figure 61. THETA V in live streaming mode</div>
+<div class="title">Figure 63. THETA V in live streaming mode</div>
 </div>
 </div>
 <div class="sect3">
@@ -2006,7 +2012,7 @@ The package and binary above contains two simple 3D assets in the scene to illus
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/connect.png" alt="connect">
 </div>
-<div class="title">Figure 62. HTC Vive Computer Connection</div>
+<div class="title">Figure 64. HTC Vive Computer Connection</div>
 </div>
 </div>
 <div class="sect3">
@@ -2018,7 +2024,60 @@ The package and binary above contains two simple 3D assets in the scene to illus
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/orientation.png" alt="orientation">
 </div>
-<div class="title">Figure 63. Align Camera and HTC Vive </div>
+<div class="title">Figure 65. Align Camera and HTC Vive </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_start_steamvr">13.1.7. Start SteamVR</h4>
+<div class="paragraph">
+<p>image::img/livestreaming/unity/thetav/vive/steamvr.png[role="thumb" title="SteamVR on Windows 10</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_start_application_on_windows">13.1.8. Start Application on Windows</h4>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/thetav/vive/clickme.png" alt="clickme">
+</div>
+<div class="title">Figure 66. Double-click on Icon to Start Application </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_wait_for_app_to_load">13.1.9. Wait for App to Load</h4>
+<div class="paragraph">
+<p>The app should load in less than 5 seconds. The headset screen will turn black as the headset adjusts to the THETA V input.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/thetav/vive/unitylogo.png" alt="unitylogo">
+</div>
+<div class="title">Figure 67. Floating Unity Logo </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_success">13.1.10. Success</h4>
+<div class="paragraph">
+<p>Congratulations. You&#8217;ve just completed the test.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/thetav/vive/finshed.png" alt="finshed">
+</div>
+<div class="title">Figure 68. Simple Test Application </div>
+</div>
+<div class="paragraph">
+<p>If you&#8217;d like to modify the code, read on.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_audio">13.1.11. Audio</h4>
+<div class="paragraph">
+<p>The script will use the first audio device it finds. Adjust this line in the code to properly identify the THETA V. The script will display the connected microphones to the debug console of Unity.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>public const int THETA_V_AUDIO_NUMBER = 0;</pre>
+</div>
 </div>
 </div>
 </div>
@@ -2051,7 +2110,7 @@ It explains how to go from dual-fisheye to a single sphere.</p>
 <div class="content">
 <img src="img/livestreaming/unity/dual-fish-eye.jpg" alt="dual fish eye">
 </div>
-<div class="title">Figure 64. Dual-fisheye with THETA S driver</div>
+<div class="title">Figure 69. Dual-fisheye with THETA S driver</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
@@ -2082,7 +2141,7 @@ It explains how to go from dual-fisheye to a single sphere.</p>
 <div class="content">
 <img src="img/livestreaming/unity/sphere-gap.png" alt="sphere gap">
 </div>
-<div class="title">Figure 65. Webcam texture will result in gap</div>
+<div class="title">Figure 70. Webcam texture will result in gap</div>
 </div>
 <div class="paragraph">
 <p>This note from Megan Zimmerman explains the issue.</p>
@@ -2134,7 +2193,7 @@ Scale Center V: 0.55</pre>
 <div class="content">
 <img src="img/livestreaming/unity/megan-closed-gap.png" alt="megan closed gap">
 </div>
-<div class="title">Figure 66. manual adjustment to close gap between each lens</div>
+<div class="title">Figure 71. manual adjustment to close gap between each lens</div>
 </div>
 </div>
 </div>
@@ -2149,7 +2208,7 @@ get Unity to recognize THETA UVC FullHD Blender.</p>
 <div class="content">
 <img src="img/livestreaming/unity/uvc-blender-unity.png" alt="uvc blender unity">
 </div>
-<div class="title">Figure 67. UVC Blender recognized by Unity as a webcam</div>
+<div class="title">Figure 72. UVC Blender recognized by Unity as a webcam</div>
 </div>
 <div class="paragraph">
 <p>Using this technique, you can simply add UVC FullHD Blender as a <code>WebCamTexture</code> in Unity. The stitch
@@ -2159,7 +2218,7 @@ will look close to perfect.</p>
 <div class="content">
 <img src="img/livestreaming/unity/uvc-working.png" alt="uvc working">
 </div>
-<div class="title">Figure 68. UVC Blender projected to sphere</div>
+<div class="title">Figure 73. UVC Blender projected to sphere</div>
 </div>
 <div class="paragraph">
 <p>Here&#8217;s how to do it.</p>
@@ -2254,7 +2313,7 @@ to mobile phones, primarily using Unity.</p>
 <div class="content">
 <img src="img/livestreaming/wifi-unity.png" alt="wifi unity">
 </div>
-<div class="title">Figure 69. 360&#176; video stream using WiFi</div>
+<div class="title">Figure 74. 360&#176; video stream using WiFi</div>
 </div>
 <div class="paragraph">
 <p>Most developers have challenges processing the MotionJPEG stream.</p>
@@ -2488,19 +2547,19 @@ Download and install
 <div class="content">
 <img src="img/livestreaming/unity/wifi/game-view-crop.png" alt="game view crop">
 </div>
-<div class="title">Figure 70. Unity WiFi Live Stream in Game Mode</div>
+<div class="title">Figure 75. Unity WiFi Live Stream in Game Mode</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/unity/wifi/scene-4-crop.png" alt="scene 4 crop">
 </div>
-<div class="title">Figure 71. Unity Scene View of WiFi Live Stream</div>
+<div class="title">Figure 76. Unity Scene View of WiFi Live Stream</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/unity/wifi/top-down-sphere.png" alt="top down sphere">
 </div>
-<div class="title">Figure 72. Top down view of sphere with THETA camera positions</div>
+<div class="title">Figure 77. Top down view of sphere with THETA camera positions</div>
 </div>
 </div>
 </div>
@@ -2524,7 +2583,7 @@ uses node.</p>
 <div class="content">
 <img src="img/livestreaming/thetaview-fisheye.png" alt="thetaview fisheye">
 </div>
-<div class="title">Figure 73. video stream prior to conversion</div>
+<div class="title">Figure 78. video stream prior to conversion</div>
 </div>
 <div class="paragraph">
 <p>The sample code uses JavaScript to convert the dual-fisheye video stream into
@@ -2535,7 +2594,7 @@ a navigable 360&#176; video. Transmission uses
 <div class="content">
 <img src="img/livestreaming/thetaview-360view.png" alt="thetaview 360view">
 </div>
-<div class="title">Figure 74. stream conversion done in browser</div>
+<div class="title">Figure 79. stream conversion done in browser</div>
 </div>
 <div class="paragraph">
 <p>As the THETA V uses UVC 1.5 with H.264, there have been no reported successes
@@ -2677,7 +2736,7 @@ There is no way to plug a microphone directly into the THETA.</p>
 <div class="content">
 <img src="img/livestreaming/mixer.png" alt="mixer">
 </div>
-<div class="title">Figure 75. OBS mixer</div>
+<div class="title">Figure 80. OBS mixer</div>
 </div>
 </div>
 </div>
@@ -2692,7 +2751,7 @@ There is no way to plug a microphone directly into the THETA.</p>
 <div class="content">
 <img src="img/livestreaming/obs-error.png" alt="obs error">
 </div>
-<div class="title">Figure 76. Error message when device not detected</div>
+<div class="title">Figure 81. Error message when device not detected</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -2736,7 +2795,7 @@ USB cable during an indoor shoot at Stanford during a crowded VR event.</p>
 <div class="content">
 <img src="img/livestreaming/heat/overheat-example.png" alt="overheat example">
 </div>
-<div class="title">Figure 77. Overheating during livestream</div>
+<div class="title">Figure 82. Overheating during livestream</div>
 </div>
 <div class="paragraph">
 <p>If the THETA is overheating, point a standard household fan at it. The airflow
@@ -2751,7 +2810,7 @@ taping or attaching a small fan used for computer CPUs to the outside of the THE
 <div class="content">
 <img src="img/livestreaming/heat/heatsinks.png" alt="heatsinks">
 </div>
-<div class="title">Figure 78. Raspberry Pi Heatsinks (L), small computer fan bracket &#174;</div>
+<div class="title">Figure 83. Raspberry Pi Heatsinks (L), small computer fan bracket &#174;</div>
 </div>
 <div class="ulist">
 <ul>
@@ -2775,7 +2834,7 @@ was too high.</p>
 <div class="content">
 <img src="img/livestreaming/heat/case-mod.png" alt="case mod">
 </div>
-<div class="title">Figure 79. Not recommended, but an example of community enthusiasm</div>
+<div class="title">Figure 84. Not recommended, but an example of community enthusiasm</div>
 </div>
 </div>
 </div>
@@ -2805,7 +2864,7 @@ can post your product information in the
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-09-07 12:11:35 DST
+Last updated 2018-09-07 15:52:18 DST
 </div>
 </div>
 </body>

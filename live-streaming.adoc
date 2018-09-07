@@ -28,7 +28,7 @@ image::img/livestreaming/banner.png[role="thumb"]
 | Yes
 | Internal 
 | 3840x1920 @ 30fps
-| Wi-Fi, Ethernet,  USB
+| Wi-Fi, Ethernet,  USB - icon:puzzle-piece[]
 
 |THETA S
 |Yes
@@ -50,7 +50,7 @@ image::img/livestreaming/banner.png[role="thumb"]
 
 |===
 
-NOTE: icon:puzzle-piece[] Streaming the THETA V through a Wi-Fi router or mobile hotspot requires the Wireless Live Streaming plug-in, a free download from the THETA Store.
+NOTE: icon:puzzle-piece[3x] Streaming the THETA V through a Wi-Fi router or mobile hotspot requires the Wireless Live Streaming plug-in, a free download from the THETA Store.
 
 CAUTION: THETA V Ethernet connection
 requires a USB OTG Ethernet adapter plugged into the USB port. The THETA V will not charge while using Ethernet. The battery will drain.
@@ -61,7 +61,7 @@ quality is 1920 x 960 with actual size output of 1920  x 960 + 120.
 
 == RICOH THETA V Software 
 
-=== THETA V Streaming with Wi-Fi - icon:puzzle-piece[]
+=== THETA V Streaming with Wi-Fi - icon:puzzle-piece[2x]
 
 You can stream the THETA V through a Wi-Fi router or a mobile phone used as a hotspot. 
 https://pluginstore.theta360.com/plugins/com.theta360.cloudstreaming/[Wireless Live Streaming] plug-in. A step-by-step guide is available 
@@ -81,7 +81,7 @@ URL and the Stream key.
 image::img/livestreaming/thetav/streaming-server.png[role="thumb" title="Wireless Configuration"]
 
 
-=== THETA V Streaming with Ethernet - icon:puzzle-piece[]
+=== THETA V Streaming with Ethernet - icon:puzzle-piece[2x]
 
 You can stream the THETA V using Ethernet using a USB OTG adapter.  See 
 https://community.theta360.guide/t/how-to-connect-theta-v-with-ethernet/3298?u=codetricity[this] article
