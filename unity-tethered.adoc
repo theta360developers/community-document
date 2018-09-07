@@ -4,7 +4,7 @@ image::img/livestreaming/unity/gitai.png[role="thumb" title="GITAI example"]
 
 Example above built by http://gitai.tech/[GITAI].
 
-Technical information below originally found 
+Technical information on the GITAI example originally found 
 http://sekaikigyouka.com/?page_id=846[here] in Japanese.
 
 * Language: HTML/CSS, Javascript, Java, C, C++, C#, PHP
@@ -19,6 +19,67 @@ http://sekaikigyouka.com/?page_id=846[here] in Japanese.
 
 The THETA V is easier to work with as it outputs a stitched equirectangular stream
 that you can use directly as a webcam texture in Unity. Just drop it onto a sphere.
+
+image::img/livestreaming/unity/thetav/vive/vive.jpg[role="thumb" title="THETA V Stream Inside of Vive Headset"]
+
+#### Overview
+
+The RICOH THETA is the world’s most popular 360 camera. The THETA V model was released in late 2017. The “V” outputs a 4K equirectangular video stream with H264 compression 3840×1920/29.97fps as well as a 2K 1920x960/29.97 stream.
+
+You can easily use a Unity webcam texture to wrap the THETA V 4K video stream onto a sphere to provide a telepresence experience for industrial or experiential applications.
+
+This test application illustrates the following techniques:
+
+* identify THETA V camera inside of Unity
+* assign THETA V to a texture
+* use flip normals on a Blender sphere to display the webcam texture to the inside of the Sphere.   The Blender sphere is imported into Unity
+* use negative scale values to solve mirroring problem of objects in sphere appearing in reverse
+* display THETA V stream inside of a HTC Vive headset with SteamVR
+* track head movements and controller movements with SteamVR
+* use THETA V as a microphone and output audio to HTC Vive
+* initial configuration tests to orient the headset and the camera to simulate real-world telepresence
+
+These techniques are compiled from the theta360.guide community in the 
+https://community.theta360.guide/c/theta-media/unity-development[Unity Development discussion conference]. If you have any questions or would like to tell us about your project please join this free and independent community of developers. We’d love to hear from you.
+
+image::img/livestreaming/unity/thetav/vive/gear.jpg[role="thumb" title="THETA V and HTC Vive"]
+
+#### Software Used in This Test
+
+Tests were done with the following:
+
+* Unity 2017.4.0f1 (earlier version should work)
+** SteamVR Plugin for Unity 
+* RICOH THETA V 
+** RICOH THETA V firmware 2.11.1 (or higher)
+*RICOH THETA V live streaming driver 1.0.1  64 bit - You NEED 1.0.1 or higher to work with Unity
+
+#### Software 
+
+* Developers: https://drive.google.com/file/d/1FOLBZ559fSnwzT2KuXN5hqJhhmlGseMn/view?usp=sharing[Unity Package] with all source code and settings
+* User: https://drive.google.com/file/d/1uyXxofwbJJIfd34lSJyktr_bhkqA49eF/view?usp=sharing[binary we use for trade shows]. Requires Windows 10 64 bit and SteamVR.
+
+NOTE: The package and binary above contains two simple 3D assets in the scene to illustrate how to import a 3D model. There are two basic moths that are stationary in different lighting areas.
+
+image::img/livestreaming/unity/thetav/vive/mothra.jpg[role="thumb" title="view from headset with moth"]
+
+image::img/livestreaming/unity/thetav/vive/moth2.png[role="thumb" title="example of 3D asset embedded into THETA V live streaming scene"]
+
+#### Turn on THETA V in Live Streaming Mode
+
+To simulate the perspective a standing person, put the THETA V on a tripod at eye level. Connect the THETA V with a USB cable and put it into live streaming mode.
+
+image::img/livestreaming/unity/thetav/vive/thetav-live.jpg[role="thumb" title="THETA V in live streaming mode"]
+
+#### Connect HTC Vive to Your Computer
+
+image::img/livestreaming/unity/thetav/vive/connect.png[role="thumb" title="HTC Vive Computer Connection"]
+
+#### Align Camera and Headset
+
+The HTC Vive default position is pointed in the same direction as the rear THETA V camera lense. The rear lense is the one that is facing away from the shutter button. A person talking directly to the rear lense will appear to be talking to the face of the person wearing the HTC Vive headset.
+
+image::img/livestreaming/unity/thetav/vive/orientation.png[role="thumb" title="Align Camera and HTC Vive "]
 
 
 
