@@ -2080,6 +2080,46 @@ The package and binary above contains two simple 3D assets in the scene to illus
 </div>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_viewing_inside_of_sphere">13.1.12. Viewing Inside of Sphere</h4>
+<div class="paragraph">
+<p>I am using a flip-normals sphere that I created in blender. This should be included in the package.</p>
+</div>
+<div class="paragraph">
+<p>If you’re interested in building your own sphere with Blender,
+<a href="https://youtu.be/56QGJ76YM-s">this</a> video will give you a step-by-step process.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/thetav/vive/blender.png" alt="blender">
+</div>
+<div class="title">Figure 69. Creating a Flip-Normals Sphere in Blender </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_mirroring">13.1.13. Mirroring</h4>
+<div class="paragraph">
+<p>The flip-normals sphere causing the scene to appear like a mirror image. To correct this problem, I am inverting the sphere with negative scale. -8, -8, -8.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/thetav/vive/negative-scale.png" alt="negative scale">
+</div>
+<div class="title">Figure 70. Assigning negative scale to sphere </div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_inverted_camera">13.1.14. Inverted Camera</h4>
+<div class="paragraph">
+<p>I needed to rotate the X axis of the SteamVR rig by 180 degrees in order to get it to work.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/unity/thetav/vive/invert.png" alt="invert">
+</div>
+<div class="title">Figure 71. Inverting camera</div>
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_theta_s_and_unity">13.2. THETA S and Unity</h3>
@@ -2110,7 +2150,7 @@ It explains how to go from dual-fisheye to a single sphere.</p>
 <div class="content">
 <img src="img/livestreaming/unity/dual-fish-eye.jpg" alt="dual fish eye">
 </div>
-<div class="title">Figure 69. Dual-fisheye with THETA S driver</div>
+<div class="title">Figure 72. Dual-fisheye with THETA S driver</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
@@ -2141,7 +2181,7 @@ It explains how to go from dual-fisheye to a single sphere.</p>
 <div class="content">
 <img src="img/livestreaming/unity/sphere-gap.png" alt="sphere gap">
 </div>
-<div class="title">Figure 70. Webcam texture will result in gap</div>
+<div class="title">Figure 73. Webcam texture will result in gap</div>
 </div>
 <div class="paragraph">
 <p>This note from Megan Zimmerman explains the issue.</p>
@@ -2193,7 +2233,7 @@ Scale Center V: 0.55</pre>
 <div class="content">
 <img src="img/livestreaming/unity/megan-closed-gap.png" alt="megan closed gap">
 </div>
-<div class="title">Figure 71. manual adjustment to close gap between each lens</div>
+<div class="title">Figure 74. manual adjustment to close gap between each lens</div>
 </div>
 </div>
 </div>
@@ -2208,7 +2248,7 @@ get Unity to recognize THETA UVC FullHD Blender.</p>
 <div class="content">
 <img src="img/livestreaming/unity/uvc-blender-unity.png" alt="uvc blender unity">
 </div>
-<div class="title">Figure 72. UVC Blender recognized by Unity as a webcam</div>
+<div class="title">Figure 75. UVC Blender recognized by Unity as a webcam</div>
 </div>
 <div class="paragraph">
 <p>Using this technique, you can simply add UVC FullHD Blender as a <code>WebCamTexture</code> in Unity. The stitch
@@ -2218,7 +2258,7 @@ will look close to perfect.</p>
 <div class="content">
 <img src="img/livestreaming/unity/uvc-working.png" alt="uvc working">
 </div>
-<div class="title">Figure 73. UVC Blender projected to sphere</div>
+<div class="title">Figure 76. UVC Blender projected to sphere</div>
 </div>
 <div class="paragraph">
 <p>Here&#8217;s how to do it.</p>
@@ -2313,7 +2353,7 @@ to mobile phones, primarily using Unity.</p>
 <div class="content">
 <img src="img/livestreaming/wifi-unity.png" alt="wifi unity">
 </div>
-<div class="title">Figure 74. 360&#176; video stream using WiFi</div>
+<div class="title">Figure 77. 360&#176; video stream using WiFi</div>
 </div>
 <div class="paragraph">
 <p>Most developers have challenges processing the MotionJPEG stream.</p>
@@ -2547,19 +2587,19 @@ Download and install
 <div class="content">
 <img src="img/livestreaming/unity/wifi/game-view-crop.png" alt="game view crop">
 </div>
-<div class="title">Figure 75. Unity WiFi Live Stream in Game Mode</div>
+<div class="title">Figure 78. Unity WiFi Live Stream in Game Mode</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/unity/wifi/scene-4-crop.png" alt="scene 4 crop">
 </div>
-<div class="title">Figure 76. Unity Scene View of WiFi Live Stream</div>
+<div class="title">Figure 79. Unity Scene View of WiFi Live Stream</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/unity/wifi/top-down-sphere.png" alt="top down sphere">
 </div>
-<div class="title">Figure 77. Top down view of sphere with THETA camera positions</div>
+<div class="title">Figure 80. Top down view of sphere with THETA camera positions</div>
 </div>
 </div>
 </div>
@@ -2583,7 +2623,7 @@ uses node.</p>
 <div class="content">
 <img src="img/livestreaming/thetaview-fisheye.png" alt="thetaview fisheye">
 </div>
-<div class="title">Figure 78. video stream prior to conversion</div>
+<div class="title">Figure 81. video stream prior to conversion</div>
 </div>
 <div class="paragraph">
 <p>The sample code uses JavaScript to convert the dual-fisheye video stream into
@@ -2594,7 +2634,7 @@ a navigable 360&#176; video. Transmission uses
 <div class="content">
 <img src="img/livestreaming/thetaview-360view.png" alt="thetaview 360view">
 </div>
-<div class="title">Figure 79. stream conversion done in browser</div>
+<div class="title">Figure 82. stream conversion done in browser</div>
 </div>
 <div class="paragraph">
 <p>As the THETA V uses UVC 1.5 with H.264, there have been no reported successes
@@ -2736,7 +2776,7 @@ There is no way to plug a microphone directly into the THETA.</p>
 <div class="content">
 <img src="img/livestreaming/mixer.png" alt="mixer">
 </div>
-<div class="title">Figure 80. OBS mixer</div>
+<div class="title">Figure 83. OBS mixer</div>
 </div>
 </div>
 </div>
@@ -2751,7 +2791,7 @@ There is no way to plug a microphone directly into the THETA.</p>
 <div class="content">
 <img src="img/livestreaming/obs-error.png" alt="obs error">
 </div>
-<div class="title">Figure 81. Error message when device not detected</div>
+<div class="title">Figure 84. Error message when device not detected</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -2795,7 +2835,7 @@ USB cable during an indoor shoot at Stanford during a crowded VR event.</p>
 <div class="content">
 <img src="img/livestreaming/heat/overheat-example.png" alt="overheat example">
 </div>
-<div class="title">Figure 82. Overheating during livestream</div>
+<div class="title">Figure 85. Overheating during livestream</div>
 </div>
 <div class="paragraph">
 <p>If the THETA is overheating, point a standard household fan at it. The airflow
@@ -2810,7 +2850,7 @@ taping or attaching a small fan used for computer CPUs to the outside of the THE
 <div class="content">
 <img src="img/livestreaming/heat/heatsinks.png" alt="heatsinks">
 </div>
-<div class="title">Figure 83. Raspberry Pi Heatsinks (L), small computer fan bracket &#174;</div>
+<div class="title">Figure 86. Raspberry Pi Heatsinks (L), small computer fan bracket &#174;</div>
 </div>
 <div class="ulist">
 <ul>
@@ -2834,7 +2874,7 @@ was too high.</p>
 <div class="content">
 <img src="img/livestreaming/heat/case-mod.png" alt="case mod">
 </div>
-<div class="title">Figure 84. Not recommended, but an example of community enthusiasm</div>
+<div class="title">Figure 87. Not recommended, but an example of community enthusiasm</div>
 </div>
 </div>
 </div>
