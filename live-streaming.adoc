@@ -170,6 +170,46 @@ obtain the IP address of the camera.
 
 The mobile app will show the IP address of the camera.
 
+Put the camera into plug-in mode by pressing and holding the mode button on the camera.
+
+When the THETA V is running the THETA RTSP Streaming plug-in, it will display
+the LEDs shown below.
+
+image::img/livestreaming/rtsp/rtsp-camera-led.png[role="thumb" title="THETA V LEDs when RTSP Plug-in is running"]
+
+Test with https://www.videolan.org/vlc/index.html[VLC].
+
+1. Confirm THETA V is running the plug-in effectively per the steps described above.
+2. Start VLC
+3. Under Media, select Open Network Stream
+
+image::img/livestreaming/rtsp/rtsp-vlc-open.png[role="thumb" title="Open network stream on VLC"]
+
+* Change IP address to your THETA camera. Example rtsp://192.168.2.101:8554/live?resolution=640x320 for the network URL
+* Press “Play”
+
+
+image::img/livestreaming/rtsp/rtsp-network-address.png[role="thumb" title="Set network URL in VLC to the IP address of your camera."]
+
+An equirectangular view of the video feed from the THETA will appear in VLC.
+
+image::img/livestreaming/rtsp/rtsp-vlc-view.png[role="thumb" title="View a live equirectangular video stream from the RICOH THETA with Wi-Fi in VLC"]
+
+No wires needed!
+
+You can adjust the video resolution to 1920x960 or 3840x1920.
+
+image::img/livestreaming/rtsp/rtsp-3840x1920.png[role="thumb" title="Configure VLC for 3840x1920 live streaming over Wi-Fi"]
+
+The video looked great with a high framerate and low latency.
+
+image::img/livestreaming/rtsp/rtsp-3840x1920-view.png[role="thumb" title="View 3840x1920 live video over Wi-Fi"]
+
+At 3840x1920 network traffic was 300 KiB/second.
+
+
+image::img/livestreaming/rtsp/rtsp-network-traffic.png[role="thumb" title="3840x1920 requires 300 KiB/second bandwidth on Wi-Fi"]
+
 
 === THETA V Streaming with Ethernet - icon:puzzle-piece[2x]
 
