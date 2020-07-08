@@ -78,11 +78,11 @@ NOTE: The RICOH R Dev Kit supports internal stitching for both USB and HDMI. The
 quality is 1920 x 960 with actual size output of 1920  x 960 + 120. 
 
 
-== RICOH THETA V Software 
+== RICOH THETA V and Z1 Software 
 
-=== THETA V Streaming with Wi-Fi - icon:puzzle-piece[2x]
+=== THETA V and Z1 Streaming with Wi-Fi - icon:puzzle-piece[2x]
 
-You can stream the THETA V through a Wi-Fi router or a mobile phone used as a hotspot. 
+You can stream the THETA V and Z1 through a Wi-Fi router or a mobile phone used as a hotspot. 
 https://pluginstore.theta360.com/plugins/com.theta360.cloudstreaming/[Wireless Live Streaming] plug-in. A step-by-step guide is available 
 http://theta360.guide/wireless-plugin-guide/[here].
 
