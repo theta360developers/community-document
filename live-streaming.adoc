@@ -122,7 +122,7 @@ live events, which also uses RTMP, no longer works with
 360 live events.  We hope that
 Facebook will add this feature
 back in the future. A step-by-step guide is available 
-http://theta360.guide/wireless-plugin-guide/[here].
+https://theta360developers.github.io/wireless-plugin-guide/[here].
 
 The plug-in is free to install. 
 https://github.com/ricohapi/theta-wireless-live-streaming-plugin[Source code is also available] if you wish to modify the
