@@ -539,7 +539,7 @@ ga('set', 'contentGroup1', 'All RICOH');
 <th class="tableblock halign-left valign-top">Model</th>
 <th class="tableblock halign-left valign-top">Streaming Supported</th>
 <th class="tableblock halign-left valign-top">Stitching</th>
-<th class="tableblock halign-left valign-top">Resolution</th>
+<th class="tableblock halign-left valign-top">Max Resolution</th>
 <th class="tableblock halign-left valign-top">Output Connection</th>
 </tr>
 </thead>
@@ -608,7 +608,8 @@ ga('set', 'contentGroup1', 'All RICOH');
 </td>
 <td class="content">
 THETA V and Z1 Ethernet connection
-requires a USB OTG Ethernet adapter plugged into the USB port. The THETA V will not charge while using Ethernet. The battery will drain. Community members have
+requires a USB OTG Ethernet adapter plugged into the USB port. In most use cases, the THETA V will not
+charge while using Ethernet. The battery will drain. Community members have
 <a href="https://community.theta360.guide/t/how-to-connect-theta-v-with-ethernet/3298/31?u=craig">reported success</a>
 using a splitter to stream with Ethernet while powering the THETA V.
 </td>
@@ -624,6 +625,61 @@ using a splitter to stream with Ethernet while powering the THETA V.
 <td class="content">
 The RICOH R Dev Kit supports internal stitching for both USB and HDMI. The video
 quality is 1920 x 960 with actual size output of 1920  x 960 + 120.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The most common method of streaming the THETA V and Z1 is with a USB cable connected to a
+Windows or Mac computer.  However, it is possible to stream using WiFi.  All the methods
+below use free software.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Table THETA V and Z1 Streaming Method</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Method</th>
+<th class="tableblock halign-left valign-top">Software Needed</th>
+<th class="tableblock halign-left valign-top">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USB to laptop then to YouTube over Internet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Windows 10 users need a driver. See <a href="http://livestreaming.theta360.guide/">live streaming site</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Z1 can charge while streaming</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wi-Fi MotionJPEG from camera to mobile app or web browser on same network</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Camera can stream MotionJPEG without additional software</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">this is the live preview in the mobile app</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wi-Fi RTMP to sites such as YouTube. Stream direct from camera</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://pluginstore.theta360.com/plugins/com.theta360.cloudstreaming/">Wireless Live Streaming Plug-in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Max resolution is 3840x1920 @ 30fps. Mobile phone or laptop not required to stream to YouTube.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wi-Fi RTSP to video players such as VLC, ffplay, GoPro VR Player</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://pluginstore.theta360.com/plugins/com.sciencearts.rtspstreaming/">THETA RTSP Streaming</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Max resolution is 3840x1920. Connect over Wi-Fi to a laptop running video player software.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The THETA V can stream for about 8 hours.  It consumes slightly more power while streaming than
+the the charge provided.  With USB-C, the Z1 can stream indefinitely. Heat may be a problem.
 </td>
 </tr>
 </table>
@@ -807,7 +863,7 @@ Kit information was taken from their
 table is in error, please add to the discussion <a href="http://lists.theta360.guide/t/360-live-streaming-guide-for-ricoh-theta/621">here</a>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 2. Table THETA S Live Streaming Drivers</caption>
+<caption class="title">Table 3. Table THETA S Live Streaming Drivers</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -2717,7 +2773,7 @@ a possible solution on GitHub.</p>
 <p><strong>A:</strong> Updated Oct 2016.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 3. Table THETA S Live Streaming</caption>
+<caption class="title">Table 4. Table THETA S Live Streaming</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -2963,7 +3019,7 @@ can post your product information in the
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-07-07 17:36:55 -0700
+Last updated 2020-07-08 10:13:39 -0700
 </div>
 </div>
 </body>

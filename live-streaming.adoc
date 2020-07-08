@@ -26,7 +26,7 @@ image::img/livestreaming/banner.png[role="thumb"]
 
 .Table Live Streaming Cameras
 |===
-|Model |Streaming Supported |Stitching |Resolution | Output Connection
+|Model |Streaming Supported |Stitching |Max Resolution | Output Connection
 
 |THETA Z1
 | Yes
@@ -69,13 +69,42 @@ image::img/livestreaming/banner.png[role="thumb"]
 NOTE: icon:puzzle-piece[3x] Streaming the THETA V through a Wi-Fi router or mobile hotspot requires the Wireless Live Streaming plug-in, a free download from the THETA Store.
 
 CAUTION: THETA V and Z1 Ethernet connection
-requires a USB OTG Ethernet adapter plugged into the USB port. The THETA V will not charge while using Ethernet. The battery will drain. Community members have 
+requires a USB OTG Ethernet adapter plugged into the USB port. In most use cases, the THETA V will not 
+charge while using Ethernet. The battery will drain. Community members have 
 https://community.theta360.guide/t/how-to-connect-theta-v-with-ethernet/3298/31?u=craig[reported success] 
 using a splitter to stream with Ethernet while powering the THETA V. 
 
 NOTE: The RICOH R Dev Kit supports internal stitching for both USB and HDMI. The video
 quality is 1920 x 960 with actual size output of 1920  x 960 + 120. 
 
+The most common method of streaming the THETA V and Z1 is with a USB cable connected to a
+Windows or Mac computer.  However, it is possible to stream using WiFi.  All the methods
+below use free software.
+
+.Table THETA V and Z1 Streaming Method
+|===
+|Method |Software Needed |Note 
+
+|USB to laptop then to YouTube over Internet
+|Windows 10 users need a driver. See http://livestreaming.theta360.guide/[live streaming site]. 
+|Z1 can charge while streaming
+
+|Wi-Fi MotionJPEG from camera to mobile app or web browser on same network
+|Camera can stream MotionJPEG without additional software
+|this is the live preview in the mobile app
+
+|Wi-Fi RTMP to sites such as YouTube. Stream direct from camera
+|https://pluginstore.theta360.com/plugins/com.theta360.cloudstreaming/[Wireless Live Streaming Plug-in]
+|Max resolution is 3840x1920 @ 30fps. Mobile phone or laptop not required to stream to YouTube.
+
+|Wi-Fi RTSP to video players such as VLC, ffplay, GoPro VR Player
+|https://pluginstore.theta360.com/plugins/com.sciencearts.rtspstreaming/[THETA RTSP Streaming]
+|Max resolution is 3840x1920. Connect over Wi-Fi to a laptop running video player software.
+
+|===
+
+NOTE: The THETA V can stream for about 8 hours.  It consumes slightly more power while streaming than
+the the charge provided.  With USB-C, the Z1 can stream indefinitely. Heat may be a problem.
 
 == RICOH THETA V and Z1 Software 
 
