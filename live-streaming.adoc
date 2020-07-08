@@ -24,6 +24,12 @@ image::img/livestreaming/banner.png[role="thumb"]
 |===
 |Model |Streaming Supported |Stitching |Resolution | Output Connection
 
+|THETA Z1
+| Yes
+| Internal 
+| 3840x1920 @ 30fps
+| Wi-Fi, Ethernet,  USB - icon:puzzle-piece[]
+
 |THETA V
 | Yes
 | Internal 
@@ -42,6 +48,12 @@ image::img/livestreaming/banner.png[role="thumb"]
 |1920x1080 @ 30fps
 | USB, HDMI
 
+|THETA SC2
+|No
+|Not supported
+|N/A
+|N/A
+
 |THETA SC
 |No
 |Not supported
@@ -52,8 +64,10 @@ image::img/livestreaming/banner.png[role="thumb"]
 
 NOTE: icon:puzzle-piece[3x] Streaming the THETA V through a Wi-Fi router or mobile hotspot requires the Wireless Live Streaming plug-in, a free download from the THETA Store.
 
-CAUTION: THETA V Ethernet connection
-requires a USB OTG Ethernet adapter plugged into the USB port. The THETA V will not charge while using Ethernet. The battery will drain.
+CAUTION: THETA V and Z1 Ethernet connection
+requires a USB OTG Ethernet adapter plugged into the USB port. The THETA V will not charge while using Ethernet. The battery will drain. Community members have 
+https://community.theta360.guide/t/how-to-connect-theta-v-with-ethernet/3298/31?u=craig[reported success] 
+using a splitter to stream with Ethernet while powering the THETA V. 
 
 NOTE: The RICOH R Dev Kit supports internal stitching for both USB and HDMI. The video
 quality is 1920 x 960 with actual size output of 1920  x 960 + 120. 
@@ -85,31 +99,55 @@ image::img/livestreaming/thetav/streaming-server.png[role="thumb" title="Wireles
 
 You can stream the THETA V using Ethernet using a USB OTG adapter.  See 
 https://community.theta360.guide/t/how-to-connect-theta-v-with-ethernet/3298?u=codetricity[this] article
-for more information. Not all USB OTG Ethernet adapters will work. The camera does not charge
-while you are connected with Ethernet. It's theoretically possible to 
+for more information. Not all USB OTG Ethernet adapters will work. In most cases, the camera does not charge
+while you are connected with Ethernet. 
+
+Community member Kev091190 has reported success using an USB splitter with the 
+THETA V.
+
+image::img/livestreaming/ethernet/ethernet-charging-status.png[role="thumb" title="THETA V charging status while connected with Ethernet"]
+
+A picture of his cable setup is shown below.
+
+image::img/livestreaming/ethernet/ethernet-cabling.png[role="thumb" title="THETA V cabling with USB to Ethernet"]
+
+Kevin is using the SinLoon 30cm USB 2.0 Data Charge Y Splitter Cable.
+
+image::img/livestreaming/ethernet/sinloon-y-splitter.png[role="thumb" title="Sinloon y-Splitter with charging port for USB devices"]
+
+image::img/livestreaming/ethernet/sinloon-y-splitter-2.png[role="thumb" title="Sinloon y-Splitter full cable layout"]
+
+
+It's also theoretically possible to 
 https://community.theta360.guide/t/possible-theta-v-battery-bypass-hack-untested/3372?u=codetricity[bypass the battery], though
 there have been no supported successed. 
 
-=== THETA V Streaming with a USB Cable
-If you are streaming the THETA V over a USB cable, you must select a THETA V video device on your 
-Windows or Mac computer when you use an encoding software such as 
-https://obsproject.com/[OBS Studio] or https://mpc-hc.org/[MPC-HC] to stream to YouTube
+
+
+
+=== THETA V and Z1 Streaming with a USB Cable
+If you are streaming the THETA V or THETA Z1 over a USB cable, you must select a THETA V or THETA Z1 video device on your Mac computer when you use an encoding software such as 
+https://obsproject.com/[OBS Studio]. On Windows, you can stream directly using https://mpc-hc.org/[MPC-HC] or download the THETA V/Z1 live streaming
+driver.  This setup will allow you to stream to YouTube
 or Facebook.
 
-==== THETA V live streaming OS requirements
+==== THETA V/Z1 live streaming OS requirements
 
 * Windows 10 version 1703 or later
 * macOS Sierra version 10.12.4 or later.
 
-==== THETA V Windows drivers
+==== THETA V/Z1 Windows drivers
 
-* https://theta360.com/en/support/download/liveapp4k/win64[Windows 10 64 bit driver download]
-* https://theta360.com/en/support/download/liveapp4k/win32[Windows 10 32 bit driver download]
+As of July 7, 2020, the latest Windows 10 driver is version 2.0.
 
-==== THETA V driver for macOS
+The latest driver is available at 
+https://livestreaming.theta360.guide[https://livestreaming.theta360.guide]
+
+
+==== THETA V/Z1 driver for macOS
 
 The driver is installed automatically when you connect the camera. 
-Select RICOH THETA V in OBS or the encoder software you want to use.
+Select RICOH THETA V/Z1 in OBS or the encoder software you want to use.
 
 ==== Encoder Software
 
