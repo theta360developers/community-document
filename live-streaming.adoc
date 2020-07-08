@@ -108,10 +108,20 @@ the the charge provided.  With USB-C, the Z1 can stream indefinitely. Heat may b
 
 == RICOH THETA V and Z1 Software 
 
-=== THETA V and Z1 Streaming with Wi-Fi - icon:puzzle-piece[2x]
+=== THETA V and Z1 Streaming with Wi-Fi
 
-You can stream the THETA V and Z1 through a Wi-Fi router or a mobile phone used as a hotspot. 
-https://pluginstore.theta360.com/plugins/com.theta360.cloudstreaming/[Wireless Live Streaming] plug-in. A step-by-step guide is available 
+==== Wireless Live Streaming Plug-in  icon:puzzle-piece[2x]
+
+With the 
+https://pluginstore.theta360.com/plugins/com.theta360.cloudstreaming/[Wireless Live Streaming] plug-in, you can stream the THETA V and Z1 through a Wi-Fi router or a mobile phone used as a hotspot to YouTube 
+Live Events in 360 or other
+live event sites that use RTMP. Most
+cloud services like YouTube use
+RTMP.  As of July 8, 2020, Facebook
+live events, which also uses RTMP, no longer works with 
+360 live events.  We hope that
+Facebook will add this feature
+back in the future. A step-by-step guide is available 
 http://theta360.guide/wireless-plugin-guide/[here].
 
 The plug-in is free to install. 
@@ -126,6 +136,39 @@ a browser-based configuration tool. You will need to enter the YouTube streaming
 URL and the Stream key.
 
 image::img/livestreaming/thetav/streaming-server.png[role="thumb" title="Wireless Configuration"]
+
+==== THETA RTSP Streaming icon:puzzle-piece[2x]
+
+RTSP is used to stream your camera
+live video to a desktop application
+running on your laptop or headset.
+You can see the RTSP stream in
+software such as VLC, ffplay, or
+GoPro VR Player.
+
+Get the 
+https://pluginstore.theta360.com/plugins/com.sciencearts.rtspstreaming/[THETA RTSP Streaming plug-in] from the
+THETA Store.  It is free to download and
+use.
+
+image::img/livestreaming/rtsp/rtsp-plug-in.png[role="thumb" title="RTSP Plug-in installation from store"]
+
+Press install.
+
+image::img/livestreaming/rtsp/rtsp-install.png[role="thumb" title="RTSP Plug-in install into camera"]
+
+The RICOH desktop software, the Basic App, will install the plug-in on your camera.  You must have the Basic App installed on your computer.
+
+After the plug-in is installed, you must activate it with the Plug-in management window of the RICOH desktop app, Basic App.
+
+image::img/livestreaming/rtsp/rtsp-activate.png[role="thumb" title="RTSP Plug-in activation"]
+
+With the plug-in activated, you can start the plug-in by pressing and holding the mode button of the camera.
+
+To use the plug-in, you must connect the THETA V to your home router with Client Mode and
+obtain the IP address of the camera.
+
+The mobile app will show the IP address of the camera.
 
 
 === THETA V Streaming with Ethernet - icon:puzzle-piece[2x]
