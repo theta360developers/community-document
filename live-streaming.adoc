@@ -1,14 +1,13 @@
 = RICOH THETA Live Streaming
-
-++++
-<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css">
-++++
-
 :icons: font
 :toc: right
 :toclevels: 2
 :toc-title: Contents
 :sectnums:
+
+++++
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css">
+++++
 
 ++++
 <script>
