@@ -2,23 +2,20 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 1.5.4">
+<meta name="generator" content="Asciidoctor 2.0.10">
 <title>RICOH THETA Live Streaming</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
-/* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
-/* Remove comment around @import statement below when using as a custom stylesheet */
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment @import statement to use as custom stylesheet */
 /*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
-article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}
-audio,canvas,video{display:inline-block}
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
+audio,video{display:inline-block}
 audio:not([controls]){display:none;height:0}
-[hidden],template{display:none}
-script{display:none!important}
 html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
-body{margin:0}
-a{background:transparent}
+a{background:none}
 a:focus{outline:thin dotted}
 a:active,a:hover{outline:0}
 h1{font-size:2em;margin:.67em 0}
@@ -45,14 +42,12 @@ button,select{text-transform:none}
 button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
 button[disabled],html input[disabled]{cursor:default}
 input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
-input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}
-input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}
 button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
 textarea{overflow:auto;vertical-align:top}
 table{border-collapse:collapse;border-spacing:0}
-*,*:before,*:after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
 html,body{font-size:100%}
-body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
 a:hover{cursor:pointer}
 img,object,embed{max-width:100%;height:auto}
 object,embed{height:100%}
@@ -64,18 +59,16 @@ img{-ms-interpolation-mode:bicubic}
 .text-center{text-align:center!important}
 .text-justify{text-align:justify!important}
 .hide{display:none}
-body{-webkit-font-smoothing:antialiased}
 img,object,svg{display:inline-block;vertical-align:middle}
 textarea{height:auto;min-height:50px}
 select{width:100%}
 .center{margin-left:auto;margin-right:auto}
-.spread{width:100%}
-p.lead,.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{font-size:1.21875em;line-height:1.6}
+.stretch{width:100%}
 .subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
 div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
 a{color:#2156a5;text-decoration:underline;line-height:inherit}
 a:hover,a:focus{color:#1d4b8f}
-a img{border:none}
+a img{border:0}
 p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
 p aside{font-size:.875em;line-height:1.35;font-style:italic}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
@@ -85,19 +78,18 @@ h2{font-size:1.6875em}
 h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
 h4,h5{font-size:1.125em}
 h6{font-size:1em}
-hr{border:solid #ddddd8;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
 em,i{font-style:italic;line-height:inherit}
 strong,b{font-weight:bold;line-height:inherit}
 small{font-size:60%;line-height:inherit}
 code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
 ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
-ul,ol,ul.no-bullet,ol.no-bullet{margin-left:1.5em}
+ul,ol{margin-left:1.5em}
 ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
 ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
 ul.square{list-style-type:square}
 ul.circle{list-style-type:circle}
 ul.disc{list-style-type:disc}
-ul.no-bullet{list-style:none}
 ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
 dl dt{margin-bottom:.3125em;font-weight:bold}
 dl dd{margin-bottom:1.25em}
@@ -105,55 +97,65 @@ abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-
 abbr{text-transform:none}
 blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
 blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
-blockquote cite:before{content:"\2014 \0020"}
+blockquote cite::before{content:"\2014 \0020"}
 blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
 blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
-@media only screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
 h1{font-size:2.75em}
 h2{font-size:2.3125em}
 h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
 h4{font-size:1.4375em}}
 table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
-table thead,table tfoot{background:#f7f8f7;font-weight:bold}
+table thead,table tfoot{background:#f7f8f7}
 table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
 table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
-table tr.even,table tr.alt,table tr:nth-of-type(even){background:#f8f8f7}
+table tr.even,table tr.alt{background:#f8f8f7}
 table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
-body{tab-size:4}
 h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
 h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
-.clearfix:before,.clearfix:after,.float-group:before,.float-group:after{content:" ";display:table}
-.clearfix:after,.float-group:after{clear:both}
-*:not(pre)>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background-color:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed}
-pre,pre>code{line-height:1.45;color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;text-rendering:optimizeSpeed}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+:not(pre)>code.nobreak{word-wrap:normal}
+:not(pre)>code.nowrap{white-space:nowrap}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
 .keyseq{color:rgba(51,51,51,.8)}
-kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background-color:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
 .keyseq kbd:first-child{margin-left:0}
 .keyseq kbd:last-child{margin-right:0}
-.menuseq,.menu{color:rgba(0,0,0,.8)}
-b.button:before,b.button:after{position:relative;top:-1px;font-weight:400}
-b.button:before{content:"[";padding:0 3px 0 2px}
-b.button:after{content:"]";padding:0 2px 0 3px}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
 p a>code:hover{color:rgba(0,0,0,.9)}
 #header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
-#header:before,#header:after,#content:before,#content:after,#footnotes:before,#footnotes:after,#footer:before,#footer:after{content:" ";display:table}
-#header:after,#content:after,#footnotes:after,#footer:after{clear:both}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
 #content{margin-top:1.25em}
-#content:before{content:none}
+#content::before{content:none}
 #header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
-#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #ddddd8}
-#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #ddddd8;padding-bottom:8px}
-#header .details{border-bottom:1px solid #ddddd8;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
 #header .details span:first-child{margin-left:-.125em}
 #header .details span.email a{color:rgba(0,0,0,.85)}
 #header .details br{display:none}
-#header .details br+span:before{content:"\00a0\2013\00a0"}
-#header .details br+span.author:before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
-#header .details br+span#revremark:before{content:"\00a0|\00a0"}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
 #header #revnumber{text-transform:capitalize}
-#header #revnumber:after{content:"\00a0"}
-#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #ddddd8;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
-#toc{border-bottom:1px solid #efefed;padding-bottom:.5em}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
 #toc>ul{margin-left:.125em}
 #toc ul.sectlevel0>li>a{font-style:italic}
 #toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
@@ -162,16 +164,16 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #toc a{text-decoration:none}
 #toc a:active{text-decoration:underline}
 #toctitle{color:#7a2518;font-size:1.2em}
-@media only screen and (min-width:768px){#toctitle{font-size:1.375em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
 body.toc2{padding-left:15em;padding-right:0}
-#toc.toc2{margin-top:0!important;background-color:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #efefed;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
 #toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
 #toc.toc2>ul{font-size:.9em;margin-bottom:0}
 #toc.toc2 ul ul{margin-left:0;padding-left:1em}
 #toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
 body.toc2.toc-right{padding-left:0;padding-right:15em}
-body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #efefed;left:auto;right:0}}
-@media only screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
 #toc.toc2{width:20em}
 #toc.toc2 #toctitle{font-size:1.375em}
 #toc.toc2>ul{font-size:.95em}
@@ -180,89 +182,101 @@ body.toc2.toc-right{padding-left:0;padding-right:20em}}
 #content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
 #content #toc>:first-child{margin-top:0}
 #content #toc>:last-child{margin-bottom:0}
-#footer{max-width:100%;background-color:rgba(0,0,0,.8);padding:1.25em}
+#footer{max-width:100%;background:rgba(0,0,0,.8);padding:1.25em}
 #footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+#content{margin-bottom:.625em}
 .sect1{padding-bottom:.625em}
-@media only screen and (min-width:768px){.sect1{padding-bottom:1.25em}}
-.sect1+.sect1{border-top:1px solid #efefed}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
 #content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
-#content h1>a.anchor:before,h2>a.anchor:before,h3>a.anchor:before,#toctitle>a.anchor:before,.sidebarblock>.content>.title>a.anchor:before,h4>a.anchor:before,h5>a.anchor:before,h6>a.anchor:before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
 #content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
 #content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
 #content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
-.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details>summary:first-of-type{cursor:pointer;display:list-item;outline:none;margin-bottom:.75em}
 .admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
-table.tableblock>caption.title{white-space:nowrap;overflow:visible;max-width:0}
-.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{color:rgba(0,0,0,.85)}
-table.tableblock #preamble>.sectionbody>.paragraph:first-of-type p{font-size:inherit}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:inherit}
 .admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
 .admonitionblock>table td.icon{text-align:center;width:80px}
 .admonitionblock>table td.icon img{max-width:none}
 .admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
-.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #ddddd8;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
 .exampleblock>.content>:first-child{margin-top:0}
 .exampleblock>.content>:last-child{margin-bottom:0}
-.sidebarblock{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;-webkit-border-radius:4px;border-radius:4px}
 .sidebarblock>:first-child{margin-top:0}
 .sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
 .exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
-.literalblock pre,.listingblock pre:not(.highlight),.listingblock pre[class="highlight"],.listingblock pre[class^="highlight "],.listingblock pre.CodeRay,.listingblock pre.prettyprint{background:#f7f7f8}
-.sidebarblock .literalblock pre,.sidebarblock .listingblock pre:not(.highlight),.sidebarblock .listingblock pre[class="highlight"],.sidebarblock .listingblock pre[class^="highlight "],.sidebarblock .listingblock pre.CodeRay,.sidebarblock .listingblock pre.prettyprint{background:#f2f1f1}
-.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;padding:1em;font-size:.8125em}
-.literalblock pre.nowrap,.literalblock pre[class].nowrap,.listingblock pre.nowrap,.listingblock pre[class].nowrap{overflow-x:auto;white-space:pre;word-wrap:normal}
-@media only screen and (min-width:768px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:.90625em}}
-@media only screen and (min-width:1280px){.literalblock pre,.literalblock pre[class],.listingblock pre,.listingblock pre[class]{font-size:1em}}
-.literalblock.output pre{color:#f7f7f8;background-color:rgba(0,0,0,.9)}
+.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
 .listingblock pre.highlightjs{padding:0}
 .listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
 .listingblock pre.prettyprint{border-width:0}
-.listingblock>.content{position:relative}
-.listingblock code[data-lang]:before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:#999}
-.listingblock:hover code[data-lang]:before{display:block}
-.listingblock.terminal pre .command:before{content:attr(data-prompt);padding-right:.5em;color:#999}
-.listingblock.terminal pre .command:not([data-prompt]):before{content:"$"}
-table.pyhltable{border-collapse:separate;border:0;margin-bottom:0;background:none}
-table.pyhltable td{vertical-align:top;padding-top:0;padding-bottom:0;line-height:1.45}
-table.pyhltable td.code{padding-left:.75em;padding-right:0}
-pre.pygments .lineno,table.pyhltable td:not(.code){color:#999;padding-left:0;padding-right:.5em;border-right:1px solid #ddddd8}
-pre.pygments .lineno{display:inline-block;margin-right:.25em}
-table.pyhltable .linenodiv{background:none!important;padding-right:0!important}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}
+pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
+pre.pygments .lineno::before{content:"";margin-right:-.125em}
 .quoteblock{margin:0 1em 1.25em 1.5em;display:table}
-.quoteblock>.title{margin-left:-1.5em;margin-bottom:.75em}
-.quoteblock blockquote,.quoteblock blockquote p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
 .quoteblock blockquote{margin:0;padding:0;border:0}
-.quoteblock blockquote:before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
 .quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
-.quoteblock .attribution{margin-top:.5em;margin-right:.5ex;text-align:right}
-.quoteblock .quoteblock{margin-left:0;margin-right:0;padding:.5em 0;border-left:3px solid rgba(0,0,0,.6)}
-.quoteblock .quoteblock blockquote{padding:0 0 0 .75em}
-.quoteblock .quoteblock blockquote:before{display:none}
-.verseblock{margin:0 1em 1.25em 1em}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
 .verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
 .verseblock pre strong{font-weight:400}
 .verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
 .quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
 .quoteblock .attribution br,.verseblock .attribution br{display:none}
 .quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
-.quoteblock.abstract{margin:0 0 1.25em 0;display:block}
-.quoteblock.abstract blockquote,.quoteblock.abstract blockquote p{text-align:left;word-spacing:0}
-.quoteblock.abstract blockquote:before,.quoteblock.abstract blockquote p:first-of-type:before{display:none}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
 table.tableblock{max-width:100%;border-collapse:separate}
-table.tableblock td>.paragraph:last-child p>p:last-child,table.tableblock th>p:last-child,table.tableblock td>p:last-child{margin-bottom:0}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+td.tableblock>.content>:last-child.sidebarblock{margin-bottom:0}
 table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
-table.grid-all th.tableblock,table.grid-all td.tableblock{border-width:0 1px 1px 0}
-table.grid-all tfoot>tr>th.tableblock,table.grid-all tfoot>tr>td.tableblock{border-width:1px 1px 0 0}
-table.grid-cols th.tableblock,table.grid-cols td.tableblock{border-width:0 1px 0 0}
-table.grid-all *>tr>.tableblock:last-child,table.grid-cols *>tr>.tableblock:last-child{border-right-width:0}
-table.grid-rows th.tableblock,table.grid-rows td.tableblock{border-width:0 0 1px 0}
-table.grid-all tbody>tr:last-child>th.tableblock,table.grid-all tbody>tr:last-child>td.tableblock,table.grid-all thead:last-child>tr>th.tableblock,table.grid-rows tbody>tr:last-child>th.tableblock,table.grid-rows tbody>tr:last-child>td.tableblock,table.grid-rows thead:last-child>tr>th.tableblock{border-bottom-width:0}
-table.grid-rows tfoot>tr>th.tableblock,table.grid-rows tfoot>tr>td.tableblock{border-width:1px 0 0 0}
+table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
+table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
+table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
+table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px}
+table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0}
+table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
+table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
 table.frame-all{border-width:1px}
 table.frame-sides{border-width:0 1px}
-table.frame-topbot{border-width:1px 0}
+table.frame-topbot,table.frame-ends{border-width:1px 0}
+table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
 th.halign-left,td.halign-left{text-align:left}
 th.halign-right,td.halign-right{text-align:right}
 th.halign-center,td.halign-center{text-align:center}
@@ -274,19 +288,19 @@ tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
 tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
 p.tableblock>code:only-child{background:none;padding:0}
 p.tableblock{font-size:1em}
-td>div.verse{white-space:pre}
 ol{margin-left:1.75em}
 ul li ol{margin-left:1.5em}
 dl dd{margin-left:1.125em}
 dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
 ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
-ul.unstyled,ol.unnumbered,ul.checklist,ul.none{list-style-type:none}
-ul.unstyled,ol.unnumbered,ul.checklist{margin-left:.625em}
-ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1em;font-size:.85em}
-ul.checklist li>p:first-child>input[type="checkbox"]:first-child{width:1em;position:relative;top:1px}
-ul.inline{margin:0 auto .625em auto;margin-left:-1.375em;margin-right:0;padding:0;list-style:none;overflow:hidden}
-ul.inline>li{list-style:none;float:left;margin-left:1.375em;display:block}
-ul.inline>li>*{display:block}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
+ul.inline{display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
 .unstyled dl dt{font-weight:400;font-style:normal}
 ol.arabic{list-style-type:decimal}
 ol.decimal{list-style-type:decimal-leading-zero}
@@ -300,11 +314,12 @@ ol.lowergreek{list-style-type:lower-greek}
 td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
 td.hdlist1{font-weight:bold;padding-bottom:1.25em}
 .literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
-.colist>table tr>td:first-of-type{padding:0 .75em;line-height:1}
-.colist>table tr>td:last-of-type{padding:.25em 0}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
 .thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
-.imageblock.left,.imageblock[style*="float: left"]{margin:.25em .625em 1.25em 0}
-.imageblock.right,.imageblock[style*="float: right"]{margin:.25em 0 1.25em .625em}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
 .imageblock>.title{margin-bottom:0}
 .imageblock.thumb,.imageblock.th{border-width:6px}
 .imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
@@ -317,9 +332,9 @@ sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:sup
 sup.footnote a,sup.footnoteref a{text-decoration:none}
 sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
 #footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
-#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em 0;border-width:1px 0 0 0}
-#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;text-indent:-1.05em;margin-bottom:.2em}
-#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
 #footnotes .footnote:last-of-type{margin-bottom:0}
 #content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
 .gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
@@ -331,48 +346,49 @@ div.unbreakable{page-break-inside:avoid}
 .overline{text-decoration:overline}
 .line-through{text-decoration:line-through}
 .aqua{color:#00bfbf}
-.aqua-background{background-color:#00fafa}
+.aqua-background{background:#00fafa}
 .black{color:#000}
-.black-background{background-color:#000}
+.black-background{background:#000}
 .blue{color:#0000bf}
-.blue-background{background-color:#0000fa}
+.blue-background{background:#0000fa}
 .fuchsia{color:#bf00bf}
-.fuchsia-background{background-color:#fa00fa}
+.fuchsia-background{background:#fa00fa}
 .gray{color:#606060}
-.gray-background{background-color:#7d7d7d}
+.gray-background{background:#7d7d7d}
 .green{color:#006000}
-.green-background{background-color:#007d00}
+.green-background{background:#007d00}
 .lime{color:#00bf00}
-.lime-background{background-color:#00fa00}
+.lime-background{background:#00fa00}
 .maroon{color:#600000}
-.maroon-background{background-color:#7d0000}
+.maroon-background{background:#7d0000}
 .navy{color:#000060}
-.navy-background{background-color:#00007d}
+.navy-background{background:#00007d}
 .olive{color:#606000}
-.olive-background{background-color:#7d7d00}
+.olive-background{background:#7d7d00}
 .purple{color:#600060}
-.purple-background{background-color:#7d007d}
+.purple-background{background:#7d007d}
 .red{color:#bf0000}
-.red-background{background-color:#fa0000}
+.red-background{background:#fa0000}
 .silver{color:#909090}
-.silver-background{background-color:#bcbcbc}
+.silver-background{background:#bcbcbc}
 .teal{color:#006060}
-.teal-background{background-color:#007d7d}
+.teal-background{background:#007d7d}
 .white{color:#bfbfbf}
-.white-background{background-color:#fafafa}
+.white-background{background:#fafafa}
 .yellow{color:#bfbf00}
-.yellow-background{background-color:#fafa00}
+.yellow-background{background:#fafa00}
 span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
 .admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
-.admonitionblock td.icon .icon-note:before{content:"\f05a";color:#19407c}
-.admonitionblock td.icon .icon-tip:before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
-.admonitionblock td.icon .icon-warning:before{content:"\f071";color:#bf6900}
-.admonitionblock td.icon .icon-caution:before{content:"\f06d";color:#bf3400}
-.admonitionblock td.icon .icon-important:before{content:"\f06a";color:#bf0000}
-.conum[data-value]{display:inline-block;color:#fff!important;background-color:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
 .conum[data-value] *{color:#fff!important}
 .conum[data-value]+b{display:none}
-.conum[data-value]:after{content:attr(data-value)}
+.conum[data-value]::after{content:attr(data-value)}
 pre .conum[data-value]{position:relative;top:-.125em}
 b.conum *{color:inherit!important}
 .conum:not([data-value]):empty{display:none}
@@ -382,41 +398,44 @@ p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
 p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
 p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
-.exampleblock>.content{background-color:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
 .print-only{display:none!important}
-@media print{@page{margin:1.25cm .75cm}
-*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
 a{color:inherit!important;text-decoration:underline!important}
 a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
-a[href^="http:"]:not(.bare):after,a[href^="https:"]:not(.bare):after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
-abbr[title]:after{content:" (" attr(title) ")"}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]::after{content:" (" attr(title) ")"}
 pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
 thead{display:table-header-group}
 svg{max-width:100%}
 p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
 h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
 #toc,.sidebarblock,.exampleblock>.content{background:none!important}
-#toc{border-bottom:1px solid #ddddd8!important;padding-bottom:0!important}
-.sect1{padding-bottom:0!important}
-.sect1+.sect1{border:0!important}
-#header>h1:first-child{margin-top:1.25rem}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
 body.book #header{text-align:center}
-body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em 0}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
 body.book #header .details{border:0!important;display:block;padding:0!important}
 body.book #header .details span:first-child{margin-left:0!important}
 body.book #header .details br{display:block}
-body.book #header .details br+span:before{content:none!important}
+body.book #header .details br+span::before{content:none!important}
 body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
 body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
-.listingblock code[data-lang]:before{display:block}
-#footer{background:none!important;padding:0 .9375em}
-#footer-text{color:rgba(0,0,0,.6)!important;font-size:.9em}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
 .hide-on-print{display:none!important}
 .print-only{display:block!important}
 .hide-for-print{display:none!important}
 .show-for-print{display:inherit!important}}
+@media print,amzn-kf8{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="article toc2 toc-right">
 <div id="header">
@@ -425,11 +444,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toctitle">Contents</div>
 <ul class="sectlevel1">
 <li><a href="#_camera_models">1. Camera Models</a></li>
-<li><a href="#_ricoh_theta_v_software">2. RICOH THETA V Software</a>
+<li><a href="#_ricoh_theta_v_and_z1_software">2. RICOH THETA V and Z1 Software</a>
 <ul class="sectlevel2">
-<li><a href="#_theta_v_streaming_with_wi_fi_span_class_icon_i_class_fa_fa_puzzle_piece_fa_2x_i_span">2.1. THETA V Streaming with Wi-Fi - <span class="icon"><i class="fa fa-puzzle-piece fa-2x"></i></span></a></li>
-<li><a href="#_theta_v_streaming_with_ethernet_span_class_icon_i_class_fa_fa_puzzle_piece_fa_2x_i_span">2.2. THETA V Streaming with Ethernet - <span class="icon"><i class="fa fa-puzzle-piece fa-2x"></i></span></a></li>
-<li><a href="#_theta_v_streaming_with_a_usb_cable">2.3. THETA V Streaming with a USB Cable</a></li>
+<li><a href="#_theta_v_and_z1_streaming_with_wi_fi">2.1. THETA V and Z1 Streaming with Wi-Fi</a></li>
+<li><a href="#_theta_v_streaming_with_ethernet">2.2. THETA V Streaming with Ethernet - <span class="icon"><i class="fa fa-puzzle-piece fa-2x"></i></span></a></li>
+<li><a href="#_theta_v_and_z1_streaming_with_a_usb_cable">2.3. THETA V and Z1 Streaming with a USB Cable</a></li>
 </ul>
 </li>
 <li><a href="#_theta_v_audio">3. THETA V audio</a></li>
@@ -479,13 +498,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </ul>
 </li>
 <li><a href="#_discuss">17. Discuss</a></li>
-<li><a href="#__a_href_http_theta360_guide_return_to_theta360_guide_a">18. <a href="http://theta360.guide/">Return to theta360.guide</a></a></li>
+<li><a href="#_return_to_theta360_guide">18. Return to theta360.guide</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 <div id="preamble">
 <div class="sectionbody">
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css">
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -505,7 +525,7 @@ ga('set', 'contentGroup1', 'All RICOH');
 <div class="sect1">
 <h2 id="_camera_models">1. Camera Models</h2>
 <div class="sectionbody">
-<table class="tableblock frame-all grid-all spread">
+<table class="tableblock frame-all grid-all stretch">
 <caption class="title">Table 1. Table Live Streaming Cameras</caption>
 <colgroup>
 <col style="width: 20%;">
@@ -519,11 +539,18 @@ ga('set', 'contentGroup1', 'All RICOH');
 <th class="tableblock halign-left valign-top">Model</th>
 <th class="tableblock halign-left valign-top">Streaming Supported</th>
 <th class="tableblock halign-left valign-top">Stitching</th>
-<th class="tableblock halign-left valign-top">Resolution</th>
+<th class="tableblock halign-left valign-top">Max Resolution</th>
 <th class="tableblock halign-left valign-top">Output Connection</th>
 </tr>
 </thead>
 <tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">THETA Z1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Internal</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3840x1920 @ 30fps</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wi-Fi, Ethernet,  USB - <span class="icon"><i class="fa fa-puzzle-piece"></i></span></p></td>
+</tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">THETA V</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
@@ -544,6 +571,13 @@ ga('set', 'contentGroup1', 'All RICOH');
 <td class="tableblock halign-left valign-top"><p class="tableblock">Internal</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1920x1080 @ 30fps</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">USB, HDMI</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">THETA SC2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Not supported</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N/A</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">THETA SC</p></td>
@@ -573,8 +607,11 @@ ga('set', 'contentGroup1', 'All RICOH');
 <i class="fa icon-caution" title="Caution"></i>
 </td>
 <td class="content">
-THETA V Ethernet connection
-requires a USB OTG Ethernet adapter plugged into the USB port. The THETA V will not charge while using Ethernet. The battery will drain.
+THETA V and Z1 Ethernet connection
+requires a USB OTG Ethernet adapter plugged into the USB port. In most use cases, the THETA V will not
+charge while using Ethernet. The battery will drain. Community members have
+<a href="https://community.theta360.guide/t/how-to-connect-theta-v-with-ethernet/3298/31?u=craig">reported success</a>
+using a splitter to stream with Ethernet while powering the THETA V.
 </td>
 </tr>
 </table>
@@ -592,16 +629,81 @@ quality is 1920 x 960 with actual size output of 1920  x 960 + 120.
 </tr>
 </table>
 </div>
+<div class="paragraph">
+<p>The most common method of streaming the THETA V and Z1 is with a USB cable connected to a
+Windows or Mac computer.  However, it is possible to stream using WiFi.  All the methods
+below use free software.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 2. Table THETA V and Z1 Streaming Method</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Method</th>
+<th class="tableblock halign-left valign-top">Software Needed</th>
+<th class="tableblock halign-left valign-top">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">USB to laptop then to YouTube over Internet</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Windows 10 users need a driver. See <a href="http://livestreaming.theta360.guide/">live streaming site</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Z1 can charge while streaming</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wi-Fi MotionJPEG from camera to mobile app or web browser on same network</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Camera can stream MotionJPEG without additional software</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">this is the live preview in the mobile app</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wi-Fi RTMP to sites such as YouTube. Stream direct from camera</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://pluginstore.theta360.com/plugins/com.theta360.cloudstreaming/">Wireless Live Streaming Plug-in</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Max resolution is 3840x1920 @ 30fps. Mobile phone or laptop not required to stream to YouTube.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wi-Fi RTSP to video players such as VLC, ffplay, GoPro VR Player</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://pluginstore.theta360.com/plugins/com.sciencearts.rtspstreaming/">THETA RTSP Streaming</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Max resolution is 3840x1920. Connect over Wi-Fi to a laptop running video player software.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The THETA V can stream for about 8 hours.  It consumes slightly more power while streaming than
+the the charge provided.  With USB-C, the Z1 can stream indefinitely. Heat may be a problem.
+</td>
+</tr>
+</table>
+</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_ricoh_theta_v_software">2. RICOH THETA V Software</h2>
+<h2 id="_ricoh_theta_v_and_z1_software">2. RICOH THETA V and Z1 Software</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_theta_v_streaming_with_wi_fi_span_class_icon_i_class_fa_fa_puzzle_piece_fa_2x_i_span">2.1. THETA V Streaming with Wi-Fi - <span class="icon"><i class="fa fa-puzzle-piece fa-2x"></i></span></h3>
+<h3 id="_theta_v_and_z1_streaming_with_wi_fi">2.1. THETA V and Z1 Streaming with Wi-Fi</h3>
+<div class="sect3">
+<h4 id="_wireless_live_streaming_plug_in">2.1.1. Wireless Live Streaming Plug-in  <span class="icon"><i class="fa fa-puzzle-piece fa-2x"></i></span></h4>
 <div class="paragraph">
-<p>You can stream the THETA V through a Wi-Fi router or a mobile phone used as a hotspot.
-<a href="https://pluginstore.theta360.com/plugins/com.theta360.cloudstreaming/">Wireless Live Streaming</a> plug-in. A step-by-step guide is available
+<p>With the
+<a href="https://pluginstore.theta360.com/plugins/com.theta360.cloudstreaming/">Wireless Live Streaming</a> plug-in, you can stream the THETA V and Z1 through a Wi-Fi router or a mobile phone used as a hotspot to YouTube
+Live Events in 360 or other
+live event sites that use RTMP. Most
+cloud services like YouTube use
+RTMP.  As of July 8, 2020, Facebook
+live events, which also uses RTMP, no longer works with
+360 live events.  We hope that
+Facebook will add this feature
+back in the future. A step-by-step guide is available
 <a href="http://theta360.guide/wireless-plugin-guide/">here</a>.</p>
 </div>
 <div class="paragraph">
@@ -627,27 +729,209 @@ URL and the Stream key.</p>
 <div class="title">Figure 2. Wireless Configuration</div>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_theta_rtsp_streaming">2.1.2. THETA RTSP Streaming <span class="icon"><i class="fa fa-puzzle-piece fa-2x"></i></span></h4>
+<div class="paragraph">
+<p>RTSP is used to stream your camera
+live video to a desktop application
+running on your laptop or headset.
+You can see the RTSP stream in
+software such as VLC, ffplay, or
+GoPro VR Player.</p>
+</div>
+<div class="paragraph">
+<p>Get the
+<a href="https://pluginstore.theta360.com/plugins/com.sciencearts.rtspstreaming/">THETA RTSP Streaming plug-in</a> from the
+THETA Store.  It is free to download and
+use.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/rtsp/rtsp-plug-in.png" alt="rtsp plug in">
+</div>
+<div class="title">Figure 3. RTSP Plug-in installation from store</div>
+</div>
+<div class="paragraph">
+<p>Press install.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/rtsp/rtsp-install.png" alt="rtsp install">
+</div>
+<div class="title">Figure 4. RTSP Plug-in install into camera</div>
+</div>
+<div class="paragraph">
+<p>The RICOH desktop software, the Basic App, will install the plug-in on your camera.  You must have the Basic App installed on your computer.</p>
+</div>
+<div class="paragraph">
+<p>After the plug-in is installed, you must activate it with the Plug-in management window of the RICOH desktop app, Basic App.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/rtsp/rtsp-activate.png" alt="rtsp activate">
+</div>
+<div class="title">Figure 5. RTSP Plug-in activation</div>
+</div>
+<div class="paragraph">
+<p>With the plug-in activated, you can start the plug-in by pressing and holding the mode button of the camera.</p>
+</div>
+<div class="paragraph">
+<p>To use the plug-in, you must connect the THETA V to your home router with Client Mode and
+obtain the IP address of the camera.</p>
+</div>
+<div class="paragraph">
+<p>The mobile app will show the IP address of the camera.</p>
+</div>
+<div class="paragraph">
+<p>Put the camera into plug-in mode by pressing and holding the mode button on the camera.</p>
+</div>
+<div class="paragraph">
+<p>When the THETA V is running the THETA RTSP Streaming plug-in, it will display
+the LEDs shown below.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/rtsp/rtsp-camera-led.png" alt="rtsp camera led">
+</div>
+<div class="title">Figure 6. THETA V LEDs when RTSP Plug-in is running</div>
+</div>
+<div class="paragraph">
+<p>Test with <a href="https://www.videolan.org/vlc/index.html">VLC</a>.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Confirm THETA V is running the plug-in effectively per the steps described above.</p>
+</li>
+<li>
+<p>Start VLC</p>
+</li>
+<li>
+<p>Under Media, select Open Network Stream</p>
+</li>
+</ol>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/rtsp/rtsp-vlc-open.png" alt="rtsp vlc open">
+</div>
+<div class="title">Figure 7. Open network stream on VLC</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Change IP address to your THETA camera. Example rtsp://192.168.2.101:8554/live?resolution=640x320 for the network URL</p>
+</li>
+<li>
+<p>Press “Play”</p>
+</li>
+</ul>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/rtsp/rtsp-network-address.png" alt="rtsp network address">
+</div>
+<div class="title">Figure 8. Set network URL in VLC to the IP address of your camera.</div>
+</div>
+<div class="paragraph">
+<p>An equirectangular view of the video feed from the THETA will appear in VLC.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/rtsp/rtsp-vlc-view.png" alt="rtsp vlc view">
+</div>
+<div class="title">Figure 9. View a live equirectangular video stream from the RICOH THETA with Wi-Fi in VLC</div>
+</div>
+<div class="paragraph">
+<p>No wires needed!</p>
+</div>
+<div class="paragraph">
+<p>You can adjust the video resolution to 1920x960 or 3840x1920.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/rtsp/rtsp-3840x1920.png" alt="rtsp 3840x1920">
+</div>
+<div class="title">Figure 10. Configure VLC for 3840x1920 live streaming over Wi-Fi</div>
+</div>
+<div class="paragraph">
+<p>The video looked great with a high framerate and low latency.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/rtsp/rtsp-3840x1920-view.png" alt="rtsp 3840x1920 view">
+</div>
+<div class="title">Figure 11. View 3840x1920 live video over Wi-Fi</div>
+</div>
+<div class="paragraph">
+<p>At 3840x1920 network traffic was 300 KiB/second.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/rtsp/rtsp-network-traffic.png" alt="rtsp network traffic">
+</div>
+<div class="title">Figure 12. 3840x1920 requires 300 KiB/second bandwidth on Wi-Fi</div>
+</div>
+</div>
+</div>
 <div class="sect2">
-<h3 id="_theta_v_streaming_with_ethernet_span_class_icon_i_class_fa_fa_puzzle_piece_fa_2x_i_span">2.2. THETA V Streaming with Ethernet - <span class="icon"><i class="fa fa-puzzle-piece fa-2x"></i></span></h3>
+<h3 id="_theta_v_streaming_with_ethernet">2.2. THETA V Streaming with Ethernet - <span class="icon"><i class="fa fa-puzzle-piece fa-2x"></i></span></h3>
 <div class="paragraph">
 <p>You can stream the THETA V using Ethernet using a USB OTG adapter.  See
 <a href="https://community.theta360.guide/t/how-to-connect-theta-v-with-ethernet/3298?u=codetricity">this</a> article
-for more information. Not all USB OTG Ethernet adapters will work. The camera does not charge
-while you are connected with Ethernet. It&#8217;s theoretically possible to
+for more information. Not all USB OTG Ethernet adapters will work. In most cases, the camera does not charge
+while you are connected with Ethernet.</p>
+</div>
+<div class="paragraph">
+<p>Community member Kev091190 has reported success using an USB splitter with the
+THETA V.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/ethernet/ethernet-charging-status.png" alt="ethernet charging status">
+</div>
+<div class="title">Figure 13. THETA V charging status while connected with Ethernet</div>
+</div>
+<div class="paragraph">
+<p>A picture of his cable setup is shown below.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/ethernet/ethernet-cabling.png" alt="ethernet cabling">
+</div>
+<div class="title">Figure 14. THETA V cabling with USB to Ethernet</div>
+</div>
+<div class="paragraph">
+<p>Kevin is using the SinLoon 30cm USB 2.0 Data Charge Y Splitter Cable.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/ethernet/sinloon-y-splitter.png" alt="sinloon y splitter">
+</div>
+<div class="title">Figure 15. Sinloon y-Splitter with charging port for USB devices</div>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/ethernet/sinloon-y-splitter-2.png" alt="sinloon y splitter 2">
+</div>
+<div class="title">Figure 16. Sinloon y-Splitter full cable layout</div>
+</div>
+<div class="paragraph">
+<p>It&#8217;s also theoretically possible to
 <a href="https://community.theta360.guide/t/possible-theta-v-battery-bypass-hack-untested/3372?u=codetricity">bypass the battery</a>, though
 there have been no supported successed.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_theta_v_streaming_with_a_usb_cable">2.3. THETA V Streaming with a USB Cable</h3>
+<h3 id="_theta_v_and_z1_streaming_with_a_usb_cable">2.3. THETA V and Z1 Streaming with a USB Cable</h3>
 <div class="paragraph">
-<p>If you are streaming the THETA V over a USB cable, you must select a THETA V video device on your
-Windows or Mac computer when you use an encoding software such as
-<a href="https://obsproject.com/">OBS Studio</a> or <a href="https://mpc-hc.org/">MPC-HC</a> to stream to YouTube
+<p>If you are streaming the THETA V or THETA Z1 over a USB cable, you must select a THETA V or THETA Z1 video device on your Mac computer when you use an encoding software such as
+<a href="https://obsproject.com/">OBS Studio</a>. On Windows, you can stream directly using <a href="https://mpc-hc.org/">MPC-HC</a> or download the THETA V/Z1 live streaming
+driver.  This setup will allow you to stream to YouTube
 or Facebook.</p>
 </div>
 <div class="sect3">
-<h4 id="_theta_v_live_streaming_os_requirements">2.3.1. THETA V live streaming OS requirements</h4>
+<h4 id="_theta_vz1_live_streaming_os_requirements">2.3.1. THETA V/Z1 live streaming OS requirements</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -660,23 +944,20 @@ or Facebook.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_theta_v_windows_drivers">2.3.2. THETA V Windows drivers</h4>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://theta360.com/en/support/download/liveapp4k/win64">Windows 10 64 bit driver download</a></p>
-</li>
-<li>
-<p><a href="https://theta360.com/en/support/download/liveapp4k/win32">Windows 10 32 bit driver download</a></p>
-</li>
-</ul>
+<h4 id="_theta_vz1_windows_drivers">2.3.2. THETA V/Z1 Windows drivers</h4>
+<div class="paragraph">
+<p>As of July 7, 2020, the latest Windows 10 driver is version 2.0.</p>
+</div>
+<div class="paragraph">
+<p>The latest driver is available at
+<a href="https://livestreaming.theta360.guide">https://livestreaming.theta360.guide</a></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_theta_v_driver_for_macos">2.3.3. THETA V driver for macOS</h4>
+<h4 id="_theta_vz1_driver_for_macos">2.3.3. THETA V/Z1 driver for macOS</h4>
 <div class="paragraph">
 <p>The driver is installed automatically when you connect the camera.
-Select RICOH THETA V in OBS or the encoder software you want to use.</p>
+Select RICOH THETA V/Z1 in OBS or the encoder software you want to use.</p>
 </div>
 </div>
 <div class="sect3">
@@ -688,7 +969,7 @@ Select RICOH THETA V in OBS or the encoder software you want to use.</p>
 <div class="content">
 <img src="img/livestreaming/thetav/obs.jpg" alt="obs">
 </div>
-<div class="title">Figure 3. OBS settings</div>
+<div class="title">Figure 17. OBS settings</div>
 </div>
 </div>
 </div>
@@ -709,7 +990,7 @@ default microphone when you are streaming.</p>
 <div class="content">
 <img src="img/livestreaming/thetav/microphone.png" alt="microphone">
 </div>
-<div class="title">Figure 4. RICOH THETA V Microphone</div>
+<div class="title">Figure 18. RICOH THETA V Microphone</div>
 </div>
 <div class="paragraph">
 <p>The audio should be set up automatically. The following screenshot is for troubleshooting.
@@ -719,7 +1000,7 @@ You should not need to set this.</p>
 <div class="content">
 <img src="img/livestreaming/thetav/audio-properties.png" alt="audio properties">
 </div>
-<div class="title">Figure 5. Microphone Properties</div>
+<div class="title">Figure 19. Microphone Properties</div>
 </div>
 </div>
 </div>
@@ -736,8 +1017,8 @@ Kit information was taken from their
 <a href="http://ricohr.ricoh/en/">main site</a>.  If this
 table is in error, please add to the discussion <a href="http://lists.theta360.guide/t/360-live-streaming-guide-for-ricoh-theta/621">here</a>.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 2. Table THETA S Live Streaming Drivers</caption>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 3. Table THETA S Live Streaming Drivers</caption>
 <colgroup>
 <col style="width: 20%;">
 <col style="width: 20%;">
@@ -827,7 +1108,7 @@ and then press <em>power</em>. The camera will go into live streaming mode.</p>
 <div class="content">
 <img src="img/livestreaming/mode-buttons.png" alt="mode buttons">
 </div>
-<div class="title">Figure 6. Start THETA in LiveStreaming mode</div>
+<div class="title">Figure 20. Start THETA in LiveStreaming mode</div>
 </div>
 <div class="paragraph">
 <p>With the camera in live streaming mode, the word <em>Live</em> will appear in blue.</p>
@@ -836,7 +1117,7 @@ and then press <em>power</em>. The camera will go into live streaming mode.</p>
 <div class="content">
 <img src="img/livestreaming/live-light.png" alt="live light">
 </div>
-<div class="title">Figure 7. Verify that the camera&#8217;s <em>Live</em> light is on</div>
+<div class="title">Figure 21. Verify that the camera&#8217;s <em>Live</em> light is on</div>
 </div>
 <div class="sect2">
 <h3 id="_connect_camera_to_computer">6.1. Connect Camera to Computer</h3>
@@ -848,7 +1129,7 @@ webcam. The camera will be called <em>RICOH THETA S</em> or  <em>RICOH THETA V</
 <div class="content">
 <img src="img/livestreaming/skype-webcam.png" alt="skype webcam">
 </div>
-<div class="title">Figure 8. Confirm you can see <em>RICOH THETA S</em> as a webcam</div>
+<div class="title">Figure 22. Confirm you can see <em>RICOH THETA S</em> as a webcam</div>
 </div>
 <div class="paragraph">
 <p>The THETA S will stream in dual-fisheye mode. If you&#8217;re using firmware 01.82 or above,
@@ -891,7 +1172,7 @@ for more information.
 <div class="content">
 <img src="img/livestreaming/live-streaming-download.png" alt="live streaming download">
 </div>
-<div class="title">Figure 9. Download the RICOH Live-Streaming App</div>
+<div class="title">Figure 23. Download the RICOH Live-Streaming App</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -913,7 +1194,7 @@ for more information.
 <div class="content">
 <img src="img/livestreaming/uvcblender-install.png" alt="uvcblender install">
 </div>
-<div class="title">Figure 10. Live-Streaming App File is Called UVC Blender</div>
+<div class="title">Figure 24. Live-Streaming App File is Called UVC Blender</div>
 </div>
 <div class="paragraph">
 <p>With the THETA turned off, the software will prompt you to reconnect the THETA to register your camera.</p>
@@ -922,7 +1203,7 @@ for more information.
 <div class="content">
 <img src="img/livestreaming/register.png" alt="register">
 </div>
-<div class="title">Figure 11. Register THETA with computer</div>
+<div class="title">Figure 25. Register THETA with computer</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -945,7 +1226,7 @@ See <a href="http://www.usb.org/developers/docs/devclass_docs/">USB device class
 <div class="content">
 <img src="img/livestreaming/register-button.png" alt="register button">
 </div>
-<div class="title">Figure 12. Register buttons appears after connection</div>
+<div class="title">Figure 26. Register buttons appears after connection</div>
 </div>
 <div class="paragraph">
 <p>Complete the registration.</p>
@@ -954,7 +1235,7 @@ See <a href="http://www.usb.org/developers/docs/devclass_docs/">USB device class
 <div class="content">
 <img src="img/livestreaming/registration-complete.png" alt="registration complete">
 </div>
-<div class="title">Figure 13. Camera and computer registration complete</div>
+<div class="title">Figure 27. Camera and computer registration complete</div>
 </div>
 <div class="paragraph">
 <p>Test the THETA UVC FullHD Blender driver with any software that works with a webcam. In the example
@@ -964,7 +1245,7 @@ below, I am using Skype.</p>
 <div class="content">
 <img src="img/livestreaming/skype-test.png" alt="skype test">
 </div>
-<div class="title">Figure 14. Testing THETA UVC FullHD Blender with Skype</div>
+<div class="title">Figure 28. Testing THETA UVC FullHD Blender with Skype</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -986,7 +1267,7 @@ look like a distorted rectangle. Skype is for testing only, not for use.
 <div class="content">
 <img src="img/livestreaming/webcam-options.png" alt="webcam options">
 </div>
-<div class="title">Figure 15. Testing THETA UVC FullHD Blender with OBS</div>
+<div class="title">Figure 29. Testing THETA UVC FullHD Blender with OBS</div>
 </div>
 <div class="admonitionblock caution">
 <table>
@@ -1027,13 +1308,13 @@ Each press should be 1 second.</p>
 <div class="content">
 <img src="img/livestreaming/ricohr/mode-image.jpg" alt="mode image">
 </div>
-<div class="title">Figure 16. Set the mode to USB. Green LED is displayed.</div>
+<div class="title">Figure 30. Set the mode to USB. Green LED is displayed.</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/ricohr/green.jpg" alt="green">
 </div>
-<div class="title">Figure 17. Green LED indicates USB output.</div>
+<div class="title">Figure 31. Green LED indicates USB output.</div>
 </div>
 </div>
 <div class="sect2">
@@ -1048,7 +1329,7 @@ application from GitHub.</p>
 <div class="content">
 <img src="img/livestreaming/ricohr/github.png" alt="github">
 </div>
-<div class="title">Figure 18. RICOH R Dev Kit USB driver on GitHub</div>
+<div class="title">Figure 32. RICOH R Dev Kit USB driver on GitHub</div>
 </div>
 <div class="admonitionblock caution">
 <table>
@@ -1066,7 +1347,7 @@ Make sure you select <em>RICOH R Development Kit UVC Capture</em> and not <em>RI
 <div class="content">
 <img src="img/livestreaming/ricohr/correctdriver.jpg" alt="correctdriver">
 </div>
-<div class="title">Figure 19. OBS Studio with the RICOH R  USB Driver</div>
+<div class="title">Figure 33. OBS Studio with the RICOH R  USB Driver</div>
 </div>
 <div class="paragraph">
 <p>If you select the wrong driver, you will not get a video stream.</p>
@@ -1075,7 +1356,7 @@ Make sure you select <em>RICOH R Development Kit UVC Capture</em> and not <em>RI
 <div class="content">
 <img src="img/livestreaming/ricohr/incorrectdriver.png" alt="incorrectdriver">
 </div>
-<div class="title">Figure 20. This is the wrong RICOH R  USB Driver for OBS</div>
+<div class="title">Figure 34. This is the wrong RICOH R  USB Driver for OBS</div>
 </div>
 </div>
 </div>
@@ -1090,7 +1371,7 @@ Make sure you select <em>RICOH R Development Kit UVC Capture</em> and not <em>RI
 <div class="content">
 <img src="img/livestreaming/obs-icon.png" alt="obs icon">
 </div>
-<div class="title">Figure 21. OBS Studio</div>
+<div class="title">Figure 35. OBS Studio</div>
 </div>
 <div class="paragraph">
 <p><a href="https://obsproject.com/">Download OBS</a></p>
@@ -1104,7 +1385,7 @@ a video capture device. Right click to open the pop-up menu.</p>
 <div class="content">
 <img src="img/livestreaming/obs-video-capture.png" alt="obs video capture">
 </div>
-<div class="title">Figure 22. Add Video Capture Device to OBS <em>Sources</em></div>
+<div class="title">Figure 36. Add Video Capture Device to OBS <em>Sources</em></div>
 </div>
 <div class="paragraph">
 <p>Select <em>THETA UVC Blender</em> as the Device. Verify that the video stream is in equirectangular format.</p>
@@ -1113,7 +1394,7 @@ a video capture device. Right click to open the pop-up menu.</p>
 <div class="content">
 <img src="img/livestreaming/obs-device.png" alt="obs device">
 </div>
-<div class="title">Figure 23. Verify THETA UVC Blender works in OBS</div>
+<div class="title">Figure 37. Verify THETA UVC Blender works in OBS</div>
 </div>
 <div class="paragraph">
 <p>If you see this message, the camera is not connected properly. Go to the troubleshooting section or read the tip
@@ -1142,7 +1423,7 @@ section below
 <div class="content">
 <img src="img/livestreaming/resolution-fps.png" alt="resolution fps">
 </div>
-<div class="title">Figure 24. Leave Resolution/FPS Type as Default</div>
+<div class="title">Figure 38. Leave Resolution/FPS Type as Default</div>
 </div>
 <div class="paragraph">
 <p>Under Settings &#8594; Video, set the resolution to 1920x1080 at 29.97fps (30fps will also work).</p>
@@ -1151,7 +1432,7 @@ section below
 <div class="content">
 <img src="img/livestreaming/obs-settings-video.png" alt="obs settings video">
 </div>
-<div class="title">Figure 25. Configure Resolution to 1920x1080</div>
+<div class="title">Figure 39. Configure Resolution to 1920x1080</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1187,7 +1468,7 @@ Click the <em>Get started</em> button on live streaming.</p>
 <div class="content">
 <img src="img/livestreaming/youtube-livestream.png" alt="youtube livestream">
 </div>
-<div class="title">Figure 26. Click Live Streaming after you click upload</div>
+<div class="title">Figure 40. Click Live Streaming after you click upload</div>
 </div>
 <div class="paragraph">
 <p>Select <em>Events</em>.</p>
@@ -1196,7 +1477,7 @@ Click the <em>Get started</em> button on live streaming.</p>
 <div class="content">
 <img src="img/livestreaming/youtube-event.png" alt="youtube event">
 </div>
-<div class="title">Figure 27. Select Events</div>
+<div class="title">Figure 41. Select Events</div>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -1217,7 +1498,7 @@ Make sure you select Events. You will not get a 360&#176; stream with <em>Stream
 <div class="content">
 <img src="img/livestreaming/youtube-new-live-event.png" alt="youtube new live event">
 </div>
-<div class="title">Figure 28. New live event</div>
+<div class="title">Figure 42. New live event</div>
 </div>
 <div class="paragraph">
 <p>Add a title.</p>
@@ -1237,7 +1518,7 @@ Make sure you select Events. You will not get a 360&#176; stream with <em>Stream
 <div class="content">
 <img src="img/livestreaming/youtube-livestream360.png" alt="youtube livestream360">
 </div>
-<div class="title">Figure 29. Select <em>This live stream is 360</em></div>
+<div class="title">Figure 43. Select <em>This live stream is 360</em></div>
 </div>
 <div class="paragraph">
 <p>Create the event. On the next screen, grab stream name from <em>Ingestion Settings</em></p>
@@ -1317,7 +1598,7 @@ is limited by my 1.5Mbps upload bandwidth.</p>
 <div class="content">
 <img src="img/livestreaming/youtube-1080.png" alt="youtube 1080">
 </div>
-<div class="title">Figure 30. THETA UVC FullHD Blender and YouTube Live Event</div>
+<div class="title">Figure 44. THETA UVC FullHD Blender and YouTube Live Event</div>
 </div>
 <div class="paragraph">
 <p>This is a screenshot from the live stream of the RICOH R Development Kit from their
@@ -1327,7 +1608,7 @@ demo at CES in January of 2017.</p>
 <div class="content">
 <img src="img/livestreaming/youtube-1080-ces.jpg" alt="youtube 1080 ces">
 </div>
-<div class="title">Figure 31. RICOH R Dev Kit Live Stream at CES</div>
+<div class="title">Figure 45. RICOH R Dev Kit Live Stream at CES</div>
 </div>
 <div class="paragraph">
 <p>The RICOH R Dev Kit was plugged into
@@ -1380,7 +1661,7 @@ for updates.</p>
 <div class="content">
 <img src="img/livestreaming/facebook/facebook-overview.jpg" alt="facebook overview">
 </div>
-<div class="title">Figure 32. Overview of Facebook Live 360 with RICOH THETA S</div>
+<div class="title">Figure 46. Overview of Facebook Live 360 with RICOH THETA S</div>
 </div>
 <div class="paragraph">
 <p><strong>Process</strong></p>
@@ -1418,7 +1699,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/click-live-stream.jpg" alt="click live stream">
 </div>
-<div class="title">Figure 33. Facebook Live page to create new event</div>
+<div class="title">Figure 47. Facebook Live page to create new event</div>
 </div>
 <div class="paragraph">
 <p><strong>Select Location to Post</strong></p>
@@ -1430,7 +1711,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/location-post.png" alt="location post">
 </div>
-<div class="title">Figure 34. Select where you want to share your live 360 event</div>
+<div class="title">Figure 48. Select where you want to share your live 360 event</div>
 </div>
 <div class="paragraph">
 <p><strong>Select 360 video</strong></p>
@@ -1442,7 +1723,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/live-stream-360.png" alt="live stream 360">
 </div>
-<div class="title">Figure 35. The checkbox for 360 video needs to be selected</div>
+<div class="title">Figure 49. The checkbox for 360 video needs to be selected</div>
 </div>
 <div class="paragraph">
 <p><strong>Get Streaming Information</strong></p>
@@ -1454,7 +1735,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/stream-key.png" alt="stream key">
 </div>
-<div class="title">Figure 36. Copy the information above for the OBS stream configuration</div>
+<div class="title">Figure 50. Copy the information above for the OBS stream configuration</div>
 </div>
 <div class="paragraph">
 <p><strong>Configure OBS</strong></p>
@@ -1466,7 +1747,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/create-source.png" alt="create source">
 </div>
-<div class="title">Figure 37. Source can be any name that is meaningful to you</div>
+<div class="title">Figure 51. Source can be any name that is meaningful to you</div>
 </div>
 <div class="paragraph">
 <p><strong>Configuration Overview</strong></p>
@@ -1510,7 +1791,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/obs-video-config.png" alt="obs video config">
 </div>
-<div class="title">Figure 38. OBS video configuration</div>
+<div class="title">Figure 52. OBS video configuration</div>
 </div>
 <div class="paragraph">
 <p><strong>OBS Settings</strong></p>
@@ -1522,7 +1803,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/obs-stream-config.png" alt="obs stream config">
 </div>
-<div class="title">Figure 39. Get this info from Facebook Live 360 config</div>
+<div class="title">Figure 53. Get this info from Facebook Live 360 config</div>
 </div>
 <div class="paragraph">
 <p><strong>Settings &#8594; Video</strong></p>
@@ -1531,7 +1812,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/obs-video-settings.png" alt="obs video settings">
 </div>
-<div class="title">Figure 40. 1920x1080 if you use THETA UVC FullHD Blender</div>
+<div class="title">Figure 54. 1920x1080 if you use THETA UVC FullHD Blender</div>
 </div>
 <div class="paragraph">
 <p><strong>Preview Live Stream on OBS</strong></p>
@@ -1540,7 +1821,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/obs-preview.jpg" alt="obs preview">
 </div>
-<div class="title">Figure 41. OBS preview is in equirectangular</div>
+<div class="title">Figure 55. OBS preview is in equirectangular</div>
 </div>
 <div class="paragraph">
 <p>If you don&#8217;t see an equirectangular stream that is similar to image above, go to the <a href="#troubleshooting">Troubleshooting</a> section.</p>
@@ -1552,7 +1833,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/obs-start-stream.png" alt="obs start stream">
 </div>
-<div class="title">Figure 42. start the stream on OBS and send to Facebook Live 360 server</div>
+<div class="title">Figure 56. start the stream on OBS and send to Facebook Live 360 server</div>
 </div>
 <div class="paragraph">
 <p><strong>Go Live 360 Broadcast on Facebook</strong></p>
@@ -1561,7 +1842,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/fb-go-live.png" alt="fb go live">
 </div>
-<div class="title">Figure 43. Go Live on Facebook and send event to your page or timeline</div>
+<div class="title">Figure 57. Go Live on Facebook and send event to your page or timeline</div>
 </div>
 <div class="paragraph">
 <p><strong>View Live on Facebook</strong></p>
@@ -1570,7 +1851,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/page-sample.png" alt="page sample">
 </div>
-<div class="title">Figure 44. RICOH THETA S Live 360 Event on Facebook Page</div>
+<div class="title">Figure 58. RICOH THETA S Live 360 Event on Facebook Page</div>
 </div>
 <div class="paragraph">
 <p><strong>Automatically Promote Saved Event on Facebook Timeline</strong></p>
@@ -1579,7 +1860,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/saved-event.jpg" alt="saved event">
 </div>
-<div class="title">Figure 45. Promote your saved event on your page or timeline</div>
+<div class="title">Figure 59. Promote your saved event on your page or timeline</div>
 </div>
 <div class="paragraph">
 <p><strong>Adjust Sharing, Expiration or Delete</strong></p>
@@ -1588,7 +1869,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/fb-delete.png" alt="fb delete">
 </div>
-<div class="title">Figure 46. Manage archived events on your page or timeline</div>
+<div class="title">Figure 60. Manage archived events on your page or timeline</div>
 </div>
 </div>
 </div>
@@ -1699,13 +1980,13 @@ Boinx Software recommends the Blackmagic Design
 <div class="content">
 <img src="img/livestreaming/mimolive/hdmi-usb.png" alt="hdmi usb">
 </div>
-<div class="title">Figure 47. Getting THETA S HDMI Output Into Your Computer</div>
+<div class="title">Figure 61. Getting THETA S HDMI Output Into Your Computer</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/mimolive/dual-fisheye.png" alt="dual fisheye">
 </div>
-<div class="title">Figure 48. mimoLive dual-fisheye before conversion to equirectangular</div>
+<div class="title">Figure 62. mimoLive dual-fisheye before conversion to equirectangular</div>
 </div>
 <div class="paragraph">
 <p>mimoLive can take the THETA S dual-fisheye video stream source and apply a filter convert it to equirectangular for
@@ -1715,13 +1996,13 @@ streaming to places like YouTube Live 360 events.</p>
 <div class="content">
 <img src="img/livestreaming/mimolive/sources-thetas.png" alt="sources thetas">
 </div>
-<div class="title">Figure 49. Preset configuration and filter for THETA S</div>
+<div class="title">Figure 63. Preset configuration and filter for THETA S</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/mimolive/placerlive.png" alt="placerlive">
 </div>
-<div class="title">Figure 50. Filter converts dual-fisheye stream to equirectangular</div>
+<div class="title">Figure 64. Filter converts dual-fisheye stream to equirectangular</div>
 </div>
 <div class="paragraph">
 <p>mimoLive provides sliders to adjust the sphere stitching. You&#8217;ll only be able to get a <em>good enough</em> stitch. The
@@ -1731,7 +2012,7 @@ edges of the spheres will not match perfectly.</p>
 <div class="content">
 <img src="img/livestreaming/mimolive/adjustment.png" alt="adjustment">
 </div>
-<div class="title">Figure 51. Use sliders to adjust sphere edges</div>
+<div class="title">Figure 65. Use sliders to adjust sphere edges</div>
 </div>
 <div class="paragraph">
 <p>This is an example of the <a href="https://youtu.be/8CEB2_YQgkU">360 live stream</a>. The quality of the stitch
@@ -1746,19 +2027,19 @@ YouTube live streaming event.</p>
 <div class="content">
 <img src="img/livestreaming/mimolive/text-placement360.png" alt="text placement360">
 </div>
-<div class="title">Figure 52. Place text into live stream to YouTube</div>
+<div class="title">Figure 66. Place text into live stream to YouTube</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/mimolive/twitter.png" alt="twitter">
 </div>
-<div class="title">Figure 53. Insert Twitter into live stream to YouTube</div>
+<div class="title">Figure 67. Insert Twitter into live stream to YouTube</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/mimolive/slides.png" alt="slides">
 </div>
-<div class="title">Figure 54. Insert presentation slides into 360 live stream</div>
+<div class="title">Figure 68. Insert presentation slides into 360 live stream</div>
 </div>
 <div class="paragraph">
 <p>You can also center your video stream.</p>
@@ -1767,7 +2048,7 @@ YouTube live streaming event.</p>
 <div class="content">
 <img src="img/livestreaming/mimolive/adjust-center.png" alt="adjust center">
 </div>
-<div class="title">Figure 55. Center 360 live stream</div>
+<div class="title">Figure 69. Center 360 live stream</div>
 </div>
 <div class="paragraph">
 <p><a href="https://youtu.be/8CEB2_YQgkU">Example Stream Archive</a></p>
@@ -1824,7 +2105,7 @@ off.</p>
 <div class="content">
 <img src="img/livestreaming/unity/gitai.png" alt="gitai">
 </div>
-<div class="title">Figure 56. GITAI example</div>
+<div class="title">Figure 70. GITAI example</div>
 </div>
 <div class="paragraph">
 <p>Example above built by <a href="http://gitai.tech/">GITAI</a>.</p>
@@ -1868,7 +2149,7 @@ that you can use directly as a webcam texture in Unity. Just drop it onto a sphe
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/vive.jpg" alt="vive">
 </div>
-<div class="title">Figure 57. THETA V Stream Inside of Vive Headset</div>
+<div class="title">Figure 71. THETA V Stream Inside of Vive Headset</div>
 </div>
 <div class="sect3">
 <h4 id="_overview">13.1.1. Overview</h4>
@@ -1917,7 +2198,7 @@ that you can use directly as a webcam texture in Unity. Just drop it onto a sphe
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/gear.jpg" alt="gear">
 </div>
-<div class="title">Figure 58. THETA V and HTC Vive</div>
+<div class="title">Figure 72. THETA V and HTC Vive</div>
 </div>
 </div>
 <div class="sect3">
@@ -1945,7 +2226,7 @@ that you can use directly as a webcam texture in Unity. Just drop it onto a sphe
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/plugin.png" alt="plugin">
 </div>
-<div class="title">Figure 59. SteamVR Unity Plugin</div>
+<div class="title">Figure 73. SteamVR Unity Plugin</div>
 </div>
 <div class="paragraph">
 <p>You need to have Steam and SteamVR installed.</p>
@@ -1954,7 +2235,7 @@ that you can use directly as a webcam texture in Unity. Just drop it onto a sphe
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/steamvr-install.png" alt="steamvr install">
 </div>
-<div class="title">Figure 60. Install SteamVR from Steam Library Tools</div>
+<div class="title">Figure 74. Install SteamVR from Steam Library Tools</div>
 </div>
 </div>
 <div class="sect3">
@@ -1978,13 +2259,13 @@ The package contains two simple 3D assets in the scene to illustrate how to impo
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/mothra.jpg" alt="mothra">
 </div>
-<div class="title">Figure 61. view from headset with moth</div>
+<div class="title">Figure 75. view from headset with moth</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/moth2.png" alt="moth2">
 </div>
-<div class="title">Figure 62. example of 3D asset embedded into THETA V live streaming scene</div>
+<div class="title">Figure 76. example of 3D asset embedded into THETA V live streaming scene</div>
 </div>
 </div>
 <div class="sect3">
@@ -1996,7 +2277,7 @@ The package contains two simple 3D assets in the scene to illustrate how to impo
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/thetav-live.jpg" alt="thetav live">
 </div>
-<div class="title">Figure 63. THETA V in live streaming mode</div>
+<div class="title">Figure 77. THETA V in live streaming mode</div>
 </div>
 </div>
 <div class="sect3">
@@ -2005,7 +2286,7 @@ The package contains two simple 3D assets in the scene to illustrate how to impo
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/connect.png" alt="connect">
 </div>
-<div class="title">Figure 64. HTC Vive Computer Connection</div>
+<div class="title">Figure 78. HTC Vive Computer Connection</div>
 </div>
 </div>
 <div class="sect3">
@@ -2017,7 +2298,7 @@ The package contains two simple 3D assets in the scene to illustrate how to impo
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/orientation.png" alt="orientation">
 </div>
-<div class="title">Figure 65. Align Camera and HTC Vive </div>
+<div class="title">Figure 79. Align Camera and HTC Vive </div>
 </div>
 </div>
 <div class="sect3">
@@ -2032,7 +2313,7 @@ The package contains two simple 3D assets in the scene to illustrate how to impo
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/clickme.png" alt="clickme">
 </div>
-<div class="title">Figure 66. Double-click on Icon to Start Application </div>
+<div class="title">Figure 80. Double-click on Icon to Start Application </div>
 </div>
 </div>
 <div class="sect3">
@@ -2044,7 +2325,7 @@ The package contains two simple 3D assets in the scene to illustrate how to impo
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/unitylogo.png" alt="unitylogo">
 </div>
-<div class="title">Figure 67. Floating Unity Logo </div>
+<div class="title">Figure 81. Floating Unity Logo </div>
 </div>
 </div>
 <div class="sect3">
@@ -2056,7 +2337,7 @@ The package contains two simple 3D assets in the scene to illustrate how to impo
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/finshed.png" alt="finshed">
 </div>
-<div class="title">Figure 68. Simple Test Application </div>
+<div class="title">Figure 82. Simple Test Application </div>
 </div>
 <div class="paragraph">
 <p>If you&#8217;d like to modify the code, read on.</p>
@@ -2086,7 +2367,7 @@ The package contains two simple 3D assets in the scene to illustrate how to impo
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/blender.png" alt="blender">
 </div>
-<div class="title">Figure 69. Creating a Flip-Normals Sphere in Blender </div>
+<div class="title">Figure 83. Creating a Flip-Normals Sphere in Blender </div>
 </div>
 </div>
 <div class="sect3">
@@ -2098,7 +2379,7 @@ The package contains two simple 3D assets in the scene to illustrate how to impo
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/negative-scale.png" alt="negative scale">
 </div>
-<div class="title">Figure 70. Assigning negative scale to sphere </div>
+<div class="title">Figure 84. Assigning negative scale to sphere </div>
 </div>
 </div>
 <div class="sect3">
@@ -2110,7 +2391,7 @@ The package contains two simple 3D assets in the scene to illustrate how to impo
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/invert.png" alt="invert">
 </div>
-<div class="title">Figure 71. Inverting camera</div>
+<div class="title">Figure 85. Inverting camera</div>
 </div>
 </div>
 </div>
@@ -2143,7 +2424,7 @@ It explains how to go from dual-fisheye to a single sphere.</p>
 <div class="content">
 <img src="img/livestreaming/unity/dual-fish-eye.jpg" alt="dual fish eye">
 </div>
-<div class="title">Figure 72. Dual-fisheye with THETA S driver</div>
+<div class="title">Figure 86. Dual-fisheye with THETA S driver</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
@@ -2174,15 +2455,14 @@ It explains how to go from dual-fisheye to a single sphere.</p>
 <div class="content">
 <img src="img/livestreaming/unity/sphere-gap.png" alt="sphere gap">
 </div>
-<div class="title">Figure 73. Webcam texture will result in gap</div>
+<div class="title">Figure 87. Webcam texture will result in gap</div>
 </div>
 <div class="paragraph">
 <p>This note from Megan Zimmerman explains the issue.</p>
 </div>
-<div class="quoteblock">
-<blockquote>
 <div class="paragraph">
-<p>The dual projection is implied in Hecomi&#8217;s post as he adds the camera feed
+<p>""
+The dual projection is implied in Hecomi&#8217;s post as he adds the camera feed
 script to both spheres for their equirectangular solution. In
 the Tanyuan solution, you have equirectangular already and are projecting
 one feed onto one sphere, because we are using two spheres we project onto both.</p>
@@ -2192,9 +2472,8 @@ one feed onto one sphere, because we are using two spheres we project onto both.
 solution because its harder to understand what is going on if you don&#8217;t do it
 yourself step by step. This has me thinking that I should probably make my
 own shader from scratch, because while I get the idea of what the
-shader is doing, I want to understand how.</p>
-</div>
-</blockquote>
+shader is doing, I want to understand how.
+""</p>
 </div>
 <div class="paragraph">
 <p>There are different ways to adjust the projection on the sphere to get rid
@@ -2226,7 +2505,7 @@ Scale Center V: 0.55</pre>
 <div class="content">
 <img src="img/livestreaming/unity/megan-closed-gap.png" alt="megan closed gap">
 </div>
-<div class="title">Figure 74. manual adjustment to close gap between each lens</div>
+<div class="title">Figure 88. manual adjustment to close gap between each lens</div>
 </div>
 </div>
 </div>
@@ -2241,7 +2520,7 @@ get Unity to recognize THETA UVC FullHD Blender.</p>
 <div class="content">
 <img src="img/livestreaming/unity/uvc-blender-unity.png" alt="uvc blender unity">
 </div>
-<div class="title">Figure 75. UVC Blender recognized by Unity as a webcam</div>
+<div class="title">Figure 89. UVC Blender recognized by Unity as a webcam</div>
 </div>
 <div class="paragraph">
 <p>Using this technique, you can simply add UVC FullHD Blender as a <code>WebCamTexture</code> in Unity. The stitch
@@ -2251,7 +2530,7 @@ will look close to perfect.</p>
 <div class="content">
 <img src="img/livestreaming/unity/uvc-working.png" alt="uvc working">
 </div>
-<div class="title">Figure 76. UVC Blender projected to sphere</div>
+<div class="title">Figure 90. UVC Blender projected to sphere</div>
 </div>
 <div class="paragraph">
 <p>Here&#8217;s how to do it.</p>
@@ -2305,17 +2584,15 @@ will look close to perfect.</p>
 <p>Here&#8217;s a summary from
 <a href="http://alax.info/blog/1433">this</a> blog post that is the source of the regedit info.</p>
 </div>
-<div class="quoteblock">
-<blockquote>
 <div class="paragraph">
-<p>The registry key is located under HKLM,
+<p>""
+The registry key is located under HKLM,
 SOFTWARE\Classes\CLSID{860BB310-5D01-11d0-BD3B-00A0C911CE86}\Instance
 (note it’s SOFTWARE\Classes\Wow6432Node\CLSID&#8230;&#8203; in 64-bit OS for 32-bit app space),
 where every subkey corresponds to a registered device
 (find yours there).
-Note that CLSID above is actually CLSID_VideoInputDeviceCategory.</p>
-</div>
-</blockquote>
+Note that CLSID above is actually CLSID_VideoInputDeviceCategory.
+""</p>
 </div>
 </div>
 </div>
@@ -2346,7 +2623,7 @@ to mobile phones, primarily using Unity.</p>
 <div class="content">
 <img src="img/livestreaming/wifi-unity.png" alt="wifi unity">
 </div>
-<div class="title">Figure 77. 360&#176; video stream using WiFi</div>
+<div class="title">Figure 91. 360&#176; video stream using WiFi</div>
 </div>
 <div class="paragraph">
 <p>Most developers have challenges processing the MotionJPEG stream.</p>
@@ -2580,19 +2857,19 @@ Download and install
 <div class="content">
 <img src="img/livestreaming/unity/wifi/game-view-crop.png" alt="game view crop">
 </div>
-<div class="title">Figure 78. Unity WiFi Live Stream in Game Mode</div>
+<div class="title">Figure 92. Unity WiFi Live Stream in Game Mode</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/unity/wifi/scene-4-crop.png" alt="scene 4 crop">
 </div>
-<div class="title">Figure 79. Unity Scene View of WiFi Live Stream</div>
+<div class="title">Figure 93. Unity Scene View of WiFi Live Stream</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/unity/wifi/top-down-sphere.png" alt="top down sphere">
 </div>
-<div class="title">Figure 80. Top down view of sphere with THETA camera positions</div>
+<div class="title">Figure 94. Top down view of sphere with THETA camera positions</div>
 </div>
 </div>
 </div>
@@ -2616,7 +2893,7 @@ uses node.</p>
 <div class="content">
 <img src="img/livestreaming/thetaview-fisheye.png" alt="thetaview fisheye">
 </div>
-<div class="title">Figure 81. video stream prior to conversion</div>
+<div class="title">Figure 95. video stream prior to conversion</div>
 </div>
 <div class="paragraph">
 <p>The sample code uses JavaScript to convert the dual-fisheye video stream into
@@ -2627,7 +2904,7 @@ a navigable 360&#176; video. Transmission uses
 <div class="content">
 <img src="img/livestreaming/thetaview-360view.png" alt="thetaview 360view">
 </div>
-<div class="title">Figure 82. stream conversion done in browser</div>
+<div class="title">Figure 96. stream conversion done in browser</div>
 </div>
 <div class="paragraph">
 <p>As the THETA V uses UVC 1.5 with H.264, there have been no reported successes
@@ -2650,8 +2927,8 @@ a possible solution on GitHub.</p>
 <div class="paragraph">
 <p><strong>A:</strong> Updated Oct 2016.</p>
 </div>
-<table class="tableblock frame-all grid-all spread">
-<caption class="title">Table 3. Table THETA S Live Streaming</caption>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 4. Table THETA S Live Streaming</caption>
 <colgroup>
 <col style="width: 16.6666%;">
 <col style="width: 16.6666%;">
@@ -2769,7 +3046,7 @@ There is no way to plug a microphone directly into the THETA.</p>
 <div class="content">
 <img src="img/livestreaming/mixer.png" alt="mixer">
 </div>
-<div class="title">Figure 83. OBS mixer</div>
+<div class="title">Figure 97. OBS mixer</div>
 </div>
 </div>
 </div>
@@ -2779,12 +3056,12 @@ There is no way to plug a microphone directly into the THETA.</p>
 <div class="sect2">
 <h3 id="_streaming_to_youtube">16.1. Streaming to YouTube</h3>
 <div class="sect3">
-<h4 id="_problem_status_0x800705aa">16.1.1. Problem: Status:0x800705AA</h4>
+<h4 id="_problem_status0x800705aa">16.1.1. Problem: Status:0x800705AA</h4>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/obs-error.png" alt="obs error">
 </div>
-<div class="title">Figure 84. Error message when device not detected</div>
+<div class="title">Figure 98. Error message when device not detected</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -2828,7 +3105,7 @@ USB cable during an indoor shoot at Stanford during a crowded VR event.</p>
 <div class="content">
 <img src="img/livestreaming/heat/overheat-example.png" alt="overheat example">
 </div>
-<div class="title">Figure 85. Overheating during livestream</div>
+<div class="title">Figure 99. Overheating during livestream</div>
 </div>
 <div class="paragraph">
 <p>If the THETA is overheating, point a standard household fan at it. The airflow
@@ -2843,7 +3120,7 @@ taping or attaching a small fan used for computer CPUs to the outside of the THE
 <div class="content">
 <img src="img/livestreaming/heat/heatsinks.png" alt="heatsinks">
 </div>
-<div class="title">Figure 86. Raspberry Pi Heatsinks (L), small computer fan bracket &#174;</div>
+<div class="title">Figure 100. Raspberry Pi Heatsinks (L), small computer fan bracket &#174;</div>
 </div>
 <div class="ulist">
 <ul>
@@ -2867,7 +3144,7 @@ was too high.</p>
 <div class="content">
 <img src="img/livestreaming/heat/case-mod.png" alt="case mod">
 </div>
-<div class="title">Figure 87. Not recommended, but an example of community enthusiasm</div>
+<div class="title">Figure 101. Not recommended, but an example of community enthusiasm</div>
 </div>
 </div>
 </div>
@@ -2889,7 +3166,7 @@ can post your product information in the
 </div>
 </div>
 <div class="sect1">
-<h2 id="__a_href_http_theta360_guide_return_to_theta360_guide_a">18. <a href="http://theta360.guide/">Return to theta360.guide</a></h2>
+<h2 id="_return_to_theta360_guide">18. <a href="http://theta360.guide/">Return to theta360.guide</a></h2>
 <div class="sectionbody">
 
 </div>
@@ -2897,7 +3174,7 @@ can post your product information in the
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2018-09-07 15:52:18 DST
+Last updated 2020-07-08 13:21:07 -0700
 </div>
 </div>
 </body>
