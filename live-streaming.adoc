@@ -22,6 +22,13 @@ ga('set', 'contentGroup1', 'All RICOH');
 ++++
 image::img/livestreaming/banner.png[role="thumb"]
 
+== Additional Live Streaming Guides
+
+This is part of a set of live streaming guides and videos that 
+are available on the 
+http://livestreaming.theta360.guide/[RICOH THETA live streaming site].
+
+
 == Camera Models
 
 .Table Live Streaming Cameras
