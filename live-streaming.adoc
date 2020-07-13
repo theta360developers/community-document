@@ -108,9 +108,7 @@ the the charge provided.  With USB-C, the Z1 can stream indefinitely. Heat may b
 
 == RICOH THETA V and Z1 Software 
 
-=== THETA V and Z1 Streaming with Wi-Fi
-
-==== Wireless Live Streaming Plug-in  icon:puzzle-piece[2x]
+=== Wi-Fi RTMP Streaming Direct to YouTube icon:puzzle-piece[2x]
 
 With the 
 https://pluginstore.theta360.com/plugins/com.theta360.cloudstreaming/[Wireless Live Streaming] plug-in, you can stream the THETA V and Z1 through a Wi-Fi router or a mobile phone used as a hotspot to YouTube 
@@ -137,14 +135,14 @@ URL and the Stream key.
 
 image::img/livestreaming/thetav/streaming-server.png[role="thumb" title="Wireless Configuration"]
 
-==== THETA RTSP Streaming icon:puzzle-piece[2x]
+=== Wi-Fi RTSP Streaming Direct to Computer icon:puzzle-piece[2x]
 
 RTSP is used to stream your camera
 live video to a desktop application
 running on your laptop or headset.
 You can see the RTSP stream in
 software such as VLC, ffplay, or
-GoPro VR Player.
+GoPro VR Player 3.
 
 Get the 
 https://pluginstore.theta360.com/plugins/com.sciencearts.rtspstreaming/[THETA RTSP Streaming plug-in] from the
@@ -210,8 +208,25 @@ At 3840x1920 network traffic was 300 KiB/second.
 
 image::img/livestreaming/rtsp/rtsp-network-traffic.png[role="thumb" title="3840x1920 requires 300 KiB/second bandwidth on Wi-Fi"]
 
+==== GoPro VR Player 3
+
+To get a 360 view of the live stream, you can use GoPro VR Player 3.
+
+image::img/livestreaming/rtsp/rtsp_gopro_vr_player_3.png[role="thumb" title="GoPro VR Player 3"]
+
+In my tests on July 12, 2020, I was only able to use GoPro VR Player 3 on
+Mac.  When I tried to use the player on Windows with 
+THETA RTSP plug-in, the GoPro VR Player would crash.  This is a low-resolution
+test.
+
+GoPro VR Player for Desktop Downloads
+
+* [Windows](https://gopro.com/downloads/PC/GoProVRPlayer/latest) - Did not work as of July 12, 2020
+* [Mac](https://gopro.com/downloads/Mac/GoProVRPlayer/latest)
+
 
 === THETA V Streaming with Ethernet - icon:puzzle-piece[2x]
+
 
 You can stream the THETA V using Ethernet using a USB OTG adapter.  See 
 https://community.theta360.guide/t/how-to-connect-theta-v-with-ethernet/3298?u=codetricity[this] article
@@ -246,6 +261,10 @@ If you are streaming the THETA V or THETA Z1 over a USB cable, you must select a
 https://obsproject.com/[OBS Studio]. On Windows, you can stream directly using https://mpc-hc.org/[MPC-HC] or download the THETA V/Z1 live streaming
 driver.  This setup will allow you to stream to YouTube
 or Facebook.
+
+video::dp5BLbtKVwk[youtube, width=660, height=480, title=RICOH THETA live streaming configuration of OBS]
+
+video::Vxq-TJE_UR4[youtube, width=640, height=480, title=RICOH THETA live streaming to YouTube Live Events in 360]
 
 ==== THETA V/Z1 live streaming OS requirements
 

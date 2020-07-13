@@ -446,9 +446,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_camera_models">1. Camera Models</a></li>
 <li><a href="#_ricoh_theta_v_and_z1_software">2. RICOH THETA V and Z1 Software</a>
 <ul class="sectlevel2">
-<li><a href="#_theta_v_and_z1_streaming_with_wi_fi">2.1. THETA V and Z1 Streaming with Wi-Fi</a></li>
-<li><a href="#_theta_v_streaming_with_ethernet">2.2. THETA V Streaming with Ethernet - <span class="icon"><i class="fa fa-puzzle-piece fa-2x"></i></span></a></li>
-<li><a href="#_theta_v_and_z1_streaming_with_a_usb_cable">2.3. THETA V and Z1 Streaming with a USB Cable</a></li>
+<li><a href="#_wi_fi_rtmp_streaming_direct_to_youtube">2.1. Wi-Fi RTMP Streaming Direct to YouTube <span class="icon"><i class="fa fa-puzzle-piece fa-2x"></i></span></a></li>
+<li><a href="#_wi_fi_rtsp_streaming_direct_to_computer">2.2. Wi-Fi RTSP Streaming Direct to Computer <span class="icon"><i class="fa fa-puzzle-piece fa-2x"></i></span></a></li>
+<li><a href="#_theta_v_streaming_with_ethernet">2.3. THETA V Streaming with Ethernet - <span class="icon"><i class="fa fa-puzzle-piece fa-2x"></i></span></a></li>
+<li><a href="#_theta_v_and_z1_streaming_with_a_usb_cable">2.4. THETA V and Z1 Streaming with a USB Cable</a></li>
 </ul>
 </li>
 <li><a href="#_theta_v_audio">3. THETA V audio</a></li>
@@ -690,9 +691,7 @@ the the charge provided.  With USB-C, the Z1 can stream indefinitely. Heat may b
 <h2 id="_ricoh_theta_v_and_z1_software">2. RICOH THETA V and Z1 Software</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_theta_v_and_z1_streaming_with_wi_fi">2.1. THETA V and Z1 Streaming with Wi-Fi</h3>
-<div class="sect3">
-<h4 id="_wireless_live_streaming_plug_in">2.1.1. Wireless Live Streaming Plug-in  <span class="icon"><i class="fa fa-puzzle-piece fa-2x"></i></span></h4>
+<h3 id="_wi_fi_rtmp_streaming_direct_to_youtube">2.1. Wi-Fi RTMP Streaming Direct to YouTube <span class="icon"><i class="fa fa-puzzle-piece fa-2x"></i></span></h3>
 <div class="paragraph">
 <p>With the
 <a href="https://pluginstore.theta360.com/plugins/com.theta360.cloudstreaming/">Wireless Live Streaming</a> plug-in, you can stream the THETA V and Z1 through a Wi-Fi router or a mobile phone used as a hotspot to YouTube
@@ -729,15 +728,15 @@ URL and the Stream key.</p>
 <div class="title">Figure 2. Wireless Configuration</div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_theta_rtsp_streaming">2.1.2. THETA RTSP Streaming <span class="icon"><i class="fa fa-puzzle-piece fa-2x"></i></span></h4>
+<div class="sect2">
+<h3 id="_wi_fi_rtsp_streaming_direct_to_computer">2.2. Wi-Fi RTSP Streaming Direct to Computer <span class="icon"><i class="fa fa-puzzle-piece fa-2x"></i></span></h3>
 <div class="paragraph">
 <p>RTSP is used to stream your camera
 live video to a desktop application
 running on your laptop or headset.
 You can see the RTSP stream in
 software such as VLC, ffplay, or
-GoPro VR Player.</p>
+GoPro VR Player 3.</p>
 </div>
 <div class="paragraph">
 <p>Get the
@@ -872,10 +871,27 @@ the LEDs shown below.</p>
 </div>
 <div class="title">Figure 12. 3840x1920 requires 300 KiB/second bandwidth on Wi-Fi</div>
 </div>
+<div class="sect3">
+<h4 id="_gopro_vr_player_3">2.2.1. GoPro VR Player 3</h4>
+<div class="paragraph">
+<p>To get a 360 view of the live stream, you can use GoPro VR Player 3.</p>
+</div>
+<div class="imageblock thumb">
+<div class="content">
+<img src="img/livestreaming/rtsp/rtsp_gopro_vr_player_3.png" alt="rtsp gopro vr player 3">
+</div>
+<div class="title">Figure 13. GoPro VR Player 3</div>
+</div>
+<div class="paragraph">
+<p>In my tests on July 12, 2020, I was only able to use GoPro VR Player 3 on
+Mac.  When I tried to use the player on Windows with
+THETA RTSP plug-in, the GoPro VR Player would crash.  This is a low-resolution
+test.</p>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_theta_v_streaming_with_ethernet">2.2. THETA V Streaming with Ethernet - <span class="icon"><i class="fa fa-puzzle-piece fa-2x"></i></span></h3>
+<h3 id="_theta_v_streaming_with_ethernet">2.3. THETA V Streaming with Ethernet - <span class="icon"><i class="fa fa-puzzle-piece fa-2x"></i></span></h3>
 <div class="paragraph">
 <p>You can stream the THETA V using Ethernet using a USB OTG adapter.  See
 <a href="https://community.theta360.guide/t/how-to-connect-theta-v-with-ethernet/3298?u=codetricity">this</a> article
@@ -890,7 +906,7 @@ THETA V.</p>
 <div class="content">
 <img src="img/livestreaming/ethernet/ethernet-charging-status.png" alt="ethernet charging status">
 </div>
-<div class="title">Figure 13. THETA V charging status while connected with Ethernet</div>
+<div class="title">Figure 14. THETA V charging status while connected with Ethernet</div>
 </div>
 <div class="paragraph">
 <p>A picture of his cable setup is shown below.</p>
@@ -899,7 +915,7 @@ THETA V.</p>
 <div class="content">
 <img src="img/livestreaming/ethernet/ethernet-cabling.png" alt="ethernet cabling">
 </div>
-<div class="title">Figure 14. THETA V cabling with USB to Ethernet</div>
+<div class="title">Figure 15. THETA V cabling with USB to Ethernet</div>
 </div>
 <div class="paragraph">
 <p>Kevin is using the SinLoon 30cm USB 2.0 Data Charge Y Splitter Cable.</p>
@@ -908,13 +924,13 @@ THETA V.</p>
 <div class="content">
 <img src="img/livestreaming/ethernet/sinloon-y-splitter.png" alt="sinloon y splitter">
 </div>
-<div class="title">Figure 15. Sinloon y-Splitter with charging port for USB devices</div>
+<div class="title">Figure 16. Sinloon y-Splitter with charging port for USB devices</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/ethernet/sinloon-y-splitter-2.png" alt="sinloon y splitter 2">
 </div>
-<div class="title">Figure 16. Sinloon y-Splitter full cable layout</div>
+<div class="title">Figure 17. Sinloon y-Splitter full cable layout</div>
 </div>
 <div class="paragraph">
 <p>It&#8217;s also theoretically possible to
@@ -923,15 +939,27 @@ there have been no supported successed.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_theta_v_and_z1_streaming_with_a_usb_cable">2.3. THETA V and Z1 Streaming with a USB Cable</h3>
+<h3 id="_theta_v_and_z1_streaming_with_a_usb_cable">2.4. THETA V and Z1 Streaming with a USB Cable</h3>
 <div class="paragraph">
 <p>If you are streaming the THETA V or THETA Z1 over a USB cable, you must select a THETA V or THETA Z1 video device on your Mac computer when you use an encoding software such as
 <a href="https://obsproject.com/">OBS Studio</a>. On Windows, you can stream directly using <a href="https://mpc-hc.org/">MPC-HC</a> or download the THETA V/Z1 live streaming
 driver.  This setup will allow you to stream to YouTube
 or Facebook.</p>
 </div>
+<div class="videoblock">
+<div class="title">RICOH THETA live streaming configuration of OBS</div>
+<div class="content">
+<iframe width="660" height="480" src="https://www.youtube.com/embed/dp5BLbtKVwk?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="videoblock">
+<div class="title">RICOH THETA live streaming to YouTube Live Events in 360</div>
+<div class="content">
+<iframe width="640" height="480" src="https://www.youtube.com/embed/Vxq-TJE_UR4?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
 <div class="sect3">
-<h4 id="_theta_vz1_live_streaming_os_requirements">2.3.1. THETA V/Z1 live streaming OS requirements</h4>
+<h4 id="_theta_vz1_live_streaming_os_requirements">2.4.1. THETA V/Z1 live streaming OS requirements</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -944,7 +972,7 @@ or Facebook.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_theta_vz1_windows_drivers">2.3.2. THETA V/Z1 Windows drivers</h4>
+<h4 id="_theta_vz1_windows_drivers">2.4.2. THETA V/Z1 Windows drivers</h4>
 <div class="paragraph">
 <p>As of July 7, 2020, the latest Windows 10 driver is version 2.0.</p>
 </div>
@@ -954,14 +982,14 @@ or Facebook.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_theta_vz1_driver_for_macos">2.3.3. THETA V/Z1 driver for macOS</h4>
+<h4 id="_theta_vz1_driver_for_macos">2.4.3. THETA V/Z1 driver for macOS</h4>
 <div class="paragraph">
 <p>The driver is installed automatically when you connect the camera.
 Select RICOH THETA V/Z1 in OBS or the encoder software you want to use.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_encoder_software">2.3.4. Encoder Software</h4>
+<h4 id="_encoder_software">2.4.4. Encoder Software</h4>
 <div class="paragraph">
 <p>Example using OBS.</p>
 </div>
@@ -969,7 +997,7 @@ Select RICOH THETA V/Z1 in OBS or the encoder software you want to use.</p>
 <div class="content">
 <img src="img/livestreaming/thetav/obs.jpg" alt="obs">
 </div>
-<div class="title">Figure 17. OBS settings</div>
+<div class="title">Figure 18. OBS settings</div>
 </div>
 </div>
 </div>
@@ -990,7 +1018,7 @@ default microphone when you are streaming.</p>
 <div class="content">
 <img src="img/livestreaming/thetav/microphone.png" alt="microphone">
 </div>
-<div class="title">Figure 18. RICOH THETA V Microphone</div>
+<div class="title">Figure 19. RICOH THETA V Microphone</div>
 </div>
 <div class="paragraph">
 <p>The audio should be set up automatically. The following screenshot is for troubleshooting.
@@ -1000,7 +1028,7 @@ You should not need to set this.</p>
 <div class="content">
 <img src="img/livestreaming/thetav/audio-properties.png" alt="audio properties">
 </div>
-<div class="title">Figure 19. Microphone Properties</div>
+<div class="title">Figure 20. Microphone Properties</div>
 </div>
 </div>
 </div>
@@ -1108,7 +1136,7 @@ and then press <em>power</em>. The camera will go into live streaming mode.</p>
 <div class="content">
 <img src="img/livestreaming/mode-buttons.png" alt="mode buttons">
 </div>
-<div class="title">Figure 20. Start THETA in LiveStreaming mode</div>
+<div class="title">Figure 21. Start THETA in LiveStreaming mode</div>
 </div>
 <div class="paragraph">
 <p>With the camera in live streaming mode, the word <em>Live</em> will appear in blue.</p>
@@ -1117,7 +1145,7 @@ and then press <em>power</em>. The camera will go into live streaming mode.</p>
 <div class="content">
 <img src="img/livestreaming/live-light.png" alt="live light">
 </div>
-<div class="title">Figure 21. Verify that the camera&#8217;s <em>Live</em> light is on</div>
+<div class="title">Figure 22. Verify that the camera&#8217;s <em>Live</em> light is on</div>
 </div>
 <div class="sect2">
 <h3 id="_connect_camera_to_computer">6.1. Connect Camera to Computer</h3>
@@ -1129,7 +1157,7 @@ webcam. The camera will be called <em>RICOH THETA S</em> or  <em>RICOH THETA V</
 <div class="content">
 <img src="img/livestreaming/skype-webcam.png" alt="skype webcam">
 </div>
-<div class="title">Figure 22. Confirm you can see <em>RICOH THETA S</em> as a webcam</div>
+<div class="title">Figure 23. Confirm you can see <em>RICOH THETA S</em> as a webcam</div>
 </div>
 <div class="paragraph">
 <p>The THETA S will stream in dual-fisheye mode. If you&#8217;re using firmware 01.82 or above,
@@ -1172,7 +1200,7 @@ for more information.
 <div class="content">
 <img src="img/livestreaming/live-streaming-download.png" alt="live streaming download">
 </div>
-<div class="title">Figure 23. Download the RICOH Live-Streaming App</div>
+<div class="title">Figure 24. Download the RICOH Live-Streaming App</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -1194,7 +1222,7 @@ for more information.
 <div class="content">
 <img src="img/livestreaming/uvcblender-install.png" alt="uvcblender install">
 </div>
-<div class="title">Figure 24. Live-Streaming App File is Called UVC Blender</div>
+<div class="title">Figure 25. Live-Streaming App File is Called UVC Blender</div>
 </div>
 <div class="paragraph">
 <p>With the THETA turned off, the software will prompt you to reconnect the THETA to register your camera.</p>
@@ -1203,7 +1231,7 @@ for more information.
 <div class="content">
 <img src="img/livestreaming/register.png" alt="register">
 </div>
-<div class="title">Figure 25. Register THETA with computer</div>
+<div class="title">Figure 26. Register THETA with computer</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1226,7 +1254,7 @@ See <a href="http://www.usb.org/developers/docs/devclass_docs/">USB device class
 <div class="content">
 <img src="img/livestreaming/register-button.png" alt="register button">
 </div>
-<div class="title">Figure 26. Register buttons appears after connection</div>
+<div class="title">Figure 27. Register buttons appears after connection</div>
 </div>
 <div class="paragraph">
 <p>Complete the registration.</p>
@@ -1235,7 +1263,7 @@ See <a href="http://www.usb.org/developers/docs/devclass_docs/">USB device class
 <div class="content">
 <img src="img/livestreaming/registration-complete.png" alt="registration complete">
 </div>
-<div class="title">Figure 27. Camera and computer registration complete</div>
+<div class="title">Figure 28. Camera and computer registration complete</div>
 </div>
 <div class="paragraph">
 <p>Test the THETA UVC FullHD Blender driver with any software that works with a webcam. In the example
@@ -1245,7 +1273,7 @@ below, I am using Skype.</p>
 <div class="content">
 <img src="img/livestreaming/skype-test.png" alt="skype test">
 </div>
-<div class="title">Figure 28. Testing THETA UVC FullHD Blender with Skype</div>
+<div class="title">Figure 29. Testing THETA UVC FullHD Blender with Skype</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1267,7 +1295,7 @@ look like a distorted rectangle. Skype is for testing only, not for use.
 <div class="content">
 <img src="img/livestreaming/webcam-options.png" alt="webcam options">
 </div>
-<div class="title">Figure 29. Testing THETA UVC FullHD Blender with OBS</div>
+<div class="title">Figure 30. Testing THETA UVC FullHD Blender with OBS</div>
 </div>
 <div class="admonitionblock caution">
 <table>
@@ -1308,13 +1336,13 @@ Each press should be 1 second.</p>
 <div class="content">
 <img src="img/livestreaming/ricohr/mode-image.jpg" alt="mode image">
 </div>
-<div class="title">Figure 30. Set the mode to USB. Green LED is displayed.</div>
+<div class="title">Figure 31. Set the mode to USB. Green LED is displayed.</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/ricohr/green.jpg" alt="green">
 </div>
-<div class="title">Figure 31. Green LED indicates USB output.</div>
+<div class="title">Figure 32. Green LED indicates USB output.</div>
 </div>
 </div>
 <div class="sect2">
@@ -1329,7 +1357,7 @@ application from GitHub.</p>
 <div class="content">
 <img src="img/livestreaming/ricohr/github.png" alt="github">
 </div>
-<div class="title">Figure 32. RICOH R Dev Kit USB driver on GitHub</div>
+<div class="title">Figure 33. RICOH R Dev Kit USB driver on GitHub</div>
 </div>
 <div class="admonitionblock caution">
 <table>
@@ -1347,7 +1375,7 @@ Make sure you select <em>RICOH R Development Kit UVC Capture</em> and not <em>RI
 <div class="content">
 <img src="img/livestreaming/ricohr/correctdriver.jpg" alt="correctdriver">
 </div>
-<div class="title">Figure 33. OBS Studio with the RICOH R  USB Driver</div>
+<div class="title">Figure 34. OBS Studio with the RICOH R  USB Driver</div>
 </div>
 <div class="paragraph">
 <p>If you select the wrong driver, you will not get a video stream.</p>
@@ -1356,7 +1384,7 @@ Make sure you select <em>RICOH R Development Kit UVC Capture</em> and not <em>RI
 <div class="content">
 <img src="img/livestreaming/ricohr/incorrectdriver.png" alt="incorrectdriver">
 </div>
-<div class="title">Figure 34. This is the wrong RICOH R  USB Driver for OBS</div>
+<div class="title">Figure 35. This is the wrong RICOH R  USB Driver for OBS</div>
 </div>
 </div>
 </div>
@@ -1371,7 +1399,7 @@ Make sure you select <em>RICOH R Development Kit UVC Capture</em> and not <em>RI
 <div class="content">
 <img src="img/livestreaming/obs-icon.png" alt="obs icon">
 </div>
-<div class="title">Figure 35. OBS Studio</div>
+<div class="title">Figure 36. OBS Studio</div>
 </div>
 <div class="paragraph">
 <p><a href="https://obsproject.com/">Download OBS</a></p>
@@ -1385,7 +1413,7 @@ a video capture device. Right click to open the pop-up menu.</p>
 <div class="content">
 <img src="img/livestreaming/obs-video-capture.png" alt="obs video capture">
 </div>
-<div class="title">Figure 36. Add Video Capture Device to OBS <em>Sources</em></div>
+<div class="title">Figure 37. Add Video Capture Device to OBS <em>Sources</em></div>
 </div>
 <div class="paragraph">
 <p>Select <em>THETA UVC Blender</em> as the Device. Verify that the video stream is in equirectangular format.</p>
@@ -1394,7 +1422,7 @@ a video capture device. Right click to open the pop-up menu.</p>
 <div class="content">
 <img src="img/livestreaming/obs-device.png" alt="obs device">
 </div>
-<div class="title">Figure 37. Verify THETA UVC Blender works in OBS</div>
+<div class="title">Figure 38. Verify THETA UVC Blender works in OBS</div>
 </div>
 <div class="paragraph">
 <p>If you see this message, the camera is not connected properly. Go to the troubleshooting section or read the tip
@@ -1423,7 +1451,7 @@ section below
 <div class="content">
 <img src="img/livestreaming/resolution-fps.png" alt="resolution fps">
 </div>
-<div class="title">Figure 38. Leave Resolution/FPS Type as Default</div>
+<div class="title">Figure 39. Leave Resolution/FPS Type as Default</div>
 </div>
 <div class="paragraph">
 <p>Under Settings &#8594; Video, set the resolution to 1920x1080 at 29.97fps (30fps will also work).</p>
@@ -1432,7 +1460,7 @@ section below
 <div class="content">
 <img src="img/livestreaming/obs-settings-video.png" alt="obs settings video">
 </div>
-<div class="title">Figure 39. Configure Resolution to 1920x1080</div>
+<div class="title">Figure 40. Configure Resolution to 1920x1080</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1468,7 +1496,7 @@ Click the <em>Get started</em> button on live streaming.</p>
 <div class="content">
 <img src="img/livestreaming/youtube-livestream.png" alt="youtube livestream">
 </div>
-<div class="title">Figure 40. Click Live Streaming after you click upload</div>
+<div class="title">Figure 41. Click Live Streaming after you click upload</div>
 </div>
 <div class="paragraph">
 <p>Select <em>Events</em>.</p>
@@ -1477,7 +1505,7 @@ Click the <em>Get started</em> button on live streaming.</p>
 <div class="content">
 <img src="img/livestreaming/youtube-event.png" alt="youtube event">
 </div>
-<div class="title">Figure 41. Select Events</div>
+<div class="title">Figure 42. Select Events</div>
 </div>
 <div class="admonitionblock warning">
 <table>
@@ -1498,7 +1526,7 @@ Make sure you select Events. You will not get a 360&#176; stream with <em>Stream
 <div class="content">
 <img src="img/livestreaming/youtube-new-live-event.png" alt="youtube new live event">
 </div>
-<div class="title">Figure 42. New live event</div>
+<div class="title">Figure 43. New live event</div>
 </div>
 <div class="paragraph">
 <p>Add a title.</p>
@@ -1518,7 +1546,7 @@ Make sure you select Events. You will not get a 360&#176; stream with <em>Stream
 <div class="content">
 <img src="img/livestreaming/youtube-livestream360.png" alt="youtube livestream360">
 </div>
-<div class="title">Figure 43. Select <em>This live stream is 360</em></div>
+<div class="title">Figure 44. Select <em>This live stream is 360</em></div>
 </div>
 <div class="paragraph">
 <p>Create the event. On the next screen, grab stream name from <em>Ingestion Settings</em></p>
@@ -1598,7 +1626,7 @@ is limited by my 1.5Mbps upload bandwidth.</p>
 <div class="content">
 <img src="img/livestreaming/youtube-1080.png" alt="youtube 1080">
 </div>
-<div class="title">Figure 44. THETA UVC FullHD Blender and YouTube Live Event</div>
+<div class="title">Figure 45. THETA UVC FullHD Blender and YouTube Live Event</div>
 </div>
 <div class="paragraph">
 <p>This is a screenshot from the live stream of the RICOH R Development Kit from their
@@ -1608,7 +1636,7 @@ demo at CES in January of 2017.</p>
 <div class="content">
 <img src="img/livestreaming/youtube-1080-ces.jpg" alt="youtube 1080 ces">
 </div>
-<div class="title">Figure 45. RICOH R Dev Kit Live Stream at CES</div>
+<div class="title">Figure 46. RICOH R Dev Kit Live Stream at CES</div>
 </div>
 <div class="paragraph">
 <p>The RICOH R Dev Kit was plugged into
@@ -1661,7 +1689,7 @@ for updates.</p>
 <div class="content">
 <img src="img/livestreaming/facebook/facebook-overview.jpg" alt="facebook overview">
 </div>
-<div class="title">Figure 46. Overview of Facebook Live 360 with RICOH THETA S</div>
+<div class="title">Figure 47. Overview of Facebook Live 360 with RICOH THETA S</div>
 </div>
 <div class="paragraph">
 <p><strong>Process</strong></p>
@@ -1699,7 +1727,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/click-live-stream.jpg" alt="click live stream">
 </div>
-<div class="title">Figure 47. Facebook Live page to create new event</div>
+<div class="title">Figure 48. Facebook Live page to create new event</div>
 </div>
 <div class="paragraph">
 <p><strong>Select Location to Post</strong></p>
@@ -1711,7 +1739,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/location-post.png" alt="location post">
 </div>
-<div class="title">Figure 48. Select where you want to share your live 360 event</div>
+<div class="title">Figure 49. Select where you want to share your live 360 event</div>
 </div>
 <div class="paragraph">
 <p><strong>Select 360 video</strong></p>
@@ -1723,7 +1751,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/live-stream-360.png" alt="live stream 360">
 </div>
-<div class="title">Figure 49. The checkbox for 360 video needs to be selected</div>
+<div class="title">Figure 50. The checkbox for 360 video needs to be selected</div>
 </div>
 <div class="paragraph">
 <p><strong>Get Streaming Information</strong></p>
@@ -1735,7 +1763,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/stream-key.png" alt="stream key">
 </div>
-<div class="title">Figure 50. Copy the information above for the OBS stream configuration</div>
+<div class="title">Figure 51. Copy the information above for the OBS stream configuration</div>
 </div>
 <div class="paragraph">
 <p><strong>Configure OBS</strong></p>
@@ -1747,7 +1775,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/create-source.png" alt="create source">
 </div>
-<div class="title">Figure 51. Source can be any name that is meaningful to you</div>
+<div class="title">Figure 52. Source can be any name that is meaningful to you</div>
 </div>
 <div class="paragraph">
 <p><strong>Configuration Overview</strong></p>
@@ -1791,7 +1819,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/obs-video-config.png" alt="obs video config">
 </div>
-<div class="title">Figure 52. OBS video configuration</div>
+<div class="title">Figure 53. OBS video configuration</div>
 </div>
 <div class="paragraph">
 <p><strong>OBS Settings</strong></p>
@@ -1803,7 +1831,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/obs-stream-config.png" alt="obs stream config">
 </div>
-<div class="title">Figure 53. Get this info from Facebook Live 360 config</div>
+<div class="title">Figure 54. Get this info from Facebook Live 360 config</div>
 </div>
 <div class="paragraph">
 <p><strong>Settings &#8594; Video</strong></p>
@@ -1812,7 +1840,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/obs-video-settings.png" alt="obs video settings">
 </div>
-<div class="title">Figure 54. 1920x1080 if you use THETA UVC FullHD Blender</div>
+<div class="title">Figure 55. 1920x1080 if you use THETA UVC FullHD Blender</div>
 </div>
 <div class="paragraph">
 <p><strong>Preview Live Stream on OBS</strong></p>
@@ -1821,7 +1849,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/obs-preview.jpg" alt="obs preview">
 </div>
-<div class="title">Figure 55. OBS preview is in equirectangular</div>
+<div class="title">Figure 56. OBS preview is in equirectangular</div>
 </div>
 <div class="paragraph">
 <p>If you don&#8217;t see an equirectangular stream that is similar to image above, go to the <a href="#troubleshooting">Troubleshooting</a> section.</p>
@@ -1833,7 +1861,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/obs-start-stream.png" alt="obs start stream">
 </div>
-<div class="title">Figure 56. start the stream on OBS and send to Facebook Live 360 server</div>
+<div class="title">Figure 57. start the stream on OBS and send to Facebook Live 360 server</div>
 </div>
 <div class="paragraph">
 <p><strong>Go Live 360 Broadcast on Facebook</strong></p>
@@ -1842,7 +1870,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/fb-go-live.png" alt="fb go live">
 </div>
-<div class="title">Figure 57. Go Live on Facebook and send event to your page or timeline</div>
+<div class="title">Figure 58. Go Live on Facebook and send event to your page or timeline</div>
 </div>
 <div class="paragraph">
 <p><strong>View Live on Facebook</strong></p>
@@ -1851,7 +1879,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/page-sample.png" alt="page sample">
 </div>
-<div class="title">Figure 58. RICOH THETA S Live 360 Event on Facebook Page</div>
+<div class="title">Figure 59. RICOH THETA S Live 360 Event on Facebook Page</div>
 </div>
 <div class="paragraph">
 <p><strong>Automatically Promote Saved Event on Facebook Timeline</strong></p>
@@ -1860,7 +1888,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/saved-event.jpg" alt="saved event">
 </div>
-<div class="title">Figure 59. Promote your saved event on your page or timeline</div>
+<div class="title">Figure 60. Promote your saved event on your page or timeline</div>
 </div>
 <div class="paragraph">
 <p><strong>Adjust Sharing, Expiration or Delete</strong></p>
@@ -1869,7 +1897,7 @@ refer to the <a href="http://theta360.guide/community-document/live-streaming.ht
 <div class="content">
 <img src="img/livestreaming/facebook/fb-delete.png" alt="fb delete">
 </div>
-<div class="title">Figure 60. Manage archived events on your page or timeline</div>
+<div class="title">Figure 61. Manage archived events on your page or timeline</div>
 </div>
 </div>
 </div>
@@ -1980,13 +2008,13 @@ Boinx Software recommends the Blackmagic Design
 <div class="content">
 <img src="img/livestreaming/mimolive/hdmi-usb.png" alt="hdmi usb">
 </div>
-<div class="title">Figure 61. Getting THETA S HDMI Output Into Your Computer</div>
+<div class="title">Figure 62. Getting THETA S HDMI Output Into Your Computer</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/mimolive/dual-fisheye.png" alt="dual fisheye">
 </div>
-<div class="title">Figure 62. mimoLive dual-fisheye before conversion to equirectangular</div>
+<div class="title">Figure 63. mimoLive dual-fisheye before conversion to equirectangular</div>
 </div>
 <div class="paragraph">
 <p>mimoLive can take the THETA S dual-fisheye video stream source and apply a filter convert it to equirectangular for
@@ -1996,13 +2024,13 @@ streaming to places like YouTube Live 360 events.</p>
 <div class="content">
 <img src="img/livestreaming/mimolive/sources-thetas.png" alt="sources thetas">
 </div>
-<div class="title">Figure 63. Preset configuration and filter for THETA S</div>
+<div class="title">Figure 64. Preset configuration and filter for THETA S</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/mimolive/placerlive.png" alt="placerlive">
 </div>
-<div class="title">Figure 64. Filter converts dual-fisheye stream to equirectangular</div>
+<div class="title">Figure 65. Filter converts dual-fisheye stream to equirectangular</div>
 </div>
 <div class="paragraph">
 <p>mimoLive provides sliders to adjust the sphere stitching. You&#8217;ll only be able to get a <em>good enough</em> stitch. The
@@ -2012,7 +2040,7 @@ edges of the spheres will not match perfectly.</p>
 <div class="content">
 <img src="img/livestreaming/mimolive/adjustment.png" alt="adjustment">
 </div>
-<div class="title">Figure 65. Use sliders to adjust sphere edges</div>
+<div class="title">Figure 66. Use sliders to adjust sphere edges</div>
 </div>
 <div class="paragraph">
 <p>This is an example of the <a href="https://youtu.be/8CEB2_YQgkU">360 live stream</a>. The quality of the stitch
@@ -2027,19 +2055,19 @@ YouTube live streaming event.</p>
 <div class="content">
 <img src="img/livestreaming/mimolive/text-placement360.png" alt="text placement360">
 </div>
-<div class="title">Figure 66. Place text into live stream to YouTube</div>
+<div class="title">Figure 67. Place text into live stream to YouTube</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/mimolive/twitter.png" alt="twitter">
 </div>
-<div class="title">Figure 67. Insert Twitter into live stream to YouTube</div>
+<div class="title">Figure 68. Insert Twitter into live stream to YouTube</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/mimolive/slides.png" alt="slides">
 </div>
-<div class="title">Figure 68. Insert presentation slides into 360 live stream</div>
+<div class="title">Figure 69. Insert presentation slides into 360 live stream</div>
 </div>
 <div class="paragraph">
 <p>You can also center your video stream.</p>
@@ -2048,7 +2076,7 @@ YouTube live streaming event.</p>
 <div class="content">
 <img src="img/livestreaming/mimolive/adjust-center.png" alt="adjust center">
 </div>
-<div class="title">Figure 69. Center 360 live stream</div>
+<div class="title">Figure 70. Center 360 live stream</div>
 </div>
 <div class="paragraph">
 <p><a href="https://youtu.be/8CEB2_YQgkU">Example Stream Archive</a></p>
@@ -2105,7 +2133,7 @@ off.</p>
 <div class="content">
 <img src="img/livestreaming/unity/gitai.png" alt="gitai">
 </div>
-<div class="title">Figure 70. GITAI example</div>
+<div class="title">Figure 71. GITAI example</div>
 </div>
 <div class="paragraph">
 <p>Example above built by <a href="http://gitai.tech/">GITAI</a>.</p>
@@ -2149,7 +2177,7 @@ that you can use directly as a webcam texture in Unity. Just drop it onto a sphe
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/vive.jpg" alt="vive">
 </div>
-<div class="title">Figure 71. THETA V Stream Inside of Vive Headset</div>
+<div class="title">Figure 72. THETA V Stream Inside of Vive Headset</div>
 </div>
 <div class="sect3">
 <h4 id="_overview">13.1.1. Overview</h4>
@@ -2198,7 +2226,7 @@ that you can use directly as a webcam texture in Unity. Just drop it onto a sphe
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/gear.jpg" alt="gear">
 </div>
-<div class="title">Figure 72. THETA V and HTC Vive</div>
+<div class="title">Figure 73. THETA V and HTC Vive</div>
 </div>
 </div>
 <div class="sect3">
@@ -2226,7 +2254,7 @@ that you can use directly as a webcam texture in Unity. Just drop it onto a sphe
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/plugin.png" alt="plugin">
 </div>
-<div class="title">Figure 73. SteamVR Unity Plugin</div>
+<div class="title">Figure 74. SteamVR Unity Plugin</div>
 </div>
 <div class="paragraph">
 <p>You need to have Steam and SteamVR installed.</p>
@@ -2235,7 +2263,7 @@ that you can use directly as a webcam texture in Unity. Just drop it onto a sphe
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/steamvr-install.png" alt="steamvr install">
 </div>
-<div class="title">Figure 74. Install SteamVR from Steam Library Tools</div>
+<div class="title">Figure 75. Install SteamVR from Steam Library Tools</div>
 </div>
 </div>
 <div class="sect3">
@@ -2259,13 +2287,13 @@ The package contains two simple 3D assets in the scene to illustrate how to impo
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/mothra.jpg" alt="mothra">
 </div>
-<div class="title">Figure 75. view from headset with moth</div>
+<div class="title">Figure 76. view from headset with moth</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/moth2.png" alt="moth2">
 </div>
-<div class="title">Figure 76. example of 3D asset embedded into THETA V live streaming scene</div>
+<div class="title">Figure 77. example of 3D asset embedded into THETA V live streaming scene</div>
 </div>
 </div>
 <div class="sect3">
@@ -2277,7 +2305,7 @@ The package contains two simple 3D assets in the scene to illustrate how to impo
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/thetav-live.jpg" alt="thetav live">
 </div>
-<div class="title">Figure 77. THETA V in live streaming mode</div>
+<div class="title">Figure 78. THETA V in live streaming mode</div>
 </div>
 </div>
 <div class="sect3">
@@ -2286,7 +2314,7 @@ The package contains two simple 3D assets in the scene to illustrate how to impo
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/connect.png" alt="connect">
 </div>
-<div class="title">Figure 78. HTC Vive Computer Connection</div>
+<div class="title">Figure 79. HTC Vive Computer Connection</div>
 </div>
 </div>
 <div class="sect3">
@@ -2298,7 +2326,7 @@ The package contains two simple 3D assets in the scene to illustrate how to impo
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/orientation.png" alt="orientation">
 </div>
-<div class="title">Figure 79. Align Camera and HTC Vive </div>
+<div class="title">Figure 80. Align Camera and HTC Vive </div>
 </div>
 </div>
 <div class="sect3">
@@ -2313,7 +2341,7 @@ The package contains two simple 3D assets in the scene to illustrate how to impo
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/clickme.png" alt="clickme">
 </div>
-<div class="title">Figure 80. Double-click on Icon to Start Application </div>
+<div class="title">Figure 81. Double-click on Icon to Start Application </div>
 </div>
 </div>
 <div class="sect3">
@@ -2325,7 +2353,7 @@ The package contains two simple 3D assets in the scene to illustrate how to impo
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/unitylogo.png" alt="unitylogo">
 </div>
-<div class="title">Figure 81. Floating Unity Logo </div>
+<div class="title">Figure 82. Floating Unity Logo </div>
 </div>
 </div>
 <div class="sect3">
@@ -2337,7 +2365,7 @@ The package contains two simple 3D assets in the scene to illustrate how to impo
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/finshed.png" alt="finshed">
 </div>
-<div class="title">Figure 82. Simple Test Application </div>
+<div class="title">Figure 83. Simple Test Application </div>
 </div>
 <div class="paragraph">
 <p>If you&#8217;d like to modify the code, read on.</p>
@@ -2367,7 +2395,7 @@ The package contains two simple 3D assets in the scene to illustrate how to impo
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/blender.png" alt="blender">
 </div>
-<div class="title">Figure 83. Creating a Flip-Normals Sphere in Blender </div>
+<div class="title">Figure 84. Creating a Flip-Normals Sphere in Blender </div>
 </div>
 </div>
 <div class="sect3">
@@ -2379,7 +2407,7 @@ The package contains two simple 3D assets in the scene to illustrate how to impo
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/negative-scale.png" alt="negative scale">
 </div>
-<div class="title">Figure 84. Assigning negative scale to sphere </div>
+<div class="title">Figure 85. Assigning negative scale to sphere </div>
 </div>
 </div>
 <div class="sect3">
@@ -2391,7 +2419,7 @@ The package contains two simple 3D assets in the scene to illustrate how to impo
 <div class="content">
 <img src="img/livestreaming/unity/thetav/vive/invert.png" alt="invert">
 </div>
-<div class="title">Figure 85. Inverting camera</div>
+<div class="title">Figure 86. Inverting camera</div>
 </div>
 </div>
 </div>
@@ -2424,7 +2452,7 @@ It explains how to go from dual-fisheye to a single sphere.</p>
 <div class="content">
 <img src="img/livestreaming/unity/dual-fish-eye.jpg" alt="dual fish eye">
 </div>
-<div class="title">Figure 86. Dual-fisheye with THETA S driver</div>
+<div class="title">Figure 87. Dual-fisheye with THETA S driver</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
@@ -2455,7 +2483,7 @@ It explains how to go from dual-fisheye to a single sphere.</p>
 <div class="content">
 <img src="img/livestreaming/unity/sphere-gap.png" alt="sphere gap">
 </div>
-<div class="title">Figure 87. Webcam texture will result in gap</div>
+<div class="title">Figure 88. Webcam texture will result in gap</div>
 </div>
 <div class="paragraph">
 <p>This note from Megan Zimmerman explains the issue.</p>
@@ -2505,7 +2533,7 @@ Scale Center V: 0.55</pre>
 <div class="content">
 <img src="img/livestreaming/unity/megan-closed-gap.png" alt="megan closed gap">
 </div>
-<div class="title">Figure 88. manual adjustment to close gap between each lens</div>
+<div class="title">Figure 89. manual adjustment to close gap between each lens</div>
 </div>
 </div>
 </div>
@@ -2520,7 +2548,7 @@ get Unity to recognize THETA UVC FullHD Blender.</p>
 <div class="content">
 <img src="img/livestreaming/unity/uvc-blender-unity.png" alt="uvc blender unity">
 </div>
-<div class="title">Figure 89. UVC Blender recognized by Unity as a webcam</div>
+<div class="title">Figure 90. UVC Blender recognized by Unity as a webcam</div>
 </div>
 <div class="paragraph">
 <p>Using this technique, you can simply add UVC FullHD Blender as a <code>WebCamTexture</code> in Unity. The stitch
@@ -2530,7 +2558,7 @@ will look close to perfect.</p>
 <div class="content">
 <img src="img/livestreaming/unity/uvc-working.png" alt="uvc working">
 </div>
-<div class="title">Figure 90. UVC Blender projected to sphere</div>
+<div class="title">Figure 91. UVC Blender projected to sphere</div>
 </div>
 <div class="paragraph">
 <p>Here&#8217;s how to do it.</p>
@@ -2623,7 +2651,7 @@ to mobile phones, primarily using Unity.</p>
 <div class="content">
 <img src="img/livestreaming/wifi-unity.png" alt="wifi unity">
 </div>
-<div class="title">Figure 91. 360&#176; video stream using WiFi</div>
+<div class="title">Figure 92. 360&#176; video stream using WiFi</div>
 </div>
 <div class="paragraph">
 <p>Most developers have challenges processing the MotionJPEG stream.</p>
@@ -2857,19 +2885,19 @@ Download and install
 <div class="content">
 <img src="img/livestreaming/unity/wifi/game-view-crop.png" alt="game view crop">
 </div>
-<div class="title">Figure 92. Unity WiFi Live Stream in Game Mode</div>
+<div class="title">Figure 93. Unity WiFi Live Stream in Game Mode</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/unity/wifi/scene-4-crop.png" alt="scene 4 crop">
 </div>
-<div class="title">Figure 93. Unity Scene View of WiFi Live Stream</div>
+<div class="title">Figure 94. Unity Scene View of WiFi Live Stream</div>
 </div>
 <div class="imageblock thumb">
 <div class="content">
 <img src="img/livestreaming/unity/wifi/top-down-sphere.png" alt="top down sphere">
 </div>
-<div class="title">Figure 94. Top down view of sphere with THETA camera positions</div>
+<div class="title">Figure 95. Top down view of sphere with THETA camera positions</div>
 </div>
 </div>
 </div>
@@ -2893,7 +2921,7 @@ uses node.</p>
 <div class="content">
 <img src="img/livestreaming/thetaview-fisheye.png" alt="thetaview fisheye">
 </div>
-<div class="title">Figure 95. video stream prior to conversion</div>
+<div class="title">Figure 96. video stream prior to conversion</div>
 </div>
 <div class="paragraph">
 <p>The sample code uses JavaScript to convert the dual-fisheye video stream into
@@ -2904,7 +2932,7 @@ a navigable 360&#176; video. Transmission uses
 <div class="content">
 <img src="img/livestreaming/thetaview-360view.png" alt="thetaview 360view">
 </div>
-<div class="title">Figure 96. stream conversion done in browser</div>
+<div class="title">Figure 97. stream conversion done in browser</div>
 </div>
 <div class="paragraph">
 <p>As the THETA V uses UVC 1.5 with H.264, there have been no reported successes
@@ -3046,7 +3074,7 @@ There is no way to plug a microphone directly into the THETA.</p>
 <div class="content">
 <img src="img/livestreaming/mixer.png" alt="mixer">
 </div>
-<div class="title">Figure 97. OBS mixer</div>
+<div class="title">Figure 98. OBS mixer</div>
 </div>
 </div>
 </div>
@@ -3061,7 +3089,7 @@ There is no way to plug a microphone directly into the THETA.</p>
 <div class="content">
 <img src="img/livestreaming/obs-error.png" alt="obs error">
 </div>
-<div class="title">Figure 98. Error message when device not detected</div>
+<div class="title">Figure 99. Error message when device not detected</div>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -3105,7 +3133,7 @@ USB cable during an indoor shoot at Stanford during a crowded VR event.</p>
 <div class="content">
 <img src="img/livestreaming/heat/overheat-example.png" alt="overheat example">
 </div>
-<div class="title">Figure 99. Overheating during livestream</div>
+<div class="title">Figure 100. Overheating during livestream</div>
 </div>
 <div class="paragraph">
 <p>If the THETA is overheating, point a standard household fan at it. The airflow
@@ -3120,7 +3148,7 @@ taping or attaching a small fan used for computer CPUs to the outside of the THE
 <div class="content">
 <img src="img/livestreaming/heat/heatsinks.png" alt="heatsinks">
 </div>
-<div class="title">Figure 100. Raspberry Pi Heatsinks (L), small computer fan bracket &#174;</div>
+<div class="title">Figure 101. Raspberry Pi Heatsinks (L), small computer fan bracket &#174;</div>
 </div>
 <div class="ulist">
 <ul>
@@ -3144,7 +3172,7 @@ was too high.</p>
 <div class="content">
 <img src="img/livestreaming/heat/case-mod.png" alt="case mod">
 </div>
-<div class="title">Figure 101. Not recommended, but an example of community enthusiasm</div>
+<div class="title">Figure 102. Not recommended, but an example of community enthusiasm</div>
 </div>
 </div>
 </div>
@@ -3174,7 +3202,7 @@ can post your product information in the
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-07-08 15:47:57 -0700
+Last updated 2020-07-13 09:04:32 -0700
 </div>
 </div>
 </body>
