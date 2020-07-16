@@ -285,11 +285,11 @@ GoPro VR Player for Desktop Downloads
 
 You can stream the THETA V using Ethernet using a USB OTG adapter.  See 
 https://community.theta360.guide/t/how-to-connect-theta-v-with-ethernet/3298?u=codetricity[this] article
-for more information. Not all USB OTG Ethernet adapters will work. In most cases, the camera does not charge
-while you are connected with Ethernet. 
+for more information. Not all USB OTG Ethernet adapters will work.
 
 Community member Kev091190 has reported success using an USB splitter with the 
-THETA V.
+THETA V.  Oppkey staff tested a different USB OTG Ethernet adapter and USB splitter
+and had similar results. 
 
 image::img/livestreaming/ethernet/ethernet-charging-status.png[role="thumb" title="THETA V charging status while connected with Ethernet"]
 
@@ -303,6 +303,22 @@ image::img/livestreaming/ethernet/sinloon-y-splitter.png[role="thumb" title="Sin
 
 image::img/livestreaming/ethernet/sinloon-y-splitter-2.png[role="thumb" title="Sinloon y-Splitter full cable layout"]
 
+To test the charging, Oppkey connected a current meter to the Y-splitter.  In the first
+test, we looked at the charge prior to streaming the camera with Ethernet.
+
+image::img/livestreaming/ethernet/before-plug-in.png[role="thumb" title="setup before starting plug-in"]
+
+Prior to the plug-in starting, the camera drew 0.41Amps. 
+
+image::img/livestreaming/ethernet/before-plug-in-meter.png[role="thumb" title="Camera drawing 0.41A before plug-in starts"]
+
+After the plug-in started, the camera current draw did not change.  It remained at 0.41amps.
+
+image::img/livestreaming/ethernet/after-plug-in-meter.png[role="thumb" title="Camera drawing 0.41A after plug-in starts"]
+
+I connected the camera to a 2amp power source and streamed it for an hour.
+
+image::img/livestreaming/ethernet/rig-2amp-power.png[role="thumb" title="Camera attached to a 2amp power source"]
 
 It's also theoretically possible to 
 https://community.theta360.guide/t/possible-theta-v-battery-bypass-hack-untested/3372?u=codetricity[bypass the battery], though
