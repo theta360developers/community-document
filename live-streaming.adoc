@@ -255,6 +255,10 @@ image::img/livestreaming/rtsp/latency.png[role="thumb" title="Latency between ca
 
 At this point, I've been streaming over Ethernet for 40 minutes continuously.
 
+After an hour of streaming over Ethernet, the battery did drop
+a little.
+
+image::img/livestreaming/rtsp/camera-state-end.png[role="thumb" title="Camera state after one hour of RTSP streaming"]
 
 ==== GoPro VR Player 3
 
