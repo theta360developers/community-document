@@ -215,6 +215,47 @@ At 3840x1920 network traffic was 300 KiB/second.
 
 image::img/livestreaming/rtsp/rtsp-network-traffic.png[role="thumb" title="3840x1920 requires 300 KiB/second bandwidth on Wi-Fi"]
 
+=== Ethernet RTSP Streaming Direct to Computer icon:puzzle-piece[2x]
+
+The RTSP plug-in works with Ethernet.  To test the plug-in, I
+used an USB to Ethernet adapter and Y-splitter for the adapter to
+also test if I can charge the camera while it is streaming over
+Ethernet.
+
+image::img/livestreaming/rtsp/rtsp-ethernet-rig.png[role="thumb" title="Using RTSP plug-in with Ethernet"]
+
+With my computer and the THETA V on the same subnet, I found the
+IP address of the THETA V by running a script on my computer.
+The script is part of my 
+https://github.com/codetricity/theta-client-mode[theta-client-mode] tests on GitHub.
+
+image::img/livestreaming/rtsp/find-theta.png[role="thumb" title="Find IP address of THETA V"]
+
+To establish a baseline prior to the RTSP Ethernet test, I used the same script
+to check the camera state. 
+
+image::img/livestreaming/rtsp/camera-state-initial.png[role="thumb" title="Camera state prior to RTSP test"]
+
+The state looks very promising.  The camera indicates that it's charging.
+Battery level is at 84%.
+
+I started the plug-in by pressing and holding the lower mode button
+of the THETA V.
+
+I opened a network stream with vlc.
+
+
+image::img/livestreaming/rtsp/ethernet-rtsp-vlc-config.png[role="thumb" title="Camera state prior to RTSP test"]
+
+image::img/livestreaming/rtsp/vlc-working.png[role="thumb" title="VLC works with smooth video"]
+
+Latency is around 2 seconds with my test resolution of 640x320.
+
+image::img/livestreaming/rtsp/latency.png[role="thumb" title="Latency between camera and VLC over Ethernet is about 2 seconds"]
+
+At this point, I've been streaming over Ethernet for 40 minutes continuously.
+
+
 ==== GoPro VR Player 3
 
 To get a 360 view of the live stream, you can use GoPro VR Player 3.
@@ -225,6 +266,9 @@ In my tests on July 12, 2020, I was only able to use GoPro VR Player 3 on
 Mac.  When I tried to use the player on Windows with 
 THETA RTSP plug-in, the GoPro VR Player would crash.  This is a low-resolution
 test.
+
+
+
 
 GoPro VR Player for Desktop Downloads
 
