@@ -318,7 +318,9 @@ image::img/livestreaming/ethernet/after-plug-in-meter.png[role="thumb" title="Ca
 
 I connected the camera to a 2amp power source and streamed it for three
 hours. The battery charge increased from 75% to 84% during the streaming
-session.  The camera body was warm, but not hot at the end of the test.
+session.  The camera body was warm, but not hot at the end of the test.  In the
+next test, I streamed it for 13 hours continuously.  The camera may
+be able to stream indefinitely.
 
 image::img/livestreaming/ethernet/rig-2amp-power.png[role="thumb" title="Camera attached to a 2amp power source"]
 
