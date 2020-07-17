@@ -324,6 +324,14 @@ image::img/livestreaming/ethernet/rig-2amp-power.png[role="thumb" title="Camera 
 
 image::img/livestreaming/ethernet/streaming-test-charging.png[role="thumb" title="THETA V charge increased after 3 hours of live streaming over Ethernet"]
 
+==== Troubleshooting the Ethernet Connection
+When the THETA V is plugged into Ethernet, both of the LED 
+lights on the USB OTG adapter need to be on.
+
+image::img/livestreaming/ethernet/data-lights.jpeg[role="thumb" title="Verify LED lights on your Ethernet adapter"]
+
+
+==== Other Hacks to Power the Camera 
 It's also theoretically possible to 
 https://community.theta360.guide/t/possible-theta-v-battery-bypass-hack-untested/3372?u=codetricity[bypass the battery], though
 there have been no supported successed. 
