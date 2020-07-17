@@ -319,7 +319,7 @@ image::img/livestreaming/ethernet/after-plug-in-meter.png[role="thumb" title="Ca
 I connected the camera to a 2amp power source and streamed it for three
 hours. The battery charge increased from 75% to 84% during the streaming
 session.  The camera body was warm, but not hot at the end of the test.  In the
-next test, I streamed it for 15 hours continuously.  The camera may
+next test, I streamed it for 17 hours continuously.  The camera may
 be able to stream indefinitely.
 
 image::img/livestreaming/ethernet/rig-2amp-power.png[role="thumb" title="Camera attached to a 2amp power source"]
@@ -335,6 +335,14 @@ Make sure that you get one that indicates it is used to power an Android
 device (the THETA V) while using a USB OTG device (the Ethernet adaptor).
 
 image::img/livestreaming/ethernet/oppkey-adapter.png[role="thumb" title="Cable to supply power to THETA V while it is using an USB OTG device"]
+
+For the USB OTG to Ethernet, I am using the adapter below.
+
+image::img/livestreaming/ethernet/ethernet-adapter.png[role="thumb" title="USB OTG Ethernet adapter"]
+
+To be able to plug the USB OTG Ethernet adapter into the Y-cable, I needed to buy a microUSB female to USB male adapter. 
+
+image::img/livestreaming/ethernet/microusb-to-usb.png[role="thumb" title="microUSB female to USB male adaptor to connect Y cable to USB OTG Ethernet"]
 
 
 ==== Troubleshooting the Ethernet Connection
