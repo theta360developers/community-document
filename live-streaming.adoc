@@ -316,9 +316,13 @@ After the plug-in started, the camera current draw did not change.  It remained 
 
 image::img/livestreaming/ethernet/after-plug-in-meter.png[role="thumb" title="Camera drawing 0.41A after plug-in starts"]
 
-I connected the camera to a 2amp power source and streamed it for an hour.
+I connected the camera to a 2amp power source and streamed it for three
+hours. The battery charge increased from 75% to 84% during the streaming
+session.  The camera body was warm, but not hot at the end of the test.
 
 image::img/livestreaming/ethernet/rig-2amp-power.png[role="thumb" title="Camera attached to a 2amp power source"]
+
+image::img/livestreaming/ethernet/streaming-test-charging.png[role="thumb" title="THETA V charge increased after 3 hours of live streaming over Ethernet"]
 
 It's also theoretically possible to 
 https://community.theta360.guide/t/possible-theta-v-battery-bypass-hack-untested/3372?u=codetricity[bypass the battery], though
